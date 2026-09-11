@@ -96,6 +96,7 @@
       },
       "color_blind_safe_required": true,
       "recommended_palettes": [
+        "Oxide-Moss",
         "Okabe-Ito",
         "Viridis",
         "ColorBrewer-Set2"

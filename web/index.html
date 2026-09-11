@@ -14,11 +14,25 @@
       <div class="logo-icon">JC</div>
       <span class="brand-title">Journal Compliance Templates</span>
     </div>
-    <nav class="nav-links">
-      <a href="https://github.com/jono/journal_compliance_templates" target="_blank" class="nav-link">GitHub</a>
-      <a href="../schemas/compliance_schema_v1.json" target="_blank" class="nav-link">JSON Schema</a>
-      <a href="../project_plan.md" target="_blank" class="nav-link">Project Roadmap</a>
-    </nav>
+
+    <div class="nav-actions">
+      <!-- Theme Switcher -->
+      <div class="theme-picker-wrap">
+        <span class="theme-picker-label">🎨 Theme:</span>
+        <select id="theme-selector" class="theme-select" aria-label="Documentation Color Theme">
+          <option value="theme-oxide-moss" selected>🌿 Oxide Moss (Warm Editorial)</option>
+          <option value="theme-okabe-ito">👓 Okabe-Ito (Accessible Light)</option>
+          <option value="theme-slate-dark">🌌 Slate Dark (Tech Dark)</option>
+          <option value="theme-viridis">🌊 Viridis Deep (Data Dense)</option>
+        </select>
+      </div>
+
+      <nav class="nav-links">
+        <a href="https://github.com/jonathanwvos/journal_compliance_templates" target="_blank" class="nav-link">GitHub</a>
+        <a href="../schemas/compliance_schema_v1.json" target="_blank" class="nav-link">Schema</a>
+        <a href="../project_plan.md" target="_blank" class="nav-link">Roadmap</a>
+      </nav>
+    </div>
   </header>
 
   <main class="container">
@@ -28,7 +42,7 @@
       <span class="hero-tag">Automated Compliance Standard</span>
       <h1>Scientific Journal Formatting Explorer</h1>
       <p>
-        Machine-readable formatting specifications, figure geometries, and editorial compliance rules for major scientific journals. Avoid revision delays and achieve automated compliance.
+        Machine-readable formatting specifications, figure geometries, accessible palettes, and editorial compliance rules for major scientific journals. Avoid revision delays and achieve automated compliance.
       </p>
     </section>
 
@@ -89,7 +103,7 @@
         </div>
         <div class="metric-box">
           <div class="metric-label">Min Allowed Font</div>
-          <div class="metric-value" id="min-font-val" style="color:var(--accent-rose);">5.0 pt</div>
+          <div class="metric-value" id="min-font-val" style="color:var(--accent-primary);">5.0 pt</div>
           <div class="metric-sub">Rejection threshold</div>
         </div>
         <div class="metric-box">
@@ -153,6 +167,58 @@
 
     </div>
 
+    <!-- Enhanced Color & Accessibility Palette Inspector -->
+    <section class="card" style="margin-bottom: 2rem;">
+      <div class="card-title">
+        <span>🎨 Accessible Color Palettes & Format Converter</span>
+      </div>
+      <p class="card-desc">
+        Explore accessible scientific palettes, convert between color spaces (HEX, RGB, HSV, CMYK), test color-vision deficiencies, and copy colors individually or as complete programming arrays.
+      </p>
+
+      <!-- Palette Controls Toolbar -->
+      <div class="palette-toolbar">
+        <!-- Palette Tabs -->
+        <div class="palette-tabs">
+          <button class="btn-pill palette-tab-btn active" data-palette="Oxide Moss">🌿 Oxide Moss</button>
+          <button class="btn-pill palette-tab-btn" data-palette="Okabe-Ito">👓 Okabe-Ito</button>
+          <button class="btn-pill palette-tab-btn" data-palette="Viridis">🌊 Viridis</button>
+          <button class="btn-pill palette-tab-btn" data-palette="Tol Bright">🎨 Tol Bright</button>
+        </div>
+
+        <!-- Format Selector -->
+        <div class="format-picker-group">
+          <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary);">Format:</span>
+          <button class="btn-pill fmt-btn active" data-fmt="hex">HEX</button>
+          <button class="btn-pill fmt-btn" data-fmt="rgb255">RGB (0-255)</button>
+          <button class="btn-pill fmt-btn" data-fmt="rgb_norm" title="Matplotlib (0.0 to 1.0)">RGB (0-1.0)</button>
+          <button class="btn-pill fmt-btn" data-fmt="hsv">HSV</button>
+          <button class="btn-pill fmt-btn" data-fmt="cmyk" title="Print format">CMYK</button>
+        </div>
+      </div>
+
+      <!-- Vision Simulation Mode (CVD) -->
+      <div class="cvd-controls" style="margin-bottom: 0.5rem;">
+        <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); margin-right: 0.5rem;">CVD Simulation:</span>
+        <button class="btn-pill cvd-btn active" data-cvd="normal">Normal Vision</button>
+        <button class="btn-pill cvd-btn" data-cvd="deuteranopia">Deuteranopia (Green-weak)</button>
+        <button class="btn-pill cvd-btn" data-cvd="protanopia">Protanopia (Red-weak)</button>
+        <button class="btn-pill cvd-btn" data-cvd="tritanopia">Tritanopia (Blue-weak)</button>
+      </div>
+
+      <!-- Interactive Swatch Grid -->
+      <div id="swatch-grid" class="swatch-grid">
+        <!-- Dynamically populated by JS -->
+      </div>
+
+      <!-- Bulk Palette Copy Action Buttons -->
+      <div class="palette-action-buttons">
+        <button id="copy-palette-hex" class="action-btn">📋 Copy Palette (HEX Array)</button>
+        <button id="copy-palette-python" class="action-btn">🐍 Copy for Python / Matplotlib</button>
+        <button id="copy-palette-r" class="action-btn">📊 Copy for R (ggplot2)</button>
+      </div>
+    </section>
+
     <!-- AI Policy & Compliance Section -->
     <section class="ai-card">
       <div class="ai-header">
@@ -171,30 +237,6 @@
       <div class="statement-box">
         <button id="copy-statement-btn" class="copy-btn">Copy Statement</button>
         <span id="ai-statement-text">Loading declaration template...</span>
-      </div>
-    </section>
-
-    <!-- Color & Accessibility Palette -->
-    <section class="card" style="margin-bottom: 2rem;">
-      <div class="card-title">
-        <span>🎨 Accessible Color Palettes & Contrast</span>
-      </div>
-      <p class="card-desc">
-        Color-blind safe palette (Okabe-Ito) compliant with Nature's accessibility requirements. Simulate color vision deficiencies:
-      </p>
-      
-      <div class="palette-container">
-        <div class="cvd-controls">
-          <span style="font-size: 0.85rem; color: var(--text-secondary); margin-right: 0.5rem;">Vision Mode:</span>
-          <button class="btn-pill cvd-btn active" data-cvd="normal">Normal</button>
-          <button class="btn-pill cvd-btn" data-cvd="deuteranopia">Deuteranopia (Green)</button>
-          <button class="btn-pill cvd-btn" data-cvd="protanopia">Protanopia (Red)</button>
-          <button class="btn-pill cvd-btn" data-cvd="tritanopia">Tritanopia (Blue)</button>
-        </div>
-
-        <div id="swatch-container" class="palette-swatches">
-          <!-- Dynamically populated by JS -->
-        </div>
       </div>
     </section>
 
@@ -222,10 +264,13 @@
 
   </main>
 
+  <!-- Floating Copy Toast -->
+  <div id="copy-toast" class="copy-toast">Copied to clipboard!</div>
+
   <footer>
     <p>
       Journal Compliance Templates &copy; 2026 &bull; Designed for researchers and academics &bull;
-      <a href="https://github.com/jono/journal_compliance_templates" target="_blank">View on GitHub</a>
+      <a href="https://github.com/jonathanwvos/journal_compliance_templates" target="_blank">View on GitHub</a>
     </p>
   </footer>
 

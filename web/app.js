@@ -497,30 +497,33 @@ function fallbackCopyToClipboard(text, onSuccess) {
 }
 
 // ---------------------------------------------------------------------------
-// Bulk Palette Export Handlers
+// ---------------------------------------------------------------------------
+// Bulk Palette Export Handlers (Annotated with Color Names & Values)
 // ---------------------------------------------------------------------------
 
 function copyPaletteAsHexArray(btn = null) {
   const swatches = PALETTES[activePalette] || PALETTES["Okabe-Ito"];
-  const list = swatches.map((s) => `"${s.hex}"`).join(", ");
-  const output = `[${list}]`;
-  copyToClipboard(output, `Copied ${activePalette} as HEX array!`, btn);
+  const lines = swatches.map((s) => `  "${s.hex}",  // ${s.name}`);
+  const output = `// ${activePalette} Palette (Accessible Scientific Standard)\n[\n${lines.join("\n")}\n]`;
+  copyToClipboard(output, `Copied ${activePalette} as annotated HEX array!`, btn);
 }
 
 function copyPaletteForPython(btn = null) {
   const swatches = PALETTES[activePalette] || PALETTES["Okabe-Ito"];
-  const tuples = swatches.map((s) => {
+  const lines = swatches.map((s) => {
     const { r, g, b } = hexToRgb(s.hex);
-    return `(${(r / 255).toFixed(3)}, ${(g / 255).toFixed(3)}, ${(b / 255).toFixed(3)})`;
+    const tuple = `(${(r / 255).toFixed(3)}, ${(g / 255).toFixed(3)}, ${(b / 255).toFixed(3)})`;
+    return `    ${tuple},  # ${s.name} (${s.hex})`;
   });
-  const output = `# ${activePalette} Palette for Matplotlib\ncolors = [\n    ${tuples.join(",\n    ")}\n]`;
+  const output = `# ${activePalette} Color-Blind Safe Palette for Matplotlib\n# Normalized RGB (0.0 to 1.0) with color annotations\ncolors = [\n${lines.join("\n")}\n]`;
   copyToClipboard(output, `Copied ${activePalette} for Python / Matplotlib!`, btn);
 }
 
 function copyPaletteForR(btn = null) {
   const swatches = PALETTES[activePalette] || PALETTES["Okabe-Ito"];
-  const list = swatches.map((s) => `"${s.hex}"`).join(", ");
-  const output = `# ${activePalette} Palette for R\npalette_${activePalette.toLowerCase().replace(/\s+/g, "_")} <- c(${list})`;
+  const varName = `palette_${activePalette.toLowerCase().replace(/[^a-z0-9]/g, "_")}`;
+  const lines = swatches.map((s) => `  "${s.hex}",  # ${s.name}`);
+  const output = `# ${activePalette} Color-Blind Safe Palette for R (ggplot2)\n${varName} <- c(\n${lines.join("\n")}\n)`;
   copyToClipboard(output, `Copied ${activePalette} for R (ggplot2)!`, btn);
 }
 
@@ -542,7 +545,7 @@ function renderCodeSnippet() {
     const singleInches = (data.figure_geometry.column_widths.single_column.width / 25.4).toFixed(2);
     const doubleInches = (data.figure_geometry.column_widths.double_column.width / 25.4).toFixed(2);
     codeBlock.textContent = `# Matplotlib configuration for ${data.metadata.journal_name}
-# Using Oxide Moss Palette
+# Using Nature-approved Okabe-Ito Color-Blind Safe Palette
 import matplotlib.pyplot as plt
 
 # Dimensions (in inches)
@@ -565,17 +568,27 @@ plt.rcParams.update({
     "savefig.bbox": "tight",
 })
 
-# Example plot with Oxide Moss Palette
+# Example plot with Okabe-Ito Palette (Nature standard)
 fig, ax = plt.subplots(figsize=(${singleInches}, 2.5))
-ax.plot([0, 1, 2], [10, 20, 15], color="#C65D2E", label="Oxide Primary") # Oxide Primary
-ax.plot([0, 1, 2], [5, 12, 18], color="#687A45", label="Moss Primary")   # Moss Primary
+ax.plot([0, 1, 2], [10, 20, 15], color="#0072B2", label="Control (Blue)")       # Blue (#0072B2)
+ax.plot([0, 1, 2], [5, 12, 18], color="#D55E00", label="Treated (Vermilion)")  # Vermilion (#D55E00)
 ax.legend(frameon=False)
 plt.savefig("figure1.pdf")`;
   } else if (activeSnippetTab === "r_ggplot2") {
-    codeBlock.textContent = `# R ggplot2 theme for ${data.metadata.journal_name} with Oxide Moss palette
+    codeBlock.textContent = `# R ggplot2 theme for ${data.metadata.journal_name}
+# Using Nature-approved Okabe-Ito Color-Blind Safe Palette
 library(ggplot2)
 
-palette_oxide_moss <- c("#C65D2E", "#687A45", "#292724", "#9E4521", "#4D5C33")
+palette_nature <- c(
+  "#000000",  # Black
+  "#E69F00",  # Orange
+  "#56B4E9",  # Sky Blue
+  "#009E73",  # Bluish Green
+  "#F0E442",  # Yellow
+  "#0072B2",  # Blue
+  "#D55E00",  # Vermilion
+  "#CC79A7"   # Reddish Purple
+)
 
 theme_nature <- function() {
   theme_classic(base_size = ${data.figure_typography.font_sizes.tick_label.size}, base_family = "${data.figure_typography.family_preferences.fallback[0]}") +
@@ -600,7 +613,7 @@ theme_nature <- function() {
   \\centering
   % Sized exactly to single column width (89mm)
   \\includegraphics[width=89mm]{figures/figure1.pdf}
-  \\caption{\\textbf{a}, Experimental kinetics using Oxide Moss styling. \\textbf{b}, Quantitative response.}
+  \\caption{\\textbf{a}, Experimental kinetics using Nature compliant vector styling. \\textbf{b}, Quantitative dose-response.}
   \\label{fig:main_result}
 \\end{figure}`;
   } else if (activeSnippetTab === "yaml") {

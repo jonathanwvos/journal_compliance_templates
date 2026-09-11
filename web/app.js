@@ -387,12 +387,14 @@ function renderSwatches() {
     const card = document.createElement("div");
     card.className = "swatch-card";
 
-    const simColor = simulateCVD(c.hex, currentCvdMode);
-    const formattedVal = formatColor(c.hex, activeColorFormat);
+    // Calculate effective color adjusted for active CVD simulation mode
+    const effectiveHex = simulateCVD(c.hex, currentCvdMode);
+    const formattedVal = formatColor(effectiveHex, activeColorFormat);
+    const isSimulated = currentCvdMode !== "normal";
 
     card.innerHTML = `
-      <div class="swatch-color-box" style="background-color: ${simColor};">
-        ${currentCvdMode !== 'normal' ? '<span>CVD</span>' : ''}
+      <div class="swatch-color-box" style="background-color: ${effectiveHex};">
+        ${isSimulated ? `<span style="font-size:0.6rem; text-transform:uppercase; letter-spacing:0.04em;">${currentCvdMode.slice(0, 5)}</span>` : ''}
       </div>
       <div class="swatch-meta">
         <span class="swatch-name">${c.name}</span>
@@ -401,8 +403,12 @@ function renderSwatches() {
       <span class="swatch-copy-hint">Click to copy</span>
     `;
 
+    const copyMsg = isSimulated
+      ? `Copied ${c.name} (${currentCvdMode}): ${formattedVal}`
+      : `Copied ${c.name}: ${formattedVal}`;
+
     card.addEventListener("click", () => {
-      copyToClipboard(formattedVal, `Copied ${c.name}: ${formattedVal}`, card);
+      copyToClipboard(formattedVal, copyMsg, card);
     });
 
     container.appendChild(card);
@@ -497,34 +503,65 @@ function fallbackCopyToClipboard(text, onSuccess) {
 }
 
 // ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// Bulk Palette Export Handlers (Annotated with Color Names & Values)
+// Bulk Palette Export Handlers (Responsive to CVD Simulation)
 // ---------------------------------------------------------------------------
 
 function copyPaletteAsHexArray(btn = null) {
   const swatches = PALETTES[activePalette] || PALETTES["Okabe-Ito"];
-  const lines = swatches.map((s) => `  "${s.hex}",  // ${s.name}`);
-  const output = `// ${activePalette} Palette (Accessible Scientific Standard)\n[\n${lines.join("\n")}\n]`;
-  copyToClipboard(output, `Copied ${activePalette} as annotated HEX array!`, btn);
+  const isSimulated = currentCvdMode !== "normal";
+  const header = isSimulated
+    ? `// ${activePalette} Palette - Simulated for ${currentCvdMode.toUpperCase()}\n`
+    : `// ${activePalette} Palette (Accessible Scientific Standard)\n`;
+  const lines = swatches.map((s) => {
+    const effectiveHex = simulateCVD(s.hex, currentCvdMode);
+    const note = isSimulated ? `// ${s.name} (simulated from ${s.hex})` : `// ${s.name}`;
+    return `  "${effectiveHex}",  ${note}`;
+  });
+  const output = `${header}[\n${lines.join("\n")}\n]`;
+  const toast = isSimulated
+    ? `Copied ${activePalette} (${currentCvdMode}) as HEX array!`
+    : `Copied ${activePalette} as annotated HEX array!`;
+  copyToClipboard(output, toast, btn);
 }
 
 function copyPaletteForPython(btn = null) {
   const swatches = PALETTES[activePalette] || PALETTES["Okabe-Ito"];
+  const isSimulated = currentCvdMode !== "normal";
+  const header = isSimulated
+    ? `# ${activePalette} Palette - Simulated for ${currentCvdMode.toUpperCase()} (Matplotlib RGB 0.0-1.0)\n`
+    : `# ${activePalette} Color-Blind Safe Palette for Matplotlib\n# Normalized RGB (0.0 to 1.0) with color annotations\n`;
   const lines = swatches.map((s) => {
-    const { r, g, b } = hexToRgb(s.hex);
+    const effectiveHex = simulateCVD(s.hex, currentCvdMode);
+    const { r, g, b } = hexToRgb(effectiveHex);
     const tuple = `(${(r / 255).toFixed(3)}, ${(g / 255).toFixed(3)}, ${(b / 255).toFixed(3)})`;
-    return `    ${tuple},  # ${s.name} (${s.hex})`;
+    const note = isSimulated ? `# ${s.name} (${effectiveHex}, orig: ${s.hex})` : `# ${s.name} (${effectiveHex})`;
+    return `    ${tuple},  ${note}`;
   });
-  const output = `# ${activePalette} Color-Blind Safe Palette for Matplotlib\n# Normalized RGB (0.0 to 1.0) with color annotations\ncolors = [\n${lines.join("\n")}\n]`;
-  copyToClipboard(output, `Copied ${activePalette} for Python / Matplotlib!`, btn);
+  const output = `${header}colors = [\n${lines.join("\n")}\n]`;
+  const toast = isSimulated
+    ? `Copied ${activePalette} (${currentCvdMode}) for Python!`
+    : `Copied ${activePalette} for Python / Matplotlib!`;
+  copyToClipboard(output, toast, btn);
 }
 
 function copyPaletteForR(btn = null) {
   const swatches = PALETTES[activePalette] || PALETTES["Okabe-Ito"];
-  const varName = `palette_${activePalette.toLowerCase().replace(/[^a-z0-9]/g, "_")}`;
-  const lines = swatches.map((s) => `  "${s.hex}",  # ${s.name}`);
-  const output = `# ${activePalette} Color-Blind Safe Palette for R (ggplot2)\n${varName} <- c(\n${lines.join("\n")}\n)`;
-  copyToClipboard(output, `Copied ${activePalette} for R (ggplot2)!`, btn);
+  const isSimulated = currentCvdMode !== "normal";
+  const varSuffix = isSimulated ? `_${currentCvdMode}` : "";
+  const varName = `palette_${activePalette.toLowerCase().replace(/[^a-z0-9]/g, "_")}${varSuffix}`;
+  const header = isSimulated
+    ? `# ${activePalette} Palette - Simulated for ${currentCvdMode.toUpperCase()} for R (ggplot2)\n`
+    : `# ${activePalette} Color-Blind Safe Palette for R (ggplot2)\n`;
+  const lines = swatches.map((s) => {
+    const effectiveHex = simulateCVD(s.hex, currentCvdMode);
+    const note = isSimulated ? `# ${s.name} (orig: ${s.hex})` : `# ${s.name}`;
+    return `  "${effectiveHex}",  ${note}`;
+  });
+  const output = `${header}${varName} <- c(\n${lines.join("\n")}\n)`;
+  const toast = isSimulated
+    ? `Copied ${activePalette} (${currentCvdMode}) for R!`
+    : `Copied ${activePalette} for R (ggplot2)!`;
+  copyToClipboard(output, toast, btn);
 }
 
 // ---------------------------------------------------------------------------

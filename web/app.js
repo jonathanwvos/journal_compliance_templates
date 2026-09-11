@@ -116,21 +116,8 @@ const FALLBACK_JOURNAL = {
   }
 };
 
-// Curated Accessible Scientific Palettes
+// Curated Accessible Scientific Palettes (Universal Standards)
 const PALETTES = {
-  "Oxide Moss": [
-    { name: "Oxide Primary", hex: "#C65D2E" },
-    { name: "Oxide Dark", hex: "#9E4521" },
-    { name: "Oxide Light", hex: "#DD8A62" },
-    { name: "Moss Primary", hex: "#687A45" },
-    { name: "Moss Dark", hex: "#4D5C33" },
-    { name: "Moss Light", hex: "#8D9B6C" },
-    { name: "Charcoal Primary", hex: "#292724" },
-    { name: "Charcoal Soft", hex: "#45413D" },
-    { name: "Charcoal Muted", hex: "#6B6660" },
-    { name: "Highlight Warm", hex: "#F3DED4" },
-    { name: "Highlight Cool", hex: "#E2E7D8" }
-  ],
   "Okabe-Ito": [
     { name: "Black", hex: "#000000" },
     { name: "Orange", hex: "#E69F00" },
@@ -164,7 +151,7 @@ let currentJournalKey = "nature";
 let currentJournalData = FALLBACK_JOURNAL.nature;
 let currentColumnMode = "single_column";
 let activeSnippetTab = "matplotlib";
-let activePalette = "Oxide Moss";
+let activePalette = "Okabe-Ito";
 let activeColorFormat = "hex"; // 'hex', 'rgb255', 'rgb_norm', 'hsv', 'cmyk'
 let currentCvdMode = "normal";
 
@@ -630,4 +617,21 @@ function setupEventListeners() {
     const text = document.getElementById("code-display").textContent;
     copyToClipboard(text, "Copied code snippet!");
   });
+
+  // Citation copy buttons
+  const copyApaBtn = document.getElementById("copy-apa-btn");
+  if (copyApaBtn) {
+    copyApaBtn.addEventListener("click", () => {
+      const text = document.getElementById("apa-text").textContent.trim();
+      copyToClipboard(text, "Copied APA citation!");
+    });
+  }
+
+  const copyBibtexBtn = document.getElementById("copy-bibtex-btn");
+  if (copyBibtexBtn) {
+    copyBibtexBtn.addEventListener("click", () => {
+      const text = document.getElementById("bibtex-text").textContent.trim();
+      copyToClipboard(text, "Copied BibTeX entry!");
+    });
+  }
 }

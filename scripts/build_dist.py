@@ -79,9 +79,25 @@ def main():
     with open(web_out, "w", encoding="utf-8") as f:
         json.dump(all_journals, f, indent=2)
 
+    # Sync schema and docs into web/ so local static servers don't 404
+    import shutil
+    web_schemas = REPO_ROOT / "web" / "schemas"
+    web_docs = REPO_ROOT / "web" / "docs"
+    web_schemas.mkdir(parents=True, exist_ok=True)
+    web_docs.mkdir(parents=True, exist_ok=True)
+
+    shutil.copy2(SCHEMA_PATH, web_schemas / "compliance_schema_v1.json")
+    if (REPO_ROOT / "project_plan.md").exists():
+        shutil.copy2(REPO_ROOT / "project_plan.md", web_docs / "project_plan.md")
+    if (REPO_ROOT / "LICENSE").exists():
+        shutil.copy2(REPO_ROOT / "LICENSE", web_docs / "LICENSE")
+    if (REPO_ROOT / "CITATION.cff").exists():
+        shutil.copy2(REPO_ROOT / "CITATION.cff", web_docs / "CITATION.cff")
+
     print(f"\nAggregated manifest written to:")
     print(f"  - {all_out}")
     print(f"  - {web_out}")
+    print(f"Synced web schemas to {web_schemas} and docs to {web_docs}")
 
     if has_errors:
         sys.exit(1)

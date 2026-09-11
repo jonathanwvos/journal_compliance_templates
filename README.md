@@ -90,7 +90,27 @@ Then visit `http://localhost:8000`.
 
 ---
 
+## Citation
+
+If you use these compliance templates or framework in your research, academic publications, or plotting workflows, please cite this project as:
+
+### APA
+> Vos, J. W. (2026). *Journal Compliance Templates: Machine-Readable Formatting Specifications for Scientific Publishing*. GitHub. https://github.com/jonathanwvos/journal_compliance_templates
+
+### BibTeX
+```bibtex
+@software{vos2026journalcompliance,
+  author       = {Vos, Jonathan W.},
+  title        = {Journal Compliance Templates: Machine-Readable Formatting Specifications for Scientific Publishing},
+  year         = {2026},
+  publisher    = {GitHub},
+  url          = {https://github.com/jonathanwvos/journal_compliance_templates}
+}
+```
+
+---
+
 ## License & Contributing
 
-Contributions are welcome! See `project_plan.md` for our roadmap and schema standards.
+Contributions are welcome! See [`project_plan.md`](project_plan.md) for our roadmap and schema standards.
 Licensed under the [MIT License](LICENSE).

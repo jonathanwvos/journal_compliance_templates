@@ -29,8 +29,9 @@
 
       <nav class="nav-links">
         <a href="https://github.com/jonathanwvos/journal_compliance_templates" target="_blank" class="nav-link">GitHub</a>
-        <a href="../schemas/compliance_schema_v1.json" target="_blank" class="nav-link">Schema</a>
-        <a href="../project_plan.md" target="_blank" class="nav-link">Roadmap</a>
+        <a href="schemas/compliance_schema_v1.json" target="_blank" class="nav-link">Schema</a>
+        <a href="docs/project_plan.md" target="_blank" class="nav-link">Roadmap</a>
+        <a href="#citation-section" class="nav-link">Cite</a>
       </nav>
     </div>
   </header>
@@ -178,12 +179,11 @@
 
       <!-- Palette Controls Toolbar -->
       <div class="palette-toolbar">
-        <!-- Palette Tabs -->
+        <!-- Palette Tabs (Accessible Scientific Standards) -->
         <div class="palette-tabs">
-          <button class="btn-pill palette-tab-btn active" data-palette="Oxide Moss">🌿 Oxide Moss</button>
-          <button class="btn-pill palette-tab-btn" data-palette="Okabe-Ito">👓 Okabe-Ito</button>
-          <button class="btn-pill palette-tab-btn" data-palette="Viridis">🌊 Viridis</button>
-          <button class="btn-pill palette-tab-btn" data-palette="Tol Bright">🎨 Tol Bright</button>
+          <button class="btn-pill palette-tab-btn active" data-palette="Okabe-Ito">👓 Okabe-Ito (Nature Standard)</button>
+          <button class="btn-pill palette-tab-btn" data-palette="Viridis">🌊 Viridis (Perceptually Uniform)</button>
+          <button class="btn-pill palette-tab-btn" data-palette="Tol Bright">🎨 Tol Bright (High Contrast)</button>
         </div>
 
         <!-- Format Selector -->
@@ -259,6 +259,44 @@
       <div class="code-container">
         <button id="copy-code-btn" class="copy-btn">Copy Code</button>
         <pre><code id="code-display" class="code-block">Loading snippet...</code></pre>
+      </div>
+    </section>
+
+    <!-- Citation Section -->
+    <section id="citation-section" class="card" style="margin-bottom: 2rem;">
+      <div class="card-title">
+        <span>📖 Citation</span>
+      </div>
+      <p class="card-desc">
+        If you use this framework, compliance templates, or code presets in your published scientific research, please cite this project:
+      </p>
+      
+      <div style="display: flex; flex-direction: column; gap: 1rem;">
+        <!-- APA Citation -->
+        <div style="background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1rem; position: relative;">
+          <button id="copy-apa-btn" class="copy-btn" style="top: 0.75rem; right: 0.75rem;">Copy APA</button>
+          <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.35rem;">APA Format</div>
+          <p id="apa-text" style="font-size: 0.9rem; color: var(--text-primary); padding-right: 5.5rem; line-height: 1.5;">
+            Vos, J. W. (2026). <em>Journal Compliance Templates: Machine-Readable Formatting Specifications for Scientific Publishing</em>. GitHub. https://github.com/jonathanwvos/journal_compliance_templates
+          </p>
+        </div>
+
+        <!-- BibTeX Citation -->
+        <div class="code-container" style="position: relative;">
+          <button id="copy-bibtex-btn" class="copy-btn">Copy BibTeX</button>
+          <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem;">BibTeX Entry</div>
+          <pre><code id="bibtex-text" class="code-block">@software{vos2026journalcompliance,
+  author       = {Vos, Jonathan W.},
+  title        = {Journal Compliance Templates: Machine-Readable Formatting Specifications for Scientific Publishing},
+  year         = {2026},
+  publisher    = {GitHub},
+  url          = {https://github.com/jonathanwvos/journal_compliance_templates}
+}</code></pre>
+        </div>
+
+        <div style="font-size: 0.85rem; color: var(--text-secondary);">
+          Also available: <a href="docs/CITATION.cff" target="_blank" style="color: var(--accent-primary); font-weight: 600;">Download CITATION.cff</a> &bull; <a href="docs/LICENSE" target="_blank" style="color: var(--accent-primary); font-weight: 600;">MIT License</a> &bull; <a href="https://github.com/jonathanwvos/journal_compliance_templates" target="_blank" style="color: var(--accent-primary); font-weight: 600;">GitHub Repository</a>
+        </div>
       </div>
     </section>
 

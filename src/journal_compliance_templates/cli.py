@@ -72,6 +72,64 @@ def run_serve(port=8000, open_browser=True):
         return 0
 
 
+def run_export_figures(journal=None, output_dir=None, palette="Okabe-Ito", fmt="all"):
+    """Export figure templates (.mplstyle, .R, .svg) to target directory."""
+    from journal_compliance_templates import load_template, list_templates, TEMPLATES_DIR
+    from journal_compliance_templates.exporters.figures import (
+        save_mplstyle,
+        save_r_theme,
+        save_svg_grid,
+        generate_all_figure_assets,
+    )
+
+    out_path = Path(output_dir) if output_dir else (DIST_DIR / "figures")
+    out_path.mkdir(parents=True, exist_ok=True)
+
+    print(f"=== Exporting Figure Templates (Palette: {palette}) ===")
+    print(f"Destination: {out_path.resolve()}\n")
+
+    if not journal or journal == "all":
+        res = generate_all_figure_assets(TEMPLATES_DIR, out_path, palette_name=palette)
+        print(f"Generated {len(res['matplotlib'])} Matplotlib styles in {out_path / 'matplotlib'}")
+        print(f"Generated {len(res['r'])} R themes in {out_path / 'r'}")
+        print(f"Generated {len(res['svg'])} SVG grids in {out_path / 'svg'}")
+        return 0
+
+    try:
+        data = load_template(journal)
+    except FileNotFoundError as e:
+        print(f"Error: {e}", file=sys.stderr)
+        return 1
+
+    slug = journal.lower()
+    exported = []
+
+    if fmt in ("mpl", "all"):
+        mpl_dir = out_path / "matplotlib"
+        mpl_dir.mkdir(parents=True, exist_ok=True)
+        p = save_mplstyle(data, mpl_dir / f"{slug}.mplstyle", palette_name=palette)
+        exported.append(p)
+
+    if fmt in ("r", "all"):
+        r_dir = out_path / "r"
+        r_dir.mkdir(parents=True, exist_ok=True)
+        p = save_r_theme(data, r_dir / f"theme_{slug}.R", palette_name=palette)
+        exported.append(p)
+
+    if fmt in ("svg", "all"):
+        svg_dir = out_path / "svg"
+        svg_dir.mkdir(parents=True, exist_ok=True)
+        col_widths = data.get("figure_geometry", {}).get("column_widths", {})
+        for col_name in col_widths.keys():
+            p = save_svg_grid(data, svg_dir / f"{slug}_{col_name}.svg", column=col_name, palette_name=palette)
+            exported.append(p)
+
+    for item in exported:
+        print(f"  -> Created: {item.relative_to(out_path.parent if out_path.parent.exists() else out_path)}")
+    print(f"\nSuccessfully exported {len(exported)} file(s) for {journal}.")
+    return 0
+
+
 def main():
     parser = argparse.ArgumentParser(
         prog="jct",
@@ -93,6 +151,13 @@ def main():
     # List command
     subparsers.add_parser("list", help="List all available journal compliance templates")
 
+    # Export figures command
+    export_parser = subparsers.add_parser("export-figures", help="Export Matplotlib, R, and SVG figure templates")
+    export_parser.add_argument("--journal", "-j", type=str, default="all", help="Journal key (e.g. nature, ieee, acs) or 'all'")
+    export_parser.add_argument("--output-dir", "-o", type=str, default=None, help="Output directory (default: dist/figures)")
+    export_parser.add_argument("--palette", type=str, default="Okabe-Ito", help="Color palette (Okabe-Ito, Viridis, Tol-Bright)")
+    export_parser.add_argument("--format", "-f", choices=["all", "mpl", "r", "svg"], default="all", help="Format to export")
+
     args = parser.parse_args()
 
     if args.command == "serve":
@@ -108,6 +173,8 @@ def main():
         for t in templates:
             print(f"  - {t}")
         sys.exit(0)
+    elif args.command == "export-figures":
+        sys.exit(run_export_figures(journal=args.journal, output_dir=args.output_dir, palette=args.palette, fmt=args.format))
     else:
         parser.print_help()
         sys.exit(0)

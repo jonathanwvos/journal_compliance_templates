@@ -1089,6 +1089,64 @@ function renderJournalView() {
 
   // Code Snippet
   renderCodeSnippet();
+
+  // Figure Exporter Downloads
+  renderFigureDownloads();
+}
+
+function renderFigureDownloads() {
+  const data = currentJournalData;
+  const journalKey = currentJournalKey;
+
+  // Update Section Header
+  const nameEl = document.getElementById("fig-dl-journal-name");
+  if (nameEl) nameEl.textContent = data.metadata.journal_name;
+
+  // 1. Matplotlib Stylesheet Download
+  const mplBtn = document.getElementById("btn-dl-mpl");
+  const mplName = document.getElementById("dl-mpl-name");
+  const mplLabel = document.getElementById("dl-mpl-label");
+  const mplFilename = `${journalKey}.mplstyle`;
+  if (mplBtn) {
+    mplBtn.href = `downloads/figures/matplotlib/${mplFilename}`;
+    mplBtn.setAttribute("download", mplFilename);
+  }
+  if (mplName) mplName.textContent = mplFilename;
+  if (mplLabel) mplLabel.textContent = mplFilename;
+
+  // 2. R ggplot2 Theme Script Download
+  const rBtn = document.getElementById("btn-dl-r");
+  const rName = document.getElementById("dl-r-name");
+  const rLabel = document.getElementById("dl-r-label");
+  const rFilename = `theme_${journalKey}.R`;
+  if (rBtn) {
+    rBtn.href = `downloads/figures/r/${rFilename}`;
+    rBtn.setAttribute("download", rFilename);
+  }
+  if (rName) rName.textContent = rFilename;
+  if (rLabel) rLabel.textContent = rFilename;
+
+  // 3. Vector SVG Grid Download Buttons
+  const svgGroup = document.getElementById("svg-dl-button-group");
+  if (svgGroup) {
+    svgGroup.innerHTML = "";
+    const colWidths = data.figure_geometry.column_widths;
+    for (const [colKey, colInfo] of Object.entries(colWidths)) {
+      const colLabel =
+        colKey === "single_column"
+          ? "1-Column"
+          : colKey === "one_and_half_column"
+          ? "1.5-Column"
+          : "2-Column";
+      const svgFilename = `${journalKey}_${colKey}.svg`;
+      const a = document.createElement("a");
+      a.className = "svg-dl-btn";
+      a.href = `downloads/figures/svg/${svgFilename}`;
+      a.setAttribute("download", svgFilename);
+      a.innerHTML = `<span>📐 ${colLabel} (${colInfo.width} mm)</span> <span style="color:var(--accent-primary); font-size:0.75rem; font-weight:700;">⬇️ SVG</span>`;
+      svgGroup.appendChild(a);
+    }
+  }
 }
 
 function updateColumnButtons() {

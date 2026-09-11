@@ -275,6 +275,63 @@
       </div>
     </section>
 
+    <!-- Figure Plotting Exporters & Template Downloads (Milestone 3) -->
+    <section class="card" style="margin-bottom: 2rem;">
+      <div class="card-title">
+        <span>📦 Production Figure Assets & Exporter Downloads</span>
+      </div>
+      <p class="card-desc">
+        Pre-configured plotting stylesheets, R themes, and vector grid canvases built directly from official guidelines for <strong id="fig-dl-journal-name" style="color:var(--accent-primary);">Nature</strong>:
+      </p>
+
+      <div class="downloads-grid">
+        <!-- Matplotlib .mplstyle Card -->
+        <div class="download-item-card">
+          <div class="dl-card-header">
+            <div class="dl-card-icon">🐍</div>
+            <div class="dl-card-content">
+              <div class="dl-card-title">Matplotlib Stylesheet</div>
+              <div class="dl-card-subtitle"><code>.mplstyle</code> &bull; Colors, DPI & line weights</div>
+              <p class="dl-card-text">Usage: <code>plt.style.use('<span id="dl-mpl-name">nature.mplstyle</span>')</code></p>
+            </div>
+          </div>
+          <a id="btn-dl-mpl" href="downloads/figures/matplotlib/nature.mplstyle" download="nature.mplstyle" class="btn-pill primary-action dl-btn">
+            ⬇️ Download <span id="dl-mpl-label">nature.mplstyle</span>
+          </a>
+        </div>
+
+        <!-- R ggplot2 Theme Card -->
+        <div class="download-item-card">
+          <div class="dl-card-header">
+            <div class="dl-card-icon">📊</div>
+            <div class="dl-card-content">
+              <div class="dl-card-title">R ggplot2 Theme Script</div>
+              <div class="dl-card-subtitle"><code>.R</code> &bull; <code>theme_*()</code>, scales & <code>ggsave_*()</code></div>
+              <p class="dl-card-text">Usage: <code>source('<span id="dl-r-name">theme_nature.R</span>')</code></p>
+            </div>
+          </div>
+          <a id="btn-dl-r" href="downloads/figures/r/theme_nature.R" download="theme_nature.R" class="btn-pill primary-action dl-btn">
+            ⬇️ Download <span id="dl-r-label">theme_nature.R</span>
+          </a>
+        </div>
+
+        <!-- Vector SVG Grids Card -->
+        <div class="download-item-card">
+          <div class="dl-card-header">
+            <div class="dl-card-icon">📐</div>
+            <div class="dl-card-content">
+              <div class="dl-card-title">Vector SVG Canvas & Guides</div>
+              <div class="dl-card-subtitle"><code>.svg</code> &bull; Inkscape & Illustrator</div>
+              <p class="dl-card-text">Locked Layer 1: margins & swatches. Unlocked Layer 2: artwork.</p>
+            </div>
+          </div>
+          <div class="svg-dl-buttons" id="svg-dl-button-group">
+            <!-- Dynamically populated buttons for each column width -->
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Citation Section -->
     <section id="citation-section" class="card" style="margin-bottom: 2rem;">
       <div class="card-title">

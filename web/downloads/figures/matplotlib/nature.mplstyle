@@ -1,0 +1,91 @@
+# ==============================================================================
+# Matplotlib Stylesheet: Nature
+# Publisher: Nature Portfolio (Springer Nature)
+# Guidelines: https://www.nature.com/nature/for-authors/final-submission
+# Last Verified: 2026-09-11
+# ==============================================================================
+# Sizing Reference:
+#   Single column width: 89.0 mm (3.50 in)
+#   Double column width: 180.0 mm (7.09 in)
+#   Max figure height:   225.0 mm (8.86 in)
+# ==============================================================================
+
+# Font Configuration
+font.family: sans-serif
+font.sans-serif: Helvetica, Arial, DejaVu Sans
+font.size: 6.0
+
+# Axes & Titles
+axes.labelsize: 7.0
+axes.labelweight: normal
+axes.titlesize: 8.0
+axes.titleweight: bold
+axes.titlepad: 6.0
+axes.labelpad: 4.0
+
+# Line Weights & Spines
+axes.linewidth: 0.5
+axes.spines.top: False
+axes.spines.right: False
+axes.spines.left: True
+axes.spines.bottom: True
+
+# Ticks Configuration
+xtick.top: False
+xtick.bottom: True
+xtick.direction: out
+xtick.major.size: 3.5
+xtick.major.width: 0.5
+xtick.minor.size: 2.0
+xtick.minor.width: 0.25
+xtick.labelsize: 6.0
+
+ytick.right: False
+ytick.left: True
+ytick.direction: out
+ytick.major.size: 3.5
+ytick.major.width: 0.5
+ytick.minor.size: 2.0
+ytick.minor.width: 0.25
+ytick.labelsize: 6.0
+
+# Plot Lines & Markers
+lines.linewidth: 1.0
+lines.markersize: 4.5
+lines.markeredgewidth: 0.5
+patch.linewidth: 0.5
+
+# Grid Lines
+grid.linewidth: 0.25
+grid.linestyle: --
+grid.alpha: 0.6
+
+# Legend Configuration
+legend.fontsize: 6.0
+legend.title_fontsize: 6.5
+legend.frameon: False
+legend.borderaxespad: 0.5
+legend.handlelength: 1.5
+legend.handleheight: 0.7
+legend.handletextpad: 0.5
+
+# Color Palette (Okabe-Ito - Color-Blind Safe)
+axes.prop_cycle: cycler('color', ['0072B2', 'D55E00', '009E73', 'F0E442', '56B4E9', 'E69F00', 'CC79A7', '000000'])
+
+# Figure Canvas & DPI
+figure.dpi: 300
+figure.autolayout: False
+figure.titlesize: 8.0
+figure.titleweight: bold
+
+# Production Export Settings (Vector & TrueType embedding)
+savefig.dpi: 1000
+savefig.format: pdf
+savefig.bbox: tight
+savefig.pad_inches: 0.02
+savefig.transparent: False
+
+# Embed TrueType / PostScript fonts directly (Do NOT rasterize to Type 3 bitmap)
+pdf.fonttype: 42
+ps.fonttype: 42
+svg.fonttype: path

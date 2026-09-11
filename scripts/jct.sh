@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # ==============================================================================
 # Universal Journal Compliance CLI Runner (Linux & macOS)
-# Usage: ./scripts/jct.sh [serve|build|test|list]
+# Usage: ./scripts/jct.sh [serve|build|test|list|export-figures]
 # ==============================================================================
 set -e
 

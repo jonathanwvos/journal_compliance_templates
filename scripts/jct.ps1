@@ -1,6 +1,6 @@
 # ==============================================================================
 # Universal Journal Compliance CLI Runner (PowerShell)
-# Usage: .\scripts\jct.ps1 [serve|build|test|list]
+# Usage: .\scripts\jct.ps1 [serve|build|test|list|export-figures]
 # ==============================================================================
 $ErrorActionPreference = "Stop"
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path

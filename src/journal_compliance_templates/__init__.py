@@ -28,7 +28,7 @@ def load_template(journal: str) -> Dict[str, Any]:
     """Load a journal template by name (e.g., 'nature')."""
     target = None
     for p in TEMPLATES_DIR.glob("**/*.yaml"):
-        if p.stem == journal:
+        if p.stem == journal or p.parent.name == journal:
             target = p
             break
 

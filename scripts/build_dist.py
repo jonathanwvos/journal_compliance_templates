@@ -8,14 +8,19 @@ import json
 import os
 import sys
 from pathlib import Path
+import shutil
 import yaml
 from jsonschema import validate, ValidationError
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT / "src"))
+
 SCHEMA_PATH = REPO_ROOT / "schemas" / "compliance_schema_v1.json"
 TEMPLATES_DIR = REPO_ROOT / "templates"
 DIST_DIR = REPO_ROOT / "dist" / "json"
+DIST_FIGURES_DIR = REPO_ROOT / "dist" / "figures"
 WEB_DATA_DIR = REPO_ROOT / "web" / "data"
+WEB_FIGURES_DIR = REPO_ROOT / "web" / "downloads" / "figures"
 
 
 def load_json(filepath: Path) -> dict:
@@ -82,8 +87,21 @@ def main():
     with open(web_out, "w", encoding="utf-8") as f:
         json.dump(all_journals, f, indent=2)
 
+    # Generate Figure Plotting Exporters & Tooling Bridges (Milestone 3)
+    from journal_compliance_templates.exporters.figures import generate_all_figure_assets
+    print("\nGenerating figure plotting assets (Matplotlib, R ggplot2, SVG grids)...")
+    fig_assets = generate_all_figure_assets(TEMPLATES_DIR, DIST_FIGURES_DIR)
+    print(f"  - Matplotlib stylesheets: {len(fig_assets['matplotlib'])} files")
+    print(f"  - R ggplot2 themes:       {len(fig_assets['r'])} files")
+    print(f"  - Vector SVG grid guides: {len(fig_assets['svg'])} files")
+
+    # Sync figures into web/downloads/figures/ for web UI 1-click downloads
+    if WEB_FIGURES_DIR.exists():
+        shutil.rmtree(WEB_FIGURES_DIR)
+    shutil.copytree(DIST_FIGURES_DIR, WEB_FIGURES_DIR)
+    print(f"Synced figure downloads to {WEB_FIGURES_DIR}")
+
     # Sync schema and docs into web/ so local static servers don't 404
-    import shutil
     web_schemas = REPO_ROOT / "web" / "schemas"
     web_docs = REPO_ROOT / "web" / "docs"
     web_schemas.mkdir(parents=True, exist_ok=True)

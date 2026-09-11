@@ -1,7 +1,7 @@
 @echo off
 REM ==============================================================================
 REM Universal Journal Compliance CLI Runner (Windows CMD)
-REM Usage: scripts\jct.bat [serve|build|test|list]
+REM Usage: scripts\jct.bat [serve|build|test|list|export-figures]
 REM ==============================================================================
 setlocal
 

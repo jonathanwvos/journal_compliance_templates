@@ -50,16 +50,27 @@ Zero-configuration scripts are provided for **Linux**, **macOS**, and **Windows*
 | **Start Server** | `./scripts/serve.sh` | `scripts\serve.bat` | `scripts\serve.ps1` | `uv run jct serve` |
 | **Build Assets** | `./scripts/build.sh` | `scripts\build.bat` | `scripts\build.ps1` | `uv run jct build` |
 | **Run Tests** | `./scripts/test.sh` | `scripts\test.bat` | `scripts\test.ps1` | `uv run jct test` |
+| **Export Figures** | `./scripts/jct.sh export-figures` | `scripts\jct.bat export-figures` | `scripts\jct.ps1 export-figures` | `uv run jct export-figures` |
 | **CLI Dispatcher** | `./scripts/jct.sh [cmd]` | `scripts\jct.bat [cmd]` | `scripts\jct.ps1 [cmd]` | `uv run jct [cmd]` |
 
-### 3. Interactive Web Documentation Explorer
+### 3. Figure Plotting Exporters & Tooling Bridges
+Generate publication-ready figure stylesheets and canvases:
+```bash
+# Export all figure assets (Matplotlib .mplstyle, R themes, SVG grids)
+uv run jct export-figures
+
+# Export only for a specific journal with custom palette
+uv run jct export-figures --journal nature --palette Okabe-Ito --format mpl
+```
+
+### 4. Interactive Web Documentation Explorer
 Run the server script or CLI:
 ```bash
 ./scripts/serve.sh
 # or on Windows:
 # scripts\serve.bat
 ```
-Then navigate to `http://localhost:8000` (or `http://localhost:8080`) to interactively explore templates, test CVD simulations, copy palette formats, and export snippets.
+Then navigate to `http://localhost:8000` to interactively explore templates, test CVD simulations, copy palette formats, and 1-click download pre-built `.mplstyle`, R themes, and SVG grids.
 
 ---
 
@@ -74,14 +85,20 @@ Then navigate to `http://localhost:8000` (or `http://localhost:8080`) to interac
 │   ├── acs/                         # ACS journal templates
 │   ├── science/                     # Science / AAAS templates
 │   └── elsevier/                    # Cell Press / Elsevier templates
+├── src/journal_compliance_templates/
+│   ├── cli.py                       # Universal CLI tool (jct)
+│   └── exporters/
+│       └── figures/                 # Matplotlib, R, & SVG generators
 ├── scripts/
-│   └── build_dist.py                # YAML -> JSON compiler and validator
+│   └── build_dist.py                # YAML -> JSON & figure asset compiler
 ├── web/
 │   ├── index.html                   # Interactive Template Explorer UI
 │   ├── styles.css                   # Modern academic interface styling
-│   └── app.js                       # Dynamic rendering & snippet generation
+│   ├── app.js                       # Dynamic rendering & snippet generation
+│   └── downloads/figures/           # Precompiled .mplstyle, .R, and .svg assets
 ├── tests/
-│   └── test_schema_validity.py      # Automated schema conformance tests
+│   ├── test_schema_validity.py      # Automated schema conformance tests
+│   └── test_figure_exporters.py     # Style loading & figure rendering tests
 ├── project_plan.md                  # Comprehensive project plan & roadmap
 └── pyproject.toml
 ```

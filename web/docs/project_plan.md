@@ -338,19 +338,22 @@ flowchart TD
 
 ### Detailed Milestones:
 
-- **Milestone 1: Schema & HTML Viewer Scaffold (Sprint 1)**
+- **Milestone 1: Schema & HTML Viewer Scaffold (Sprint 1)** ✅ *COMPLETED*
   - Establish `schemas/compliance_schema_v1.json` encompassing figure geometry, typography, line weights, color, manuscript formatting rules, and AI usage policies.
   - Build the interactive `web/index.html` viewer with live visual column, typography, and AI policy badges.
   - Set up automated CI testing for schema conformity.
 
-- **Milestone 2: Tier 1 Template Authoring (Sprint 2)**
+- **Milestone 2: Tier 1 Template Authoring (Sprint 2)** ✅ *COMPLETED*
   - Author audited, verified YAML files for Nature, IEEE, ACS, Science, and Cell/Elsevier with direct citations, official URLs, and specific AI policy declarations.
   - Generate corresponding JSON files in `dist/`.
 
-- **Milestone 3: Figure Plotting Exporters (Sprint 3)**
-  - Implement Matplotlib `.mplstyle` generator.
-  - Implement `ggplot2` R theme generator.
-  - Generate Inkscape/Illustrator blank `.svg` templates with exact column boundaries.
+- **Milestone 3: Figure Plotting Exporters (Sprint 3)** ✅ *COMPLETED*
+  - Matplotlib `.mplstyle` generator (`mplstyle_generator.py`) with DPI, font embedding (type 42), line weights, and accessible color cycler.
+  - R ggplot2 theme generator (`r_theme_generator.py`) providing `theme_<journal>()`, color/fill scales, and `ggsave_<journal>()` helper.
+  - Inkscape & Illustrator vector SVG grid generator (`svg_grid_generator.py`) with locked guide layers, dimension limits, gutters, typographical ladders, and embedded swatches.
+  - Unified CLI export command `jct export-figures` supporting format filtering and custom accessible palettes.
+  - Automated test suite `tests/test_figure_exporters.py` (33 total tests passing).
+  - Interactive Web Viewer integration with 1-click download cards for `.mplstyle`, `.R`, and `.svg` canvases.
 
 - **Milestone 4: Pre-Populated Manuscript Generators (Sprint 4)**
   - Implement `docx_generator.py`: builds `.docx` templates pre-configured with the journal's exact margins, body font, heading hierarchy, 1.5/double spacing, continuous line numbering, mandatory disclosure sections, and **formal AI usage declaration template**.

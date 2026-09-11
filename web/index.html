@@ -191,7 +191,8 @@
           <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary);">Format:</span>
           <button class="btn-pill fmt-btn active" data-fmt="hex">HEX</button>
           <button class="btn-pill fmt-btn" data-fmt="rgb255">RGB (0-255)</button>
-          <button class="btn-pill fmt-btn" data-fmt="rgb_norm" title="Matplotlib (0.0 to 1.0)">RGB (0-1.0)</button>
+          <button class="btn-pill fmt-btn" data-fmt="rgb_norm" title="Normalized RGB (0.0 to 1.0)">RGB% (0-1.0)</button>
+          <button class="btn-pill fmt-btn" data-fmt="rgb_percent" title="Percentage RGB (0-100%)">RGB% (0-100%)</button>
           <button class="btn-pill fmt-btn" data-fmt="hsv">HSV</button>
           <button class="btn-pill fmt-btn" data-fmt="cmyk" title="Print format">CMYK</button>
         </div>
@@ -213,9 +214,21 @@
 
       <!-- Bulk Palette Copy Action Buttons -->
       <div class="palette-action-buttons">
-        <button id="copy-palette-hex" class="action-btn">📋 Copy Palette (HEX Array)</button>
-        <button id="copy-palette-python" class="action-btn">🐍 Copy for Python / Matplotlib</button>
-        <button id="copy-palette-r" class="action-btn">📊 Copy for R (ggplot2)</button>
+        <button id="copy-palette-formatted" class="action-btn primary-action">📋 Copy Palette (<span id="active-fmt-badge">HEX</span> Array)</button>
+        <button id="copy-palette-python" class="action-btn">🐍 Copy for Python</button>
+        <button id="copy-palette-r" class="action-btn">📊 Copy for R</button>
+        <button id="copy-palette-latex" class="action-btn">📄 Copy for LaTeX</button>
+      </div>
+
+      <!-- Quick Copy Row by Format -->
+      <div class="palette-quick-row">
+        <span class="quick-row-label">Quick Copy Palette:</span>
+        <button class="action-btn-sm" data-copy-fmt="hex">HEX</button>
+        <button class="action-btn-sm" data-copy-fmt="rgb255">RGB (0-255)</button>
+        <button class="action-btn-sm" data-copy-fmt="rgb_norm">RGB% (0-1.0)</button>
+        <button class="action-btn-sm" data-copy-fmt="rgb_percent">RGB% (0-100%)</button>
+        <button class="action-btn-sm" data-copy-fmt="hsv">HSV</button>
+        <button class="action-btn-sm" data-copy-fmt="cmyk">CMYK</button>
       </div>
     </section>
 

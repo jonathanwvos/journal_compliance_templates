@@ -629,7 +629,7 @@ body {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
-  margin-top: 1rem;
+  margin-top: 1.25rem;
 }
 
 .action-btn {
@@ -638,7 +638,7 @@ body {
   color: var(--text-primary);
   font-size: 0.8rem;
   font-weight: 600;
-  padding: 0.4rem 0.85rem;
+  padding: 0.45rem 0.9rem;
   border-radius: var(--radius-sm);
   cursor: pointer;
   display: inline-flex;
@@ -648,6 +648,53 @@ body {
 }
 
 .action-btn:hover {
+  background: var(--accent-primary);
+  color: #FFFFFF;
+  border-color: var(--accent-primary);
+}
+
+.action-btn.primary-action {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  background: var(--bg-card);
+  font-weight: 700;
+}
+
+.action-btn.primary-action:hover {
+  background: var(--accent-primary);
+  color: #FFFFFF;
+}
+
+.palette-quick-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--border-color);
+}
+
+.quick-row-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-right: 0.25rem;
+}
+
+.action-btn-sm {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.action-btn-sm:hover {
   background: var(--accent-primary);
   color: #FFFFFF;
   border-color: var(--accent-primary);

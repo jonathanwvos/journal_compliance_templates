@@ -41,27 +41,25 @@ cd journal_compliance_templates
 uv sync --all-extras
 ```
 
-### 2. Validate & Compile Templates
-Compile the human-readable YAML templates into JSON schemas and web assets:
+### 2. Cross-Platform Scripts & Quick Commands
 
+Zero-configuration scripts are provided for **Linux**, **macOS**, and **Windows**:
+
+| Action | Linux / macOS (Bash) | Windows (CMD Batch) | Windows (PowerShell) | Python CLI (`jct`) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Start Server** | `./scripts/serve.sh` | `scripts\serve.bat` | `scripts\serve.ps1` | `uv run jct serve` |
+| **Build Assets** | `./scripts/build.sh` | `scripts\build.bat` | `scripts\build.ps1` | `uv run jct build` |
+| **Run Tests** | `./scripts/test.sh` | `scripts\test.bat` | `scripts\test.ps1` | `uv run jct test` |
+| **CLI Dispatcher** | `./scripts/jct.sh [cmd]` | `scripts\jct.bat [cmd]` | `scripts\jct.ps1 [cmd]` | `uv run jct [cmd]` |
+
+### 3. Interactive Web Documentation Explorer
+Run the server script or CLI:
 ```bash
-uv run python scripts/build_dist.py
+./scripts/serve.sh
+# or on Windows:
+# scripts\serve.bat
 ```
-
-### 3. Run Test Suite
-Verify schema conformance and numerical sanity:
-
-```bash
-uv run pytest
-```
-
-### 4. Interactive Web Documentation Explorer
-Open `web/index.html` in your browser or run a simple static server:
-
-```bash
-python3 -m http.server --directory web 8000
-```
-Then visit `http://localhost:8000`.
+Then navigate to `http://localhost:8000` (or `http://localhost:8080`) to interactively explore templates, test CVD simulations, copy palette formats, and export snippets.
 
 ---
 

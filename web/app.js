@@ -216,7 +216,8 @@ function renderJournalView() {
   // Typography Preview
   renderTypographyPreview();
 
-  // Swatch Grid
+  // Swatch Grid & Active Format
+  updateActiveFormatBadge();
   renderSwatches();
 
   // AI Policy Box
@@ -325,6 +326,22 @@ function rgbToCmyk(r, g, b) {
   return { c, m, y, k: Math.round(k * 100) };
 }
 
+const FORMAT_LABELS = {
+  hex: "HEX",
+  rgb255: "RGB",
+  rgb_norm: "RGB% (0-1.0)",
+  rgb_percent: "RGB% (0-100%)",
+  hsv: "HSV",
+  cmyk: "CMYK"
+};
+
+function updateActiveFormatBadge() {
+  const badge = document.getElementById("active-fmt-badge");
+  if (badge) {
+    badge.textContent = FORMAT_LABELS[activeColorFormat] || activeColorFormat.toUpperCase();
+  }
+}
+
 function formatColor(hex, format) {
   const { r, g, b } = hexToRgb(hex);
 
@@ -335,6 +352,8 @@ function formatColor(hex, format) {
       return `rgb(${r}, ${g}, ${b})`;
     case "rgb_norm":
       return `(${(r / 255).toFixed(3)}, ${(g / 255).toFixed(3)}, ${(b / 255).toFixed(3)})`;
+    case "rgb_percent":
+      return `rgb(${Math.round((r / 255) * 100)}%, ${Math.round((g / 255) * 100)}%, ${Math.round((b / 255) * 100)}%)`;
     case "hsv": {
       const hsv = rgbToHsv(r, g, b);
       return `hsv(${hsv.h}°, ${hsv.s}%, ${hsv.v}%)`;
@@ -503,41 +522,59 @@ function fallbackCopyToClipboard(text, onSuccess) {
 }
 
 // ---------------------------------------------------------------------------
-// Bulk Palette Export Handlers (Responsive to CVD Simulation)
+// Bulk Palette Export Handlers (Responsive to Format and CVD Simulation)
 // ---------------------------------------------------------------------------
 
-function copyPaletteAsHexArray(btn = null) {
+function copyPaletteInFormat(fmt, btn = null) {
   const swatches = PALETTES[activePalette] || PALETTES["Okabe-Ito"];
   const isSimulated = currentCvdMode !== "normal";
+  const fmtLabel = FORMAT_LABELS[fmt] || fmt.toUpperCase();
+
   const header = isSimulated
-    ? `// ${activePalette} Palette - Simulated for ${currentCvdMode.toUpperCase()}\n`
-    : `// ${activePalette} Palette (Accessible Scientific Standard)\n`;
+    ? `// ${activePalette} Palette - Simulated for ${currentCvdMode.toUpperCase()} [${fmtLabel}]\n`
+    : `// ${activePalette} Palette (Accessible Scientific Standard) [${fmtLabel}]\n`;
+
   const lines = swatches.map((s) => {
     const effectiveHex = simulateCVD(s.hex, currentCvdMode);
-    const note = isSimulated ? `// ${s.name} (simulated from ${s.hex})` : `// ${s.name}`;
-    return `  "${effectiveHex}",  ${note}`;
+    const formatted = formatColor(effectiveHex, fmt);
+    const origNote = isSimulated ? `(simulated from ${s.hex})` : `(${effectiveHex})`;
+    if (fmt === "rgb_norm") {
+      return `  ${formatted},  // ${s.name} ${origNote}`;
+    }
+    return `  "${formatted}",  // ${s.name} ${origNote}`;
   });
+
   const output = `${header}[\n${lines.join("\n")}\n]`;
-  const toast = isSimulated
-    ? `Copied ${activePalette} (${currentCvdMode}) as HEX array!`
-    : `Copied ${activePalette} as annotated HEX array!`;
-  copyToClipboard(output, toast, btn);
+  const toastMsg = isSimulated
+    ? `Copied ${activePalette} (${currentCvdMode}) as ${fmtLabel}!`
+    : `Copied ${activePalette} as ${fmtLabel}!`;
+
+  copyToClipboard(output, toastMsg, btn);
 }
 
 function copyPaletteForPython(btn = null) {
   const swatches = PALETTES[activePalette] || PALETTES["Okabe-Ito"];
   const isSimulated = currentCvdMode !== "normal";
   const header = isSimulated
-    ? `# ${activePalette} Palette - Simulated for ${currentCvdMode.toUpperCase()} (Matplotlib RGB 0.0-1.0)\n`
-    : `# ${activePalette} Color-Blind Safe Palette for Matplotlib\n# Normalized RGB (0.0 to 1.0) with color annotations\n`;
-  const lines = swatches.map((s) => {
+    ? `# ${activePalette} Palette - Simulated for ${currentCvdMode.toUpperCase()} (Python Dictionary & Normalized RGB)\n`
+    : `# ${activePalette} Color-Blind Safe Palette for Python / Matplotlib\n# Normalized RGB (0.0 to 1.0) and HEX definitions\n`;
+
+  const dictLines = swatches.map((s) => {
+    const effectiveHex = simulateCVD(s.hex, currentCvdMode);
+    const slug = s.name.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "");
+    const note = isSimulated ? `# ${s.name} (orig: ${s.hex})` : `# ${s.name}`;
+    return `    "${slug}": "${effectiveHex}",  ${note}`;
+  });
+
+  const listLines = swatches.map((s) => {
     const effectiveHex = simulateCVD(s.hex, currentCvdMode);
     const { r, g, b } = hexToRgb(effectiveHex);
     const tuple = `(${(r / 255).toFixed(3)}, ${(g / 255).toFixed(3)}, ${(b / 255).toFixed(3)})`;
     const note = isSimulated ? `# ${s.name} (${effectiveHex}, orig: ${s.hex})` : `# ${s.name} (${effectiveHex})`;
     return `    ${tuple},  ${note}`;
   });
-  const output = `${header}colors = [\n${lines.join("\n")}\n]`;
+
+  const output = `${header}palette = {\n${dictLines.join("\n")}\n}\n\ncolors_rgb_norm = [\n${listLines.join("\n")}\n]`;
   const toast = isSimulated
     ? `Copied ${activePalette} (${currentCvdMode}) for Python!`
     : `Copied ${activePalette} for Python / Matplotlib!`;
@@ -552,15 +589,40 @@ function copyPaletteForR(btn = null) {
   const header = isSimulated
     ? `# ${activePalette} Palette - Simulated for ${currentCvdMode.toUpperCase()} for R (ggplot2)\n`
     : `# ${activePalette} Color-Blind Safe Palette for R (ggplot2)\n`;
+
   const lines = swatches.map((s) => {
     const effectiveHex = simulateCVD(s.hex, currentCvdMode);
+    const slug = s.name.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "");
     const note = isSimulated ? `# ${s.name} (orig: ${s.hex})` : `# ${s.name}`;
-    return `  "${effectiveHex}",  ${note}`;
+    return `  "${slug}" = "${effectiveHex}",  ${note}`;
   });
+
   const output = `${header}${varName} <- c(\n${lines.join("\n")}\n)`;
   const toast = isSimulated
     ? `Copied ${activePalette} (${currentCvdMode}) for R!`
     : `Copied ${activePalette} for R (ggplot2)!`;
+  copyToClipboard(output, toast, btn);
+}
+
+function copyPaletteForLatex(btn = null) {
+  const swatches = PALETTES[activePalette] || PALETTES["Okabe-Ito"];
+  const isSimulated = currentCvdMode !== "normal";
+  const header = isSimulated
+    ? `% ${activePalette} Palette - Simulated for ${currentCvdMode.toUpperCase()} (LaTeX xcolor)\n\\usepackage{xcolor}\n`
+    : `% ${activePalette} Color-Blind Safe Palette for LaTeX (xcolor package)\n\\usepackage{xcolor}\n`;
+
+  const lines = swatches.map((s) => {
+    const effectiveHex = simulateCVD(s.hex, currentCvdMode);
+    const cleanHex = effectiveHex.replace("#", "").toUpperCase();
+    const slug = s.name.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "");
+    const note = isSimulated ? `% orig: ${s.hex}` : `% ${s.name}`;
+    return `\\definecolor{jct_${slug}}{HTML}{${cleanHex}} ${note}`;
+  });
+
+  const output = `${header}${lines.join("\n")}`;
+  const toast = isSimulated
+    ? `Copied ${activePalette} (${currentCvdMode}) for LaTeX!`
+    : `Copied ${activePalette} for LaTeX!`;
   copyToClipboard(output, toast, btn);
 }
 
@@ -577,18 +639,52 @@ function renderAiPolicy() {
 function renderCodeSnippet() {
   const codeBlock = document.getElementById("code-display");
   const data = currentJournalData;
+  const swatches = PALETTES[activePalette] || PALETTES["Okabe-Ito"];
+  const isSimulated = currentCvdMode !== "normal";
+  const cvdDesc = isSimulated ? ` [CVD Simulated: ${currentCvdMode.toUpperCase()}]` : "";
+
+  // Prepare color details for all swatches
+  const colorItems = swatches.map((s) => {
+    const effectiveHex = simulateCVD(s.hex, currentCvdMode);
+    const { r, g, b } = hexToRgb(effectiveHex);
+    const slug = s.name.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "");
+    return {
+      name: s.name,
+      slug,
+      hex: effectiveHex,
+      origHex: s.hex,
+      r, g, b,
+      rNorm: (r / 255).toFixed(3),
+      gNorm: (g / 255).toFixed(3),
+      bNorm: (b / 255).toFixed(3),
+      hsv: rgbToHsv(r, g, b),
+      cmyk: rgbToCmyk(r, g, b)
+    };
+  });
+
+  const singleInches = (data.figure_geometry.column_widths.single_column.width / 25.4).toFixed(2);
+  const doubleInches = (data.figure_geometry.column_widths.double_column.width / 25.4).toFixed(2);
+  const primaryColorSlug = colorItems.length > 5 ? colorItems[5].slug : colorItems[0].slug;
+  const secondaryColorSlug = colorItems.length > 6 ? colorItems[6].slug : (colorItems.length > 1 ? colorItems[1].slug : colorItems[0].slug);
 
   if (activeSnippetTab === "matplotlib") {
-    const singleInches = (data.figure_geometry.column_widths.single_column.width / 25.4).toFixed(2);
-    const doubleInches = (data.figure_geometry.column_widths.double_column.width / 25.4).toFixed(2);
+    const pyDictLines = colorItems.map((c) => {
+      const simNote = isSimulated ? `  # orig: ${c.origHex}` : "";
+      return `    "${c.slug}": "${c.hex}",${simNote.padEnd(20)} # ${c.name}`;
+    }).join("\n");
+
     codeBlock.textContent = `# Matplotlib configuration for ${data.metadata.journal_name}
-# Using Nature-approved Okabe-Ito Color-Blind Safe Palette
+# Selected Palette: ${activePalette} (${colorItems.length} colors)${cvdDesc}
 import matplotlib.pyplot as plt
+from cycler import cycler
 
-# Dimensions (in inches)
-# Single column: ${singleInches} in (${data.figure_geometry.column_widths.single_column.width} mm)
-# Double column: ${doubleInches} in (${data.figure_geometry.column_widths.double_column.width} mm)
+# 1. Complete Selected Palette Colors
+palette = {
+${pyDictLines}
+}
 
+# 2. Compliant Typography & Geometry Parameters
+# Single column: ${singleInches} in (${data.figure_geometry.column_widths.single_column.width} mm) | Double column: ${doubleInches} in (${data.figure_geometry.column_widths.double_column.width} mm)
 plt.rcParams.update({
     "font.family": "${data.figure_typography.family_preferences.fallback[0]}",
     "font.sans-serif": ["${data.figure_typography.family_preferences.primary}", "Arial"],
@@ -600,34 +696,39 @@ plt.rcParams.update({
     "ytick.labelsize": ${data.figure_typography.font_sizes.tick_label.size},
     "axes.linewidth": ${data.line_weights.axis_lines},
     "lines.linewidth": ${data.line_weights.data_lines_normal},
+    "axes.prop_cycle": cycler(color=list(palette.values())),
     "figure.dpi": 300,
     "savefig.dpi": ${data.export_requirements.resolution_dpi.line_art},
     "savefig.bbox": "tight",
 })
 
-# Example plot with Okabe-Ito Palette (Nature standard)
+# 3. Example Publication-Ready Figure
 fig, ax = plt.subplots(figsize=(${singleInches}, 2.5))
-ax.plot([0, 1, 2], [10, 20, 15], color="#0072B2", label="Control (Blue)")       # Blue (#0072B2)
-ax.plot([0, 1, 2], [5, 12, 18], color="#D55E00", label="Treated (Vermilion)")  # Vermilion (#D55E00)
+ax.plot([0, 1, 2], [10, 20, 15], color=palette["${primaryColorSlug}"], label="Control (${colorItems.find(c => c.slug === primaryColorSlug).name})")
+ax.plot([0, 1, 2], [5, 12, 18], color=palette["${secondaryColorSlug}"], label="Treated (${colorItems.find(c => c.slug === secondaryColorSlug).name})")
+ax.set_xlabel("Time (h)")
+ax.set_ylabel("Normalized Response (a.u.)")
 ax.legend(frameon=False)
 plt.savefig("figure1.pdf")`;
   } else if (activeSnippetTab === "r_ggplot2") {
-    codeBlock.textContent = `# R ggplot2 theme for ${data.metadata.journal_name}
-# Using Nature-approved Okabe-Ito Color-Blind Safe Palette
+    const rVectorLines = colorItems.map((c) => {
+      const simNote = isSimulated ? `  # orig: ${c.origHex}` : "";
+      return `  "${c.slug}" = "${c.hex}",${simNote.padEnd(20)} # ${c.name}`;
+    }).join("\n");
+
+    const varName = `palette_${activePalette.toLowerCase().replace(/[^a-z0-9]/g, "_")}`;
+
+    codeBlock.textContent = `# R ggplot2 theme & palette for ${data.metadata.journal_name}
+# Selected Palette: ${activePalette} (${colorItems.length} colors)${cvdDesc}
 library(ggplot2)
 
-palette_nature <- c(
-  "#000000",  # Black
-  "#E69F00",  # Orange
-  "#56B4E9",  # Sky Blue
-  "#009E73",  # Bluish Green
-  "#F0E442",  # Yellow
-  "#0072B2",  # Blue
-  "#D55E00",  # Vermilion
-  "#CC79A7"   # Reddish Purple
+# 1. Complete Selected Palette Vector
+${varName} <- c(
+${rVectorLines}
 )
 
-theme_nature <- function() {
+# 2. Journal Compliant Theme
+theme_${currentJournalKey} <- function() {
   theme_classic(base_size = ${data.figure_typography.font_sizes.tick_label.size}, base_family = "${data.figure_typography.family_preferences.fallback[0]}") +
     theme(
       axis.title = element_text(size = ${data.figure_typography.font_sizes.axis_title.size}),
@@ -639,24 +740,96 @@ theme_nature <- function() {
     )
 }
 
-# ggsave("fig1.pdf", width = ${data.figure_geometry.column_widths.single_column.width}, height = 65, units = "mm", dpi = 1000)`;
+# 3. Example Plot with Injected Colors
+# p <- ggplot(df, aes(x = time, y = response, color = cohort)) +
+#   geom_line(linewidth = ${data.line_weights.data_lines_normal * 0.353}) +
+#   scale_color_manual(values = ${varName}) +
+#   theme_${currentJournalKey}()
+# ggsave("fig1.pdf", plot = p, width = ${data.figure_geometry.column_widths.single_column.width}, height = 65, units = "mm", dpi = ${data.export_requirements.resolution_dpi.line_art})`;
   } else if (activeSnippetTab === "latex") {
-    codeBlock.textContent = `% LaTeX Figure snippet for ${data.metadata.journal_name}
-\\usepackage{graphicx}
-\\usepackage{lineno}
-\\linenumbers % Required by Nature during review
+    const latexColorLines = colorItems.map((c) => {
+      const cleanHex = c.hex.replace("#", "").toUpperCase();
+      const simNote = isSimulated ? ` % orig: ${c.origHex}` : "";
+      return `\\definecolor{jct_${c.slug}}{HTML}{${cleanHex}}${simNote.padEnd(16)} % ${c.name}`;
+    }).join("\n");
 
+    const cycleItems = colorItems.slice(0, 6).map((c) => `  {jct_${c.slug}, mark=*},`).join("\n");
+
+    codeBlock.textContent = `% LaTeX Figure snippet & color definitions for ${data.metadata.journal_name}
+% Selected Palette: ${activePalette} (${colorItems.length} colors)${cvdDesc}
+\\usepackage{graphicx}
+\\usepackage{xcolor}
+\\usepackage{pgfplots}
+\\pgfplotsset{compat=1.18}
+\\usepackage{lineno}
+\\linenumbers % Required during review
+
+% 1. Complete Selected Palette Definitions
+${latexColorLines}
+
+% 2. PGFPlots Plot Cycle List
+\\pgfplotscreateplotcyclelist{journal_palette}{
+${cycleItems}
+}
+
+% 3. Compliant Figure Environment (Single Column Width: ${data.figure_geometry.column_widths.single_column.width} mm)
 \\begin{figure}[htbp]
   \\centering
-  % Sized exactly to single column width (89mm)
-  \\includegraphics[width=89mm]{figures/figure1.pdf}
-  \\caption{\\textbf{a}, Experimental kinetics using Nature compliant vector styling. \\textbf{b}, Quantitative dose-response.}
+  \\includegraphics[width=${data.figure_geometry.column_widths.single_column.width}mm]{figures/figure1.pdf}
+  \\caption{\\textbf{a}, Kinetics under \\textcolor{jct_${primaryColorSlug}}{${colorItems.find(c => c.slug === primaryColorSlug).name}} and \\textcolor{jct_${secondaryColorSlug}}{${colorItems.find(c => c.slug === secondaryColorSlug).name}} conditions. \\textbf{b}, Multi-panel dose response.}
   \\label{fig:main_result}
 \\end{figure}`;
   } else if (activeSnippetTab === "yaml") {
-    codeBlock.textContent = `# Full canonical YAML specification available in repository:
-# templates/nature/nature.yaml
-# Run \`python scripts/build_dist.py\` to compile into dist/json/.`;
+    const yamlColorLines = colorItems.map((c) => {
+      return `    - name: "${c.name}"
+      slug: "${c.slug}"
+      hex: "${c.hex}"
+      rgb_255: [${c.r}, ${c.g}, ${c.b}]
+      rgb_norm: [${c.rNorm}, ${c.gNorm}, ${c.bNorm}]
+      hsv: [${c.hsv.h}, ${c.hsv.s}, ${c.hsv.v}]
+      cmyk: [${c.cmyk.c}, ${c.cmyk.m}, ${c.cmyk.y}, ${c.cmyk.k}]`;
+    }).join("\n");
+
+    codeBlock.textContent = `# Journal Compliance Template: ${data.metadata.journal_name}
+# Selected Palette: ${activePalette}${cvdDesc}
+schema_version: "${data.schema_version}"
+metadata:
+  journal_name: "${data.metadata.journal_name}"
+  publisher: "${data.metadata.publisher}"
+  guidelines_url: "${data.metadata.guidelines_url}"
+
+figure_geometry:
+  single_column_width_mm: ${data.figure_geometry.column_widths.single_column.width}
+  one_and_half_column_width_mm: ${data.figure_geometry.column_widths.one_and_half_column.width}
+  double_column_width_mm: ${data.figure_geometry.column_widths.double_column.width}
+  max_height_mm: ${data.figure_geometry.max_height}
+
+figure_typography:
+  primary_font: "${data.figure_typography.family_preferences.primary}"
+  fallback_fonts: [${data.figure_typography.family_preferences.fallback.map(f => `"${f}"`).join(", ")}]
+  font_sizes_pt:
+    panel_label: ${data.figure_typography.font_sizes.panel_label.size}
+    axis_title: ${data.figure_typography.font_sizes.axis_title.size}
+    tick_label: ${data.figure_typography.font_sizes.tick_label.size}
+    min_allowed_size: ${data.figure_typography.font_sizes.min_allowed_size}
+
+line_weights_pt:
+  axis_lines: ${data.line_weights.axis_lines}
+  data_lines_normal: ${data.line_weights.data_lines_normal}
+  min_allowed_weight: ${data.line_weights.min_allowed_weight}
+
+export_requirements:
+  resolution_dpi:
+    line_art: ${data.export_requirements.resolution_dpi.line_art}
+    photographic_halftone: ${data.export_requirements.resolution_dpi.photographic_halftone}
+
+# Selected Colors Injected Dynamically
+selected_palette:
+  name: "${activePalette}"
+  cvd_simulation: "${currentCvdMode}"
+  color_count: ${colorItems.length}
+  colors:
+${yamlColorLines}`;
   }
 }
 
@@ -686,13 +859,14 @@ function setupEventListeners() {
     });
   });
 
-  // Palette tabs
+  // Palette tabs (triggers swatches and code snippet re-render)
   document.querySelectorAll(".palette-tab-btn").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       document.querySelectorAll(".palette-tab-btn").forEach((b) => b.classList.remove("active"));
       e.target.classList.add("active");
       activePalette = e.target.dataset.palette;
       renderSwatches();
+      renderCodeSnippet();
     });
   });
 
@@ -702,17 +876,19 @@ function setupEventListeners() {
       document.querySelectorAll(".fmt-btn").forEach((b) => b.classList.remove("active"));
       e.target.classList.add("active");
       activeColorFormat = e.target.dataset.fmt;
+      updateActiveFormatBadge();
       renderSwatches();
     });
   });
 
-  // CVD mode buttons
+  // CVD mode buttons (triggers swatches and code snippet re-render)
   document.querySelectorAll(".cvd-btn").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       document.querySelectorAll(".cvd-btn").forEach((b) => b.classList.remove("active"));
       e.target.classList.add("active");
       currentCvdMode = e.target.dataset.cvd;
       renderSwatches();
+      renderCodeSnippet();
     });
   });
 
@@ -726,12 +902,27 @@ function setupEventListeners() {
     });
   });
 
-  // Bulk copy buttons
-  const copyHexBtn = document.getElementById("copy-palette-hex");
-  if (copyHexBtn) {
-    copyHexBtn.addEventListener("click", (e) => copyPaletteAsHexArray(e.currentTarget));
+  // Bulk copy palette in currently selected format
+  const copyFormattedBtn = document.getElementById("copy-palette-formatted");
+  if (copyFormattedBtn) {
+    copyFormattedBtn.addEventListener("click", (e) => copyPaletteInFormat(activeColorFormat, e.currentTarget));
   }
 
+  // Fallback for legacy copy-palette-hex ID if present
+  const copyHexBtn = document.getElementById("copy-palette-hex");
+  if (copyHexBtn) {
+    copyHexBtn.addEventListener("click", (e) => copyPaletteInFormat(activeColorFormat, e.currentTarget));
+  }
+
+  // Quick Copy by Format buttons
+  document.querySelectorAll("[data-copy-fmt]").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const fmt = e.currentTarget.dataset.copyFmt;
+      copyPaletteInFormat(fmt, e.currentTarget);
+    });
+  });
+
+  // Language-specific palette copy buttons
   const copyPyBtn = document.getElementById("copy-palette-python");
   if (copyPyBtn) {
     copyPyBtn.addEventListener("click", (e) => copyPaletteForPython(e.currentTarget));
@@ -740,6 +931,11 @@ function setupEventListeners() {
   const copyRBtn = document.getElementById("copy-palette-r");
   if (copyRBtn) {
     copyRBtn.addEventListener("click", (e) => copyPaletteForR(e.currentTarget));
+  }
+
+  const copyLatexBtn = document.getElementById("copy-palette-latex");
+  if (copyLatexBtn) {
+    copyLatexBtn.addEventListener("click", (e) => copyPaletteForLatex(e.currentTarget));
   }
 
   // Statement & code copy buttons

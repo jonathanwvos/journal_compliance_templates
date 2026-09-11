@@ -1,0 +1,96 @@
+# Scientific Journal Compliance Templates
+
+> **Standardized, machine-readable, and human-auditable formatting & compliance templates for major scientific journals.**
+
+Academics and researchers expend immense effort re-formatting figures, charts, and manuscripts to comply with strict publisher guidelines. This repository provides canonical specifications in annotated **YAML** and compiled **JSON**, paired with automated exporters for **Python (Matplotlib/Seaborn)**, **R (ggplot2)**, **Vector design (Inkscape/Illustrator)**, and **Manuscript processors (.docx, .tex)**.
+
+---
+
+## Features
+
+- 📑 **Human-Auditable & Citation-Backed**: Every rule is documented with page numbers, quotations, and official author guideline URLs.
+- 📐 **Rigorous Figure Geometry**: Exact column widths (single, 1.5, double column), gutters, and maximum heights.
+- 🔤 **Typographical Hierarchies**: Complete font specifications for panel labels, axis titles, tick labels, legends, and minimum rejection thresholds.
+- 🎨 **Color & Accessibility**: Enforces color-blind safe palettes (Okabe-Ito, Viridis) and color space rules (RGB vs. CMYK).
+- 🤖 **AI Compliance & Declarations**: Formally captures publisher-specific AI policies, generative image bans, and approved disclosure statements.
+- 🌐 **Interactive Documentation Explorer**: A visual web interface to browse requirements, preview column widths and font scales, and copy code snippets.
+- 🔄 **Multi-Tool Bridges**: Exporters generating `.mplstyle` presets, `ggplot2` themes, `.docx` templates, and LaTeX starter files.
+
+---
+
+## Supported Journals (Tier 1 Flagships)
+
+| Publisher | Journal | Template | Status |
+| :--- | :--- | :--- | :--- |
+| **Nature Portfolio** | *Nature* | [`templates/nature/nature.yaml`](templates/nature/nature.yaml) | ✅ Verified |
+| **IEEE** | *IEEE Transactions* | `templates/ieee/ieee_transactions.yaml` | 🟡 In Progress |
+| **ACS** | *JACS* | `templates/acs/jacs.yaml` | 🟡 In Progress |
+| **AAAS / Science** | *Science* | `templates/science/science.yaml` | 🟡 In Progress |
+| **Elsevier / Cell Press** | *Cell* | `templates/elsevier/cell.yaml` | 🟡 In Progress |
+
+---
+
+## Quickstart
+
+### 1. Installation
+Clone the repository and install dependencies using [uv](https://docs.astral.sh/uv/):
+
+```bash
+git clone https://github.com/jono/journal_compliance_templates.git
+cd journal_compliance_templates
+uv sync --all-extras
+```
+
+### 2. Validate & Compile Templates
+Compile the human-readable YAML templates into JSON schemas and web assets:
+
+```bash
+uv run python scripts/build_dist.py
+```
+
+### 3. Run Test Suite
+Verify schema conformance and numerical sanity:
+
+```bash
+uv run pytest
+```
+
+### 4. Interactive Web Documentation Explorer
+Open `web/index.html` in your browser or run a simple static server:
+
+```bash
+python3 -m http.server --directory web 8000
+```
+Then visit `http://localhost:8000`.
+
+---
+
+## Project Structure
+
+```
+├── schemas/
+│   └── compliance_schema_v1.json    # JSON Schema definition
+├── templates/
+│   ├── nature/                      # Nature Portfolio templates
+│   ├── ieee/                        # IEEE publishing templates
+│   ├── acs/                         # ACS journal templates
+│   ├── science/                     # Science / AAAS templates
+│   └── elsevier/                    # Cell Press / Elsevier templates
+├── scripts/
+│   └── build_dist.py                # YAML -> JSON compiler and validator
+├── web/
+│   ├── index.html                   # Interactive Template Explorer UI
+│   ├── styles.css                   # Modern academic interface styling
+│   └── app.js                       # Dynamic rendering & snippet generation
+├── tests/
+│   └── test_schema_validity.py      # Automated schema conformance tests
+├── project_plan.md                  # Comprehensive project plan & roadmap
+└── pyproject.toml
+```
+
+---
+
+## License & Contributing
+
+Contributions are welcome! See `project_plan.md` for our roadmap and schema standards.
+Licensed under the [MIT License](LICENSE).

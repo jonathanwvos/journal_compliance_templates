@@ -1,0 +1,208 @@
+# ==============================================================================
+# Nature Portfolio: Journal Compliance Template
+# Official Nature guidelines: https://www.nature.com/nature/for-authors/final-submission
+# ==============================================================================
+
+schema_version: "1.0.0"
+
+metadata:
+  publisher: "Nature Portfolio (Springer Nature)"
+  journal_name: "Nature"
+  issn: "1476-4687"
+  guidelines_url: "https://www.nature.com/nature/for-authors/final-submission"
+  last_verified: "2026-09-11"
+  notes: >
+    Official guidelines for primary research articles and brief communications.
+    Specific attention must be paid to font embedding, 89 mm single-column width,
+    lowercase bold panel letters ('a', 'b'), and minimum 5 pt font size.
+
+# ------------------------------------------------------------------------------
+# Figure Dimensions & Geometry
+# Source: Nature Final Submission Guide - "Figure sizing"
+# "Figures should be sized to fit Nature's column widths of 89 mm (single column),
+# 120 mm (1.5 column) or 180 mm (double column / full text spread)."
+# ------------------------------------------------------------------------------
+figure_geometry:
+  default_unit: "mm"
+  max_height: 225.0  # Max height allowing caption space on a 270 mm page
+  column_widths:
+    single_column:
+      width: 89.0
+      description: "Standard single column width (89 mm / 3.5 in)"
+    one_and_half_column:
+      width: 120.0
+      description: "Intermediate 1.5-column width (120 mm / 4.7 in)"
+    double_column:
+      width: 180.0
+      description: "Full text-width page spread (180 mm / 7.1 in)"
+  panel_spacing:
+    minimum_gutter: 3.0 # Minimum recommended gutter between adjacent panels
+
+# ------------------------------------------------------------------------------
+# Typography Hierarchy for Figures
+# Source: Nature Guide - "Lettering should be in Helvetica or Arial."
+# "At final printed size, letters must not be smaller than 5 pt (ideal range 6–8 pt)."
+# ------------------------------------------------------------------------------
+figure_typography:
+  family_preferences:
+    primary: "Helvetica"
+    fallback:
+      - "Arial"
+    serif_alternative: "Times New Roman"
+    symbol_font: "Symbol"
+  font_sizes:
+    unit: "pt"
+    panel_label:
+      size: 8.0
+      weight: "bold"
+    axis_title:
+      size: 7.0
+      weight: "regular"
+    tick_label:
+      size: 6.0
+      weight: "regular"
+    legend_title:
+      size: 6.5
+      weight: "bold"
+    legend_text:
+      size: 6.0
+      weight: "regular"
+    annotation:
+      size: 5.5
+      weight: "regular"
+    min_allowed_size: 5.0 # Pre-flight rejection threshold
+
+# ------------------------------------------------------------------------------
+# Line Weights & Stroke Thickness
+# Source: "Lines should be no thinner than 0.25 pt (0.5 pt preferred for visibility)."
+# ------------------------------------------------------------------------------
+line_weights:
+  unit: "pt"
+  axis_lines: 0.5
+  tick_marks: 0.5
+  data_lines_normal: 1.0
+  data_lines_thick: 1.5
+  grid_lines: 0.25
+  min_allowed_weight: 0.25
+
+# ------------------------------------------------------------------------------
+# Panel Labeling Convention
+# Source: "Panels must be labelled with lowercase, bold letters (a, b, c, etc.)"
+# "No brackets, parentheses, or trailing periods should be used."
+# ------------------------------------------------------------------------------
+panel_labeling:
+  case: "lowercase"     # 'a', 'b', 'c'
+  weight: "bold"
+  punctuation: ""       # Pure letter: 'a', not '(a)' or 'a.'
+  position: "top_left_outside"
+  font_family: "Helvetica"
+
+# ------------------------------------------------------------------------------
+# Color & Accessibility Requirements
+# Source: Nature Accessibility Guidelines - "Figures must be readable by individuals
+# with color-vision deficiencies (e.g. avoid red/green simultaneous contrasts)."
+# ------------------------------------------------------------------------------
+color_specifications:
+  accepted_modes:
+    initial_submission:
+      - "RGB"
+    final_production:
+      - "RGB"
+      - "CMYK"
+  color_blind_safe_required: true
+  recommended_palettes:
+    - "Okabe-Ito"
+    - "Viridis"
+    - "ColorBrewer-Set2"
+  black_white_contrast_ratio: 4.5
+
+# ------------------------------------------------------------------------------
+# Export Formats & Resolution (DPI)
+# Source: Nature Artwork Guidelines - Vector (PDF/EPS) preferred; TIFF for rasters.
+# ------------------------------------------------------------------------------
+export_requirements:
+  preferred_vector_formats:
+    - format: "PDF"
+      notes: "Vector PDF with all fonts embedded or outlined."
+    - format: "EPS"
+      notes: "Encapsulated PostScript with fonts converted to outlines/curves."
+  accepted_raster_formats:
+    - format: "TIFF"
+      compression: "LZW"
+  resolution_dpi:
+    line_art: 1000            # Pure monochrome / vector graphs rasterized
+    combination_art: 600       # Photographic image with vector text/overlays
+    photographic_halftone: 300 # Micrographs, photos
+  max_file_size_mb: 50
+
+# ------------------------------------------------------------------------------
+# Manuscript Text Formatting
+# Source: Nature Submission Guidelines - Double-spaced text, continuous line numbers
+# ------------------------------------------------------------------------------
+manuscript_layout:
+  page:
+    size: "A4"
+    margins_mm:
+      top: 25.4
+      bottom: 25.4
+      left: 25.4
+      right: 25.4
+  spacing:
+    line_spacing: "double"
+    line_numbering: "continuous"
+  body_typography:
+    font_family: "Times New Roman"
+    font_size_pt: 12.0
+  heading_hierarchy:
+    title:
+      size_pt: 18.0
+      weight: "bold"
+      numbered: false
+    h1:
+      size_pt: 14.0
+      weight: "bold"
+      numbered: false
+    h2:
+      size_pt: 12.0
+      weight: "bold"
+      numbered: false
+    h3:
+      size_pt: 12.0
+      weight: "italic"
+      numbered: false
+  limits:
+    abstract_max_words: 150
+    main_text_max_words: 5000
+    max_display_items: 6 # Combined figure + table limit for standard articles
+  required_sections:
+    - "Title, Authors, Affiliations"
+    - "Abstract"
+    - "Main Text (Introduction, Results, Discussion)"
+    - "Methods"
+    - "Data Availability"
+    - "Code Availability"
+    - "References"
+    - "Acknowledgements"
+    - "Author Contributions"
+    - "Ethics Declarations / Competing Interests"
+
+# ------------------------------------------------------------------------------
+# AI & Generative Technologies Policy
+# Source: Nature Portfolio Editorial Policies - Artificial Intelligence (AI)
+# "Large Language Models (LLMs) do not satisfy authorship criteria.
+# Generative AI images/art are not permitted for scientific publication."
+# ------------------------------------------------------------------------------
+ai_policy:
+  authorship_eligible: false
+  generative_imagery_allowed: false
+  generative_imagery_exceptions: >
+    Permissible only when the manuscript specifically investigates generative AI models
+    as the primary subject of scientific inquiry.
+  text_and_code_disclosure_required: true
+  preferred_disclosure_placement: "Methods"
+  policy_url: "https://www.nature.com/nature-portfolio/editorial-policies/ai"
+  official_statement_template: >
+    During the preparation of this manuscript, the author(s) used [TOOL NAME, VERSION, e.g., Claude 3.5 Sonnet / ChatGPT]
+    in order to [SPECIFY PURPOSE: e.g., refine prose for readability / assist in drafting Python data processing routines].
+    The author(s) reviewed and edited the output as needed and take full responsibility for the integrity and accuracy
+    of all published material.

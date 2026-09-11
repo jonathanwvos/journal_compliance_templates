@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Journal Compliance Explorer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="top-nav">
+    <div class="logo-area">
+      <div class="logo-icon">JC</div>
+      <span class="brand-title">Journal Compliance Templates</span>
+    </div>
+    <nav class="nav-links">
+      <a href="https://github.com/jono/journal_compliance_templates" target="_blank" class="nav-link">GitHub</a>
+      <a href="../schemas/compliance_schema_v1.json" target="_blank" class="nav-link">JSON Schema</a>
+      <a href="../project_plan.md" target="_blank" class="nav-link">Project Roadmap</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    
+    <!-- Hero Section -->
+    <section class="hero">
+      <span class="hero-tag">Automated Compliance Standard</span>
+      <h1>Scientific Journal Formatting Explorer</h1>
+      <p>
+        Machine-readable formatting specifications, figure geometries, and editorial compliance rules for major scientific journals. Avoid revision delays and achieve automated compliance.
+      </p>
+    </section>
+
+    <!-- Journal Selector Tabs -->
+    <div class="journal-selector">
+      <button class="journal-tab active" data-journal="nature">
+        <span>Nature</span>
+        <span class="status-badge verified">Verified</span>
+      </button>
+      <button class="journal-tab" data-journal="ieee" title="In development">
+        <span>IEEE Transactions</span>
+        <span class="status-badge in-progress">Sprint 2</span>
+      </button>
+      <button class="journal-tab" data-journal="acs" title="In development">
+        <span>ACS (JACS)</span>
+        <span class="status-badge in-progress">Sprint 2</span>
+      </button>
+      <button class="journal-tab" data-journal="science" title="In development">
+        <span>Science (AAAS)</span>
+        <span class="status-badge in-progress">Sprint 2</span>
+      </button>
+      <button class="journal-tab" data-journal="cell" title="In development">
+        <span>Cell Press</span>
+        <span class="status-badge in-progress">Sprint 2</span>
+      </button>
+    </div>
+
+    <!-- Overview Card -->
+    <section class="overview-card">
+      <div class="overview-header">
+        <div class="journal-meta">
+          <h2 id="journal-name">Nature</h2>
+          <p id="publisher-name" class="publisher-sub">Nature Portfolio (Springer Nature)</p>
+        </div>
+        <div class="meta-badges">
+          <div class="badge-item">ISSN: <span id="issn-val" style="color:var(--text-primary);">1476-4687</span></div>
+          <div class="badge-item">Verified: <span id="verified-val" style="color:var(--text-primary);">2026-09-11</span></div>
+          <div class="badge-item"><a id="guidelines-link" href="#" target="_blank">Official Guidelines &nearr;</a></div>
+        </div>
+      </div>
+
+      <!-- Quick Metrics -->
+      <div class="metrics-grid">
+        <div class="metric-box">
+          <div class="metric-label">1-Column Width</div>
+          <div class="metric-value" id="single-width-val">89 mm</div>
+          <div class="metric-sub">Standard single column</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-label">Max Figure Height</div>
+          <div class="metric-value" id="max-height-val">225 mm</div>
+          <div class="metric-sub">Includes caption clearance</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-label">Primary Typeface</div>
+          <div class="metric-value" id="font-family-val">Helvetica</div>
+          <div class="metric-sub">Fallback: Arial</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-label">Min Allowed Font</div>
+          <div class="metric-value" id="min-font-val" style="color:var(--accent-rose);">5.0 pt</div>
+          <div class="metric-sub">Rejection threshold</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-label">Vector / Line DPI</div>
+          <div class="metric-value" id="lineart-dpi-val">1000 DPI</div>
+          <div class="metric-sub">Combos: 600 / Photos: 300</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Features Split -->
+    <div class="feature-split">
+      
+      <!-- Feature 1: Figure Geometry Visualizer -->
+      <div class="card">
+        <div class="card-title">
+          <span>📐 Figure Geometry & Column Widths</span>
+        </div>
+        <p class="card-desc" id="visualizer-desc">
+          Interactive column layout relative to full page print dimensions.
+        </p>
+        
+        <div class="visualizer-controls">
+          <button class="btn-pill col-btn active" data-col="single_column">1 Column (89 mm)</button>
+          <button class="btn-pill col-btn" data-col="one_and_half_column">1.5 Column (120 mm)</button>
+          <button class="btn-pill col-btn" data-col="double_column">2 Column (180 mm)</button>
+        </div>
+
+        <div class="page-stage">
+          <div class="page-mockup">
+            <div class="page-text-line"></div>
+            <div class="page-text-line"></div>
+            <div class="page-text-line short"></div>
+            
+            <!-- Rendered Figure Box -->
+            <div id="figure-box-render" class="figure-box-render">
+              <strong>89 mm</strong>
+              <span>(3.50 in)</span>
+            </div>
+
+            <div class="page-text-line"></div>
+            <div class="page-text-line"></div>
+            <div class="page-text-line short"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 2: Typography Scale Hierarchy -->
+      <div class="card">
+        <div class="card-title">
+          <span>🔤 Typographical Scale Preview</span>
+        </div>
+        <p class="card-desc">
+          Live point-size preview demonstrating hierarchy across figure panels and annotations.
+        </p>
+        
+        <div id="typo-stage" class="typography-stage">
+          <!-- Dynamically populated by JS -->
+        </div>
+      </div>
+
+    </div>
+
+    <!-- AI Policy & Compliance Section -->
+    <section class="ai-card">
+      <div class="ai-header">
+        <div class="card-title" style="margin-bottom:0;">
+          <span>🤖 AI Usage Policy & Required Declarations</span>
+        </div>
+        <div class="ai-status-group">
+          <span class="ai-pill danger">🚫 Authorship: Prohibited</span>
+          <span class="ai-pill danger">🚫 Generative Visuals: Banned</span>
+          <span class="ai-pill warning">⚠️ Disclosure: Required in <span id="ai-placement-val">Methods</span></span>
+        </div>
+      </div>
+      <p class="card-desc">
+        Top publishers enforce strict bans on generative AI for scientific figures and require formal disclosure statements to prevent desk rejections. Copy this pre-approved declaration template:
+      </p>
+      <div class="statement-box">
+        <button id="copy-statement-btn" class="copy-btn">Copy Statement</button>
+        <span id="ai-statement-text">Loading declaration template...</span>
+      </div>
+    </section>
+
+    <!-- Color & Accessibility Palette -->
+    <section class="card" style="margin-bottom: 2rem;">
+      <div class="card-title">
+        <span>🎨 Accessible Color Palettes & Contrast</span>
+      </div>
+      <p class="card-desc">
+        Color-blind safe palette (Okabe-Ito) compliant with Nature's accessibility requirements. Simulate color vision deficiencies:
+      </p>
+      
+      <div class="palette-container">
+        <div class="cvd-controls">
+          <span style="font-size: 0.85rem; color: var(--text-secondary); margin-right: 0.5rem;">Vision Mode:</span>
+          <button class="btn-pill cvd-btn active" data-cvd="normal">Normal</button>
+          <button class="btn-pill cvd-btn" data-cvd="deuteranopia">Deuteranopia (Green)</button>
+          <button class="btn-pill cvd-btn" data-cvd="protanopia">Protanopia (Red)</button>
+          <button class="btn-pill cvd-btn" data-cvd="tritanopia">Tritanopia (Blue)</button>
+        </div>
+
+        <div id="swatch-container" class="palette-swatches">
+          <!-- Dynamically populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Exporters & Code Snippet Card -->
+    <section class="exporter-card">
+      <div class="card-title">
+        <span>🔄 Instant Exporter & Boilerplate Snippets</span>
+      </div>
+      <p class="card-desc">
+        One-click compliant code presets ready to paste into your plotting or manuscript scripts:
+      </p>
+
+      <div class="tab-nav">
+        <button class="tab-btn active" data-tab="matplotlib">Python (Matplotlib)</button>
+        <button class="tab-btn" data-tab="r_ggplot2">R (ggplot2)</button>
+        <button class="tab-btn" data-tab="latex">LaTeX (.tex)</button>
+        <button class="tab-btn" data-tab="yaml">Raw YAML Template</button>
+      </div>
+
+      <div class="code-container">
+        <button id="copy-code-btn" class="copy-btn">Copy Code</button>
+        <pre><code id="code-display" class="code-block">Loading snippet...</code></pre>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      Journal Compliance Templates &copy; 2026 &bull; Designed for researchers and academics &bull;
+      <a href="https://github.com/jono/journal_compliance_templates" target="_blank">View on GitHub</a>
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/jono/journal_compliance_templates/main/schemas/compliance_schema_v1.json",
+  "title": "JournalComplianceSpecification",
+  "description": "Standard schema for scientific journal formatting, figure geometry, manuscript layout, and AI compliance requirements.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "metadata",
+    "figure_geometry",
+    "figure_typography",
+    "line_weights",
+    "panel_labeling",
+    "color_specifications",
+    "export_requirements",
+    "manuscript_layout",
+    "ai_policy"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["publisher", "journal_name", "guidelines_url", "last_verified"],
+      "properties": {
+        "publisher": { "type": "string" },
+        "journal_name": { "type": "string" },
+        "issn": { "type": ["string", "null"] },
+        "guidelines_url": { "type": "string" },
+        "last_verified": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+        "notes": { "type": "string" }
+      }
+    },
+    "figure_geometry": {
+      "type": "object",
+      "required": ["default_unit", "max_height", "column_widths"],
+      "properties": {
+        "default_unit": { "type": "string", "enum": ["mm", "cm", "inch", "pt"] },
+        "max_height": { "type": "number", "minimum": 1 },
+        "column_widths": {
+          "type": "object",
+          "required": ["single_column", "double_column"],
+          "additionalProperties": {
+            "type": "object",
+            "required": ["width", "description"],
+            "properties": {
+              "width": { "type": "number", "minimum": 1 },
+              "description": { "type": "string" }
+            }
+          }
+        },
+        "panel_spacing": {
+          "type": "object",
+          "properties": {
+            "minimum_gutter": { "type": "number", "minimum": 0 }
+          }
+        }
+      }
+    },
+    "figure_typography": {
+      "type": "object",
+      "required": ["family_preferences", "font_sizes"],
+      "properties": {
+        "family_preferences": {
+          "type": "object",
+          "required": ["primary", "fallback"],
+          "properties": {
+            "primary": { "type": "string" },
+            "fallback": { "type": "array", "items": { "type": "string" } },
+            "serif_alternative": { "type": "string" },
+            "symbol_font": { "type": "string" }
+          }
+        },
+        "font_sizes": {
+          "type": "object",
+          "required": [
+            "unit",
+            "panel_label",
+            "axis_title",
+            "tick_label",
+            "legend_text",
+            "min_allowed_size"
+          ],
+          "properties": {
+            "unit": { "type": "string", "enum": ["pt"] },
+            "panel_label": { "$ref": "#/$defs/font_spec" },
+            "axis_title": { "$ref": "#/$defs/font_spec" },
+            "tick_label": { "$ref": "#/$defs/font_spec" },
+            "legend_title": { "$ref": "#/$defs/font_spec" },
+            "legend_text": { "$ref": "#/$defs/font_spec" },
+            "annotation": { "$ref": "#/$defs/font_spec" },
+            "min_allowed_size": { "type": "number", "minimum": 1 }
+          }
+        }
+      }
+    },
+    "line_weights": {
+      "type": "object",
+      "required": ["unit", "axis_lines", "tick_marks", "data_lines_normal", "min_allowed_weight"],
+      "properties": {
+        "unit": { "type": "string", "enum": ["pt"] },
+        "axis_lines": { "type": "number", "minimum": 0 },
+        "tick_marks": { "type": "number", "minimum": 0 },
+        "data_lines_normal": { "type": "number", "minimum": 0 },
+        "data_lines_thick": { "type": "number", "minimum": 0 },
+        "grid_lines": { "type": "number", "minimum": 0 },
+        "min_allowed_weight": { "type": "number", "minimum": 0 }
+      }
+    },
+    "panel_labeling": {
+      "type": "object",
+      "required": ["case", "weight", "position"],
+      "properties": {
+        "case": { "type": "string", "enum": ["lowercase", "uppercase"] },
+        "weight": { "type": "string", "enum": ["bold", "regular", "semibold"] },
+        "punctuation": { "type": "string" },
+        "position": {
+          "type": "string",
+          "enum": ["top_left_outside", "top_left_inside", "top_left", "above_figure"]
+        },
+        "font_family": { "type": "string" }
+      }
+    },
+    "color_specifications": {
+      "type": "object",
+      "required": ["accepted_modes", "color_blind_safe_required"],
+      "properties": {
+        "accepted_modes": {
+          "type": "object",
+          "required": ["initial_submission", "final_production"],
+          "properties": {
+            "initial_submission": { "type": "array", "items": { "type": "string" } },
+            "final_production": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "color_blind_safe_required": { "type": "boolean" },
+        "recommended_palettes": { "type": "array", "items": { "type": "string" } },
+        "black_white_contrast_ratio": { "type": "number" }
+      }
+    },
+    "export_requirements": {
+      "type": "object",
+      "required": ["preferred_vector_formats", "accepted_raster_formats", "resolution_dpi"],
+      "properties": {
+        "preferred_vector_formats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["format"],
+            "properties": {
+              "format": { "type": "string" },
+              "notes": { "type": "string" }
+            }
+          }
+        },
+        "accepted_raster_formats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["format"],
+            "properties": {
+              "format": { "type": "string" },
+              "compression": { "type": "string" }
+            }
+          }
+        },
+        "resolution_dpi": {
+          "type": "object",
+          "required": ["line_art", "combination_art", "photographic_halftone"],
+          "properties": {
+            "line_art": { "type": "integer", "minimum": 100 },
+            "combination_art": { "type": "integer", "minimum": 100 },
+            "photographic_halftone": { "type": "integer", "minimum": 100 }
+          }
+        },
+        "max_file_size_mb": { "type": "number", "minimum": 1 }
+      }
+    },
+    "manuscript_layout": {
+      "type": "object",
+      "required": ["page", "spacing", "body_typography", "required_sections"],
+      "properties": {
+        "page": {
+          "type": "object",
+          "required": ["size", "margins_mm"],
+          "properties": {
+            "size": { "type": "string" },
+            "margins_mm": {
+              "type": "object",
+              "required": ["top", "bottom", "left", "right"],
+              "properties": {
+                "top": { "type": "number" },
+                "bottom": { "type": "number" },
+                "left": { "type": "number" },
+                "right": { "type": "number" }
+              }
+            }
+          }
+        },
+        "spacing": {
+          "type": "object",
+          "required": ["line_spacing", "line_numbering"],
+          "properties": {
+            "line_spacing": { "type": "string", "enum": ["double", "1.5", "single"] },
+            "line_numbering": { "type": "string", "enum": ["continuous", "per_page", "none"] }
+          }
+        },
+        "body_typography": {
+          "type": "object",
+          "required": ["font_family", "font_size_pt"],
+          "properties": {
+            "font_family": { "type": "string" },
+            "font_size_pt": { "type": "number" }
+          }
+        },
+        "heading_hierarchy": {
+          "type": "object",
+          "properties": {
+            "title": { "$ref": "#/$defs/heading_spec" },
+            "h1": { "$ref": "#/$defs/heading_spec" },
+            "h2": { "$ref": "#/$defs/heading_spec" },
+            "h3": { "$ref": "#/$defs/heading_spec" }
+          }
+        },
+        "limits": {
+          "type": "object",
+          "properties": {
+            "abstract_max_words": { "type": "integer" },
+            "main_text_max_words": { "type": "integer" },
+            "max_display_items": { "type": "integer" }
+          }
+        },
+        "required_sections": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "ai_policy": {
+      "type": "object",
+      "required": [
+        "authorship_eligible",
+        "generative_imagery_allowed",
+        "text_and_code_disclosure_required",
+        "preferred_disclosure_placement",
+        "official_statement_template"
+      ],
+      "properties": {
+        "authorship_eligible": { "type": "boolean" },
+        "generative_imagery_allowed": { "type": "boolean" },
+        "generative_imagery_exceptions": { "type": "string" },
+        "text_and_code_disclosure_required": { "type": "boolean" },
+        "preferred_disclosure_placement": { "type": "string" },
+        "policy_url": { "type": "string" },
+        "official_statement_template": { "type": "string" }
+      }
+    }
+  },
+  "$defs": {
+    "font_spec": {
+      "type": "object",
+      "required": ["size", "weight"],
+      "properties": {
+        "size": { "type": "number", "minimum": 1 },
+        "weight": { "type": "string", "enum": ["regular", "bold", "italic", "semibold"] }
+      }
+    },
+    "heading_spec": {
+      "type": "object",
+      "required": ["size_pt", "weight"],
+      "properties": {
+        "size_pt": { "type": "number", "minimum": 1 },
+        "weight": { "type": "string", "enum": ["regular", "bold", "italic", "semibold"] },
+        "numbered": { "type": "boolean" }
+      }
+    }
+  }
+}

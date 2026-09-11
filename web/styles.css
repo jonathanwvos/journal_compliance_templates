@@ -846,6 +846,18 @@ body {
   border-color: var(--accent-primary);
 }
 
+.copy-btn.copied, .action-btn.copied {
+  background: var(--accent-secondary) !important;
+  color: #FFFFFF !important;
+  border-color: var(--accent-secondary) !important;
+}
+
+.swatch-card.swatch-copied {
+  border-color: var(--accent-primary) !important;
+  box-shadow: 0 0 0 2px var(--accent-primary) !important;
+  transform: translateY(-3px) scale(1.02);
+}
+
 /* Code Exporter Card */
 .exporter-card {
   background: var(--bg-card);

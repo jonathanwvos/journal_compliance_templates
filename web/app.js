@@ -402,7 +402,7 @@ function renderSwatches() {
     `;
 
     card.addEventListener("click", () => {
-      copyToClipboard(formattedVal, `Copied ${c.name}: ${formattedVal}`);
+      copyToClipboard(formattedVal, `Copied ${c.name}: ${formattedVal}`, card);
     });
 
     container.appendChild(card);
@@ -411,43 +411,117 @@ function renderSwatches() {
 
 function showToast(message) {
   const toast = document.getElementById("copy-toast");
+  if (!toast) return;
   toast.textContent = message;
   toast.classList.add("show");
   setTimeout(() => toast.classList.remove("show"), 2200);
 }
 
-function copyToClipboard(text, successMsg = "Copied to clipboard!") {
-  navigator.clipboard.writeText(text).then(() => {
+function copyToClipboard(text, successMsg = "Copied to clipboard!", triggerEl = null) {
+  const onSuccess = () => {
     showToast(successMsg);
-  });
+    if (triggerEl) {
+      if (triggerEl.classList.contains("swatch-card")) {
+        triggerEl.classList.add("swatch-copied");
+        const hint = triggerEl.querySelector(".swatch-copy-hint");
+        if (hint) {
+          const prev = hint.textContent;
+          hint.textContent = "✓ Copied!";
+          setTimeout(() => {
+            hint.textContent = prev;
+            triggerEl.classList.remove("swatch-copied");
+          }, 1500);
+        } else {
+          setTimeout(() => triggerEl.classList.remove("swatch-copied"), 1500);
+        }
+      } else {
+        const origText = triggerEl.dataset.origText || triggerEl.textContent;
+        triggerEl.dataset.origText = origText;
+        triggerEl.textContent = "✓ Copied!";
+        triggerEl.classList.add("copied");
+        setTimeout(() => {
+          triggerEl.textContent = origText;
+          triggerEl.classList.remove("copied");
+        }, 1800);
+      }
+    }
+  };
+
+  // Modern Async Clipboard API (Secure Contexts)
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text)
+      .then(onSuccess)
+      .catch((err) => {
+        console.warn("Async clipboard failed, falling back to execCommand:", err);
+        fallbackCopyToClipboard(text, onSuccess);
+      });
+  } else {
+    // Universal fallback for http://, file://, and local development
+    fallbackCopyToClipboard(text, onSuccess);
+  }
+}
+
+function fallbackCopyToClipboard(text, onSuccess) {
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+  textArea.style.position = "fixed";
+  textArea.style.top = "0";
+  textArea.style.left = "0";
+  textArea.style.width = "2em";
+  textArea.style.height = "2em";
+  textArea.style.padding = "0";
+  textArea.style.border = "none";
+  textArea.style.outline = "none";
+  textArea.style.boxShadow = "none";
+  textArea.style.background = "transparent";
+  textArea.style.opacity = "0";
+  textArea.setAttribute("readonly", "");
+  document.body.appendChild(textArea);
+
+  textArea.focus();
+  textArea.select();
+
+  try {
+    const successful = document.execCommand("copy");
+    if (successful) {
+      onSuccess();
+    } else {
+      prompt("Copy to clipboard: Ctrl+C, Enter", text);
+    }
+  } catch (err) {
+    console.error("Fallback copy failed:", err);
+    prompt("Copy to clipboard: Ctrl+C, Enter", text);
+  } finally {
+    document.body.removeChild(textArea);
+  }
 }
 
 // ---------------------------------------------------------------------------
 // Bulk Palette Export Handlers
 // ---------------------------------------------------------------------------
 
-function copyPaletteAsHexArray() {
-  const swatches = PALETTES[activePalette];
+function copyPaletteAsHexArray(btn = null) {
+  const swatches = PALETTES[activePalette] || PALETTES["Okabe-Ito"];
   const list = swatches.map((s) => `"${s.hex}"`).join(", ");
   const output = `[${list}]`;
-  copyToClipboard(output, `Copied ${activePalette} as HEX array!`);
+  copyToClipboard(output, `Copied ${activePalette} as HEX array!`, btn);
 }
 
-function copyPaletteForPython() {
-  const swatches = PALETTES[activePalette];
+function copyPaletteForPython(btn = null) {
+  const swatches = PALETTES[activePalette] || PALETTES["Okabe-Ito"];
   const tuples = swatches.map((s) => {
     const { r, g, b } = hexToRgb(s.hex);
     return `(${(r / 255).toFixed(3)}, ${(g / 255).toFixed(3)}, ${(b / 255).toFixed(3)})`;
   });
   const output = `# ${activePalette} Palette for Matplotlib\ncolors = [\n    ${tuples.join(",\n    ")}\n]`;
-  copyToClipboard(output, `Copied ${activePalette} for Python / Matplotlib!`);
+  copyToClipboard(output, `Copied ${activePalette} for Python / Matplotlib!`, btn);
 }
 
-function copyPaletteForR() {
-  const swatches = PALETTES[activePalette];
+function copyPaletteForR(btn = null) {
+  const swatches = PALETTES[activePalette] || PALETTES["Okabe-Ito"];
   const list = swatches.map((s) => `"${s.hex}"`).join(", ");
   const output = `# ${activePalette} Palette for R\npalette_${activePalette.toLowerCase().replace(/\s+/g, "_")} <- c(${list})`;
-  copyToClipboard(output, `Copied ${activePalette} for R (ggplot2)!`);
+  copyToClipboard(output, `Copied ${activePalette} for R (ggplot2)!`, btn);
 }
 
 // ---------------------------------------------------------------------------
@@ -603,35 +677,52 @@ function setupEventListeners() {
   });
 
   // Bulk copy buttons
-  document.getElementById("copy-palette-hex").addEventListener("click", copyPaletteAsHexArray);
-  document.getElementById("copy-palette-python").addEventListener("click", copyPaletteForPython);
-  document.getElementById("copy-palette-r").addEventListener("click", copyPaletteForR);
+  const copyHexBtn = document.getElementById("copy-palette-hex");
+  if (copyHexBtn) {
+    copyHexBtn.addEventListener("click", (e) => copyPaletteAsHexArray(e.currentTarget));
+  }
+
+  const copyPyBtn = document.getElementById("copy-palette-python");
+  if (copyPyBtn) {
+    copyPyBtn.addEventListener("click", (e) => copyPaletteForPython(e.currentTarget));
+  }
+
+  const copyRBtn = document.getElementById("copy-palette-r");
+  if (copyRBtn) {
+    copyRBtn.addEventListener("click", (e) => copyPaletteForR(e.currentTarget));
+  }
 
   // Statement & code copy buttons
-  document.getElementById("copy-statement-btn").addEventListener("click", () => {
-    const text = document.getElementById("ai-statement-text").textContent;
-    copyToClipboard(text, "Copied AI Disclosure Statement!");
-  });
+  const stmtBtn = document.getElementById("copy-statement-btn");
+  if (stmtBtn) {
+    stmtBtn.addEventListener("click", (e) => {
+      const text = document.getElementById("ai-statement-text").textContent.trim();
+      copyToClipboard(text, "Copied AI Disclosure Statement!", e.currentTarget);
+    });
+  }
 
-  document.getElementById("copy-code-btn").addEventListener("click", () => {
-    const text = document.getElementById("code-display").textContent;
-    copyToClipboard(text, "Copied code snippet!");
-  });
+  const codeBtn = document.getElementById("copy-code-btn");
+  if (codeBtn) {
+    codeBtn.addEventListener("click", (e) => {
+      const text = document.getElementById("code-display").textContent;
+      copyToClipboard(text, "Copied code snippet!", e.currentTarget);
+    });
+  }
 
   // Citation copy buttons
   const copyApaBtn = document.getElementById("copy-apa-btn");
   if (copyApaBtn) {
-    copyApaBtn.addEventListener("click", () => {
+    copyApaBtn.addEventListener("click", (e) => {
       const text = document.getElementById("apa-text").textContent.trim();
-      copyToClipboard(text, "Copied APA citation!");
+      copyToClipboard(text, "Copied APA citation!", e.currentTarget);
     });
   }
 
   const copyBibtexBtn = document.getElementById("copy-bibtex-btn");
   if (copyBibtexBtn) {
-    copyBibtexBtn.addEventListener("click", () => {
+    copyBibtexBtn.addEventListener("click", (e) => {
       const text = document.getElementById("bibtex-text").textContent.trim();
-      copyToClipboard(text, "Copied BibTeX entry!");
+      copyToClipboard(text, "Copied BibTeX entry!", e.currentTarget);
     });
   }
 }

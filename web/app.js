@@ -4,93 +4,179 @@
  */
 
 const FALLBACK_JOURNAL = {
-  nature: {
-    schema_version: "1.0.0",
-    metadata: {
-      publisher: "Nature Portfolio (Springer Nature)",
-      journal_name: "Nature",
-      issn: "1476-4687",
-      guidelines_url: "https://www.nature.com/nature/for-authors/final-submission",
-      last_verified: "2026-09-11",
-      notes: "Official guidelines for primary research articles and brief communications."
+  "nature": {
+    "schema_version": "1.0.0",
+    "metadata": {
+      "publisher": "Nature Portfolio (Springer Nature)",
+      "journal_name": "Nature",
+      "issn": "1476-4687",
+      "guidelines_url": "https://www.nature.com/nature/for-authors/final-submission",
+      "last_verified": "2026-09-11",
+      "notes": "Official guidelines for primary research articles and brief communications. Specific attention must be paid to font embedding, 89 mm single-column width, lowercase bold panel letters ('a', 'b'), and minimum 5 pt font size.\n"
     },
-    figure_geometry: {
-      default_unit: "mm",
-      max_height: 225.0,
-      column_widths: {
-        single_column: { width: 89.0, description: "Standard single column width (89 mm / 3.5 in)" },
-        one_and_half_column: { width: 120.0, description: "Intermediate 1.5-column width (120 mm / 4.7 in)" },
-        double_column: { width: 180.0, description: "Full text-width page spread (180 mm / 7.1 in)" }
+    "figure_geometry": {
+      "default_unit": "mm",
+      "max_height": 225.0,
+      "column_widths": {
+        "single_column": {
+          "width": 89.0,
+          "description": "Standard single column width (89 mm / 3.5 in)"
+        },
+        "one_and_half_column": {
+          "width": 120.0,
+          "description": "Intermediate 1.5-column width (120 mm / 4.7 in)"
+        },
+        "double_column": {
+          "width": 180.0,
+          "description": "Full text-width page spread (180 mm / 7.1 in)"
+        }
       },
-      panel_spacing: { minimum_gutter: 3.0 }
-    },
-    figure_typography: {
-      family_preferences: {
-        primary: "Helvetica",
-        fallback: ["Arial"],
-        serif_alternative: "Times New Roman"
-      },
-      font_sizes: {
-        unit: "pt",
-        panel_label: { size: 8.0, weight: "bold" },
-        axis_title: { size: 7.0, weight: "regular" },
-        tick_label: { size: 6.0, weight: "regular" },
-        legend_title: { size: 6.5, weight: "bold" },
-        legend_text: { size: 6.0, weight: "regular" },
-        annotation: { size: 5.5, weight: "regular" },
-        min_allowed_size: 5.0
+      "panel_spacing": {
+        "minimum_gutter": 3.0
       }
     },
-    line_weights: {
-      unit: "pt",
-      axis_lines: 0.5,
-      tick_marks: 0.5,
-      data_lines_normal: 1.0,
-      data_lines_thick: 1.5,
-      grid_lines: 0.25,
-      min_allowed_weight: 0.25
-    },
-    panel_labeling: {
-      case: "lowercase",
-      weight: "bold",
-      punctuation: "",
-      position: "top_left_outside",
-      font_family: "Helvetica"
-    },
-    color_specifications: {
-      accepted_modes: {
-        initial_submission: ["RGB"],
-        final_production: ["RGB", "CMYK"]
+    "figure_typography": {
+      "family_preferences": {
+        "primary": "Helvetica",
+        "fallback": [
+          "Arial"
+        ],
+        "serif_alternative": "Times New Roman",
+        "symbol_font": "Symbol"
       },
-      color_blind_safe_required: true,
-      recommended_palettes: ["Oxide-Moss", "Okabe-Ito", "Viridis", "Tol-Bright"],
-      black_white_contrast_ratio: 4.5
+      "font_sizes": {
+        "unit": "pt",
+        "panel_label": {
+          "size": 8.0,
+          "weight": "bold"
+        },
+        "axis_title": {
+          "size": 7.0,
+          "weight": "regular"
+        },
+        "tick_label": {
+          "size": 6.0,
+          "weight": "regular"
+        },
+        "legend_title": {
+          "size": 6.5,
+          "weight": "bold"
+        },
+        "legend_text": {
+          "size": 6.0,
+          "weight": "regular"
+        },
+        "annotation": {
+          "size": 5.5,
+          "weight": "regular"
+        },
+        "min_allowed_size": 5.0
+      }
     },
-    export_requirements: {
-      preferred_vector_formats: [
-        { format: "PDF", notes: "Vector PDF with all fonts embedded or outlined." },
-        { format: "EPS", notes: "Encapsulated PostScript with fonts converted to curves." }
+    "line_weights": {
+      "unit": "pt",
+      "axis_lines": 0.5,
+      "tick_marks": 0.5,
+      "data_lines_normal": 1.0,
+      "data_lines_thick": 1.5,
+      "grid_lines": 0.25,
+      "min_allowed_weight": 0.25
+    },
+    "panel_labeling": {
+      "case": "lowercase",
+      "weight": "bold",
+      "punctuation": "",
+      "position": "top_left_outside",
+      "font_family": "Helvetica"
+    },
+    "color_specifications": {
+      "accepted_modes": {
+        "initial_submission": [
+          "RGB"
+        ],
+        "final_production": [
+          "RGB",
+          "CMYK"
+        ]
+      },
+      "color_blind_safe_required": true,
+      "recommended_palettes": [
+        "Okabe-Ito",
+        "Viridis",
+        "ColorBrewer-Set2"
       ],
-      accepted_raster_formats: [{ format: "TIFF", compression: "LZW" }],
-      resolution_dpi: {
-        line_art: 1000,
-        combination_art: 600,
-        photographic_halftone: 300
-      },
-      max_file_size_mb: 50
+      "black_white_contrast_ratio": 4.5
     },
-    manuscript_layout: {
-      page: { size: "A4", margins_mm: { top: 25.4, bottom: 25.4, left: 25.4, right: 25.4 } },
-      spacing: { line_spacing: "double", line_numbering: "continuous" },
-      body_typography: { font_family: "Times New Roman", font_size_pt: 12.0 },
-      heading_hierarchy: {
-        title: { size_pt: 18.0, weight: "bold", numbered: false },
-        h1: { size_pt: 14.0, weight: "bold", numbered: false },
-        h2: { size_pt: 12.0, weight: "bold", numbered: false },
-        h3: { size_pt: 12.0, weight: "italic", numbered: false }
+    "export_requirements": {
+      "preferred_vector_formats": [
+        {
+          "format": "PDF",
+          "notes": "Vector PDF with all fonts embedded or outlined."
+        },
+        {
+          "format": "EPS",
+          "notes": "Encapsulated PostScript with fonts converted to outlines/curves."
+        }
+      ],
+      "accepted_raster_formats": [
+        {
+          "format": "TIFF",
+          "compression": "LZW"
+        }
+      ],
+      "resolution_dpi": {
+        "line_art": 1000,
+        "combination_art": 600,
+        "photographic_halftone": 300
       },
-      limits: { abstract_max_words: 150, main_text_max_words: 5000, max_display_items: 6 },
-      required_sections: [
+      "max_file_size_mb": 50
+    },
+    "manuscript_layout": {
+      "page": {
+        "size": "A4",
+        "margins_mm": {
+          "top": 25.4,
+          "bottom": 25.4,
+          "left": 25.4,
+          "right": 25.4
+        }
+      },
+      "spacing": {
+        "line_spacing": "double",
+        "line_numbering": "continuous"
+      },
+      "body_typography": {
+        "font_family": "Times New Roman",
+        "font_size_pt": 12.0
+      },
+      "heading_hierarchy": {
+        "title": {
+          "size_pt": 18.0,
+          "weight": "bold",
+          "numbered": false
+        },
+        "h1": {
+          "size_pt": 14.0,
+          "weight": "bold",
+          "numbered": false
+        },
+        "h2": {
+          "size_pt": 12.0,
+          "weight": "bold",
+          "numbered": false
+        },
+        "h3": {
+          "size_pt": 12.0,
+          "weight": "italic",
+          "numbered": false
+        }
+      },
+      "limits": {
+        "abstract_max_words": 150,
+        "main_text_max_words": 5000,
+        "max_display_items": 6
+      },
+      "required_sections": [
         "Title, Authors, Affiliations",
         "Abstract",
         "Main Text (Introduction, Results, Discussion)",
@@ -103,15 +189,792 @@ const FALLBACK_JOURNAL = {
         "Ethics Declarations / Competing Interests"
       ]
     },
-    ai_policy: {
-      authorship_eligible: false,
-      generative_imagery_allowed: false,
-      generative_imagery_exceptions: "Permissible only when the manuscript specifically investigates generative AI models.",
-      text_and_code_disclosure_required: true,
-      preferred_disclosure_placement: "Methods",
-      policy_url: "https://www.nature.com/nature-portfolio/editorial-policies/ai",
-      official_statement_template:
-        "During the preparation of this manuscript, the author(s) used [TOOL NAME, VERSION, e.g., Claude 3.5 Sonnet / ChatGPT] in order to [SPECIFY PURPOSE: e.g., refine prose for readability / assist in drafting Python data processing routines]. The author(s) reviewed and edited the output as needed and take full responsibility for the integrity and accuracy of all published material."
+    "ai_policy": {
+      "authorship_eligible": false,
+      "generative_imagery_allowed": false,
+      "generative_imagery_exceptions": "Permissible only when the manuscript specifically investigates generative AI models as the primary subject of scientific inquiry.\n",
+      "text_and_code_disclosure_required": true,
+      "preferred_disclosure_placement": "Methods",
+      "policy_url": "https://www.nature.com/nature-portfolio/editorial-policies/ai",
+      "official_statement_template": "During the preparation of this manuscript, the author(s) used [TOOL NAME, VERSION, e.g., Claude 3.5 Sonnet / ChatGPT] in order to [SPECIFY PURPOSE: e.g., refine prose for readability / assist in drafting Python data processing routines]. The author(s) reviewed and edited the output as needed and take full responsibility for the integrity and accuracy of all published material.\n"
+    }
+  },
+  "ieee": {
+    "schema_version": "1.0.0",
+    "metadata": {
+      "publisher": "IEEE (Institute of Electrical and Electronics Engineers)",
+      "journal_name": "IEEE Transactions",
+      "issn": "0162-8828",
+      "guidelines_url": "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/",
+      "last_verified": "2026-09-11",
+      "notes": "Official guidelines for IEEE Transactions, Journals, and Letters. Features standard 2-column layout with 3.5 in (88.9 mm) single column width, Times New Roman font hierarchy, strict 0.5 pt minimum line weight, and 6 pt font rejection floor.\n"
+    },
+    "figure_geometry": {
+      "default_unit": "mm",
+      "max_height": 241.3,
+      "column_widths": {
+        "single_column": {
+          "width": 88.9,
+          "description": "Standard single column width (3.5 in / 88.9 mm / 21 picas)"
+        },
+        "double_column": {
+          "width": 181.9,
+          "description": "Full-width double column spread (7.16 in / 181.9 mm / 43 picas)"
+        }
+      },
+      "panel_spacing": {
+        "minimum_gutter": 3.0
+      }
+    },
+    "figure_typography": {
+      "family_preferences": {
+        "primary": "Times New Roman",
+        "fallback": [
+          "Helvetica",
+          "Arial",
+          "Nimbus Roman"
+        ],
+        "serif_alternative": "Times New Roman",
+        "symbol_font": "Symbol"
+      },
+      "font_sizes": {
+        "unit": "pt",
+        "panel_label": {
+          "size": 8.0,
+          "weight": "bold"
+        },
+        "axis_title": {
+          "size": 8.0,
+          "weight": "regular"
+        },
+        "tick_label": {
+          "size": 7.0,
+          "weight": "regular"
+        },
+        "legend_title": {
+          "size": 7.5,
+          "weight": "bold"
+        },
+        "legend_text": {
+          "size": 7.0,
+          "weight": "regular"
+        },
+        "annotation": {
+          "size": 6.5,
+          "weight": "regular"
+        },
+        "min_allowed_size": 6.0
+      }
+    },
+    "line_weights": {
+      "unit": "pt",
+      "axis_lines": 0.5,
+      "tick_marks": 0.5,
+      "data_lines_normal": 1.0,
+      "data_lines_thick": 1.5,
+      "grid_lines": 0.25,
+      "min_allowed_weight": 0.5
+    },
+    "panel_labeling": {
+      "case": "lowercase",
+      "weight": "bold",
+      "punctuation": "(a)",
+      "position": "top_left",
+      "font_family": "Times New Roman"
+    },
+    "color_specifications": {
+      "accepted_modes": {
+        "initial_submission": [
+          "RGB"
+        ],
+        "final_production": [
+          "RGB",
+          "CMYK"
+        ]
+      },
+      "color_blind_safe_required": true,
+      "recommended_palettes": [
+        "Okabe-Ito",
+        "Tol-Bright",
+        "Viridis"
+      ],
+      "black_white_contrast_ratio": 4.5
+    },
+    "export_requirements": {
+      "preferred_vector_formats": [
+        {
+          "format": "EPS",
+          "notes": "Encapsulated PostScript with fonts embedded or converted to curves."
+        },
+        {
+          "format": "PDF",
+          "notes": "Vector PDF with high-resolution subset fonts embedded."
+        }
+      ],
+      "accepted_raster_formats": [
+        {
+          "format": "TIFF",
+          "compression": "LZW"
+        }
+      ],
+      "resolution_dpi": {
+        "line_art": 1000,
+        "combination_art": 600,
+        "photographic_halftone": 300
+      },
+      "max_file_size_mb": 50
+    },
+    "manuscript_layout": {
+      "page": {
+        "size": "Letter",
+        "margins_mm": {
+          "top": 19.1,
+          "bottom": 25.4,
+          "left": 16.5,
+          "right": 16.5
+        }
+      },
+      "spacing": {
+        "line_spacing": "single",
+        "line_numbering": "none"
+      },
+      "body_typography": {
+        "font_family": "Times New Roman",
+        "font_size_pt": 10.0
+      },
+      "heading_hierarchy": {
+        "title": {
+          "size_pt": 24.0,
+          "weight": "bold",
+          "numbered": false
+        },
+        "h1": {
+          "size_pt": 10.0,
+          "weight": "bold",
+          "numbered": true
+        },
+        "h2": {
+          "size_pt": 10.0,
+          "weight": "italic",
+          "numbered": true
+        },
+        "h3": {
+          "size_pt": 10.0,
+          "weight": "italic",
+          "numbered": true
+        }
+      },
+      "limits": {
+        "abstract_max_words": 250,
+        "main_text_max_words": 9000,
+        "max_display_items": 12
+      },
+      "required_sections": [
+        "Title, Authors, Affiliations",
+        "Abstract",
+        "Index Terms (Keywords)",
+        "Introduction",
+        "Related Work / System Model",
+        "Methodology / Proposed Formulation",
+        "Experimental Evaluation / Results",
+        "Conclusion",
+        "Acknowledgment",
+        "References",
+        "Biographies with Author Photographs"
+      ]
+    },
+    "ai_policy": {
+      "authorship_eligible": false,
+      "generative_imagery_allowed": false,
+      "generative_imagery_exceptions": "Permissible only when generative AI models are the direct subject of scientific analysis.\n",
+      "text_and_code_disclosure_required": true,
+      "preferred_disclosure_placement": "Acknowledgment",
+      "policy_url": "https://journals.ieeeauthorcenter.ieee.org/become-an-ieee-journal-author/publishing-ethics/guidelines-and-policies/ieee-principles-for-artificial-intelligence-ai-generated-text/",
+      "official_statement_template": "The author(s) acknowledge the use of [TOOL NAME, VERSION, e.g., ChatGPT-4 / Claude 3.5] to assist in [SPECIFY PURPOSE: e.g., editing and improving English prose clarity / formatting references]. The author(s) have reviewed all content and take full responsibility for the accuracy, originality, and integrity of the entire manuscript.\n"
+    }
+  },
+  "acs": {
+    "schema_version": "1.0.0",
+    "metadata": {
+      "publisher": "American Chemical Society (ACS)",
+      "journal_name": "Journal of the American Chemical Society",
+      "issn": "0002-7863",
+      "guidelines_url": "https://publish.acs.org/publish/author_guidelines?coden=jacsat",
+      "last_verified": "2026-09-11",
+      "notes": "Official guidelines for JACS articles and communications. Specifies 3.25 in (82.5 mm) single-column width, mandatory TOC/Abstract graphic (3.25 x 1.75 in), uppercase panel identifiers ('A', 'B'), and 1200 DPI line art.\n"
+    },
+    "figure_geometry": {
+      "default_unit": "mm",
+      "max_height": 235.0,
+      "column_widths": {
+        "single_column": {
+          "width": 82.5,
+          "description": "Standard single column width (3.25 in / 82.5 mm / 20 picas)"
+        },
+        "one_and_half_column": {
+          "width": 114.0,
+          "description": "Intermediate 1.5-column width (4.5 in / 114.0 mm / 27 picas)"
+        },
+        "double_column": {
+          "width": 177.8,
+          "description": "Full double column width (7.0 in / 177.8 mm / 42 picas)"
+        }
+      },
+      "panel_spacing": {
+        "minimum_gutter": 3.0
+      }
+    },
+    "figure_typography": {
+      "family_preferences": {
+        "primary": "Arial",
+        "fallback": [
+          "Helvetica",
+          "Times New Roman"
+        ],
+        "serif_alternative": "Times New Roman",
+        "symbol_font": "Symbol"
+      },
+      "font_sizes": {
+        "unit": "pt",
+        "panel_label": {
+          "size": 9.0,
+          "weight": "bold"
+        },
+        "axis_title": {
+          "size": 8.0,
+          "weight": "regular"
+        },
+        "tick_label": {
+          "size": 7.0,
+          "weight": "regular"
+        },
+        "legend_title": {
+          "size": 7.5,
+          "weight": "bold"
+        },
+        "legend_text": {
+          "size": 7.0,
+          "weight": "regular"
+        },
+        "annotation": {
+          "size": 6.5,
+          "weight": "regular"
+        },
+        "min_allowed_size": 6.0
+      }
+    },
+    "line_weights": {
+      "unit": "pt",
+      "axis_lines": 0.5,
+      "tick_marks": 0.5,
+      "data_lines_normal": 1.0,
+      "data_lines_thick": 1.5,
+      "grid_lines": 0.25,
+      "min_allowed_weight": 0.5
+    },
+    "panel_labeling": {
+      "case": "uppercase",
+      "weight": "bold",
+      "punctuation": "",
+      "position": "top_left",
+      "font_family": "Arial"
+    },
+    "color_specifications": {
+      "accepted_modes": {
+        "initial_submission": [
+          "RGB"
+        ],
+        "final_production": [
+          "RGB",
+          "CMYK"
+        ]
+      },
+      "color_blind_safe_required": true,
+      "recommended_palettes": [
+        "Okabe-Ito",
+        "Viridis",
+        "Tol-Bright"
+      ],
+      "black_white_contrast_ratio": 4.5
+    },
+    "export_requirements": {
+      "preferred_vector_formats": [
+        {
+          "format": "PDF",
+          "notes": "High-resolution vector PDF with subset fonts embedded."
+        },
+        {
+          "format": "EPS",
+          "notes": "Encapsulated PostScript with fonts converted to outlines/curves."
+        }
+      ],
+      "accepted_raster_formats": [
+        {
+          "format": "TIFF",
+          "compression": "LZW"
+        }
+      ],
+      "resolution_dpi": {
+        "line_art": 1200,
+        "combination_art": 600,
+        "photographic_halftone": 300
+      },
+      "max_file_size_mb": 50
+    },
+    "manuscript_layout": {
+      "page": {
+        "size": "Letter",
+        "margins_mm": {
+          "top": 25.4,
+          "bottom": 25.4,
+          "left": 25.4,
+          "right": 25.4
+        }
+      },
+      "spacing": {
+        "line_spacing": "double",
+        "line_numbering": "continuous"
+      },
+      "body_typography": {
+        "font_family": "Times New Roman",
+        "font_size_pt": 12.0
+      },
+      "heading_hierarchy": {
+        "title": {
+          "size_pt": 18.0,
+          "weight": "bold",
+          "numbered": false
+        },
+        "h1": {
+          "size_pt": 12.0,
+          "weight": "bold",
+          "numbered": false
+        },
+        "h2": {
+          "size_pt": 12.0,
+          "weight": "italic",
+          "numbered": false
+        }
+      },
+      "limits": {
+        "abstract_max_words": 250,
+        "main_text_max_words": 8000,
+        "max_display_items": 8
+      },
+      "required_sections": [
+        "Title, Authors, Affiliations",
+        "Table of Contents (TOC) / Abstract Graphic (3.25 x 1.75 in)",
+        "Abstract",
+        "Introduction",
+        "Results and Discussion",
+        "Conclusions",
+        "Experimental Section / Methods",
+        "Associated Content (Supporting Information Notice)",
+        "Author Information",
+        "Acknowledgment",
+        "References"
+      ]
+    },
+    "ai_policy": {
+      "authorship_eligible": false,
+      "generative_imagery_allowed": false,
+      "generative_imagery_exceptions": "Permissible only when generative AI models are the direct subject of scientific analysis in chemical sciences or computational chemistry.\n",
+      "text_and_code_disclosure_required": true,
+      "preferred_disclosure_placement": "Acknowledgment",
+      "policy_url": "https://publish.acs.org/publish/author_guidelines?coden=jacsat#policies_ai",
+      "official_statement_template": "The author(s) declare that [TOOL NAME, VERSION, e.g., Claude 3.5 / ChatGPT] was used for [SPECIFY FUNCTION: e.g., language editing and drafting assistance]. The author(s) have reviewed, verified, and take full responsibility for all content and data reported in this manuscript.\n"
+    }
+  },
+  "science": {
+    "schema_version": "1.0.0",
+    "metadata": {
+      "publisher": "American Association for the Advancement of Science (AAAS)",
+      "journal_name": "Science",
+      "issn": "1095-9203",
+      "guidelines_url": "https://www.science.org/content/page/science-information-authors",
+      "last_verified": "2026-09-11",
+      "notes": "Official guidelines for Science Research Articles and Reports. Features 55 mm single-column width (2.17 in), uppercase bold panel labels ('A', 'B'), Helvetica typography, strict 4 display item cap, and prohibition of generative imagery.\n"
+    },
+    "figure_geometry": {
+      "default_unit": "mm",
+      "max_height": 230.0,
+      "column_widths": {
+        "single_column": {
+          "width": 55.0,
+          "description": "Standard 1-column width (55 mm / 2.17 in)"
+        },
+        "one_and_half_column": {
+          "width": 120.0,
+          "description": "Intermediate 1.5-column width (120 mm / 4.72 in)"
+        },
+        "double_column": {
+          "width": 175.0,
+          "description": "Full text-width 2-column page spread (175 mm / 6.89 in)"
+        }
+      },
+      "panel_spacing": {
+        "minimum_gutter": 3.0
+      }
+    },
+    "figure_typography": {
+      "family_preferences": {
+        "primary": "Helvetica",
+        "fallback": [
+          "Arial"
+        ],
+        "serif_alternative": "Times New Roman",
+        "symbol_font": "Symbol"
+      },
+      "font_sizes": {
+        "unit": "pt",
+        "panel_label": {
+          "size": 9.0,
+          "weight": "bold"
+        },
+        "axis_title": {
+          "size": 7.5,
+          "weight": "regular"
+        },
+        "tick_label": {
+          "size": 6.5,
+          "weight": "regular"
+        },
+        "legend_title": {
+          "size": 7.0,
+          "weight": "bold"
+        },
+        "legend_text": {
+          "size": 6.5,
+          "weight": "regular"
+        },
+        "annotation": {
+          "size": 6.0,
+          "weight": "regular"
+        },
+        "min_allowed_size": 5.5
+      }
+    },
+    "line_weights": {
+      "unit": "pt",
+      "axis_lines": 0.5,
+      "tick_marks": 0.5,
+      "data_lines_normal": 1.0,
+      "data_lines_thick": 1.5,
+      "grid_lines": 0.25,
+      "min_allowed_weight": 0.25
+    },
+    "panel_labeling": {
+      "case": "uppercase",
+      "weight": "bold",
+      "punctuation": "",
+      "position": "top_left_outside",
+      "font_family": "Helvetica"
+    },
+    "color_specifications": {
+      "accepted_modes": {
+        "initial_submission": [
+          "RGB"
+        ],
+        "final_production": [
+          "RGB",
+          "CMYK"
+        ]
+      },
+      "color_blind_safe_required": true,
+      "recommended_palettes": [
+        "Okabe-Ito",
+        "Viridis",
+        "Tol-Bright"
+      ],
+      "black_white_contrast_ratio": 4.5
+    },
+    "export_requirements": {
+      "preferred_vector_formats": [
+        {
+          "format": "PDF",
+          "notes": "Vector PDF with subset fonts embedded."
+        },
+        {
+          "format": "EPS",
+          "notes": "Encapsulated PostScript with fonts outlined."
+        },
+        {
+          "format": "SVG",
+          "notes": "Clean vector SVG."
+        }
+      ],
+      "accepted_raster_formats": [
+        {
+          "format": "TIFF",
+          "compression": "LZW"
+        }
+      ],
+      "resolution_dpi": {
+        "line_art": 1000,
+        "combination_art": 600,
+        "photographic_halftone": 300
+      },
+      "max_file_size_mb": 50
+    },
+    "manuscript_layout": {
+      "page": {
+        "size": "Letter",
+        "margins_mm": {
+          "top": 25.4,
+          "bottom": 25.4,
+          "left": 25.4,
+          "right": 25.4
+        }
+      },
+      "spacing": {
+        "line_spacing": "double",
+        "line_numbering": "continuous"
+      },
+      "body_typography": {
+        "font_family": "Times New Roman",
+        "font_size_pt": 12.0
+      },
+      "heading_hierarchy": {
+        "title": {
+          "size_pt": 18.0,
+          "weight": "bold",
+          "numbered": false
+        },
+        "h1": {
+          "size_pt": 14.0,
+          "weight": "bold",
+          "numbered": false
+        },
+        "h2": {
+          "size_pt": 12.0,
+          "weight": "bold",
+          "numbered": false
+        }
+      },
+      "limits": {
+        "abstract_max_words": 125,
+        "main_text_max_words": 4500,
+        "max_display_items": 4
+      },
+      "required_sections": [
+        "Title, Authors, Affiliations",
+        "One-Sentence Summary (\u2264150 characters)",
+        "Abstract (\u2264125 words)",
+        "Main Text",
+        "References and Notes",
+        "Acknowledgments (Funding, Author contributions, Competing interests, Data and materials availability)",
+        "Supplementary Materials"
+      ]
+    },
+    "ai_policy": {
+      "authorship_eligible": false,
+      "generative_imagery_allowed": false,
+      "generative_imagery_exceptions": "Permissible only when generative AI models are the direct topic of scientific investigation.\n",
+      "text_and_code_disclosure_required": true,
+      "preferred_disclosure_placement": "Acknowledgments",
+      "policy_url": "https://www.science.org/content/page/science-information-authors#editorial-policies",
+      "official_statement_template": "The author(s) used [TOOL NAME, VERSION] to assist with [SPECIFY PURPOSE: e.g., improving prose style and grammatical phrasing]. All scientific arguments, calculations, and interpretations were generated and independently verified by the human authors, who accept full responsibility for the veracity and originality of the work.\n"
+    }
+  },
+  "cell": {
+    "schema_version": "1.0.0",
+    "metadata": {
+      "publisher": "Cell Press (Elsevier)",
+      "journal_name": "Cell",
+      "issn": "0092-8674",
+      "guidelines_url": "https://www.cell.com/cell/authors",
+      "last_verified": "2026-09-11",
+      "notes": "Official guidelines for Cell Press primary research manuscripts. Features STAR Methods framework, Key Resources Table, 85 mm single column width, mandatory standalone AI declaration section, and strict accessibility requirements.\n"
+    },
+    "figure_geometry": {
+      "default_unit": "mm",
+      "max_height": 235.0,
+      "column_widths": {
+        "single_column": {
+          "width": 85.0,
+          "description": "Standard 1-column width (85 mm / 3.35 in)"
+        },
+        "one_and_half_column": {
+          "width": 114.0,
+          "description": "Intermediate 1.5-column width (114 mm / 4.49 in)"
+        },
+        "double_column": {
+          "width": 174.0,
+          "description": "Full text-width 2-column page spread (174 mm / 6.85 in)"
+        }
+      },
+      "panel_spacing": {
+        "minimum_gutter": 3.0
+      }
+    },
+    "figure_typography": {
+      "family_preferences": {
+        "primary": "Arial",
+        "fallback": [
+          "Helvetica"
+        ],
+        "serif_alternative": "Times New Roman",
+        "symbol_font": "Symbol"
+      },
+      "font_sizes": {
+        "unit": "pt",
+        "panel_label": {
+          "size": 8.0,
+          "weight": "bold"
+        },
+        "axis_title": {
+          "size": 7.0,
+          "weight": "regular"
+        },
+        "tick_label": {
+          "size": 6.0,
+          "weight": "regular"
+        },
+        "legend_title": {
+          "size": 6.5,
+          "weight": "bold"
+        },
+        "legend_text": {
+          "size": 6.0,
+          "weight": "regular"
+        },
+        "annotation": {
+          "size": 5.5,
+          "weight": "regular"
+        },
+        "min_allowed_size": 5.0
+      }
+    },
+    "line_weights": {
+      "unit": "pt",
+      "axis_lines": 0.5,
+      "tick_marks": 0.5,
+      "data_lines_normal": 1.0,
+      "data_lines_thick": 1.5,
+      "grid_lines": 0.25,
+      "min_allowed_weight": 0.25
+    },
+    "panel_labeling": {
+      "case": "uppercase",
+      "weight": "bold",
+      "punctuation": "",
+      "position": "top_left_outside",
+      "font_family": "Arial"
+    },
+    "color_specifications": {
+      "accepted_modes": {
+        "initial_submission": [
+          "RGB"
+        ],
+        "final_production": [
+          "RGB",
+          "CMYK"
+        ]
+      },
+      "color_blind_safe_required": true,
+      "recommended_palettes": [
+        "Okabe-Ito",
+        "Tol-Bright",
+        "Viridis"
+      ],
+      "black_white_contrast_ratio": 4.5
+    },
+    "export_requirements": {
+      "preferred_vector_formats": [
+        {
+          "format": "PDF",
+          "notes": "Vector PDF with all fonts embedded."
+        },
+        {
+          "format": "EPS",
+          "notes": "Encapsulated PostScript with fonts converted to outlines."
+        }
+      ],
+      "accepted_raster_formats": [
+        {
+          "format": "TIFF",
+          "compression": "LZW"
+        }
+      ],
+      "resolution_dpi": {
+        "line_art": 1000,
+        "combination_art": 500,
+        "photographic_halftone": 300
+      },
+      "max_file_size_mb": 50
+    },
+    "manuscript_layout": {
+      "page": {
+        "size": "Letter",
+        "margins_mm": {
+          "top": 25.4,
+          "bottom": 25.4,
+          "left": 25.4,
+          "right": 25.4
+        }
+      },
+      "spacing": {
+        "line_spacing": "double",
+        "line_numbering": "continuous"
+      },
+      "body_typography": {
+        "font_family": "Arial",
+        "font_size_pt": 11.0
+      },
+      "heading_hierarchy": {
+        "title": {
+          "size_pt": 18.0,
+          "weight": "bold",
+          "numbered": false
+        },
+        "h1": {
+          "size_pt": 12.0,
+          "weight": "bold",
+          "numbered": false
+        },
+        "h2": {
+          "size_pt": 11.0,
+          "weight": "bold",
+          "numbered": false
+        },
+        "h3": {
+          "size_pt": 11.0,
+          "weight": "italic",
+          "numbered": false
+        }
+      },
+      "limits": {
+        "abstract_max_words": 150,
+        "main_text_max_words": 7000,
+        "max_display_items": 7
+      },
+      "required_sections": [
+        "Title, Authors, Affiliations",
+        "Summary (Abstract)",
+        "Introduction",
+        "Results",
+        "Discussion",
+        "Declaration of Generative AI and AI-Assisted Technologies in the Writing Process",
+        "STAR Methods",
+        "Key Resources Table",
+        "Resource Availability (Lead Contact, Materials Availability, Data and Code Availability)",
+        "Experimental Model and Study Participant Details",
+        "Method Details",
+        "Quantification and Statistical Analysis",
+        "Acknowledgments",
+        "Author Contributions",
+        "Declaration of Interests",
+        "References"
+      ]
+    },
+    "ai_policy": {
+      "authorship_eligible": false,
+      "generative_imagery_allowed": false,
+      "generative_imagery_exceptions": "Permissible only when generative AI models are the direct subject of scientific analysis.\n",
+      "text_and_code_disclosure_required": true,
+      "preferred_disclosure_placement": "Declaration of Generative AI and AI-assisted technologies in the writing process",
+      "policy_url": "https://www.elsevier.com/about/policies-and-standards/the-use-of-generative-ai-and-ai-assisted-technologies-in-writing-for-elsevier",
+      "official_statement_template": "Declaration of generative AI and AI-assisted technologies in the writing process: During the preparation of this work the author(s) used [NAME TOOL / SERVICE] in order to [REASON]. After using this tool/service, the author(s) reviewed and edited the content as needed and take(s) full responsibility for the content of the publication.\n"
     }
   }
 };
@@ -210,7 +1073,8 @@ function renderJournalView() {
   document.getElementById("lineart-dpi-val").textContent =
     data.export_requirements.resolution_dpi.line_art + " DPI";
 
-  // Geometry Visualizer
+  // Column Buttons & Geometry Visualizer
+  updateColumnButtons();
   updateVisualizer();
 
   // Typography Preview
@@ -227,9 +1091,26 @@ function renderJournalView() {
   renderCodeSnippet();
 }
 
+function updateColumnButtons() {
+  const geom = currentJournalData.figure_geometry;
+  const btn15 = document.querySelector('.col-btn[data-col="one_and_half_column"]');
+  if (btn15) {
+    if (!geom.column_widths.one_and_half_column) {
+      btn15.style.display = "none";
+      if (currentColumnMode === "one_and_half_column") {
+        currentColumnMode = "single_column";
+        document.querySelectorAll(".col-btn").forEach((b) => b.classList.remove("active"));
+        document.querySelector('.col-btn[data-col="single_column"]')?.classList.add("active");
+      }
+    } else {
+      btn15.style.display = "";
+    }
+  }
+}
+
 function updateVisualizer() {
   const geom = currentJournalData.figure_geometry;
-  const col = geom.column_widths[currentColumnMode];
+  const col = geom.column_widths[currentColumnMode] || geom.column_widths.single_column;
   const box = document.getElementById("figure-box-render");
   const desc = document.getElementById("visualizer-desc");
 
@@ -244,11 +1125,17 @@ function updateVisualizer() {
 
 function renderTypographyPreview() {
   const typo = currentJournalData.figure_typography.font_sizes;
+  const primaryFont = currentJournalData.figure_typography.family_preferences.primary;
+  const panelCase = currentJournalData.panel_labeling.case;
+  const panelPunct = currentJournalData.panel_labeling.punctuation || "";
+  const panelSample = panelPunct ? (panelPunct.includes("a") ? (panelCase === "uppercase" ? panelPunct.toUpperCase() : panelPunct) : (panelCase === "uppercase" ? `A${panelPunct}` : `a${panelPunct}`)) : (panelCase === "uppercase" ? "A" : "a");
+
   const stage = document.getElementById("typo-stage");
+  stage.style.fontFamily = `"${primaryFont}", Helvetica, Arial, sans-serif`;
   stage.innerHTML = `
     <div class="typo-row">
       <span class="typo-label">Panel Label (${typo.panel_label.size} pt ${typo.panel_label.weight})</span>
-      <span class="typo-preview" style="font-size: ${typo.panel_label.size * 2}px; font-weight: ${typo.panel_label.weight === 'bold' ? '700' : '400'};">a</span>
+      <span class="typo-preview" style="font-size: ${typo.panel_label.size * 2}px; font-weight: ${typo.panel_label.weight === 'bold' ? '700' : '400'};">${panelSample}</span>
     </div>
     <div class="typo-row">
       <span class="typo-label">Axis Title (${typo.axis_title.size} pt)</span>
@@ -848,6 +1735,22 @@ function setupEventListeners() {
       showToast(`Switched theme to ${e.target.options[e.target.selectedIndex].text}`);
     });
   }
+
+  // Journal Selector Tabs
+  document.querySelectorAll(".journal-tab").forEach((tab) => {
+    tab.addEventListener("click", (e) => {
+      document.querySelectorAll(".journal-tab").forEach((t) => t.classList.remove("active"));
+      const btn = e.currentTarget;
+      btn.classList.add("active");
+      const key = btn.dataset.journal;
+      if (window.JOURNALS_DATA && window.JOURNALS_DATA[key]) {
+        currentJournalKey = key;
+        currentJournalData = window.JOURNALS_DATA[key];
+        renderJournalView();
+        showToast(`Loaded ${currentJournalData.metadata.journal_name} specifications`);
+      }
+    });
+  });
 
   // Column mode buttons
   document.querySelectorAll(".col-btn").forEach((btn) => {

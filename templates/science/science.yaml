@@ -1,0 +1,199 @@
+# ==============================================================================
+# Science (AAAS): Journal Compliance Template
+# Official Science guidelines: https://www.science.org/content/page/science-information-authors
+# ==============================================================================
+
+schema_version: "1.0.0"
+
+metadata:
+  publisher: "American Association for the Advancement of Science (AAAS)"
+  journal_name: "Science"
+  issn: "1095-9203"
+  guidelines_url: "https://www.science.org/content/page/science-information-authors"
+  last_verified: "2026-09-11"
+  notes: >
+    Official guidelines for Science Research Articles and Reports.
+    Features 55 mm single-column width (2.17 in), uppercase bold panel labels ('A', 'B'),
+    Helvetica typography, strict 4 display item cap, and prohibition of generative imagery.
+
+# ------------------------------------------------------------------------------
+# Figure Dimensions & Geometry
+# Source: Science Instructions for Preparing Figures
+# "Widths: 55 mm (1 column / 2.17 in), 120 mm (1.5 column / 4.72 in),
+# 175 mm (2 column / 6.89 in / full page spread)."
+# "Maximum depth: 230 mm."
+# ------------------------------------------------------------------------------
+figure_geometry:
+  default_unit: "mm"
+  max_height: 230.0
+  column_widths:
+    single_column:
+      width: 55.0
+      description: "Standard 1-column width (55 mm / 2.17 in)"
+    one_and_half_column:
+      width: 120.0
+      description: "Intermediate 1.5-column width (120 mm / 4.72 in)"
+    double_column:
+      width: 175.0
+      description: "Full text-width 2-column page spread (175 mm / 6.89 in)"
+  panel_spacing:
+    minimum_gutter: 3.0
+
+# ------------------------------------------------------------------------------
+# Typography Hierarchy for Figures
+# Source: Science Artwork Guidelines - Helvetica preferred
+# "Lettering should be 6–9 pt; panel labels 9 pt bold. Avoid fonts < 5.5 pt."
+# ------------------------------------------------------------------------------
+figure_typography:
+  family_preferences:
+    primary: "Helvetica"
+    fallback:
+      - "Arial"
+    serif_alternative: "Times New Roman"
+    symbol_font: "Symbol"
+  font_sizes:
+    unit: "pt"
+    panel_label:
+      size: 9.0
+      weight: "bold"
+    axis_title:
+      size: 7.5
+      weight: "regular"
+    tick_label:
+      size: 6.5
+      weight: "regular"
+    legend_title:
+      size: 7.0
+      weight: "bold"
+    legend_text:
+      size: 6.5
+      weight: "regular"
+    annotation:
+      size: 6.0
+      weight: "regular"
+    min_allowed_size: 5.5  # Science production floor
+
+# ------------------------------------------------------------------------------
+# Line Weights & Stroke Thickness
+# Source: Science Guidelines - Lines must not be thinner than 0.25 pt
+# ------------------------------------------------------------------------------
+line_weights:
+  unit: "pt"
+  axis_lines: 0.5
+  tick_marks: 0.5
+  data_lines_normal: 1.0
+  data_lines_thick: 1.5
+  grid_lines: 0.25
+  min_allowed_weight: 0.25
+
+# ------------------------------------------------------------------------------
+# Panel Labeling Convention
+# Source: Science Style Guide - "Panels must be labeled with capital letters (A, B, C)."
+# ------------------------------------------------------------------------------
+panel_labeling:
+  case: "uppercase"
+  weight: "bold"
+  punctuation: ""
+  position: "top_left_outside"
+  font_family: "Helvetica"
+
+# ------------------------------------------------------------------------------
+# Color & Accessibility Requirements
+# Source: Science Guidelines - Color-blind safe palettes required
+# ------------------------------------------------------------------------------
+color_specifications:
+  accepted_modes:
+    initial_submission:
+      - "RGB"
+    final_production:
+      - "RGB"
+      - "CMYK"
+  color_blind_safe_required: true
+  recommended_palettes:
+    - "Okabe-Ito"
+    - "Viridis"
+    - "Tol-Bright"
+  black_white_contrast_ratio: 4.5
+
+# ------------------------------------------------------------------------------
+# Export Formats & Resolution (DPI)
+# ------------------------------------------------------------------------------
+export_requirements:
+  preferred_vector_formats:
+    - format: "PDF"
+      notes: "Vector PDF with subset fonts embedded."
+    - format: "EPS"
+      notes: "Encapsulated PostScript with fonts outlined."
+    - format: "SVG"
+      notes: "Clean vector SVG."
+  accepted_raster_formats:
+    - format: "TIFF"
+      compression: "LZW"
+  resolution_dpi:
+    line_art: 1000
+    combination_art: 600
+    photographic_halftone: 300
+  max_file_size_mb: 50
+
+# ------------------------------------------------------------------------------
+# Manuscript Text Formatting
+# Source: Science Submission Guidelines - Double spaced, line numbered
+# ------------------------------------------------------------------------------
+manuscript_layout:
+  page:
+    size: "Letter"
+    margins_mm:
+      top: 25.4
+      bottom: 25.4
+      left: 25.4
+      right: 25.4
+  spacing:
+    line_spacing: "double"
+    line_numbering: "continuous"
+  body_typography:
+    font_family: "Times New Roman"
+    font_size_pt: 12.0
+  heading_hierarchy:
+    title:
+      size_pt: 18.0
+      weight: "bold"
+      numbered: false
+    h1:
+      size_pt: 14.0
+      weight: "bold"
+      numbered: false
+    h2:
+      size_pt: 12.0
+      weight: "bold"
+      numbered: false
+  limits:
+    abstract_max_words: 125
+    main_text_max_words: 4500
+    max_display_items: 4  # Strict Science limit for research articles
+  required_sections:
+    - "Title, Authors, Affiliations"
+    - "One-Sentence Summary (≤150 characters)"
+    - "Abstract (≤125 words)"
+    - "Main Text"
+    - "References and Notes"
+    - "Acknowledgments (Funding, Author contributions, Competing interests, Data and materials availability)"
+    - "Supplementary Materials"
+
+# ------------------------------------------------------------------------------
+# AI & Generative Technologies Policy
+# Source: Science Editorial Policies - Authorship and Generative AI
+# "Artificial intelligence cannot be an author. AI generated images/figures are prohibited."
+# ------------------------------------------------------------------------------
+ai_policy:
+  authorship_eligible: false
+  generative_imagery_allowed: false
+  generative_imagery_exceptions: >
+    Permissible only when generative AI models are the direct topic of scientific investigation.
+  text_and_code_disclosure_required: true
+  preferred_disclosure_placement: "Acknowledgments"
+  policy_url: "https://www.science.org/content/page/science-information-authors#editorial-policies"
+  official_statement_template: >
+    The author(s) used [TOOL NAME, VERSION] to assist with [SPECIFY PURPOSE: e.g., improving prose style
+    and grammatical phrasing]. All scientific arguments, calculations, and interpretations were
+    generated and independently verified by the human authors, who accept full responsibility
+    for the veracity and originality of the work.

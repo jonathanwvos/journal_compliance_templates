@@ -54,7 +54,10 @@ def main():
             validate(instance=data, schema=schema)
             
             journal_key = yf.stem
+            parent_key = yf.parent.name
             all_journals[journal_key] = data
+            if parent_key != "templates" and parent_key not in all_journals:
+                all_journals[parent_key] = data
 
             # Write individual JSON
             out_file = DIST_DIR / f"{journal_key}.json"

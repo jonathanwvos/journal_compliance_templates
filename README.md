@@ -23,10 +23,10 @@ Academics and researchers expend immense effort re-formatting figures, charts, a
 | Publisher | Journal | Template | Status |
 | :--- | :--- | :--- | :--- |
 | **Nature Portfolio** | *Nature* | [`templates/nature/nature.yaml`](templates/nature/nature.yaml) | ✅ Verified |
-| **IEEE** | *IEEE Transactions* | `templates/ieee/ieee_transactions.yaml` | 🟡 In Progress |
-| **ACS** | *JACS* | `templates/acs/jacs.yaml` | 🟡 In Progress |
-| **AAAS / Science** | *Science* | `templates/science/science.yaml` | 🟡 In Progress |
-| **Elsevier / Cell Press** | *Cell* | `templates/elsevier/cell.yaml` | 🟡 In Progress |
+| **IEEE** | *IEEE Transactions* | [`templates/ieee/ieee_transactions.yaml`](templates/ieee/ieee_transactions.yaml) | ✅ Verified |
+| **ACS** | *JACS* | [`templates/acs/jacs.yaml`](templates/acs/jacs.yaml) | ✅ Verified |
+| **AAAS / Science** | *Science* | [`templates/science/science.yaml`](templates/science/science.yaml) | ✅ Verified |
+| **Elsevier / Cell Press** | *Cell* | [`templates/elsevier/cell.yaml`](templates/elsevier/cell.yaml) | ✅ Verified |
 
 ---
 

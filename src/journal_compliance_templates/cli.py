@@ -29,18 +29,23 @@ def run_build():
     return res.returncode
 
 
-def run_test():
-    """Run pytest suite verifying schema conformance and numerical consistency."""
+def run_test(gui=False, headed=False, extra_args=None):
+    """Run pytest suite verifying schema conformance or browser GUI QA tests."""
     print("=== Running Test Suite ===")
-    try:
-        import pytest
-    except ImportError:
-        print("pytest not installed. Attempting uv run pytest...")
-        res = subprocess.run(["uv", "run", "pytest", "-v"])
-        return res.returncode
+    cmd = ["uv", "run", "pytest", "-v"]
+    if gui:
+        cmd.append(str(REPO_ROOT / "tests" / "gui"))
+        if headed:
+            cmd.append("--headed")
+    else:
+        # Default: run all tests except gui unless requested
+        cmd.append(str(REPO_ROOT / "tests"))
 
-    res = pytest.main(["-v", str(REPO_ROOT / "tests")])
-    return int(res)
+    if extra_args:
+        cmd.extend(extra_args)
+
+    res = subprocess.run(cmd)
+    return res.returncode
 
 
 def run_serve(port=8000, open_browser=True):
@@ -146,7 +151,13 @@ def main():
     subparsers.add_parser("build", help="Compile YAML templates to JSON and synchronize web assets")
 
     # Test command
-    subparsers.add_parser("test", help="Run schema validation and numerical consistency tests")
+    test_parser = subparsers.add_parser("test", help="Run schema validation and numerical consistency tests")
+    test_parser.add_argument("--gui", action="store_true", help="Run browser GUI / Playwright end-to-end QA tests")
+    test_parser.add_argument("--headed", action="store_true", help="Run browser tests in headed mode (visible browser window)")
+
+    # Test-GUI alias command
+    test_gui_parser = subparsers.add_parser("test-gui", help="Run Playwright browser GUI QA tests")
+    test_gui_parser.add_argument("--headed", action="store_true", help="Run browser tests in headed mode (visible browser window)")
 
     # List command
     subparsers.add_parser("list", help="List all available journal compliance templates")
@@ -158,14 +169,16 @@ def main():
     export_parser.add_argument("--palette", type=str, default="Okabe-Ito", help="Color palette (Okabe-Ito, Viridis, Tol-Bright)")
     export_parser.add_argument("--format", "-f", choices=["all", "mpl", "r", "svg"], default="all", help="Format to export")
 
-    args = parser.parse_args()
+    args, unknown = parser.parse_known_args()
 
     if args.command == "serve":
         sys.exit(run_serve(port=args.port, open_browser=not args.no_browser))
     elif args.command == "build":
         sys.exit(run_build())
     elif args.command == "test":
-        sys.exit(run_test())
+        sys.exit(run_test(gui=args.gui, headed=args.headed, extra_args=unknown))
+    elif args.command == "test-gui":
+        sys.exit(run_test(gui=True, headed=args.headed, extra_args=unknown))
     elif args.command == "list":
         from journal_compliance_templates import list_templates
         templates = list_templates()

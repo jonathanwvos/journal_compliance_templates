@@ -31,3 +31,12 @@ packages = ["src/journal_compliance_templates"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
+pythonpath = ["src", "."]
+markers = [
+    "gui: Browser GUI and end-to-end user tests using Playwright",
+]
+
+[dependency-groups]
+dev = [
+    "pytest-playwright>=0.9.0",
+]

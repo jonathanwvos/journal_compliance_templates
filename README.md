@@ -49,7 +49,8 @@ Zero-configuration scripts are provided for **Linux**, **macOS**, and **Windows*
 | :--- | :--- | :--- | :--- | :--- |
 | **Start Server** | `./scripts/serve.sh` | `scripts\serve.bat` | `scripts\serve.ps1` | `uv run jct serve` |
 | **Build Assets** | `./scripts/build.sh` | `scripts\build.bat` | `scripts\build.ps1` | `uv run jct build` |
-| **Run Tests** | `./scripts/test.sh` | `scripts\test.bat` | `scripts\test.ps1` | `uv run jct test` |
+| **Run All Tests** | `./scripts/test.sh` | `scripts\test.bat` | `scripts\test.ps1` | `uv run jct test` |
+| **Run GUI QA Tests** | `./scripts/test_gui.sh` | `scripts\test_gui.bat` | `scripts\test_gui.ps1` | `uv run jct test-gui` |
 | **Export Figures** | `./scripts/jct.sh export-figures` | `scripts\jct.bat export-figures` | `scripts\jct.ps1 export-figures` | `uv run jct export-figures` |
 | **CLI Dispatcher** | `./scripts/jct.sh [cmd]` | `scripts\jct.bat [cmd]` | `scripts\jct.ps1 [cmd]` | `uv run jct [cmd]` |
 
@@ -72,6 +73,19 @@ Run the server script or CLI:
 ```
 Then navigate to `http://localhost:8000` to interactively explore templates, test CVD simulations, copy palette formats, and 1-click download pre-built `.mplstyle`, R themes, and SVG grids.
 
+### 5. Automated Browser GUI QA Testing
+Run the automated end-to-end browser QA tests to verify the UI:
+```bash
+# Run headless (fast, in the background):
+./scripts/test_gui.sh
+# or: uv run jct test-gui
+
+# Run headed (watch the browser open and click through the UI):
+./scripts/test_gui.sh --headed
+# or: uv run jct test-gui --headed
+```
+For guidelines and documentation on manually coding new GUI tests, see [`tests/gui/README.md`](tests/gui/README.md).
+
 ---
 
 ## Project Structure
@@ -90,7 +104,8 @@ Then navigate to `http://localhost:8000` to interactively explore templates, tes
 │   └── exporters/
 │       └── figures/                 # Matplotlib, R, & SVG generators
 ├── scripts/
-│   └── build_dist.py                # YAML -> JSON & figure asset compiler
+│   ├── build_dist.py                # YAML -> JSON & figure asset compiler
+│   └── test_gui.sh / .bat / .ps1    # Cross-platform GUI test runners
 ├── web/
 │   ├── index.html                   # Interactive Template Explorer UI
 │   ├── styles.css                   # Modern academic interface styling
@@ -98,7 +113,11 @@ Then navigate to `http://localhost:8000` to interactively explore templates, tes
 │   └── downloads/figures/           # Precompiled .mplstyle, .R, and .svg assets
 ├── tests/
 │   ├── test_schema_validity.py      # Automated schema conformance tests
-│   └── test_figure_exporters.py     # Style loading & figure rendering tests
+│   ├── test_figure_exporters.py     # Style loading & figure rendering tests
+│   └── gui/                         # Browser GUI QA tests (Playwright)
+│       ├── conftest.py              # Ephemeral server & browser fixtures
+│       ├── pages/explorer_page.py   # Page Object Model helper
+│       └── test_*.py                # Navigation, CVD, clipboard, & download tests
 ├── project_plan.md                  # Comprehensive project plan & roadmap
 └── pyproject.toml
 ```

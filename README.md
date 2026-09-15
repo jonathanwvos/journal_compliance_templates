@@ -27,6 +27,7 @@ Academics and researchers expend immense effort re-formatting figures, charts, a
 | **ACS** | *JACS* | [`templates/acs/jacs.yaml`](templates/acs/jacs.yaml) | ✅ Verified |
 | **AAAS / Science** | *Science* | [`templates/science/science.yaml`](templates/science/science.yaml) | ✅ Verified |
 | **Elsevier / Cell Press** | *Cell* | [`templates/elsevier/cell.yaml`](templates/elsevier/cell.yaml) | ✅ Verified |
+| **ASCO** | *Journal of Clinical Oncology (JCO)* | [`templates/asco/jco.yaml`](templates/asco/jco.yaml) | ✅ Verified |
 
 ---
 
@@ -98,7 +99,8 @@ For guidelines and documentation on manually coding new GUI tests, see [`tests/g
 │   ├── ieee/                        # IEEE publishing templates
 │   ├── acs/                         # ACS journal templates
 │   ├── science/                     # Science / AAAS templates
-│   └── elsevier/                    # Cell Press / Elsevier templates
+│   ├── elsevier/                    # Cell Press / Elsevier templates
+│   └── asco/                        # ASCO (JCO) templates
 ├── src/journal_compliance_templates/
 │   ├── cli.py                       # Universal CLI tool (jct)
 │   └── exporters/

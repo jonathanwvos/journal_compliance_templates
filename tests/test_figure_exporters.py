@@ -43,7 +43,7 @@ def test_accessible_palettes_presence():
     assert len(ACCESSIBLE_PALETTES['Okabe-Ito']) >= 8
 
 
-@pytest.mark.parametrize('journal_key', ['nature', 'ieee_transactions', 'jacs', 'science', 'cell'])
+@pytest.mark.parametrize('journal_key', ['nature', 'ieee_transactions', 'jacs', 'science', 'cell', 'jco'])
 def test_mplstyle_generation_and_properties(journal_key, all_templates):
     assert journal_key in all_templates
     data = all_templates[journal_key]
@@ -57,7 +57,7 @@ def test_mplstyle_generation_and_properties(journal_key, all_templates):
     assert str(data['figure_typography']['font_sizes']['tick_label']['size']) in style_text
 
 
-@pytest.mark.parametrize('journal_key', ['nature', 'ieee_transactions', 'jacs', 'science', 'cell'])
+@pytest.mark.parametrize('journal_key', ['nature', 'ieee_transactions', 'jacs', 'science', 'cell', 'jco'])
 def test_mplstyle_loading_and_figure_rendering(journal_key, all_templates, tmp_path):
     data = all_templates[journal_key]
     style_file = tmp_path / f'{journal_key}.mplstyle'
@@ -88,7 +88,7 @@ def test_mplstyle_loading_and_figure_rendering(journal_key, all_templates, tmp_p
     assert pdf_out.stat().st_size > 500
 
 
-@pytest.mark.parametrize('journal_key', ['nature', 'ieee_transactions', 'jacs', 'science', 'cell'])
+@pytest.mark.parametrize('journal_key', ['nature', 'ieee_transactions', 'jacs', 'science', 'cell', 'jco'])
 def test_r_theme_generation(journal_key, all_templates, tmp_path):
     data = all_templates[journal_key]
     r_content = generate_r_theme_content(data, palette_name='Okabe-Ito')
@@ -108,7 +108,7 @@ def test_r_theme_generation(journal_key, all_templates, tmp_path):
     assert r_file.stat().st_size > 1000
 
 
-@pytest.mark.parametrize('journal_key', ['nature', 'ieee_transactions', 'jacs', 'science', 'cell'])
+@pytest.mark.parametrize('journal_key', ['nature', 'ieee_transactions', 'jacs', 'science', 'cell', 'jco'])
 def test_svg_grid_generation_and_xml_structure(journal_key, all_templates, tmp_path):
     data = all_templates[journal_key]
     col_widths = data['figure_geometry']['column_widths']

@@ -25,6 +25,7 @@ def test_initial_page_load_defaults_to_nature(app_page):
     ("acs", "Journal of the American Chemical Society", "82.5 mm", "Arial"),
     ("science", "Science", "55 mm", "Helvetica"),
     ("cell", "Cell", "85 mm", "Arial"),
+    ("jco", "Journal of Clinical Oncology", "84.6 mm", "Arial"),
 ])
 def test_switching_journal_tabs_updates_header_and_metrics(
     app_page, journal_key, expected_title, expected_width, expected_font

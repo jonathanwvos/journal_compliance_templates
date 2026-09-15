@@ -69,6 +69,8 @@ def generate_r_theme_content(journal_data: Dict[str, Any], palette_name: str = "
         slug = "cell"
     elif "nature" in meta["journal_name"].lower():
         slug = "nature"
+    elif "clinical oncology" in meta["journal_name"].lower() or "jco" in meta["journal_name"].lower():
+        slug = "jco"
 
     primary_font = typo["family_preferences"]["primary"]
     base_family = primary_font if primary_font != "Helvetica" else "Arial"

@@ -1,0 +1,209 @@
+# ==============================================================================
+# Journal of Clinical Oncology (JCO) - ASCO Compliance Template
+# Official JCO guidelines: https://ascopubs.org/journal/jco/author-instructions
+# ==============================================================================
+
+schema_version: "1.0.0"
+
+metadata:
+  publisher: "American Society of Clinical Oncology (ASCO)"
+  journal_name: "Journal of Clinical Oncology"
+  issn: "0732-183X"
+  guidelines_url: "https://ascopubs.org/journal/jco/author-instructions"
+  last_verified: "2026-09-15"
+  notes: >
+    Official guidelines for Journal of Clinical Oncology (JCO), the premier peer-reviewed
+    journal of ASCO. Covers clinical research, clinical trials, and oncology reviews.
+    Features 84.6 mm (3.33 in) single-column width, 169.4 mm (6.67 in) double-column width,
+    Arial typography, uppercase bold panel labeling ('A', 'B'), strict AI usage disclosure
+    preceding References, and combined limit of 5-6 display items.
+
+# ------------------------------------------------------------------------------
+# Figure Dimensions & Geometry
+# Source: ASCO Publications Manuscript Guidelines & Artwork Specifications
+# "Single-column width: 3.33 inches (84.6 mm / 20 picas)."
+# "Double-column width: 6.67 inches (169.4 mm / 40 picas)."
+# "Maximum figure depth: 8.85 inches (225 mm)."
+# ------------------------------------------------------------------------------
+figure_geometry:
+  default_unit: "mm"
+  max_height: 225.0
+  column_widths:
+    single_column:
+      width: 84.6
+      description: "Standard 1-column width (84.6 mm / 3.33 in)"
+    double_column:
+      width: 169.4
+      description: "Full-width 2-column page spread (169.4 mm / 6.67 in)"
+  panel_spacing:
+    minimum_gutter: 3.0
+
+# ------------------------------------------------------------------------------
+# Typography Hierarchy for Figures
+# Source: ASCO Figure Guidelines - Arial preferred (8-10 pt)
+# "Text size: 7-9 pt; panel titles: 9 pt bold. Minimum permitted font: 6 pt."
+# ------------------------------------------------------------------------------
+figure_typography:
+  family_preferences:
+    primary: "Arial"
+    fallback:
+      - "Helvetica"
+    serif_alternative: "Times New Roman"
+    symbol_font: "Symbol"
+  font_sizes:
+    unit: "pt"
+    panel_label:
+      size: 9.0
+      weight: "bold"
+    axis_title:
+      size: 8.0
+      weight: "regular"
+    tick_label:
+      size: 7.0
+      weight: "regular"
+    legend_title:
+      size: 7.5
+      weight: "bold"
+    legend_text:
+      size: 7.0
+      weight: "regular"
+    annotation:
+      size: 6.5
+      weight: "regular"
+    min_allowed_size: 6.0  # JCO floor
+
+# ------------------------------------------------------------------------------
+# Line Weights & Stroke Thickness
+# Source: ASCO Guidelines - Minimum line thickness 0.5 pt
+# ------------------------------------------------------------------------------
+line_weights:
+  unit: "pt"
+  axis_lines: 0.5
+  tick_marks: 0.5
+  data_lines_normal: 1.0
+  data_lines_thick: 1.5
+  grid_lines: 0.25
+  min_allowed_weight: 0.5
+
+# ------------------------------------------------------------------------------
+# Panel Labeling Convention
+# Source: ASCO Guidelines - "Uppercase bold letters (A, B, C) placed top-left."
+# ------------------------------------------------------------------------------
+panel_labeling:
+  case: "uppercase"
+  weight: "bold"
+  punctuation: ""
+  position: "top_left"
+  font_family: "Arial"
+
+# ------------------------------------------------------------------------------
+# Color & Accessibility Requirements
+# Source: ASCO Publications Color Standards - High contrast & CVD accessible
+# ------------------------------------------------------------------------------
+color_specifications:
+  accepted_modes:
+    initial_submission:
+      - "RGB"
+    final_production:
+      - "RGB"
+      - "CMYK"
+  color_blind_safe_required: true
+  recommended_palettes:
+    - "Okabe-Ito"
+    - "Tol-Bright"
+    - "Viridis"
+  black_white_contrast_ratio: 4.5
+
+# ------------------------------------------------------------------------------
+# Export Formats & Resolution (DPI)
+# Source: ASCO Digital Art Guidelines - Vector preferred (.pdf, .eps)
+# ------------------------------------------------------------------------------
+export_requirements:
+  preferred_vector_formats:
+    - format: "PDF"
+      notes: "Vector PDF with high-resolution subset fonts embedded."
+    - format: "EPS"
+      notes: "Encapsulated PostScript with fonts converted to outlines/curves."
+  accepted_raster_formats:
+    - format: "TIFF"
+      compression: "LZW"
+  resolution_dpi:
+    line_art: 1000
+    combination_art: 600
+    photographic_halftone: 300
+  max_file_size_mb: 50
+
+# ------------------------------------------------------------------------------
+# Manuscript Text Formatting
+# Source: JCO Instructions for Authors (Original Reports)
+# ------------------------------------------------------------------------------
+manuscript_layout:
+  page:
+    size: "Letter"
+    margins_mm:
+      top: 25.4
+      bottom: 25.4
+      left: 25.4
+      right: 25.4
+  spacing:
+    line_spacing: "double"
+    line_numbering: "continuous"
+  body_typography:
+    font_family: "Arial"
+    font_size_pt: 11.0
+  heading_hierarchy:
+    title:
+      size_pt: 18.0
+      weight: "bold"
+      numbered: false
+    h1:
+      size_pt: 12.0
+      weight: "bold"
+      numbered: false
+    h2:
+      size_pt: 11.0
+      weight: "bold"
+      numbered: false
+    h3:
+      size_pt: 11.0
+      weight: "italic"
+      numbered: false
+  limits:
+    abstract_max_words: 275
+    main_text_max_words: 4000
+    max_display_items: 6  # Total tables + figures combined
+  required_sections:
+    - "Title Page (Title, Authors, Affiliations, Corresponding Author, Running Head)"
+    - "Structured Abstract (Context, Purpose, Methods, Results, Conclusion)"
+    - "Introduction"
+    - "Methods"
+    - "Results"
+    - "Discussion"
+    - "Acknowledgment of AI-Assisted Writing and Technologies"
+    - "Acknowledgment of Support and Research Funding"
+    - "Authors' Disclosures of Potential Conflicts of Interest"
+    - "Author Contributions"
+    - "References"
+    - "Tables"
+    - "Figure Legends"
+
+# ------------------------------------------------------------------------------
+# AI & Generative Technologies Policy
+# Source: ASCO Policy on the Use of Artificial Intelligence & Large Language Models
+# "AI tools cannot be listed as authors. Human authors remain fully responsible.
+# Disclose use in an acknowledgment statement prior to References."
+# ------------------------------------------------------------------------------
+ai_policy:
+  authorship_eligible: false
+  generative_imagery_allowed: false
+  generative_imagery_exceptions: >
+    Permissible only when the manuscript specifically investigates generative AI models, diagnostic machine learning algorithms, or computer vision in oncology.
+  text_and_code_disclosure_required: true
+  preferred_disclosure_placement: "Acknowledgment section prior to References"
+  policy_url: "https://ascopubs.org/journal/jco/author-instructions"
+  official_statement_template: >
+    Acknowledgment of AI-assisted writing and technologies:
+    During the preparation of this manuscript, the author(s) used [TOOL NAME, VERSION, e.g., ChatGPT / Claude]
+    for the purpose of [DESCRIBE PURPOSE: e.g., grammar improvement / drafting preliminary summaries of non-clinical literature].
+    The authors reviewed and edited all generated content and take full responsibility for the integrity,
+    factual accuracy, and originality of the published work.

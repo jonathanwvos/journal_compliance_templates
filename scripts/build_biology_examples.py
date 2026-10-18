@@ -4,6 +4,7 @@ Run with the project's dev dependencies. SVGs are checked in so the explorer wor
 without Python or a plotting library. No patient data or fitted embeddings are used.
 """
 import json
+import re
 import warnings
 from pathlib import Path
 
@@ -14,13 +15,74 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib import font_manager
-from matplotlib.colors import LinearSegmentedColormap
+from matplotlib.colors import LinearSegmentedColormap, ListedColormap, to_hex, to_rgb
 from matplotlib.lines import Line2D
 from matplotlib.text import Text
 
 DESTINATION = Path(__file__).resolve().parents[1] / 'web' / 'images' / 'biology'
 COLORS = ['#0072B2', '#D55E00', '#009E73']
 CELL_TYPES = ['T cells', 'B cells', 'Monocytes']
+
+# Colour roles are independent of journal geometry. Neutral ink stays black/grey.
+PALETTES = {
+    'okabe-ito': {'series': COLORS, 'diverging': ['#0072B2', '#F7F7F7', '#D55E00'],
+                  'sequential': ['#F7F7F7', '#0072B2']},
+    'viridis': {'series': ['#440154', '#21918C', '#5EC962'],
+                'diverging': ['#440154', '#F7F7F7', '#5EC962'],
+                'sequential': ['#440154', '#3B528B', '#21918C', '#5EC962', '#FDE725']},
+    'tol-bright': {'series': ['#4477AA', '#EE6677', '#228833'],
+                   'diverging': ['#4477AA', '#F7F7F7', '#EE6677'],
+                   'sequential': ['#F7F7F7', '#4477AA']},
+}
+CVD_MATRICES = {
+    'normal': np.eye(3),
+    'deuteranopia': [[.625, .375, 0], [.7, .3, 0], [0, .3, .7]],
+    'protanopia': [[.567, .433, 0], [.558, .442, 0], [0, .242, .758]],
+    'tritanopia': [[.95, .05, 0], [0, .433, .567], [0, .475, .525]],
+}
+
+
+def placeholder_map(prefix):
+    """Unique colours let us preserve each quantitative value when styling SVGs."""
+    return ListedColormap([f'#{prefix}{i:04x}' for i in range(256)])
+
+
+def apply_palettes(svg):
+    roles = {color.lower(): f'series-{i}' for i, color in enumerate(COLORS)}
+    for prefix, role in [('a1', 'diverging'), ('a2', 'sequential')]:
+        roles.update({f'#{prefix}{i:04x}': f'{role}-{i}' for i in range(256)})
+    used = set()
+
+    def replace_color(match):
+        property_name, color = match.groups()
+        role = roles.get(color.lower())
+        if not role:
+            return match.group(0)
+        used.add(role)
+        return f'{property_name}: var(--{role})'
+
+    svg = re.sub(r'(fill|stroke): (#[0-9a-fA-F]{6})', replace_color, svg)
+    styles, targets = [], []
+    for palette, spec in PALETTES.items():
+        values = {f'series-{i}': color for i, color in enumerate(spec['series'])}
+        for role in ['diverging', 'sequential']:
+            cmap = LinearSegmentedColormap.from_list(role, spec[role])
+            values.update({f'{role}-{i}': to_hex(cmap(i / 255)) for i in range(256)})
+        for mode, matrix in CVD_MATRICES.items():
+            target = f'{palette}-{mode}'
+            targets.append(f'<g id="{target}"/>')
+            declarations = []
+            for role in sorted(used):
+                rgb = np.clip(np.floor(np.dot(matrix, to_rgb(values[role])) * 255 + .5), 0, 255).astype(int)
+                color = '#' + ''.join(f'{channel:02x}' for channel in rgb)
+                declarations.append(f'--{role}:{color}')
+            selector = f'#{target}:target ~ #figure_1'
+            if target == 'okabe-ito-normal':
+                selector = f'#figure_1, {selector}'
+            styles.append(f'{selector} {{{";".join(declarations)}}}')
+    # Fragment targets work in external <img> SVGs, including file:// previews.
+    return svg.replace('<g id="figure_1">', '<style>' + '\n'.join(styles) + '</style>\n'
+                       + '\n'.join(targets) + '\n<g id="figure_1">', 1)
 
 
 def layout_for(data, count):
@@ -137,7 +199,7 @@ def make_examples(data, destination, layout, family):
         encoded = base64.b64encode(buffer.getvalue()).decode('ascii')
         svg = path.read_text()
         svg = svg.replace('<defs>', f'<defs><style>@font-face {{font-family: \'{family}\'; src: url(data:font/ttf;base64,{encoded});}}</style>', 1)
-        path.write_text(svg)
+        path.write_text(apply_palettes(svg))
         checks.append({'plot': name, 'min_font_pt': minimum, 'text_inside': True, 'bytes': path.stat().st_size})
         plt.close(fig)
     fig, ax = canvas()
@@ -150,7 +212,7 @@ def make_examples(data, destination, layout, family):
                 (0.14, 0.21, 3, 3), (0.14, 0.18, 5, 5),
                 (0.18, 0.18, 4, 5), (0.18, 0.26, 4, 4), (0.18, 0.24, 5, 5)]
     for x1, x2, y1, y2 in segments:
-        ax.plot([x1, x2], [y1, y2], color='#374151', linewidth=1.3)
+        ax.plot([x1, x2], [y1, y2], color=COLORS[0], linewidth=1.3)
     for i, x in enumerate([0.19, 0.23, 0.25, 0.21, 0.26, 0.24]):
         ax.text(x + 0.008, i, f'Isolate {chr(65+i)}', va='center', fontsize=8)
     ax.set(xlim=(0, 0.36), ylim=(-0.5, 5.5), xlabel='Substitutions / site', yticks=[])
@@ -192,7 +254,7 @@ def make_examples(data, destination, layout, family):
     genes = ['CD3D', 'IL7R', 'MS4A1', 'CD79A', 'LYZ', 'S100A8']
     values = np.array([[2, -1, -0.8], [1.5, -0.7, -1], [-1, 2, -0.6], [-0.8, 1.7, -1], [-1, -0.9, 2], [-0.6, -1, 1.8]])
     values += rng.normal(0, 0.15, values.shape)
-    cmap = LinearSegmentedColormap.from_list('expression', ['#2166AC', '#F7F7F7', '#B2182B'])
+    cmap = placeholder_map('a1')
     im = ax.pcolormesh(np.arange(4) - .5, np.arange(7) - .5, values, cmap=cmap, vmin=-2, vmax=2, rasterized=False)
     ax.invert_yaxis()
     ax.set(xticks=range(3), xticklabels=['T', 'B', 'Mono'], yticks=range(6), yticklabels=genes)
@@ -227,7 +289,7 @@ def make_examples(data, destination, layout, family):
     pathways = ['Interferon', 'Antigen\npresentation', 'Cell cycle', 'Chemotaxis', 'Translation']
     ratios = [0.31, 0.24, 0.19, 0.16, 0.11]
     scores = [5.3, 4.1, 3.2, 2.6, 1.8]
-    points = ax.scatter(ratios, range(5), s=[150, 120, 90, 65, 45], c=scores, cmap='viridis', vmin=1, vmax=6)
+    points = ax.scatter(ratios, range(5), s=[150, 120, 90, 65, 45], c=scores, cmap=placeholder_map('a2'), vmin=1, vmax=6)
     ax.set(yticks=range(5), yticklabels=pathways, xlabel='Gene ratio', xlim=(0.05, 0.37), ylim=(-0.5, 4.5))
     fig.colorbar(points, ax=ax, shrink=0.85, label='−log10 adjusted P')
     ax.text(0.06, 4.35, 'Area: gene count', fontsize=7)

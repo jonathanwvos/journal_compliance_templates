@@ -201,7 +201,8 @@ function renderNamingGuidance() {
     }
     container.append(details);
   }
-  window.JCT_NAMING_PREVIEW.render(document.getElementById("naming-preview"), currentJournalData);
+  window.JCT_NAMING_PREVIEW.render(document.getElementById("naming-preview"), currentJournalData,
+    { palette: activePalette, cvd: currentCvdMode });
 }
 
 function renderFigureDownloads() {
@@ -937,7 +938,7 @@ function setupEventListeners() {
     });
   });
 
-  // Palette tabs (triggers swatches and code snippet re-render)
+  // Keep scientific artwork, swatches and snippets on the same palette.
   document.querySelectorAll(".palette-tab-btn").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       document.querySelectorAll(".palette-tab-btn").forEach((b) => b.classList.remove("active"));
@@ -945,6 +946,8 @@ function setupEventListeners() {
       activePalette = e.target.dataset.palette;
       renderSwatches();
       renderCodeSnippet();
+      window.JCT_NAMING_PREVIEW.applyColours(document.getElementById("naming-preview"),
+        { palette: activePalette, cvd: currentCvdMode });
     });
   });
 
@@ -967,6 +970,8 @@ function setupEventListeners() {
       currentCvdMode = e.target.dataset.cvd;
       renderSwatches();
       renderCodeSnippet();
+      window.JCT_NAMING_PREVIEW.applyColours(document.getElementById("naming-preview"),
+        { palette: activePalette, cvd: currentCvdMode });
     });
   });
 

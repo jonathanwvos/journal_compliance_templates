@@ -19,7 +19,31 @@
  <defs><style>@font-face {font-family: 'Liberation Sans'; src: url(data:font/ttf;base64,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);}</style>
   <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
  </defs>
- <g id="figure_1">
+ <style>#figure_1, #okabe-ito-normal:target ~ #figure_1 {--diverging-0:#0072b2;--diverging-1:#0273b3;--diverging-10:#137cb7;--diverging-100:#c2dae8;--diverging-101:#c4dbe9;--diverging-102:#c6dce9;--diverging-103:#c8ddea;--diverging-104:#c9deea;--diverging-105:#cbe0eb;--diverging-106:#cde1eb;--diverging-107:#cfe2ec;--diverging-108:#d1e3ec;--diverging-109:#d3e4ed;--diverging-11:#157db8;--diverging-110:#d5e5ee;--diverging-111:#d7e6ee;--diverging-112:#d9e7ef;--diverging-113:#dbe8ef;--diverging-114:#dde9f0;--diverging-115:#dfeaf0;--diverging-116:#e1ebf1;--diverging-117:#e3ecf1;--diverging-118:#e5edf2;--diverging-119:#e7eef2;--diverging-12:#177fb8;--diverging-120:#e8eff3;--diverging-121:#eaf0f3;--diverging-122:#ecf1f4;--diverging-123:#eef2f5;--diverging-124:#f0f3f5;--diverging-125:#f2f4f6;--diverging-126:#f4f5f6;--diverging-127:#f6f6f7;--diverging-128:#f7f6f6;--diverging-129:#f7f5f4;--diverging-13:#1980b9;--diverging-130:#f6f4f2;--diverging-131:#f6f3f0;--diverging-132:#f6f2ee;--diverging-133:#f6f0ec;--diverging-134:#f5efea;--diverging-135:#f5eee8;--diverging-136:#f5ede7;--diverging-137:#f4ece5;--diverging-138:#f4eae3;--diverging-139:#f4e9e1;--diverging-14:#1b81ba;--diverging-140:#f4e8df;--diverging-141:#f3e7dd;--diverging-142:#f3e6db;--diverging-143:#f3e4d9;--diverging-144:#f3e3d7;--diverging-145:#f2e2d5;--diverging-146:#f2e1d3;--diverging-147:#f2e0d1;--diverging-148:#f2decf;--diverging-149:#f1ddcd;--diverging-15:#1d82ba;--diverging-150:#f1dccb;--diverging-151:#f1dbc9;--diverging-152:#f0dac8;--diverging-153:#f0d8c6;--diverging-154:#f0d7c4;--diverging-155:#f0d6c2;--diverging-156:#efd5c0;--diverging-157:#efd4be;--diverging-158:#efd2bc;--diverging-159:#efd1ba;--diverging-16:#1f83bb;--diverging-160:#eed0b8;--diverging-161:#eecfb6;--diverging-162:#eeceb4;--diverging-163:#eeccb2;--diverging-164:#edcbb0;--diverging-165:#edcaae;--diverging-166:#edc9ac;--diverging-167:#ecc8aa;--diverging-168:#ecc6a9;--diverging-169:#ecc5a7;--diverging-17:#2184bb;--diverging-170:#ecc4a5;--diverging-171:#ebc3a3;--diverging-172:#ebc2a1;--diverging-173:#ebc09f;--diverging-174:#ebbf9d;--diverging-175:#eabe9b;--diverging-176:#eabd99;--diverging-177:#eabc97;--diverging-178:#eaba95;--diverging-179:#e9b993;--diverging-18:#2385bc;--diverging-180:#e9b891;--diverging-181:#e9b78f;--diverging-182:#e8b68d;--diverging-183:#e8b48b;--diverging-184:#e8b38a;--diverging-185:#e8b288;--diverging-186:#e7b186;--diverging-187:#e7b084;--diverging-188:#e7ae82;--diverging-189:#e7ad80;--diverging-19:#2586bc;--diverging-190:#e6ac7e;--diverging-191:#e6ab7c;--diverging-192:#e6aa7a;--diverging-193:#e6a878;--diverging-194:#e5a776;--diverging-195:#e5a674;--diverging-196:#e5a572;--diverging-197:#e4a470;--diverging-198:#e4a26e;--diverging-199:#e4a16c;--diverging-2:#0474b3;--diverging-20:#2787bd;--diverging-200:#e4a06b;--diverging-201:#e39f69;--diverging-202:#e39e67;--diverging-203:#e39c65;--diverging-204:#e39b63;--diverging-205:#e29a61;--diverging-206:#e2995f;--diverging-207:#e2985d;--diverging-208:#e2965b;--diverging-209:#e19559;--diverging-21:#2988bd;--diverging-210:#e19457;--diverging-211:#e19355;--diverging-212:#e09253;--diverging-213:#e09051;--diverging-214:#e08f4f;--diverging-215:#e08e4d;--diverging-216:#df8d4c;--diverging-217:#df8c4a;--diverging-218:#df8a48;--diverging-219:#df8946;--diverging-22:#2b89be;--diverging-220:#de8844;--diverging-221:#de8742;--diverging-222:#de8640;--diverging-223:#de843e;--diverging-224:#dd833c;--diverging-225:#dd823a;--diverging-226:#dd8138;--diverging-227:#dc8036;--diverging-228:#dc7e34;--diverging-229:#dc7d32;--diverging-23:#2d8abe;--diverging-230:#dc7c30;--diverging-231:#db7b2e;--diverging-232:#db7a2d;--diverging-233:#db782b;--diverging-234:#db7729;--diverging-235:#da7627;--diverging-236:#da7525;--diverging-237:#da7423;--diverging-238:#da7221;--diverging-239:#d9711f;--diverging-24:#2e8bbf;--diverging-240:#d9701d;--diverging-241:#d96f1b;--diverging-242:#d86e19;--diverging-243:#d86c17;--diverging-244:#d86b15;--diverging-245:#d86a13;--diverging-246:#d76911;--diverging-247:#d7680f;--diverging-248:#d7660e;--diverging-249:#d7650c;--diverging-25:#308cc0;--diverging-250:#d6640a;--diverging-251:#d66308;--diverging-252:#d66206;--diverging-253:#d66004;--diverging-254:#d55f02;--diverging-255:#d55e00;--diverging-26:#328dc0;--diverging-27:#348ec1;--diverging-28:#368fc1;--diverging-29:#3890c2;--diverging-3:#0675b4;--diverging-30:#3a91c2;--diverging-31:#3c92c3;--diverging-32:#3e93c3;--diverging-33:#4094c4;--diverging-34:#4295c4;--diverging-35:#4497c5;--diverging-36:#4698c5;--diverging-37:#4899c6;--diverging-38:#4a9ac7;--diverging-39:#4c9bc7;--diverging-4:#0876b4;--diverging-40:#4d9cc8;--diverging-41:#4f9dc8;--diverging-42:#519ec9;--diverging-43:#539fc9;--diverging-44:#55a0ca;--diverging-45:#57a1ca;--diverging-46:#59a2cb;--diverging-47:#5ba3cb;--diverging-48:#5da4cc;--diverging-49:#5fa5cd;--diverging-5:#0a77b5;--diverging-50:#61a6cd;--diverging-51:#63a7ce;--diverging-52:#65a8ce;--diverging-53:#67a9cf;--diverging-54:#69aacf;--diverging-55:#6babd0;--diverging-56:#6cacd0;--diverging-57:#6eadd1;--diverging-58:#70afd1;--diverging-59:#72b0d2;--diverging-6:#0c78b5;--diverging-60:#74b1d2;--diverging-61:#76b2d3;--diverging-62:#78b3d4;--diverging-63:#7ab4d4;--diverging-64:#7cb5d5;--diverging-65:#7eb6d5;--diverging-66:#80b7d6;--diverging-67:#82b8d6;--diverging-68:#84b9d7;--diverging-69:#86bad7;--diverging-7:#0e79b6;--diverging-70:#88bbd8;--diverging-71:#8abcd8;--diverging-72:#8bbdd9;--diverging-73:#8dbeda;--diverging-74:#8fbfda;--diverging-75:#91c0db;--diverging-76:#93c1db;--diverging-77:#95c2dc;--diverging-78:#97c3dc;--diverging-79:#99c4dd;--diverging-8:#0f7ab6;--diverging-80:#9bc5dd;--diverging-81:#9dc6de;--diverging-82:#9fc8de;--diverging-83:#a1c9df;--diverging-84:#a3cadf;--diverging-85:#a5cbe0;--diverging-86:#a7cce1;--diverging-87:#a9cde1;--diverging-88:#aacee2;--diverging-89:#accfe2;--diverging-9:#117bb7;--diverging-90:#aed0e3;--diverging-91:#b0d1e3;--diverging-92:#b2d2e4;--diverging-93:#b4d3e4;--diverging-94:#b6d4e5;--diverging-95:#b8d5e5;--diverging-96:#bad6e6;--diverging-97:#bcd7e6;--diverging-98:#bed8e7;--diverging-99:#c0d9e8}
+#okabe-ito-deuteranopia:target ~ #figure_1 {--diverging-0:#2b229f;--diverging-1:#2c24a0;--diverging-10:#3a33a5;--diverging-100:#cbc9e4;--diverging-101:#cdcbe5;--diverging-102:#cecde5;--diverging-103:#d0cee6;--diverging-104:#d1cfe6;--diverging-105:#d3d1e8;--diverging-106:#d5d3e8;--diverging-107:#d6d5e9;--diverging-108:#d8d6e9;--diverging-109:#d9d8ea;--diverging-11:#3c34a6;--diverging-110:#dbdaeb;--diverging-111:#dddbec;--diverging-112:#dedded;--diverging-113:#e0dfed;--diverging-114:#e2e1ee;--diverging-115:#e3e2ee;--diverging-116:#e5e4ef;--diverging-117:#e6e6f0;--diverging-118:#e8e7f0;--diverging-119:#eae9f1;--diverging-12:#3e36a7;--diverging-120:#ebeaf2;--diverging-121:#ececf2;--diverging-122:#eeeef3;--diverging-123:#f0eff4;--diverging-124:#f1f1f4;--diverging-125:#f3f3f5;--diverging-126:#f4f4f6;--diverging-127:#f6f6f7;--diverging-128:#f7f7f6;--diverging-129:#f6f6f4;--diverging-13:#4038a8;--diverging-130:#f5f5f3;--diverging-131:#f5f5f1;--diverging-132:#f4f5ef;--diverging-133:#f4f4ed;--diverging-134:#f3f3eb;--diverging-135:#f2f3ea;--diverging-136:#f2f3e9;--diverging-137:#f1f2e7;--diverging-138:#f0f1e5;--diverging-139:#f0f1e3;--diverging-14:#413aa9;--diverging-140:#f0f0e2;--diverging-141:#efefe0;--diverging-142:#eeefde;--diverging-143:#edeedc;--diverging-144:#edeedb;--diverging-145:#ecedd9;--diverging-146:#ecedd7;--diverging-147:#ebedd5;--diverging-148:#ebecd3;--diverging-149:#eaebd2;--diverging-15:#433ba9;--diverging-150:#e9ebd0;--diverging-151:#e9eace;--diverging-152:#e8e9cd;--diverging-153:#e7e9cb;--diverging-154:#e7e9ca;--diverging-155:#e6e8c8;--diverging-156:#e5e7c6;--diverging-157:#e5e7c5;--diverging-158:#e4e6c3;--diverging-159:#e4e6c1;--diverging-16:#453daa;--diverging-160:#e3e5bf;--diverging-161:#e2e5be;--diverging-162:#e2e4bc;--diverging-163:#e1e4ba;--diverging-164:#e0e3b8;--diverging-165:#e0e3b6;--diverging-166:#e0e2b5;--diverging-167:#dfe1b3;--diverging-168:#dee1b2;--diverging-169:#dde0b0;--diverging-17:#463fab;--diverging-170:#dde0ae;--diverging-171:#dcdfad;--diverging-172:#dcdfab;--diverging-173:#dbdea9;--diverging-174:#dbdea7;--diverging-175:#dadda5;--diverging-176:#d9dca4;--diverging-177:#d9dca2;--diverging-178:#d8dca0;--diverging-179:#d7db9e;--diverging-18:#4840ab;--diverging-180:#d7da9d;--diverging-181:#d6da9b;--diverging-182:#d5d999;--diverging-183:#d5d897;--diverging-184:#d4d896;--diverging-185:#d4d895;--diverging-186:#d3d793;--diverging-187:#d2d791;--diverging-188:#d2d68f;--diverging-189:#d1d68d;--diverging-19:#4942ac;--diverging-190:#d0d58c;--diverging-191:#d0d48a;--diverging-192:#d0d488;--diverging-193:#cfd386;--diverging-194:#ced285;--diverging-195:#cdd283;--diverging-196:#cdd281;--diverging-197:#ccd180;--diverging-198:#cbd07e;--diverging-199:#cbd07c;--diverging-2:#2e26a0;--diverging-20:#4b44ad;--diverging-200:#cbd07b;--diverging-201:#cacf79;--diverging-202:#c9ce78;--diverging-203:#c8ce76;--diverging-204:#c8cd74;--diverging-205:#c7cc72;--diverging-206:#c7cc70;--diverging-207:#c6cc6f;--diverging-208:#c5cb6d;--diverging-209:#c4ca6b;--diverging-21:#4d46ad;--diverging-210:#c4ca69;--diverging-211:#c4ca68;--diverging-212:#c3c966;--diverging-213:#c2c864;--diverging-214:#c2c862;--diverging-215:#c1c761;--diverging-216:#c0c660;--diverging-217:#c0c65e;--diverging-218:#bfc55c;--diverging-219:#bfc55a;--diverging-22:#4e47ae;--diverging-220:#bec458;--diverging-221:#bdc457;--diverging-222:#bdc455;--diverging-223:#bcc353;--diverging-224:#bbc251;--diverging-225:#bbc250;--diverging-226:#bbc14e;--diverging-227:#bac04c;--diverging-228:#b9c04a;--diverging-229:#b8c049;--diverging-23:#5049ae;--diverging-230:#b8bf47;--diverging-231:#b7be45;--diverging-232:#b7be44;--diverging-233:#b6bd42;--diverging-234:#b5bd40;--diverging-235:#b4bc3f;--diverging-236:#b4bc3d;--diverging-237:#b4bb3b;--diverging-238:#b3bb39;--diverging-239:#b2ba38;--diverging-24:#514aaf;--diverging-240:#b2ba36;--diverging-241:#b1b934;--diverging-242:#b0b833;--diverging-243:#b0b831;--diverging-244:#afb72f;--diverging-245:#afb72d;--diverging-246:#aeb62b;--diverging-247:#adb62a;--diverging-248:#adb528;--diverging-249:#acb527;--diverging-25:#534cb0;--diverging-250:#abb425;--diverging-251:#abb323;--diverging-252:#abb322;--diverging-253:#aab320;--diverging-254:#a9b21e;--diverging-255:#a8b11c;--diverging-26:#544db1;--diverging-27:#564fb2;--diverging-28:#5751b2;--diverging-29:#5952b3;--diverging-3:#3027a1;--diverging-30:#5b54b3;--diverging-31:#5c56b4;--diverging-32:#5e57b5;--diverging-33:#6059b6;--diverging-34:#615bb6;--diverging-35:#635db7;--diverging-36:#655fb8;--diverging-37:#6660b9;--diverging-38:#6862ba;--diverging-39:#6a64ba;--diverging-4:#3129a1;--diverging-40:#6b65bb;--diverging-41:#6c66bb;--diverging-42:#6e68bc;--diverging-43:#706abc;--diverging-44:#716bbd;--diverging-45:#736dbe;--diverging-46:#746fbf;--diverging-47:#7671bf;--diverging-48:#7872c0;--diverging-49:#7974c1;--diverging-5:#332ba2;--diverging-50:#7b76c1;--diverging-51:#7d77c2;--diverging-52:#7e79c3;--diverging-53:#807bc4;--diverging-54:#817cc4;--diverging-55:#837ec5;--diverging-56:#847fc5;--diverging-57:#8681c6;--diverging-58:#8883c7;--diverging-59:#8985c8;--diverging-6:#352ca3;--diverging-60:#8b86c8;--diverging-61:#8c88c9;--diverging-62:#8e8aca;--diverging-63:#908bca;--diverging-64:#918dcb;--diverging-65:#938fcc;--diverging-66:#9591cd;--diverging-67:#9692cd;--diverging-68:#9894ce;--diverging-69:#9a96ce;--diverging-7:#362ea4;--diverging-70:#9b97cf;--diverging-71:#9d99d0;--diverging-72:#9e9ad1;--diverging-73:#9f9cd2;--diverging-74:#a19dd2;--diverging-75:#a39fd3;--diverging-76:#a4a1d3;--diverging-77:#a6a3d4;--diverging-78:#a8a4d4;--diverging-79:#a9a6d6;--diverging-8:#372fa4;--diverging-80:#aba8d6;--diverging-81:#aca9d7;--diverging-82:#aeabd7;--diverging-83:#b0add8;--diverging-84:#b2afd9;--diverging-85:#b3b0da;--diverging-86:#b5b2db;--diverging-87:#b7b4db;--diverging-88:#b8b5dc;--diverging-89:#b9b7dc;--diverging-9:#3931a5;--diverging-90:#bbb8dd;--diverging-91:#bcbade;--diverging-92:#bebcdf;--diverging-93:#c0bddf;--diverging-94:#c1bfe0;--diverging-95:#c3c1e0;--diverging-96:#c4c2e1;--diverging-97:#c6c4e2;--diverging-98:#c8c6e3;--diverging-99:#c9c7e3}
+#okabe-ito-protanopia:target ~ #figure_1 {--diverging-0:#3132a3;--diverging-1:#3334a4;--diverging-10:#4041a9;--diverging-100:#cccde5;--diverging-101:#cecee6;--diverging-102:#d0d0e6;--diverging-103:#d1d1e7;--diverging-104:#d2d2e7;--diverging-105:#d4d4e8;--diverging-106:#d6d6e9;--diverging-107:#d7d7ea;--diverging-108:#d9d9ea;--diverging-109:#dadbeb;--diverging-11:#4243aa;--diverging-110:#dcdcec;--diverging-111:#dddeec;--diverging-112:#dfdfed;--diverging-113:#e1e1ed;--diverging-114:#e2e2ee;--diverging-115:#e4e4ef;--diverging-116:#e5e5f0;--diverging-117:#e7e7f0;--diverging-118:#e8e9f1;--diverging-119:#eaeaf1;--diverging-12:#4445aa;--diverging-120:#ebebf2;--diverging-121:#ededf2;--diverging-122:#eeeef3;--diverging-123:#f0f0f4;--diverging-124:#f1f1f5;--diverging-125:#f3f3f6;--diverging-126:#f4f4f6;--diverging-127:#f6f6f7;--diverging-128:#f7f7f6;--diverging-129:#f6f6f4;--diverging-13:#4647ab;--diverging-130:#f5f5f2;--diverging-131:#f5f5f1;--diverging-132:#f4f4ef;--diverging-133:#f3f3ed;--diverging-134:#f2f2eb;--diverging-135:#f2f2e9;--diverging-136:#f2f1e8;--diverging-137:#f1f0e7;--diverging-138:#f0f0e5;--diverging-139:#efefe3;--diverging-14:#4748ac;--diverging-140:#efefe1;--diverging-141:#eeeedf;--diverging-142:#ededde;--diverging-143:#edecdc;--diverging-144:#ececda;--diverging-145:#ebebd8;--diverging-146:#ebead6;--diverging-147:#eaead5;--diverging-148:#e9e9d3;--diverging-149:#e8e8d1;--diverging-15:#494aac;--diverging-150:#e8e8cf;--diverging-151:#e7e7cd;--diverging-152:#e6e6cc;--diverging-153:#e6e5ca;--diverging-154:#e5e5c9;--diverging-155:#e5e5c7;--diverging-156:#e4e4c5;--diverging-157:#e3e3c3;--diverging-158:#e2e2c1;--diverging-159:#e2e2c0;--diverging-16:#4a4bad;--diverging-160:#e1e1be;--diverging-161:#e1e0bc;--diverging-162:#e0e0ba;--diverging-163:#dfdfb8;--diverging-164:#dedeb7;--diverging-165:#dedeb5;--diverging-166:#ddddb3;--diverging-167:#dcdcb1;--diverging-168:#dcdbb0;--diverging-169:#dbdbae;--diverging-17:#4c4dae;--diverging-170:#dbdaad;--diverging-171:#dad9ab;--diverging-172:#d9d9a9;--diverging-173:#d8d8a7;--diverging-174:#d8d8a5;--diverging-175:#d7d7a3;--diverging-176:#d7d6a2;--diverging-177:#d6d6a0;--diverging-178:#d5d59e;--diverging-179:#d4d49c;--diverging-18:#4d4eaf;--diverging-180:#d4d39a;--diverging-181:#d3d399;--diverging-182:#d2d297;--diverging-183:#d1d195;--diverging-184:#d1d194;--diverging-185:#d1d092;--diverging-186:#d0cf90;--diverging-187:#cfcf8f;--diverging-188:#cece8d;--diverging-189:#cecd8b;--diverging-19:#4f50af;--diverging-190:#cdcc89;--diverging-191:#cccc87;--diverging-192:#cccb86;--diverging-193:#cbcb84;--diverging-194:#caca82;--diverging-195:#cac980;--diverging-196:#c9c97e;--diverging-197:#c8c87d;--diverging-198:#c7c77b;--diverging-199:#c7c679;--diverging-2:#3436a4;--diverging-20:#5151b0;--diverging-200:#c7c678;--diverging-201:#c6c576;--diverging-202:#c5c574;--diverging-203:#c4c472;--diverging-204:#c4c371;--diverging-205:#c3c26f;--diverging-206:#c2c26d;--diverging-207:#c2c16b;--diverging-208:#c1c069;--diverging-209:#c0bf68;--diverging-21:#5253b0;--diverging-210:#c0bf66;--diverging-211:#bfbf64;--diverging-212:#bebe62;--diverging-213:#bdbd60;--diverging-214:#bdbc5e;--diverging-215:#bcbc5d;--diverging-216:#bbbb5c;--diverging-217:#bbba5a;--diverging-218:#bab958;--diverging-219:#bab956;--diverging-22:#5455b1;--diverging-220:#b9b854;--diverging-221:#b8b853;--diverging-222:#b8b751;--diverging-223:#b7b64f;--diverging-224:#b6b54d;--diverging-225:#b6b54b;--diverging-226:#b5b44a;--diverging-227:#b4b348;--diverging-228:#b3b246;--diverging-229:#b3b244;--diverging-23:#5556b1;--diverging-230:#b2b242;--diverging-231:#b1b141;--diverging-232:#b1b040;--diverging-233:#b0af3e;--diverging-234:#b0af3c;--diverging-235:#afae3a;--diverging-236:#aead38;--diverging-237:#aead37;--diverging-238:#adac35;--diverging-239:#acab33;--diverging-24:#5657b2;--diverging-240:#acab31;--diverging-241:#abaa2f;--diverging-242:#aaa92e;--diverging-243:#a9a82c;--diverging-244:#a9a82a;--diverging-245:#a8a728;--diverging-246:#a7a626;--diverging-247:#a7a625;--diverging-248:#a6a523;--diverging-249:#a6a522;--diverging-25:#5859b3;--diverging-250:#a5a420;--diverging-251:#a4a31e;--diverging-252:#a4a31c;--diverging-253:#a3a21a;--diverging-254:#a2a119;--diverging-255:#a1a017;--diverging-26:#595ab4;--diverging-27:#5b5cb5;--diverging-28:#5d5db5;--diverging-29:#5e5fb6;--diverging-3:#3637a5;--diverging-30:#6060b6;--diverging-31:#6162b7;--diverging-32:#6364b7;--diverging-33:#6465b8;--diverging-34:#6667b9;--diverging-35:#6869ba;--diverging-36:#6a6aba;--diverging-37:#6b6cbb;--diverging-38:#6d6dbc;--diverging-39:#6e6fbc;--diverging-4:#3839a5;--diverging-40:#6f70bd;--diverging-41:#7171be;--diverging-42:#7273bf;--diverging-43:#7475bf;--diverging-44:#7576c0;--diverging-45:#7778c0;--diverging-46:#7979c1;--diverging-47:#7a7bc1;--diverging-48:#7c7cc2;--diverging-49:#7d7ec3;--diverging-5:#393aa6;--diverging-50:#7f7fc4;--diverging-51:#8081c5;--diverging-52:#8283c5;--diverging-53:#8484c6;--diverging-54:#8586c6;--diverging-55:#8787c7;--diverging-56:#8888c7;--diverging-57:#898ac8;--diverging-58:#8b8cc9;--diverging-59:#8d8dca;--diverging-6:#3b3ca6;--diverging-60:#8e8fca;--diverging-61:#9091cb;--diverging-62:#9292cc;--diverging-63:#9394cc;--diverging-64:#9595cd;--diverging-65:#9697cd;--diverging-66:#9898ce;--diverging-67:#999acf;--diverging-68:#9b9bd0;--diverging-69:#9d9dd0;--diverging-7:#3c3da7;--diverging-70:#9e9fd1;--diverging-71:#a0a0d1;--diverging-72:#a1a1d2;--diverging-73:#a2a3d3;--diverging-74:#a4a4d3;--diverging-75:#a5a6d4;--diverging-76:#a7a7d5;--diverging-77:#a8a9d6;--diverging-78:#aaaad6;--diverging-79:#acacd7;--diverging-8:#3d3ea7;--diverging-80:#adaed7;--diverging-81:#afafd8;--diverging-82:#b1b1d9;--diverging-83:#b2b3da;--diverging-84:#b4b4da;--diverging-85:#b5b6db;--diverging-86:#b7b7dc;--diverging-87:#b9b9dc;--diverging-88:#babadd;--diverging-89:#bbbbdd;--diverging-9:#3f40a8;--diverging-90:#bdbdde;--diverging-91:#bebfdf;--diverging-92:#c0c0e0;--diverging-93:#c1c2e0;--diverging-94:#c3c3e1;--diverging-95:#c5c5e1;--diverging-96:#c6c6e2;--diverging-97:#c8c8e2;--diverging-98:#c9c9e3;--diverging-99:#cbcbe4}
+#okabe-ito-tritanopia:target ~ #figure_1 {--diverging-0:#069694;--diverging-1:#089795;--diverging-10:#189d9b;--diverging-100:#c3e2e1;--diverging-101:#c5e3e2;--diverging-102:#c7e3e3;--diverging-103:#c9e4e4;--diverging-104:#cae5e4;--diverging-105:#cce6e6;--diverging-106:#cee7e6;--diverging-107:#d0e8e7;--diverging-108:#d2e8e8;--diverging-109:#d4e9e9;--diverging-11:#1a9e9c;--diverging-110:#d6eaea;--diverging-111:#d8ebea;--diverging-112:#daeceb;--diverging-113:#dcecec;--diverging-114:#deeded;--diverging-115:#e0eded;--diverging-116:#e2eeee;--diverging-117:#e3efef;--diverging-118:#e5f0f0;--diverging-119:#e7f0f0;--diverging-12:#1c9f9d;--diverging-120:#e8f1f1;--diverging-121:#eaf2f2;--diverging-122:#ecf3f3;--diverging-123:#eef4f4;--diverging-124:#f0f4f4;--diverging-125:#f2f5f5;--diverging-126:#f4f6f6;--diverging-127:#f6f7f7;--diverging-128:#f7f6f6;--diverging-129:#f7f4f4;--diverging-13:#1ea09e;--diverging-130:#f6f3f3;--diverging-131:#f6f1f1;--diverging-132:#f6f0f0;--diverging-133:#f6eeee;--diverging-134:#f5ecec;--diverging-135:#f5ebeb;--diverging-136:#f5eaea;--diverging-137:#f4e8e8;--diverging-138:#f4e6e6;--diverging-139:#f3e4e5;--diverging-14:#20a19f;--diverging-140:#f3e3e3;--diverging-141:#f2e1e2;--diverging-142:#f2e0e0;--diverging-143:#f2dede;--diverging-144:#f2dcdd;--diverging-145:#f1dbdb;--diverging-146:#f1d9da;--diverging-147:#f1d7d8;--diverging-148:#f1d5d6;--diverging-149:#f0d4d5;--diverging-15:#22a29f;--diverging-150:#f0d2d3;--diverging-151:#f0d1d2;--diverging-152:#efd0d1;--diverging-153:#efcecf;--diverging-154:#efcccd;--diverging-155:#efcbcb;--diverging-156:#eec9ca;--diverging-157:#eec8c8;--diverging-158:#eec6c6;--diverging-159:#edc4c5;--diverging-16:#24a3a0;--diverging-160:#ecc2c3;--diverging-161:#ecc1c2;--diverging-162:#ecbfc0;--diverging-163:#ecbdbe;--diverging-164:#ebbcbd;--diverging-165:#ebbabb;--diverging-166:#ebb9ba;--diverging-167:#eab7b8;--diverging-168:#eab6b7;--diverging-169:#eab4b5;--diverging-17:#26a3a1;--diverging-170:#eab2b4;--diverging-171:#e9b1b2;--diverging-172:#e9afb1;--diverging-173:#e9adaf;--diverging-174:#e9acad;--diverging-175:#e8aaac;--diverging-176:#e8a9aa;--diverging-177:#e8a7a9;--diverging-178:#e8a5a7;--diverging-179:#e7a3a5;--diverging-18:#28a4a2;--diverging-180:#e7a2a4;--diverging-181:#e6a0a2;--diverging-182:#e59fa0;--diverging-183:#e59d9e;--diverging-184:#e59c9d;--diverging-185:#e59a9c;--diverging-186:#e4999a;--diverging-187:#e49799;--diverging-188:#e49597;--diverging-189:#e49395;--diverging-19:#2aa5a2;--diverging-190:#e39294;--diverging-191:#e39092;--diverging-192:#e38f91;--diverging-193:#e38d8f;--diverging-194:#e28b8d;--diverging-195:#e28a8c;--diverging-196:#e2888a;--diverging-197:#e18789;--diverging-198:#e18587;--diverging-199:#e18385;--diverging-2:#0a9895;--diverging-20:#2ca6a3;--diverging-200:#e18284;--diverging-201:#e08083;--diverging-202:#e07f81;--diverging-203:#df7d7f;--diverging-204:#df7b7e;--diverging-205:#de7a7c;--diverging-206:#de787b;--diverging-207:#de7779;--diverging-208:#de7577;--diverging-209:#dd7376;--diverging-21:#2ea6a4;--diverging-210:#dd7174;--diverging-211:#dd7072;--diverging-212:#dc6e71;--diverging-213:#dc6c6f;--diverging-214:#dc6b6d;--diverging-215:#dc696c;--diverging-216:#db686b;--diverging-217:#db6769;--diverging-218:#db6567;--diverging-219:#db6366;--diverging-22:#30a7a5;--diverging-220:#da6164;--diverging-221:#da6063;--diverging-222:#da5e61;--diverging-223:#da5c5f;--diverging-224:#d95b5e;--diverging-225:#d8595c;--diverging-226:#d8585b;--diverging-227:#d75659;--diverging-228:#d75457;--diverging-229:#d75256;--diverging-23:#32a7a5;--diverging-230:#d75154;--diverging-231:#d64f53;--diverging-232:#d64e52;--diverging-233:#d64c50;--diverging-234:#d64b4e;--diverging-235:#d5494d;--diverging-236:#d5484b;--diverging-237:#d54649;--diverging-238:#d54447;--diverging-239:#d44346;--diverging-24:#33a8a6;--diverging-240:#d44144;--diverging-241:#d43f43;--diverging-242:#d33e41;--diverging-243:#d33c3f;--diverging-244:#d33a3e;--diverging-245:#d3393c;--diverging-246:#d2373b;--diverging-247:#d13639;--diverging-248:#d13438;--diverging-249:#d13336;--diverging-25:#35a9a7;--diverging-250:#d03135;--diverging-251:#d02f33;--diverging-252:#d02e32;--diverging-253:#d02c30;--diverging-254:#cf2a2e;--diverging-255:#cf292d;--diverging-26:#37aaa8;--diverging-27:#39aba9;--diverging-28:#3aaba9;--diverging-29:#3cacaa;--diverging-3:#0c9996;--diverging-30:#3eadab;--diverging-31:#40aeac;--diverging-32:#42aeac;--diverging-33:#44afad;--diverging-34:#46b0ae;--diverging-35:#48b1af;--diverging-36:#4ab2b0;--diverging-37:#4cb3b1;--diverging-38:#4eb4b2;--diverging-39:#50b4b2;--diverging-4:#0e9997;--diverging-40:#51b5b3;--diverging-41:#53b5b4;--diverging-42:#55b6b5;--diverging-43:#57b7b5;--diverging-44:#59b8b6;--diverging-45:#5bb8b7;--diverging-46:#5db9b8;--diverging-47:#5fbab8;--diverging-48:#61bbb9;--diverging-49:#63bcba;--diverging-5:#0f9a98;--diverging-50:#64bcba;--diverging-51:#66bdbb;--diverging-52:#68bebc;--diverging-53:#6abfbd;--diverging-54:#6cbfbd;--diverging-55:#6ec0be;--diverging-56:#6fc0bf;--diverging-57:#71c1c0;--diverging-58:#73c2c1;--diverging-59:#75c3c2;--diverging-6:#119b98;--diverging-60:#77c4c2;--diverging-61:#79c5c3;--diverging-62:#7bc6c4;--diverging-63:#7dc6c5;--diverging-64:#7fc7c6;--diverging-65:#81c8c6;--diverging-66:#83c9c7;--diverging-67:#85c9c8;--diverging-68:#87cac9;--diverging-69:#89cac9;--diverging-7:#139c99;--diverging-70:#8bcbca;--diverging-71:#8ccccb;--diverging-72:#8dcdcc;--diverging-73:#8fcecd;--diverging-74:#91cecd;--diverging-75:#93cfce;--diverging-76:#95d0cf;--diverging-77:#97d1d0;--diverging-78:#99d1d0;--diverging-79:#9bd2d1;--diverging-8:#149c9a;--diverging-80:#9dd3d2;--diverging-81:#9fd4d3;--diverging-82:#a1d4d4;--diverging-83:#a3d5d5;--diverging-84:#a5d6d5;--diverging-85:#a7d7d6;--diverging-86:#a9d8d7;--diverging-87:#abd8d8;--diverging-88:#acd9d9;--diverging-89:#aedad9;--diverging-9:#169d9b;--diverging-90:#b0dbda;--diverging-91:#b2dbda;--diverging-92:#b4dcdb;--diverging-93:#b6dddc;--diverging-94:#b8dedd;--diverging-95:#b9dedd;--diverging-96:#bbdfde;--diverging-97:#bde0df;--diverging-98:#bfe1e0;--diverging-99:#c1e2e1}
+#viridis-normal:target ~ #figure_1 {--diverging-0:#440154;--diverging-1:#450355;--diverging-10:#521461;--diverging-100:#d0c2d4;--diverging-101:#d2c4d5;--diverging-102:#d3c6d6;--diverging-103:#d5c8d8;--diverging-104:#d6cad9;--diverging-105:#d7ccda;--diverging-106:#d9cedc;--diverging-107:#dacfdd;--diverging-108:#dcd1de;--diverging-109:#ddd3df;--diverging-11:#531662;--diverging-110:#ded5e1;--diverging-111:#e0d7e2;--diverging-112:#e1d9e3;--diverging-113:#e3dbe4;--diverging-114:#e4dde6;--diverging-115:#e5dfe7;--diverging-116:#e7e1e8;--diverging-117:#e8e3ea;--diverging-118:#eae5eb;--diverging-119:#ebe7ec;--diverging-12:#551863;--diverging-120:#ece9ed;--diverging-121:#eeeaef;--diverging-122:#efecf0;--diverging-123:#f1eef1;--diverging-124:#f2f0f3;--diverging-125:#f3f2f4;--diverging-126:#f5f4f5;--diverging-127:#f6f6f6;--diverging-128:#f6f7f6;--diverging-129:#f5f6f5;--diverging-13:#561a65;--diverging-130:#f4f6f4;--diverging-131:#f3f6f3;--diverging-132:#f2f5f2;--diverging-133:#f0f5f1;--diverging-134:#eff5ef;--diverging-135:#eef4ee;--diverging-136:#edf4ed;--diverging-137:#ecf4ec;--diverging-138:#eaf3eb;--diverging-139:#e9f3ea;--diverging-14:#581c66;--diverging-140:#e8f2e8;--diverging-141:#e7f2e7;--diverging-142:#e6f2e6;--diverging-143:#e4f1e5;--diverging-144:#e3f1e4;--diverging-145:#e2f1e3;--diverging-146:#e1f0e1;--diverging-147:#e0f0e0;--diverging-148:#def0df;--diverging-149:#ddefde;--diverging-15:#591e67;--diverging-150:#dcefdd;--diverging-151:#dbefdc;--diverging-152:#daeeda;--diverging-153:#d8eed9;--diverging-154:#d7edd8;--diverging-155:#d6edd7;--diverging-156:#d5edd6;--diverging-157:#d4ecd5;--diverging-158:#d2ecd3;--diverging-159:#d1ecd2;--diverging-16:#5a2068;--diverging-160:#d0ebd1;--diverging-161:#cfebd0;--diverging-162:#ceebcf;--diverging-163:#cceace;--diverging-164:#cbeacc;--diverging-165:#cae9cb;--diverging-166:#c9e9ca;--diverging-167:#c8e9c9;--diverging-168:#c6e8c8;--diverging-169:#c5e8c7;--diverging-17:#5c226a;--diverging-170:#c4e8c5;--diverging-171:#c3e7c4;--diverging-172:#c2e7c3;--diverging-173:#c0e7c2;--diverging-174:#bfe6c1;--diverging-175:#bee6bf;--diverging-176:#bde6be;--diverging-177:#bce5bd;--diverging-178:#bae5bc;--diverging-179:#b9e4bb;--diverging-18:#5d246b;--diverging-180:#b8e4ba;--diverging-181:#b7e4b8;--diverging-182:#b6e3b7;--diverging-183:#b4e3b6;--diverging-184:#b3e3b5;--diverging-185:#b2e2b4;--diverging-186:#b1e2b3;--diverging-187:#b0e2b1;--diverging-188:#aee1b0;--diverging-189:#ade1af;--diverging-19:#5f266c;--diverging-190:#ace0ae;--diverging-191:#abe0ad;--diverging-192:#aae0ac;--diverging-193:#a8dfaa;--diverging-194:#a7dfa9;--diverging-195:#a6dfa8;--diverging-196:#a5dea7;--diverging-197:#a4dea6;--diverging-198:#a2dea5;--diverging-199:#a1dda3;--diverging-2:#470557;--diverging-20:#60286e;--diverging-200:#a0dda2;--diverging-201:#9fdca1;--diverging-202:#9edca0;--diverging-203:#9cdc9f;--diverging-204:#9bdb9e;--diverging-205:#9adb9c;--diverging-206:#99db9b;--diverging-207:#98da9a;--diverging-208:#96da99;--diverging-209:#95da98;--diverging-21:#612a6f;--diverging-210:#94d997;--diverging-211:#93d995;--diverging-212:#92d994;--diverging-213:#90d893;--diverging-214:#8fd892;--diverging-215:#8ed791;--diverging-216:#8dd790;--diverging-217:#8cd78e;--diverging-218:#8ad68d;--diverging-219:#89d68c;--diverging-22:#632b70;--diverging-220:#88d68b;--diverging-221:#87d58a;--diverging-222:#86d589;--diverging-223:#84d587;--diverging-224:#83d486;--diverging-225:#82d485;--diverging-226:#81d384;--diverging-227:#80d383;--diverging-228:#7ed382;--diverging-229:#7dd280;--diverging-23:#642d71;--diverging-230:#7cd27f;--diverging-231:#7bd27e;--diverging-232:#7ad17d;--diverging-233:#78d17c;--diverging-234:#77d17b;--diverging-235:#76d079;--diverging-236:#75d078;--diverging-237:#74cf77;--diverging-238:#72cf76;--diverging-239:#71cf75;--diverging-24:#662f73;--diverging-240:#70ce74;--diverging-241:#6fce72;--diverging-242:#6ece71;--diverging-243:#6ccd70;--diverging-244:#6bcd6f;--diverging-245:#6acd6e;--diverging-246:#69cc6d;--diverging-247:#68cc6b;--diverging-248:#66cc6a;--diverging-249:#65cb69;--diverging-25:#673174;--diverging-250:#64cb68;--diverging-251:#63ca67;--diverging-252:#62ca66;--diverging-253:#60ca64;--diverging-254:#5fc963;--diverging-255:#5ec962;--diverging-26:#693375;--diverging-27:#6a3577;--diverging-28:#6b3778;--diverging-29:#6d3979;--diverging-3:#480758;--diverging-30:#6e3b7a;--diverging-31:#703d7c;--diverging-32:#713f7d;--diverging-33:#72417e;--diverging-34:#74437f;--diverging-35:#754581;--diverging-36:#774682;--diverging-37:#784883;--diverging-38:#794a85;--diverging-39:#7b4c86;--diverging-4:#4a0959;--diverging-40:#7c4e87;--diverging-41:#7e5088;--diverging-42:#7f528a;--diverging-43:#80548b;--diverging-44:#82568c;--diverging-45:#83588e;--diverging-46:#855a8f;--diverging-47:#865c90;--diverging-48:#875e91;--diverging-49:#896093;--diverging-5:#4b0b5a;--diverging-50:#8a6194;--diverging-51:#8c6395;--diverging-52:#8d6596;--diverging-53:#8e6798;--diverging-54:#906999;--diverging-55:#916b9a;--diverging-56:#936d9c;--diverging-57:#946f9d;--diverging-58:#95719e;--diverging-59:#97739f;--diverging-6:#4c0d5c;--diverging-60:#9875a1;--diverging-61:#9a77a2;--diverging-62:#9b79a3;--diverging-63:#9c7ba5;--diverging-64:#9e7ca6;--diverging-65:#9f7ea7;--diverging-66:#a180a8;--diverging-67:#a282aa;--diverging-68:#a384ab;--diverging-69:#a586ac;--diverging-7:#4e0f5d;--diverging-70:#a688ad;--diverging-71:#a88aaf;--diverging-72:#a98cb0;--diverging-73:#aa8eb1;--diverging-74:#ac90b3;--diverging-75:#ad92b4;--diverging-76:#af94b5;--diverging-77:#b096b6;--diverging-78:#b297b8;--diverging-79:#b399b9;--diverging-8:#4f105e;--diverging-80:#b49bba;--diverging-81:#b69dbc;--diverging-82:#b79fbd;--diverging-83:#b9a1be;--diverging-84:#baa3bf;--diverging-85:#bba5c1;--diverging-86:#bda7c2;--diverging-87:#bea9c3;--diverging-88:#c0abc5;--diverging-89:#c1adc6;--diverging-9:#511260;--diverging-90:#c2afc7;--diverging-91:#c4b1c8;--diverging-92:#c5b3ca;--diverging-93:#c7b4cb;--diverging-94:#c8b6cc;--diverging-95:#c9b8cd;--diverging-96:#cbbacf;--diverging-97:#ccbcd0;--diverging-98:#cebed1;--diverging-99:#cfc0d3}
+#viridis-deuteranopia:target ~ #figure_1 {--diverging-0:#2b303b;--diverging-1:#2c313c;--diverging-10:#3b3f4a;--diverging-100:#cbcccf;--diverging-101:#cdced0;--diverging-102:#cecfd1;--diverging-103:#d0d1d3;--diverging-104:#d2d2d4;--diverging-105:#d3d4d6;--diverging-106:#d5d6d8;--diverging-107:#d6d7d9;--diverging-108:#d8d9da;--diverging-109:#d9dadb;--diverging-11:#3c414b;--diverging-110:#dbdbdd;--diverging-111:#dddddf;--diverging-112:#dedfe0;--diverging-113:#e0e1e1;--diverging-114:#e1e2e3;--diverging-115:#e3e3e5;--diverging-116:#e5e5e6;--diverging-117:#e6e6e8;--diverging-118:#e8e9e9;--diverging-119:#eaeaeb;--diverging-12:#3e434d;--diverging-120:#ebebec;--diverging-121:#ededed;--diverging-122:#eeeeef;--diverging-123:#f0f0f0;--diverging-124:#f1f1f2;--diverging-125:#f3f3f3;--diverging-126:#f5f5f5;--diverging-127:#f6f6f6;--diverging-128:#f6f6f6;--diverging-129:#f5f5f5;--diverging-13:#40444e;--diverging-130:#f5f5f5;--diverging-131:#f4f4f4;--diverging-132:#f3f3f3;--diverging-133:#f2f2f2;--diverging-134:#f1f1f1;--diverging-135:#f0f0f0;--diverging-136:#f0efef;--diverging-137:#efeeee;--diverging-138:#ededed;--diverging-139:#edeced;--diverging-14:#424650;--diverging-140:#ecebeb;--diverging-141:#ebeaea;--diverging-142:#ebeaea;--diverging-143:#e9e8e9;--diverging-144:#e8e7e8;--diverging-145:#e8e6e7;--diverging-146:#e7e5e5;--diverging-147:#e6e5e5;--diverging-148:#e5e3e4;--diverging-149:#e4e2e3;--diverging-15:#434751;--diverging-150:#e3e2e2;--diverging-151:#e3e1e2;--diverging-152:#e2e0e0;--diverging-153:#e0dfdf;--diverging-154:#dfdede;--diverging-155:#dfddde;--diverging-156:#dedcdd;--diverging-157:#dddbdc;--diverging-158:#dcdadb;--diverging-159:#dbd9da;--diverging-16:#444952;--diverging-160:#dad8d9;--diverging-161:#dad7d8;--diverging-162:#d9d7d7;--diverging-163:#d7d5d6;--diverging-164:#d7d4d5;--diverging-165:#d6d3d4;--diverging-166:#d5d3d3;--diverging-167:#d4d2d3;--diverging-168:#d3d0d2;--diverging-169:#d2d0d1;--diverging-17:#464b54;--diverging-170:#d2cfd0;--diverging-171:#d1cecf;--diverging-172:#d0cdce;--diverging-173:#cfcccd;--diverging-174:#cecbcc;--diverging-175:#cdcacb;--diverging-176:#ccc9ca;--diverging-177:#cbc8c9;--diverging-178:#cac7c8;--diverging-179:#c9c6c7;--diverging-18:#484c56;--diverging-180:#c9c5c7;--diverging-181:#c8c5c5;--diverging-182:#c7c3c4;--diverging-183:#c6c2c3;--diverging-184:#c5c1c3;--diverging-185:#c4c0c2;--diverging-186:#c3c0c1;--diverging-187:#c3bfc0;--diverging-188:#c1bdbf;--diverging-189:#c1bdbe;--diverging-19:#4a4e57;--diverging-190:#c0bcbd;--diverging-191:#bfbbbc;--diverging-192:#bebabc;--diverging-193:#bdb9ba;--diverging-194:#bcb8b9;--diverging-195:#bbb7b9;--diverging-196:#bab6b8;--diverging-197:#bab5b7;--diverging-198:#b9b4b6;--diverging-199:#b8b3b4;--diverging-2:#2e333e;--diverging-20:#4b4f59;--diverging-200:#b7b2b4;--diverging-201:#b6b1b3;--diverging-202:#b5b1b2;--diverging-203:#b4afb1;--diverging-204:#b3aeb0;--diverging-205:#b2adaf;--diverging-206:#b2adae;--diverging-207:#b1acad;--diverging-208:#b0aaac;--diverging-209:#afaaac;--diverging-21:#4c515a;--diverging-210:#aea9ab;--diverging-211:#ada8a9;--diverging-212:#ada7a9;--diverging-213:#aba6a8;--diverging-214:#aaa5a7;--diverging-215:#a9a4a6;--diverging-216:#a9a3a5;--diverging-217:#a8a3a4;--diverging-218:#a7a1a3;--diverging-219:#a6a0a2;--diverging-22:#4e525b;--diverging-220:#a59fa2;--diverging-221:#a49ea1;--diverging-222:#a49ea0;--diverging-223:#a29c9e;--diverging-224:#a19b9d;--diverging-225:#a19b9d;--diverging-226:#a09a9c;--diverging-227:#9f999b;--diverging-228:#9e989a;--diverging-229:#9d9699;--diverging-23:#4f545d;--diverging-230:#9c9698;--diverging-231:#9c9597;--diverging-232:#9b9496;--diverging-233:#999395;--diverging-234:#999295;--diverging-235:#989193;--diverging-236:#979092;--diverging-237:#968f91;--diverging-238:#958e91;--diverging-239:#948d90;--diverging-24:#51565f;--diverging-240:#938c8f;--diverging-241:#938b8e;--diverging-242:#928b8d;--diverging-243:#90898c;--diverging-244:#90888b;--diverging-245:#8f888b;--diverging-246:#8e878a;--diverging-247:#8e8688;--diverging-248:#8c8587;--diverging-249:#8b8486;--diverging-25:#535760;--diverging-250:#8b8386;--diverging-251:#8a8285;--diverging-252:#898184;--diverging-253:#888083;--diverging-254:#877f82;--diverging-255:#867e81;--diverging-26:#555961;--diverging-27:#565a63;--diverging-28:#585b65;--diverging-29:#5a5d66;--diverging-3:#303540;--diverging-30:#5b5f67;--diverging-31:#5d6169;--diverging-32:#5e626a;--diverging-33:#60636c;--diverging-34:#62656d;--diverging-35:#63676f;--diverging-36:#656870;--diverging-37:#666a71;--diverging-38:#676b73;--diverging-39:#696d75;--diverging-4:#323741;--diverging-40:#6b6e76;--diverging-41:#6d7077;--diverging-42:#6e7279;--diverging-43:#70737a;--diverging-44:#72757c;--diverging-45:#73767e;--diverging-46:#75787f;--diverging-47:#767980;--diverging-48:#787b82;--diverging-49:#7a7d84;--diverging-5:#333842;--diverging-50:#7b7e85;--diverging-51:#7d8086;--diverging-52:#7e8187;--diverging-53:#7f8289;--diverging-54:#81848b;--diverging-55:#83868c;--diverging-56:#85888e;--diverging-57:#86898f;--diverging-58:#888a91;--diverging-59:#8a8c92;--diverging-6:#343944;--diverging-60:#8b8d94;--diverging-61:#8d8f95;--diverging-62:#8e9196;--diverging-63:#909298;--diverging-64:#919499;--diverging-65:#93959b;--diverging-66:#95979c;--diverging-67:#96989e;--diverging-68:#979a9f;--diverging-69:#999ca1;--diverging-7:#363b46;--diverging-70:#9b9da2;--diverging-71:#9d9fa4;--diverging-72:#9ea0a5;--diverging-73:#a0a2a6;--diverging-74:#a2a4a8;--diverging-75:#a3a5aa;--diverging-76:#a5a7ab;--diverging-77:#a6a8ac;--diverging-78:#a8aaae;--diverging-79:#a9abaf;--diverging-8:#373c47;--diverging-80:#abadb1;--diverging-81:#adafb3;--diverging-82:#aeb0b4;--diverging-83:#b0b2b5;--diverging-84:#b1b3b7;--diverging-85:#b3b4b9;--diverging-86:#b5b6ba;--diverging-87:#b6b8bb;--diverging-88:#b8babd;--diverging-89:#babbbf;--diverging-9:#393e49;--diverging-90:#bbbcc0;--diverging-91:#bdbec1;--diverging-92:#bec0c3;--diverging-93:#c0c1c4;--diverging-94:#c1c3c5;--diverging-95:#c3c4c7;--diverging-96:#c5c6c9;--diverging-97:#c6c7ca;--diverging-98:#c8c9cb;--diverging-99:#c9cbcd}
+#viridis-protanopia:target ~ #figure_1 {--diverging-0:#272640;--diverging-1:#282841;--diverging-10:#37374e;--diverging-100:#cacad0;--diverging-101:#ccccd1;--diverging-102:#cdcdd2;--diverging-103:#cfcfd4;--diverging-104:#d1d1d5;--diverging-105:#d2d2d7;--diverging-106:#d4d4d9;--diverging-107:#d5d5da;--diverging-108:#d7d7db;--diverging-109:#d9d9dc;--diverging-11:#393850;--diverging-110:#dadade;--diverging-111:#dcdcdf;--diverging-112:#dedde1;--diverging-113:#e0dfe2;--diverging-114:#e1e1e4;--diverging-115:#e2e2e5;--diverging-116:#e4e4e6;--diverging-117:#e6e6e8;--diverging-118:#e8e8ea;--diverging-119:#e9e9eb;--diverging-12:#3b3a51;--diverging-120:#ebebec;--diverging-121:#ececee;--diverging-122:#eeeeef;--diverging-123:#f0f0f0;--diverging-124:#f1f1f2;--diverging-125:#f3f3f4;--diverging-126:#f5f5f5;--diverging-127:#f6f6f6;--diverging-128:#f6f6f6;--diverging-129:#f5f5f5;--diverging-13:#3c3b53;--diverging-130:#f5f5f4;--diverging-131:#f4f4f4;--diverging-132:#f3f3f3;--diverging-133:#f2f2f2;--diverging-134:#f2f2f0;--diverging-135:#f1f1ef;--diverging-136:#f0f0ef;--diverging-137:#eff0ee;--diverging-138:#eeeeed;--diverging-139:#ededec;--diverging-14:#3e3d54;--diverging-140:#ececea;--diverging-141:#ececea;--diverging-142:#ebebe9;--diverging-143:#eaeae8;--diverging-144:#e9e9e7;--diverging-145:#e8e9e6;--diverging-146:#e7e8e5;--diverging-147:#e7e7e4;--diverging-148:#e6e6e3;--diverging-149:#e5e5e2;--diverging-15:#3f3f55;--diverging-150:#e4e4e1;--diverging-151:#e4e4e1;--diverging-152:#e3e3df;--diverging-153:#e2e2de;--diverging-154:#e1e1dd;--diverging-155:#e0e0dc;--diverging-156:#dfe0dc;--diverging-157:#dedfdb;--diverging-158:#ddddd9;--diverging-159:#ddddd8;--diverging-16:#414057;--diverging-160:#dcdcd7;--diverging-161:#dbdbd7;--diverging-162:#dbdbd6;--diverging-163:#d9d9d5;--diverging-164:#d8d9d3;--diverging-165:#d7d8d2;--diverging-166:#d7d7d2;--diverging-167:#d6d7d1;--diverging-168:#d5d5d0;--diverging-169:#d4d4cf;--diverging-17:#434259;--diverging-170:#d4d4cd;--diverging-171:#d3d3cc;--diverging-172:#d2d2cc;--diverging-173:#d1d1cb;--diverging-174:#d0d0ca;--diverging-175:#cfd0c8;--diverging-176:#cfcfc8;--diverging-177:#cecec7;--diverging-178:#cdcdc6;--diverging-179:#ccccc5;--diverging-18:#44445a;--diverging-180:#cbcbc4;--diverging-181:#cacbc3;--diverging-182:#c9cac2;--diverging-183:#c8c9c1;--diverging-184:#c8c8c0;--diverging-185:#c7c7bf;--diverging-186:#c6c7be;--diverging-187:#c6c6bd;--diverging-188:#c4c5bc;--diverging-189:#c4c4bb;--diverging-19:#46465b;--diverging-190:#c3c3ba;--diverging-191:#c2c2b9;--diverging-192:#c1c2b9;--diverging-193:#c0c0b7;--diverging-194:#bfc0b6;--diverging-195:#bfbfb5;--diverging-196:#bebeb4;--diverging-197:#bdbeb4;--diverging-198:#bcbdb3;--diverging-199:#bbbcb1;--diverging-2:#2a2a43;--diverging-20:#48475d;--diverging-200:#babbb0;--diverging-201:#b9baaf;--diverging-202:#b9b9af;--diverging-203:#b8b8ae;--diverging-204:#b7b7ad;--diverging-205:#b6b7ab;--diverging-206:#b6b6aa;--diverging-207:#b5b5a9;--diverging-208:#b3b4a9;--diverging-209:#b3b3a8;--diverging-21:#49495e;--diverging-210:#b2b2a7;--diverging-211:#b1b2a5;--diverging-212:#b1b1a5;--diverging-213:#afb0a4;--diverging-214:#afafa3;--diverging-215:#aeaea2;--diverging-216:#adaea1;--diverging-217:#acada0;--diverging-218:#abac9f;--diverging-219:#aaab9e;--diverging-22:#4b4a5f;--diverging-220:#aaaa9d;--diverging-221:#a9a99c;--diverging-222:#a8a99b;--diverging-223:#a7a89a;--diverging-224:#a6a799;--diverging-225:#a6a698;--diverging-226:#a5a597;--diverging-227:#a4a596;--diverging-228:#a3a496;--diverging-229:#a2a394;--diverging-23:#4c4c61;--diverging-230:#a1a293;--diverging-231:#a1a192;--diverging-232:#a0a091;--diverging-233:#9f9f91;--diverging-234:#9e9f90;--diverging-235:#9d9e8e;--diverging-236:#9c9d8d;--diverging-237:#9b9c8c;--diverging-238:#9a9b8c;--diverging-239:#9a9b8b;--diverging-24:#4e4e63;--diverging-240:#999a8a;--diverging-241:#989988;--diverging-242:#989888;--diverging-243:#969787;--diverging-244:#959686;--diverging-245:#959685;--diverging-246:#949584;--diverging-247:#939482;--diverging-248:#929382;--diverging-249:#919281;--diverging-25:#504f64;--diverging-250:#919280;--diverging-251:#90917f;--diverging-252:#8f907e;--diverging-253:#8e8f7d;--diverging-254:#8d8e7c;--diverging-255:#8c8d7b;--diverging-26:#525165;--diverging-27:#535367;--diverging-28:#545468;--diverging-29:#56566a;--diverging-3:#2c2b44;--diverging-30:#58576b;--diverging-31:#5a596d;--diverging-32:#5b5b6e;--diverging-33:#5d5c6f;--diverging-34:#5f5e70;--diverging-35:#606072;--diverging-36:#626173;--diverging-37:#636375;--diverging-38:#656477;--diverging-39:#676678;--diverging-4:#2e2d46;--diverging-40:#686879;--diverging-41:#6a6a7a;--diverging-42:#6c6b7c;--diverging-43:#6d6d7e;--diverging-44:#6f6f7f;--diverging-45:#707081;--diverging-46:#727282;--diverging-47:#747383;--diverging-48:#757585;--diverging-49:#777787;--diverging-5:#2f2f47;--diverging-50:#787888;--diverging-51:#7a7a89;--diverging-52:#7c7b8a;--diverging-53:#7d7d8c;--diverging-54:#7f7f8d;--diverging-55:#81808f;--diverging-56:#838291;--diverging-57:#848492;--diverging-58:#858593;--diverging-59:#878794;--diverging-6:#313049;--diverging-60:#898996;--diverging-61:#8b8b98;--diverging-62:#8c8c99;--diverging-63:#8e8d9b;--diverging-64:#8f8f9c;--diverging-65:#91909d;--diverging-66:#93929e;--diverging-67:#9494a0;--diverging-68:#9695a2;--diverging-69:#9897a3;--diverging-7:#33324a;--diverging-70:#9999a4;--diverging-71:#9b9ba6;--diverging-72:#9c9ca7;--diverging-73:#9e9ea9;--diverging-74:#a0a0ab;--diverging-75:#a1a1ac;--diverging-76:#a3a3ad;--diverging-77:#a5a5ae;--diverging-78:#a6a6b0;--diverging-79:#a8a8b1;--diverging-8:#34334b;--diverging-80:#a9a9b2;--diverging-81:#ababb4;--diverging-82:#adacb6;--diverging-83:#afaeb7;--diverging-84:#b0b0b8;--diverging-85:#b1b1ba;--diverging-86:#b3b3bb;--diverging-87:#b5b5bd;--diverging-88:#b7b7bf;--diverging-89:#b8b8c0;--diverging-9:#36354d;--diverging-90:#babac1;--diverging-91:#bcbcc2;--diverging-92:#bdbdc4;--diverging-93:#bfbfc5;--diverging-94:#c0c0c7;--diverging-95:#c2c1c8;--diverging-96:#c4c3ca;--diverging-97:#c5c5cb;--diverging-98:#c7c7cc;--diverging-99:#c9c8ce}
+#viridis-tritanopia:target ~ #figure_1 {--diverging-0:#41302d;--diverging-1:#42312e;--diverging-10:#4f403c;--diverging-100:#cfcccb;--diverging-101:#d1cecd;--diverging-102:#d2cfce;--diverging-103:#d4d1d0;--diverging-104:#d5d3d2;--diverging-105:#d6d4d3;--diverging-106:#d8d6d5;--diverging-107:#d9d7d6;--diverging-108:#dbd8d8;--diverging-109:#dddad9;--diverging-11:#50413e;--diverging-110:#dedcdb;--diverging-111:#e0dddd;--diverging-112:#e1dfde;--diverging-113:#e3e0e0;--diverging-114:#e4e2e2;--diverging-115:#e5e4e3;--diverging-116:#e7e5e5;--diverging-117:#e8e7e7;--diverging-118:#eae8e8;--diverging-119:#ebeaea;--diverging-12:#52433f;--diverging-120:#ecebeb;--diverging-121:#eeeded;--diverging-122:#efeeee;--diverging-123:#f1f0f0;--diverging-124:#f2f2f2;--diverging-125:#f3f3f3;--diverging-126:#f5f5f5;--diverging-127:#f6f6f6;--diverging-128:#f6f6f6;--diverging-129:#f5f5f5;--diverging-13:#534541;--diverging-130:#f4f5f5;--diverging-131:#f3f4f4;--diverging-132:#f2f3f3;--diverging-133:#f0f3f3;--diverging-134:#eff2f2;--diverging-135:#eef1f1;--diverging-136:#edf0f0;--diverging-137:#eceff0;--diverging-138:#eaeeef;--diverging-139:#eaeeee;--diverging-14:#554643;--diverging-140:#e9eced;--diverging-141:#e8ecec;--diverging-142:#e7ebec;--diverging-143:#e5eaeb;--diverging-144:#e4eaea;--diverging-145:#e3e9ea;--diverging-146:#e2e7e8;--diverging-147:#e1e7e8;--diverging-148:#dfe6e7;--diverging-149:#dee5e6;--diverging-15:#564744;--diverging-150:#dde5e6;--diverging-151:#dce4e5;--diverging-152:#dbe3e3;--diverging-153:#d9e2e3;--diverging-154:#d8e1e2;--diverging-155:#d7e1e1;--diverging-156:#d6e0e1;--diverging-157:#d5dfe0;--diverging-158:#d3dedf;--diverging-159:#d2ddde;--diverging-16:#574946;--diverging-160:#d1dcdd;--diverging-161:#d0dcdd;--diverging-162:#cfdbdc;--diverging-163:#cedadb;--diverging-164:#cdd9da;--diverging-165:#ccd8d9;--diverging-166:#cbd7d9;--diverging-167:#cad7d8;--diverging-168:#c8d6d7;--diverging-169:#c7d5d7;--diverging-17:#594b48;--diverging-170:#c6d4d6;--diverging-171:#c5d3d5;--diverging-172:#c4d3d4;--diverging-173:#c2d2d4;--diverging-174:#c1d1d3;--diverging-175:#c0d0d2;--diverging-176:#bfcfd1;--diverging-177:#beced0;--diverging-178:#bccecf;--diverging-179:#bbcdce;--diverging-18:#5a4c49;--diverging-180:#baccce;--diverging-181:#b9cbcd;--diverging-182:#b8cacc;--diverging-183:#b6c9cb;--diverging-184:#b5c9cb;--diverging-185:#b4c8ca;--diverging-186:#b3c7c9;--diverging-187:#b3c6c8;--diverging-188:#b1c5c7;--diverging-189:#b0c5c7;--diverging-19:#5c4e4b;--diverging-190:#afc4c6;--diverging-191:#aec3c5;--diverging-192:#adc3c5;--diverging-193:#abc1c3;--diverging-194:#aac0c3;--diverging-195:#a9c0c2;--diverging-196:#a8bfc1;--diverging-197:#a7bec1;--diverging-198:#a5bec0;--diverging-199:#a4bcbf;--diverging-2:#443330;--diverging-20:#5d504d;--diverging-200:#a3bcbe;--diverging-201:#a2bbbd;--diverging-202:#a1babd;--diverging-203:#9fb9bc;--diverging-204:#9eb8bb;--diverging-205:#9db7ba;--diverging-206:#9cb7b9;--diverging-207:#9bb6b8;--diverging-208:#99b5b8;--diverging-209:#98b5b7;--diverging-21:#5e514e;--diverging-210:#97b4b6;--diverging-211:#96b2b5;--diverging-212:#96b2b5;--diverging-213:#94b1b4;--diverging-214:#93b0b3;--diverging-215:#92afb2;--diverging-216:#91afb2;--diverging-217:#90aeb1;--diverging-218:#8eadb0;--diverging-219:#8dacaf;--diverging-22:#60524f;--diverging-220:#8cabaf;--diverging-221:#8baaae;--diverging-222:#8aaaad;--diverging-223:#88a9ac;--diverging-224:#87a8ab;--diverging-225:#86a7ab;--diverging-226:#85a6aa;--diverging-227:#84a6a9;--diverging-228:#82a5a8;--diverging-229:#81a4a7;--diverging-23:#615451;--diverging-230:#80a3a6;--diverging-231:#7fa2a6;--diverging-232:#7ea1a5;--diverging-233:#7ca1a4;--diverging-234:#7ca0a4;--diverging-235:#7b9fa2;--diverging-236:#7a9ea2;--diverging-237:#799da1;--diverging-238:#779da0;--diverging-239:#769ca0;--diverging-24:#635653;--diverging-240:#759b9f;--diverging-241:#749a9e;--diverging-242:#73999d;--diverging-243:#71989c;--diverging-244:#70989c;--diverging-245:#6f979b;--diverging-246:#6e969a;--diverging-247:#6d9599;--diverging-248:#6b9499;--diverging-249:#6a9398;--diverging-25:#645754;--diverging-250:#699397;--diverging-251:#689296;--diverging-252:#679196;--diverging-253:#659094;--diverging-254:#648f93;--diverging-255:#638f93;--diverging-26:#665856;--diverging-27:#675a58;--diverging-28:#685c59;--diverging-29:#6a5d5b;--diverging-3:#453532;--diverging-30:#6b5f5c;--diverging-31:#6d615e;--diverging-32:#6e6260;--diverging-33:#706461;--diverging-34:#726563;--diverging-35:#736765;--diverging-36:#756866;--diverging-37:#766967;--diverging-38:#776b69;--diverging-39:#796d6a;--diverging-4:#473633;--diverging-40:#7a6e6c;--diverging-41:#7c706d;--diverging-42:#7d726f;--diverging-43:#7e7371;--diverging-44:#807572;--diverging-45:#817774;--diverging-46:#837876;--diverging-47:#847977;--diverging-48:#857b79;--diverging-49:#877d7b;--diverging-5:#483834;--diverging-50:#887e7c;--diverging-51:#8a7f7d;--diverging-52:#8b817f;--diverging-53:#8c8381;--diverging-54:#8e8482;--diverging-55:#8f8684;--diverging-56:#918886;--diverging-57:#928987;--diverging-58:#938b89;--diverging-59:#958c8a;--diverging-6:#493a36;--diverging-60:#968e8c;--diverging-61:#988f8e;--diverging-62:#99918f;--diverging-63:#9a9391;--diverging-64:#9c9492;--diverging-65:#9d9594;--diverging-66:#9f9795;--diverging-67:#a09997;--diverging-68:#a19a98;--diverging-69:#a39c9a;--diverging-7:#4b3b38;--diverging-70:#a59d9b;--diverging-71:#a79f9d;--diverging-72:#a8a09f;--diverging-73:#a9a2a0;--diverging-74:#aba4a2;--diverging-75:#aca5a4;--diverging-76:#aea7a5;--diverging-77:#afa8a7;--diverging-78:#b1aaa8;--diverging-79:#b2abaa;--diverging-8:#4c3c39;--diverging-80:#b3adab;--diverging-81:#b5afad;--diverging-82:#b6b0af;--diverging-83:#b8b1b0;--diverging-84:#b9b3b2;--diverging-85:#bab5b4;--diverging-86:#bcb6b5;--diverging-87:#bdb8b7;--diverging-88:#bfbab9;--diverging-89:#c0bbba;--diverging-9:#4e3e3b;--diverging-90:#c1bdbc;--diverging-91:#c3bebd;--diverging-92:#c4c0bf;--diverging-93:#c6c1c0;--diverging-94:#c7c2c2;--diverging-95:#c8c4c3;--diverging-96:#cac6c5;--diverging-97:#cbc7c7;--diverging-98:#cdc9c8;--diverging-99:#cecbca}
+#tol-bright-normal:target ~ #figure_1 {--diverging-0:#4477aa;--diverging-1:#4578ab;--diverging-10:#5281b0;--diverging-100:#d0dbe6;--diverging-101:#d2dce7;--diverging-102:#d3dde8;--diverging-103:#d5dee8;--diverging-104:#d6dfe9;--diverging-105:#d7e0e9;--diverging-106:#d9e1ea;--diverging-107:#dae2eb;--diverging-108:#dce3eb;--diverging-109:#dde4ec;--diverging-11:#5382b1;--diverging-110:#dee5ec;--diverging-111:#e0e6ed;--diverging-112:#e1e7ee;--diverging-113:#e3e8ee;--diverging-114:#e4e9ef;--diverging-115:#e5eaef;--diverging-116:#e7ebf0;--diverging-117:#e8ecf1;--diverging-118:#eaedf1;--diverging-119:#ebeef2;--diverging-12:#5583b1;--diverging-120:#eceff2;--diverging-121:#eef0f3;--diverging-122:#eff1f4;--diverging-123:#f1f2f4;--diverging-124:#f2f3f5;--diverging-125:#f3f4f5;--diverging-126:#f5f5f6;--diverging-127:#f6f6f7;--diverging-128:#f7f6f6;--diverging-129:#f7f5f5;--diverging-13:#5684b2;--diverging-130:#f7f4f4;--diverging-131:#f7f3f3;--diverging-132:#f7f2f2;--diverging-133:#f7f1f1;--diverging-134:#f7f0f0;--diverging-135:#f6eeef;--diverging-136:#f6edee;--diverging-137:#f6eced;--diverging-138:#f6ebec;--diverging-139:#f6eaeb;--diverging-14:#5885b2;--diverging-140:#f6e9ea;--diverging-141:#f6e8e9;--diverging-142:#f6e7e8;--diverging-143:#f6e5e7;--diverging-144:#f6e4e6;--diverging-145:#f6e3e5;--diverging-146:#f6e2e4;--diverging-147:#f6e1e3;--diverging-148:#f6e0e2;--diverging-149:#f5dfe1;--diverging-15:#5986b3;--diverging-150:#f5dde0;--diverging-151:#f5dcdf;--diverging-152:#f5dbde;--diverging-153:#f5dadd;--diverging-154:#f5d9dc;--diverging-155:#f5d8db;--diverging-156:#f5d7da;--diverging-157:#f5d5d9;--diverging-158:#f5d4d8;--diverging-159:#f5d3d7;--diverging-16:#5a87b4;--diverging-160:#f5d2d6;--diverging-161:#f5d1d5;--diverging-162:#f5d0d4;--diverging-163:#f4cfd3;--diverging-164:#f4cdd2;--diverging-165:#f4ccd1;--diverging-166:#f4cbd0;--diverging-167:#f4cacf;--diverging-168:#f4c9ce;--diverging-169:#f4c8cd;--diverging-17:#5c88b4;--diverging-170:#f4c7cc;--diverging-171:#f4c6cb;--diverging-172:#f4c4ca;--diverging-173:#f4c3c9;--diverging-174:#f4c2c8;--diverging-175:#f4c1c7;--diverging-176:#f4c0c6;--diverging-177:#f4bfc5;--diverging-178:#f3bec4;--diverging-179:#f3bcc3;--diverging-18:#5d89b5;--diverging-180:#f3bbc2;--diverging-181:#f3bac1;--diverging-182:#f3b9c0;--diverging-183:#f3b8bf;--diverging-184:#f3b7be;--diverging-185:#f3b6bd;--diverging-186:#f3b4bc;--diverging-187:#f3b3bb;--diverging-188:#f3b2ba;--diverging-189:#f3b1b9;--diverging-19:#5f8ab5;--diverging-190:#f3b0b8;--diverging-191:#f3afb7;--diverging-192:#f2aeb6;--diverging-193:#f2adb5;--diverging-194:#f2abb4;--diverging-195:#f2aab3;--diverging-196:#f2a9b2;--diverging-197:#f2a8b1;--diverging-198:#f2a7b0;--diverging-199:#f2a6af;--diverging-2:#4779ab;--diverging-20:#608bb6;--diverging-200:#f2a5ae;--diverging-201:#f2a3ad;--diverging-202:#f2a2ac;--diverging-203:#f2a1ab;--diverging-204:#f2a0aa;--diverging-205:#f29fa9;--diverging-206:#f19ea8;--diverging-207:#f19da7;--diverging-208:#f19ba6;--diverging-209:#f19aa5;--diverging-21:#618cb7;--diverging-210:#f199a4;--diverging-211:#f198a3;--diverging-212:#f197a2;--diverging-213:#f196a1;--diverging-214:#f195a0;--diverging-215:#f1939f;--diverging-216:#f1929e;--diverging-217:#f1919d;--diverging-218:#f1909c;--diverging-219:#f18f9b;--diverging-22:#638db7;--diverging-220:#f08e9a;--diverging-221:#f08d99;--diverging-222:#f08c98;--diverging-223:#f08a97;--diverging-224:#f08996;--diverging-225:#f08895;--diverging-226:#f08794;--diverging-227:#f08693;--diverging-228:#f08592;--diverging-229:#f08491;--diverging-23:#648eb8;--diverging-230:#f08290;--diverging-231:#f0818f;--diverging-232:#f0808e;--diverging-233:#f07f8d;--diverging-234:#ef7e8c;--diverging-235:#ef7d8b;--diverging-236:#ef7c8a;--diverging-237:#ef7a89;--diverging-238:#ef7988;--diverging-239:#ef7887;--diverging-24:#668fb8;--diverging-240:#ef7786;--diverging-241:#ef7685;--diverging-242:#ef7584;--diverging-243:#ef7483;--diverging-244:#ef7382;--diverging-245:#ef7181;--diverging-246:#ef7080;--diverging-247:#ef6f7f;--diverging-248:#ee6e7e;--diverging-249:#ee6d7d;--diverging-25:#6790b9;--diverging-250:#ee6c7c;--diverging-251:#ee6b7b;--diverging-252:#ee697a;--diverging-253:#ee6879;--diverging-254:#ee6778;--diverging-255:#ee6677;--diverging-26:#6991ba;--diverging-27:#6a92ba;--diverging-28:#6b93bb;--diverging-29:#6d94bc;--diverging-3:#487aac;--diverging-30:#6e95bc;--diverging-31:#7096bd;--diverging-32:#7197bd;--diverging-33:#7298be;--diverging-34:#7499bf;--diverging-35:#759abf;--diverging-36:#779bc0;--diverging-37:#789cc0;--diverging-38:#799dc1;--diverging-39:#7b9ec2;--diverging-4:#4a7bac;--diverging-40:#7c9fc2;--diverging-41:#7ea0c3;--diverging-42:#7fa1c3;--diverging-43:#80a2c4;--diverging-44:#82a3c5;--diverging-45:#83a4c5;--diverging-46:#85a5c6;--diverging-47:#86a6c6;--diverging-48:#87a7c7;--diverging-49:#89a8c8;--diverging-5:#4b7cad;--diverging-50:#8aa9c8;--diverging-51:#8caac9;--diverging-52:#8dabc9;--diverging-53:#8eacca;--diverging-54:#90adcb;--diverging-55:#91aecb;--diverging-56:#93afcc;--diverging-57:#94b0cc;--diverging-58:#95b1cd;--diverging-59:#97b2ce;--diverging-6:#4c7dae;--diverging-60:#98b3ce;--diverging-61:#9ab4cf;--diverging-62:#9bb5cf;--diverging-63:#9cb6d0;--diverging-64:#9eb7d1;--diverging-65:#9fb8d1;--diverging-66:#a1b9d2;--diverging-67:#a2bad2;--diverging-68:#a3bbd3;--diverging-69:#a5bcd4;--diverging-7:#4e7eae;--diverging-70:#a6bdd4;--diverging-71:#a8bed5;--diverging-72:#a9bfd5;--diverging-73:#aac0d6;--diverging-74:#acc1d7;--diverging-75:#adc2d7;--diverging-76:#afc3d8;--diverging-77:#b0c4d9;--diverging-78:#b2c5d9;--diverging-79:#b3c6da;--diverging-8:#4f7faf;--diverging-80:#b4c7da;--diverging-81:#b6c8db;--diverging-82:#b7c9dc;--diverging-83:#b9cadc;--diverging-84:#bacbdd;--diverging-85:#bbccdd;--diverging-86:#bdcdde;--diverging-87:#becedf;--diverging-88:#c0cfdf;--diverging-89:#c1d0e0;--diverging-9:#5180af;--diverging-90:#c2d1e0;--diverging-91:#c4d2e1;--diverging-92:#c5d3e2;--diverging-93:#c7d4e2;--diverging-94:#c8d5e3;--diverging-95:#c9d6e3;--diverging-96:#cbd7e4;--diverging-97:#ccd8e5;--diverging-98:#ced9e5;--diverging-99:#cfdae6}
+#tol-bright-deuteranopia:target ~ #figure_1 {--diverging-0:#57539b;--diverging-1:#58549c;--diverging-10:#6460a2;--diverging-100:#d4d3e3;--diverging-101:#d6d5e4;--diverging-102:#d7d6e5;--diverging-103:#d8d8e5;--diverging-104:#d9d9e6;--diverging-105:#dadae6;--diverging-106:#dcdbe7;--diverging-107:#dddce8;--diverging-108:#dfdee9;--diverging-109:#e0dfea;--diverging-11:#6561a3;--diverging-110:#e1e0ea;--diverging-111:#e2e2eb;--diverging-112:#e3e3ec;--diverging-113:#e5e4ec;--diverging-114:#e6e6ed;--diverging-115:#e7e7ed;--diverging-116:#e9e8ee;--diverging-117:#eae9f0;--diverging-118:#ebebf0;--diverging-119:#ececf1;--diverging-12:#6663a3;--diverging-120:#ededf1;--diverging-121:#efeff2;--diverging-122:#f0f0f3;--diverging-123:#f1f1f3;--diverging-124:#f2f2f4;--diverging-125:#f3f3f5;--diverging-126:#f5f5f6;--diverging-127:#f6f6f7;--diverging-128:#f7f7f6;--diverging-129:#f6f6f5;--diverging-13:#6764a4;--diverging-130:#f6f6f4;--diverging-131:#f5f6f3;--diverging-132:#f5f5f2;--diverging-133:#f5f5f1;--diverging-134:#f4f5f0;--diverging-135:#f3f4ef;--diverging-136:#f3f3ee;--diverging-137:#f2f3ed;--diverging-138:#f2f3ec;--diverging-139:#f2f2eb;--diverging-14:#6966a4;--diverging-140:#f1f2ea;--diverging-141:#f1f2e9;--diverging-142:#f0f2e8;--diverging-143:#f0f1e6;--diverging-144:#eff1e5;--diverging-145:#eff0e4;--diverging-146:#eff0e3;--diverging-147:#eef0e2;--diverging-148:#eeefe1;--diverging-149:#edeee0;--diverging-15:#6a66a5;--diverging-150:#eceedf;--diverging-151:#eceede;--diverging-152:#ebeddd;--diverging-153:#ebeddc;--diverging-154:#ebeddb;--diverging-155:#eaecda;--diverging-156:#eaecd9;--diverging-157:#e9ebd8;--diverging-158:#e9ebd7;--diverging-159:#e8ebd6;--diverging-16:#6b68a7;--diverging-160:#e8ebd5;--diverging-161:#e8ead4;--diverging-162:#e7ead3;--diverging-163:#e6e9d2;--diverging-164:#e5e8d1;--diverging-165:#e5e8cf;--diverging-166:#e5e8ce;--diverging-167:#e4e7cd;--diverging-168:#e4e7cc;--diverging-169:#e4e7cb;--diverging-17:#6d69a7;--diverging-170:#e3e7cb;--diverging-171:#e3e6ca;--diverging-172:#e2e6c8;--diverging-173:#e2e5c7;--diverging-174:#e1e5c6;--diverging-175:#e1e5c5;--diverging-176:#e1e4c4;--diverging-177:#e0e4c3;--diverging-178:#dfe3c2;--diverging-179:#dee3c1;--diverging-18:#6e6aa8;--diverging-180:#dee2c0;--diverging-181:#dee2bf;--diverging-182:#dde2be;--diverging-183:#dde1bd;--diverging-184:#dce1bc;--diverging-185:#dce1bb;--diverging-186:#dbe0ba;--diverging-187:#dbe0b9;--diverging-188:#dbdfb8;--diverging-189:#dadfb7;--diverging-19:#6f6ca8;--diverging-190:#dadfb6;--diverging-191:#dadfb5;--diverging-192:#d9deb4;--diverging-193:#d8ddb3;--diverging-194:#d7ddb1;--diverging-195:#d7dcb0;--diverging-196:#d7dcaf;--diverging-197:#d6dcae;--diverging-198:#d6dbad;--diverging-199:#d6dbac;--diverging-2:#5a569c;--diverging-20:#706da9;--diverging-200:#d5dbab;--diverging-201:#d4daaa;--diverging-202:#d4daa9;--diverging-203:#d4daa8;--diverging-204:#d3d9a7;--diverging-205:#d3d9a6;--diverging-206:#d2d8a5;--diverging-207:#d2d8a4;--diverging-208:#d1d7a3;--diverging-209:#d0d7a2;--diverging-21:#716eaa;--diverging-210:#d0d7a1;--diverging-211:#d0d6a0;--diverging-212:#cfd69f;--diverging-213:#cfd69e;--diverging-214:#cfd59d;--diverging-215:#ced59b;--diverging-216:#cdd49a;--diverging-217:#cdd499;--diverging-218:#cdd498;--diverging-219:#ccd497;--diverging-22:#7370aa;--diverging-220:#cbd396;--diverging-221:#cbd295;--diverging-222:#cbd294;--diverging-223:#cad193;--diverging-224:#c9d192;--diverging-225:#c9d191;--diverging-226:#c9d190;--diverging-227:#c8d08f;--diverging-228:#c8d08e;--diverging-229:#c8d08d;--diverging-23:#7471ab;--diverging-230:#c7cf8c;--diverging-231:#c6cf8b;--diverging-232:#c6ce8a;--diverging-233:#c6ce89;--diverging-234:#c5cd88;--diverging-235:#c4cd87;--diverging-236:#c4cc86;--diverging-237:#c3cc84;--diverging-238:#c3cc84;--diverging-239:#c2cb83;--diverging-24:#7572ac;--diverging-240:#c2cb82;--diverging-241:#c2cb81;--diverging-242:#c1ca80;--diverging-243:#c1ca7e;--diverging-244:#c1ca7d;--diverging-245:#c0c97c;--diverging-246:#bfc97b;--diverging-247:#bfc97a;--diverging-248:#bec879;--diverging-249:#bec778;--diverging-25:#7673ad;--diverging-250:#bdc777;--diverging-251:#bdc776;--diverging-252:#bcc675;--diverging-253:#bcc674;--diverging-254:#bbc573;--diverging-255:#bbc572;--diverging-26:#7875ae;--diverging-27:#7976ae;--diverging-28:#7a77af;--diverging-29:#7c79b0;--diverging-3:#5b579d;--diverging-30:#7d7ab0;--diverging-31:#7e7bb1;--diverging-32:#7f7cb2;--diverging-33:#807db3;--diverging-34:#827fb4;--diverging-35:#8380b4;--diverging-36:#8482b5;--diverging-37:#8683b5;--diverging-38:#8784b6;--diverging-39:#8886b7;--diverging-4:#5c599d;--diverging-40:#8987b7;--diverging-41:#8b88b8;--diverging-42:#8c89b9;--diverging-43:#8d8aba;--diverging-44:#8e8cbb;--diverging-45:#8f8dbb;--diverging-46:#918fbc;--diverging-47:#9290bc;--diverging-48:#9391bd;--diverging-49:#9592be;--diverging-5:#5d5a9e;--diverging-50:#9693bf;--diverging-51:#9795c0;--diverging-52:#9896c0;--diverging-53:#9997c1;--diverging-54:#9b99c2;--diverging-55:#9c9ac2;--diverging-56:#9d9bc3;--diverging-57:#9f9cc4;--diverging-58:#a09dc5;--diverging-59:#a19fc6;--diverging-6:#5e5b9f;--diverging-60:#a2a0c6;--diverging-61:#a4a2c7;--diverging-62:#a5a3c7;--diverging-63:#a6a4c8;--diverging-64:#a7a6c9;--diverging-65:#a8a7ca;--diverging-66:#aaa8cb;--diverging-67:#aba9cb;--diverging-68:#acaacc;--diverging-69:#aeaccd;--diverging-7:#605ca0;--diverging-70:#afadcd;--diverging-71:#b0afce;--diverging-72:#b1b0ce;--diverging-73:#b2b1cf;--diverging-74:#b4b2d0;--diverging-75:#b5b3d1;--diverging-76:#b7b5d2;--diverging-77:#b8b6d3;--diverging-78:#b9b8d3;--diverging-79:#bab9d4;--diverging-8:#615da1;--diverging-80:#bbbad4;--diverging-81:#bdbbd5;--diverging-82:#bebcd6;--diverging-83:#bfbed7;--diverging-84:#c0bfd8;--diverging-85:#c1c0d8;--diverging-86:#c3c2d9;--diverging-87:#c4c3da;--diverging-88:#c6c4da;--diverging-89:#c7c5db;--diverging-9:#635fa1;--diverging-90:#c8c6db;--diverging-91:#c9c8dc;--diverging-92:#cac9dd;--diverging-93:#cccbde;--diverging-94:#cdccdf;--diverging-95:#cecddf;--diverging-96:#d0cfe0;--diverging-97:#d1d0e1;--diverging-98:#d2d1e1;--diverging-99:#d3d2e2}
+#tol-bright-protanopia:target ~ #figure_1 {--diverging-0:#5a5b9e;--diverging-1:#5b5c9f;--diverging-10:#6667a5;--diverging-100:#d5d5e3;--diverging-101:#d6d6e4;--diverging-102:#d7d7e5;--diverging-103:#d9d9e6;--diverging-104:#dadae7;--diverging-105:#dbdbe7;--diverging-106:#dcdde8;--diverging-107:#dddee9;--diverging-108:#dfdfe9;--diverging-109:#e0e0ea;--diverging-11:#6768a6;--diverging-110:#e1e1ea;--diverging-111:#e3e3eb;--diverging-112:#e4e4ec;--diverging-113:#e5e5ed;--diverging-114:#e6e6ee;--diverging-115:#e7e7ee;--diverging-116:#e9e9ef;--diverging-117:#eaeaf0;--diverging-118:#ebebf0;--diverging-119:#ececf1;--diverging-12:#6969a6;--diverging-120:#ededf1;--diverging-121:#efeff2;--diverging-122:#f0f0f3;--diverging-123:#f1f1f4;--diverging-124:#f2f2f5;--diverging-125:#f3f3f5;--diverging-126:#f5f5f6;--diverging-127:#f6f6f7;--diverging-128:#f7f7f6;--diverging-129:#f6f6f5;--diverging-13:#6a6aa7;--diverging-130:#f6f6f4;--diverging-131:#f5f5f3;--diverging-132:#f5f5f2;--diverging-133:#f4f4f1;--diverging-134:#f4f4f0;--diverging-135:#f3f2ef;--diverging-136:#f2f2ee;--diverging-137:#f2f2ed;--diverging-138:#f1f1ec;--diverging-139:#f1f1eb;--diverging-14:#6b6ca7;--diverging-140:#f0f0ea;--diverging-141:#f0f0e9;--diverging-142:#f0efe8;--diverging-143:#efeee7;--diverging-144:#eeeee6;--diverging-145:#eeeee5;--diverging-146:#edede4;--diverging-147:#edede3;--diverging-148:#ecece2;--diverging-149:#ebebe1;--diverging-15:#6c6da8;--diverging-150:#ebeadf;--diverging-151:#eaeade;--diverging-152:#eaeadd;--diverging-153:#e9e9dc;--diverging-154:#e9e9db;--diverging-155:#e8e8da;--diverging-156:#e8e8d9;--diverging-157:#e7e7d8;--diverging-158:#e7e6d7;--diverging-159:#e6e6d6;--diverging-16:#6d6ea9;--diverging-160:#e6e6d5;--diverging-161:#e5e5d4;--diverging-162:#e5e5d3;--diverging-163:#e4e4d2;--diverging-164:#e3e3d1;--diverging-165:#e3e2d0;--diverging-166:#e2e2cf;--diverging-167:#e2e1ce;--diverging-168:#e1e1cd;--diverging-169:#e1e1cc;--diverging-17:#6f6fa9;--diverging-170:#e1e0cb;--diverging-171:#e0e0ca;--diverging-172:#dfdfc9;--diverging-173:#dfdec8;--diverging-174:#dedec7;--diverging-175:#deddc6;--diverging-176:#ddddc5;--diverging-177:#ddddc4;--diverging-178:#dcdcc3;--diverging-179:#dbdbc1;--diverging-18:#7070aa;--diverging-180:#dbdac0;--diverging-181:#dadabf;--diverging-182:#dad9be;--diverging-183:#d9d9bd;--diverging-184:#d9d8bc;--diverging-185:#d9d8bb;--diverging-186:#d8d7ba;--diverging-187:#d7d7b9;--diverging-188:#d7d6b8;--diverging-189:#d6d6b7;--diverging-19:#7272ab;--diverging-190:#d6d5b6;--diverging-191:#d6d5b5;--diverging-192:#d5d4b4;--diverging-193:#d4d4b3;--diverging-194:#d3d3b2;--diverging-195:#d3d2b1;--diverging-196:#d2d2b0;--diverging-197:#d2d1af;--diverging-198:#d2d1ae;--diverging-199:#d1d0ad;--diverging-2:#5d5d9f;--diverging-20:#7373ac;--diverging-200:#d1d0ac;--diverging-201:#d0cfab;--diverging-202:#cfcfaa;--diverging-203:#cfcea9;--diverging-204:#cecea8;--diverging-205:#cecda7;--diverging-206:#cdcca6;--diverging-207:#cdcca5;--diverging-208:#cccba3;--diverging-209:#cbcba2;--diverging-21:#7474ad;--diverging-210:#cbcaa1;--diverging-211:#cacaa0;--diverging-212:#cac99f;--diverging-213:#cac99e;--diverging-214:#c9c89d;--diverging-215:#c8c79c;--diverging-216:#c8c79b;--diverging-217:#c7c79a;--diverging-218:#c7c699;--diverging-219:#c7c698;--diverging-22:#7576ad;--diverging-220:#c6c597;--diverging-221:#c5c496;--diverging-222:#c5c495;--diverging-223:#c4c394;--diverging-224:#c3c293;--diverging-225:#c3c292;--diverging-226:#c3c291;--diverging-227:#c2c190;--diverging-228:#c2c18f;--diverging-229:#c1c08e;--diverging-23:#7677ae;--diverging-230:#c0bf8d;--diverging-231:#c0bf8c;--diverging-232:#c0be8b;--diverging-233:#bfbe8a;--diverging-234:#bebd89;--diverging-235:#bebd88;--diverging-236:#bdbc87;--diverging-237:#bcbb85;--diverging-238:#bcbb84;--diverging-239:#bbba83;--diverging-24:#7878ae;--diverging-240:#bbba82;--diverging-241:#bbba81;--diverging-242:#bab980;--diverging-243:#bab97f;--diverging-244:#b9b87e;--diverging-245:#b8b77d;--diverging-246:#b8b77c;--diverging-247:#b8b67b;--diverging-248:#b7b57a;--diverging-249:#b6b579;--diverging-25:#7979af;--diverging-250:#b6b578;--diverging-251:#b5b477;--diverging-252:#b4b376;--diverging-253:#b4b375;--diverging-254:#b4b274;--diverging-255:#b3b273;--diverging-26:#7a7bb0;--diverging-27:#7b7cb0;--diverging-28:#7c7db1;--diverging-29:#7e7eb2;--diverging-3:#5e5ea0;--diverging-30:#7f7fb3;--diverging-31:#8081b4;--diverging-32:#8182b4;--diverging-33:#8283b5;--diverging-34:#8484b6;--diverging-35:#8585b6;--diverging-36:#8787b7;--diverging-37:#8888b7;--diverging-38:#8989b8;--diverging-39:#8a8ab9;--diverging-4:#5f60a0;--diverging-40:#8b8bba;--diverging-41:#8d8dbb;--diverging-42:#8e8ebb;--diverging-43:#8f8fbc;--diverging-44:#9091bd;--diverging-45:#9192bd;--diverging-46:#9393be;--diverging-47:#9494be;--diverging-48:#9595bf;--diverging-49:#9697c0;--diverging-5:#6061a1;--diverging-50:#9798c0;--diverging-51:#9999c1;--diverging-52:#9a9ac2;--diverging-53:#9b9bc3;--diverging-54:#9d9dc4;--diverging-55:#9e9ec4;--diverging-56:#9f9fc5;--diverging-57:#a0a0c5;--diverging-58:#a1a1c6;--diverging-59:#a3a3c7;--diverging-6:#6162a2;--diverging-60:#a4a4c7;--diverging-61:#a5a5c8;--diverging-62:#a6a6c9;--diverging-63:#a7a7ca;--diverging-64:#a9a9cb;--diverging-65:#aaaacb;--diverging-66:#abaccc;--diverging-67:#acadcc;--diverging-68:#adaecd;--diverging-69:#afafce;--diverging-7:#6363a2;--diverging-70:#b0b0ce;--diverging-71:#b2b2cf;--diverging-72:#b3b3d0;--diverging-73:#b4b4d1;--diverging-74:#b5b5d2;--diverging-75:#b6b6d2;--diverging-76:#b8b8d3;--diverging-77:#b9b9d4;--diverging-78:#babad4;--diverging-79:#bbbbd5;--diverging-8:#6464a3;--diverging-80:#bcbcd5;--diverging-81:#bebed6;--diverging-82:#bfbfd7;--diverging-83:#c0c1d8;--diverging-84:#c1c2d9;--diverging-85:#c2c3d9;--diverging-86:#c4c4da;--diverging-87:#c5c5db;--diverging-88:#c6c7db;--diverging-89:#c7c8dc;--diverging-9:#6566a4;--diverging-90:#c8c9dc;--diverging-91:#cacadd;--diverging-92:#cbcbde;--diverging-93:#cdcddf;--diverging-94:#cecee0;--diverging-95:#cfcfe0;--diverging-96:#d0d0e1;--diverging-97:#d1d1e2;--diverging-98:#d3d3e2;--diverging-99:#d4d4e3}
+#tol-bright-tritanopia:target ~ #figure_1 {--diverging-0:#479492;--diverging-1:#489593;--diverging-10:#549c9a;--diverging-100:#d1e1e1;--diverging-101:#d3e2e2;--diverging-102:#d3e3e3;--diverging-103:#d5e4e3;--diverging-104:#d6e5e4;--diverging-105:#d7e5e5;--diverging-106:#d9e6e6;--diverging-107:#dae7e7;--diverging-108:#dce8e7;--diverging-109:#dde9e8;--diverging-11:#559d9b;--diverging-110:#dee9e9;--diverging-111:#e0eaea;--diverging-112:#e1ebeb;--diverging-113:#e3ebeb;--diverging-114:#e4ecec;--diverging-115:#e5eded;--diverging-116:#e7eeee;--diverging-117:#e8efef;--diverging-118:#eaefef;--diverging-119:#ebf0f0;--diverging-12:#579d9b;--diverging-120:#ecf1f1;--diverging-121:#eef2f2;--diverging-122:#eff3f3;--diverging-123:#f1f3f3;--diverging-124:#f2f4f4;--diverging-125:#f3f5f5;--diverging-126:#f5f6f6;--diverging-127:#f6f7f7;--diverging-128:#f7f6f6;--diverging-129:#f7f5f5;--diverging-13:#589e9c;--diverging-130:#f7f4f4;--diverging-131:#f7f3f3;--diverging-132:#f7f2f2;--diverging-133:#f7f1f1;--diverging-134:#f7f0f0;--diverging-135:#f6efef;--diverging-136:#f6eeee;--diverging-137:#f6eded;--diverging-138:#f5ecec;--diverging-139:#f5ebeb;--diverging-14:#5a9f9d;--diverging-140:#f5eaea;--diverging-141:#f5e9e9;--diverging-142:#f5e8e8;--diverging-143:#f5e6e6;--diverging-144:#f5e5e5;--diverging-145:#f5e4e4;--diverging-146:#f5e3e3;--diverging-147:#f5e2e2;--diverging-148:#f5e1e1;--diverging-149:#f4e0e0;--diverging-15:#5ba09e;--diverging-150:#f4dfdf;--diverging-151:#f4dede;--diverging-152:#f4dddd;--diverging-153:#f4dcdc;--diverging-154:#f4dbdb;--diverging-155:#f4dada;--diverging-156:#f3d9d9;--diverging-157:#f3d7d7;--diverging-158:#f3d6d6;--diverging-159:#f3d5d5;--diverging-16:#5ca19f;--diverging-160:#f3d4d4;--diverging-161:#f3d3d3;--diverging-162:#f3d2d2;--diverging-163:#f2d1d1;--diverging-164:#f2d0d0;--diverging-165:#f2cfcf;--diverging-166:#f2cece;--diverging-167:#f2cdcd;--diverging-168:#f2cccc;--diverging-169:#f2cbcb;--diverging-17:#5ea19f;--diverging-170:#f2caca;--diverging-171:#f2c9c9;--diverging-172:#f2c7c7;--diverging-173:#f2c6c6;--diverging-174:#f2c5c5;--diverging-175:#f1c4c4;--diverging-176:#f1c3c3;--diverging-177:#f1c2c2;--diverging-178:#f0c1c1;--diverging-179:#f0c0c0;--diverging-18:#5fa2a0;--diverging-180:#f0bfbf;--diverging-181:#f0bebe;--diverging-182:#f0bdbd;--diverging-183:#f0bcbc;--diverging-184:#f0bbbb;--diverging-185:#f0baba;--diverging-186:#f0b9b8;--diverging-187:#f0b8b7;--diverging-188:#f0b7b6;--diverging-189:#f0b6b5;--diverging-19:#61a2a1;--diverging-190:#f0b5b4;--diverging-191:#f0b4b3;--diverging-192:#efb3b2;--diverging-193:#efb2b1;--diverging-194:#eeb0b0;--diverging-195:#eeafaf;--diverging-196:#eeaeae;--diverging-197:#eeadad;--diverging-198:#eeacac;--diverging-199:#eeabab;--diverging-2:#4a9593;--diverging-20:#62a3a2;--diverging-200:#eeaaaa;--diverging-201:#eea9a8;--diverging-202:#eea8a7;--diverging-203:#eea7a6;--diverging-204:#eea6a5;--diverging-205:#eea5a4;--diverging-206:#eda4a3;--diverging-207:#eda3a2;--diverging-208:#eda1a1;--diverging-209:#eda0a0;--diverging-21:#63a4a3;--diverging-210:#ed9f9f;--diverging-211:#ed9e9e;--diverging-212:#ec9d9d;--diverging-213:#ec9c9c;--diverging-214:#ec9b9b;--diverging-215:#ec9a99;--diverging-216:#ec9998;--diverging-217:#ec9897;--diverging-218:#ec9796;--diverging-219:#ec9695;--diverging-22:#65a5a3;--diverging-220:#eb9594;--diverging-221:#eb9493;--diverging-222:#eb9392;--diverging-223:#eb9191;--diverging-224:#eb9090;--diverging-225:#eb8f8f;--diverging-226:#eb8e8e;--diverging-227:#eb8d8d;--diverging-228:#eb8c8c;--diverging-229:#eb8b8b;--diverging-23:#66a6a4;--diverging-230:#eb8a89;--diverging-231:#ea8988;--diverging-232:#ea8887;--diverging-233:#ea8786;--diverging-234:#e98685;--diverging-235:#e98584;--diverging-236:#e98483;--diverging-237:#e98382;--diverging-238:#e98281;--diverging-239:#e98180;--diverging-24:#68a6a5;--diverging-240:#e9807f;--diverging-241:#e97f7e;--diverging-242:#e97e7d;--diverging-243:#e97d7c;--diverging-244:#e97c7b;--diverging-245:#e97a79;--diverging-246:#e97978;--diverging-247:#e97877;--diverging-248:#e87776;--diverging-249:#e87675;--diverging-25:#69a7a6;--diverging-250:#e87574;--diverging-251:#e77473;--diverging-252:#e77372;--diverging-253:#e77271;--diverging-254:#e77170;--diverging-255:#e7706f;--diverging-26:#6ba8a7;--diverging-27:#6ca9a7;--diverging-28:#6daaa8;--diverging-29:#6faba9;--diverging-3:#4a9694;--diverging-30:#70aba9;--diverging-31:#72acaa;--diverging-32:#73adab;--diverging-33:#74aeac;--diverging-34:#76afad;--diverging-35:#77afad;--diverging-36:#79b0ae;--diverging-37:#7ab0af;--diverging-38:#7bb1b0;--diverging-39:#7db2b1;--diverging-4:#4c9795;--diverging-40:#7eb3b1;--diverging-41:#80b4b2;--diverging-42:#81b4b3;--diverging-43:#82b5b4;--diverging-44:#84b6b5;--diverging-45:#85b7b5;--diverging-46:#87b8b6;--diverging-47:#88b8b7;--diverging-48:#89b9b8;--diverging-49:#8bbab9;--diverging-5:#4d9896;--diverging-50:#8cbbb9;--diverging-51:#8ebcba;--diverging-52:#8fbcbb;--diverging-53:#90bdbc;--diverging-54:#91bebd;--diverging-55:#92bebd;--diverging-56:#94bfbe;--diverging-57:#95c0bf;--diverging-58:#96c1c0;--diverging-59:#98c2c1;--diverging-6:#4e9997;--diverging-60:#99c2c1;--diverging-61:#9bc3c2;--diverging-62:#9cc4c3;--diverging-63:#9dc5c4;--diverging-64:#9fc6c5;--diverging-65:#a0c6c5;--diverging-66:#a2c7c6;--diverging-67:#a3c8c7;--diverging-68:#a4c9c8;--diverging-69:#a6cac9;--diverging-7:#509997;--diverging-70:#a7cac9;--diverging-71:#a9cbca;--diverging-72:#aacbcb;--diverging-73:#abcccc;--diverging-74:#adcdcd;--diverging-75:#aececd;--diverging-76:#b0cfce;--diverging-77:#b1d0cf;--diverging-78:#b3d0d0;--diverging-79:#b4d1d1;--diverging-8:#519a98;--diverging-80:#b5d2d1;--diverging-81:#b7d3d2;--diverging-82:#b8d4d3;--diverging-83:#bad4d3;--diverging-84:#bbd5d4;--diverging-85:#bcd6d5;--diverging-86:#bed7d6;--diverging-87:#bfd8d7;--diverging-88:#c1d8d7;--diverging-89:#c2d9d8;--diverging-9:#539b99;--diverging-90:#c3dad9;--diverging-91:#c5dbda;--diverging-92:#c6dcdb;--diverging-93:#c8dcdb;--diverging-94:#c9dddc;--diverging-95:#cadddd;--diverging-96:#ccdede;--diverging-97:#cddfdf;--diverging-98:#cfe0df;--diverging-99:#d0e1e0}</style>
+<g id="okabe-ito-normal"/>
+<g id="okabe-ito-deuteranopia"/>
+<g id="okabe-ito-protanopia"/>
+<g id="okabe-ito-tritanopia"/>
+<g id="viridis-normal"/>
+<g id="viridis-deuteranopia"/>
+<g id="viridis-protanopia"/>
+<g id="viridis-tritanopia"/>
+<g id="tol-bright-normal"/>
+<g id="tol-bright-deuteranopia"/>
+<g id="tol-bright-protanopia"/>
+<g id="tol-bright-tritanopia"/>
+<g id="figure_1">
   <g id="patch_1">
    <path d="M 0 120.427087 
 L 154.393701 120.427087 
@@ -43,109 +67,109 @@ L 59.179388 1.8
 L 59.179388 19.487848 
 L 30.14 19.487848 
 L 30.14 1.8 
-" clip-path="url(#p8284921d57)" style="fill: #b62638"/>
+" clip-path="url(#p8284921d57)" style="fill: var(--diverging-247)"/>
     <path d="M 59.179388 1.8 
 L 88.218776 1.8 
 L 88.218776 19.487848 
 L 59.179388 19.487848 
 L 59.179388 1.8 
-" clip-path="url(#p8284921d57)" style="fill: #8eb0d2"/>
+" clip-path="url(#p8284921d57)" style="fill: var(--diverging-65)"/>
     <path d="M 88.218776 1.8 
 L 117.258163 1.8 
 L 117.258163 19.487848 
 L 88.218776 19.487848 
 L 88.218776 1.8 
-" clip-path="url(#p8284921d57)" style="fill: #a6c0da"/>
+" clip-path="url(#p8284921d57)" style="fill: var(--diverging-79)"/>
     <path d="M 30.14 19.487848 
 L 59.179388 19.487848 
 L 59.179388 37.175696 
 L 30.14 37.175696 
 L 30.14 19.487848 
-" clip-path="url(#p8284921d57)" style="fill: #ca6773"/>
+" clip-path="url(#p8284921d57)" style="fill: var(--diverging-210)"/>
     <path d="M 59.179388 19.487848 
 L 88.218776 19.487848 
 L 88.218776 37.175696 
 L 59.179388 37.175696 
 L 59.179388 19.487848 
-" clip-path="url(#p8284921d57)" style="fill: #b1c8df"/>
+" clip-path="url(#p8284921d57)" style="fill: var(--diverging-86)"/>
     <path d="M 88.218776 19.487848 
 L 117.258163 19.487848 
 L 117.258163 37.175696 
 L 88.218776 37.175696 
 L 88.218776 19.487848 
-" clip-path="url(#p8284921d57)" style="fill: #9fbbd8"/>
+" clip-path="url(#p8284921d57)" style="fill: var(--diverging-75)"/>
     <path d="M 30.14 37.175696 
 L 59.179388 37.175696 
 L 59.179388 54.863543 
 L 30.14 54.863543 
 L 30.14 37.175696 
-" clip-path="url(#p8284921d57)" style="fill: #96b6d5"/>
+" clip-path="url(#p8284921d57)" style="fill: var(--diverging-70)"/>
     <path d="M 59.179388 37.175696 
 L 88.218776 37.175696 
 L 88.218776 54.863543 
 L 59.179388 54.863543 
 L 59.179388 37.175696 
-" clip-path="url(#p8284921d57)" style="fill: #b2182b"/>
+" clip-path="url(#p8284921d57)" style="fill: var(--diverging-255)"/>
     <path d="M 88.218776 37.175696 
 L 117.258163 37.175696 
 L 117.258163 54.863543 
 L 88.218776 54.863543 
 L 88.218776 37.175696 
-" clip-path="url(#p8284921d57)" style="fill: #b0c7de"/>
+" clip-path="url(#p8284921d57)" style="fill: var(--diverging-85)"/>
     <path d="M 30.14 54.863543 
 L 59.179388 54.863543 
 L 59.179388 72.551391 
 L 30.14 72.551391 
 L 30.14 54.863543 
-" clip-path="url(#p8284921d57)" style="fill: #b5cae0"/>
+" clip-path="url(#p8284921d57)" style="fill: var(--diverging-88)"/>
     <path d="M 59.179388 54.863543 
 L 88.218776 54.863543 
 L 88.218776 72.551391 
 L 59.179388 72.551391 
 L 59.179388 54.863543 
-" clip-path="url(#p8284921d57)" style="fill: #bf4251"/>
+" clip-path="url(#p8284921d57)" style="fill: var(--diverging-231)"/>
     <path d="M 88.218776 54.863543 
 L 117.258163 54.863543 
 L 117.258163 72.551391 
 L 88.218776 72.551391 
 L 88.218776 54.863543 
-" clip-path="url(#p8284921d57)" style="fill: #81a7ce"/>
+" clip-path="url(#p8284921d57)" style="fill: var(--diverging-57)"/>
     <path d="M 30.14 72.551391 
 L 59.179388 72.551391 
 L 59.179388 90.239239 
 L 30.14 90.239239 
 L 30.14 72.551391 
-" clip-path="url(#p8284921d57)" style="fill: #9cb9d7"/>
+" clip-path="url(#p8284921d57)" style="fill: var(--diverging-73)"/>
     <path d="M 59.179388 72.551391 
 L 88.218776 72.551391 
 L 88.218776 90.239239 
 L 59.179388 90.239239 
 L 59.179388 72.551391 
-" clip-path="url(#p8284921d57)" style="fill: #abc3dc"/>
+" clip-path="url(#p8284921d57)" style="fill: var(--diverging-82)"/>
     <path d="M 88.218776 72.551391 
 L 117.258163 72.551391 
 L 117.258163 90.239239 
 L 88.218776 90.239239 
 L 88.218776 72.551391 
-" clip-path="url(#p8284921d57)" style="fill: #b2182b"/>
+" clip-path="url(#p8284921d57)" style="fill: var(--diverging-255)"/>
     <path d="M 30.14 90.239239 
 L 59.179388 90.239239 
 L 59.179388 107.927087 
 L 30.14 107.927087 
 L 30.14 90.239239 
-" clip-path="url(#p8284921d57)" style="fill: #b1c8df"/>
+" clip-path="url(#p8284921d57)" style="fill: var(--diverging-86)"/>
     <path d="M 59.179388 90.239239 
 L 88.218776 90.239239 
 L 88.218776 107.927087 
 L 59.179388 107.927087 
 L 59.179388 90.239239 
-" clip-path="url(#p8284921d57)" style="fill: #78a1cb"/>
+" clip-path="url(#p8284921d57)" style="fill: var(--diverging-52)"/>
     <path d="M 88.218776 90.239239 
 L 117.258163 90.239239 
 L 117.258163 107.927087 
 L 88.218776 107.927087 
 L 88.218776 90.239239 
-" clip-path="url(#p8284921d57)" style="fill: #b2182b"/>
+" clip-path="url(#p8284921d57)" style="fill: var(--diverging-255)"/>
    </g>
    <g id="matplotlib.axis_1">
     <g id="xtick_1">
@@ -231,1537 +255,1537 @@ L 126.124473 99.967555
 L 126.124473 99.61518 
 L 121.614072 99.61518 
 L 121.614072 99.967555 
-" clip-path="url(#p18c48b6b06)" style="fill: #2166ac"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-0)"/>
     <path d="M 121.614072 99.61518 
 L 126.124473 99.61518 
 L 126.124473 99.262805 
 L 121.614072 99.262805 
 L 121.614072 99.61518 
-" clip-path="url(#p18c48b6b06)" style="fill: #2367ad"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-1)"/>
     <path d="M 121.614072 99.262805 
 L 126.124473 99.262805 
 L 126.124473 98.91043 
 L 121.614072 98.91043 
 L 121.614072 99.262805 
-" clip-path="url(#p18c48b6b06)" style="fill: #2468ad"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-2)"/>
     <path d="M 121.614072 98.91043 
 L 126.124473 98.91043 
 L 126.124473 98.558055 
 L 121.614072 98.558055 
 L 121.614072 98.91043 
-" clip-path="url(#p18c48b6b06)" style="fill: #2669ae"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-3)"/>
     <path d="M 121.614072 98.558055 
 L 126.124473 98.558055 
 L 126.124473 98.20568 
 L 121.614072 98.20568 
 L 121.614072 98.558055 
-" clip-path="url(#p18c48b6b06)" style="fill: #286bae"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-4)"/>
     <path d="M 121.614072 98.20568 
 L 126.124473 98.20568 
 L 126.124473 97.853305 
 L 121.614072 97.853305 
 L 121.614072 98.20568 
-" clip-path="url(#p18c48b6b06)" style="fill: #296caf"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-5)"/>
     <path d="M 121.614072 97.853305 
 L 126.124473 97.853305 
 L 126.124473 97.500929 
 L 121.614072 97.500929 
 L 121.614072 97.853305 
-" clip-path="url(#p18c48b6b06)" style="fill: #2b6db0"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-6)"/>
     <path d="M 121.614072 97.500929 
 L 126.124473 97.500929 
 L 126.124473 97.148554 
 L 121.614072 97.148554 
 L 121.614072 97.500929 
-" clip-path="url(#p18c48b6b06)" style="fill: #2d6eb0"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-7)"/>
     <path d="M 121.614072 97.148554 
 L 126.124473 97.148554 
 L 126.124473 96.796179 
 L 121.614072 96.796179 
 L 121.614072 97.148554 
-" clip-path="url(#p18c48b6b06)" style="fill: #2e6fb1"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-8)"/>
     <path d="M 121.614072 96.796179 
 L 126.124473 96.796179 
 L 126.124473 96.443804 
 L 121.614072 96.443804 
 L 121.614072 96.796179 
-" clip-path="url(#p18c48b6b06)" style="fill: #3070b1"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-9)"/>
     <path d="M 121.614072 96.443804 
 L 126.124473 96.443804 
 L 126.124473 96.091429 
 L 121.614072 96.091429 
 L 121.614072 96.443804 
-" clip-path="url(#p18c48b6b06)" style="fill: #3271b2"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-10)"/>
     <path d="M 121.614072 96.091429 
 L 126.124473 96.091429 
 L 126.124473 95.739054 
 L 121.614072 95.739054 
 L 121.614072 96.091429 
-" clip-path="url(#p18c48b6b06)" style="fill: #3373b2"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-11)"/>
     <path d="M 121.614072 95.739054 
 L 126.124473 95.739054 
 L 126.124473 95.386679 
 L 121.614072 95.386679 
 L 121.614072 95.739054 
-" clip-path="url(#p18c48b6b06)" style="fill: #3574b3"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-12)"/>
     <path d="M 121.614072 95.386679 
 L 126.124473 95.386679 
 L 126.124473 95.034304 
 L 121.614072 95.034304 
 L 121.614072 95.386679 
-" clip-path="url(#p18c48b6b06)" style="fill: #3775b4"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-13)"/>
     <path d="M 121.614072 95.034304 
 L 126.124473 95.034304 
 L 126.124473 94.681929 
 L 121.614072 94.681929 
 L 121.614072 95.034304 
-" clip-path="url(#p18c48b6b06)" style="fill: #3876b4"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-14)"/>
     <path d="M 121.614072 94.681929 
 L 126.124473 94.681929 
 L 126.124473 94.329554 
 L 121.614072 94.329554 
 L 121.614072 94.681929 
-" clip-path="url(#p18c48b6b06)" style="fill: #3a77b5"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-15)"/>
     <path d="M 121.614072 94.329554 
 L 126.124473 94.329554 
 L 126.124473 93.977179 
 L 121.614072 93.977179 
 L 121.614072 94.329554 
-" clip-path="url(#p18c48b6b06)" style="fill: #3c78b5"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-16)"/>
     <path d="M 121.614072 93.977179 
 L 126.124473 93.977179 
 L 126.124473 93.624803 
 L 121.614072 93.624803 
 L 121.614072 93.977179 
-" clip-path="url(#p18c48b6b06)" style="fill: #3e79b6"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-17)"/>
     <path d="M 121.614072 93.624803 
 L 126.124473 93.624803 
 L 126.124473 93.272428 
 L 121.614072 93.272428 
 L 121.614072 93.624803 
-" clip-path="url(#p18c48b6b06)" style="fill: #3f7ab7"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-18)"/>
     <path d="M 121.614072 93.272428 
 L 126.124473 93.272428 
 L 126.124473 92.920053 
 L 121.614072 92.920053 
 L 121.614072 93.272428 
-" clip-path="url(#p18c48b6b06)" style="fill: #417cb7"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-19)"/>
     <path d="M 121.614072 92.920053 
 L 126.124473 92.920053 
 L 126.124473 92.567678 
 L 121.614072 92.567678 
 L 121.614072 92.920053 
-" clip-path="url(#p18c48b6b06)" style="fill: #437db8"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-20)"/>
     <path d="M 121.614072 92.567678 
 L 126.124473 92.567678 
 L 126.124473 92.215303 
 L 121.614072 92.215303 
 L 121.614072 92.567678 
-" clip-path="url(#p18c48b6b06)" style="fill: #447eb8"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-21)"/>
     <path d="M 121.614072 92.215303 
 L 126.124473 92.215303 
 L 126.124473 91.862928 
 L 121.614072 91.862928 
 L 121.614072 92.215303 
-" clip-path="url(#p18c48b6b06)" style="fill: #467fb9"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-22)"/>
     <path d="M 121.614072 91.862928 
 L 126.124473 91.862928 
 L 126.124473 91.510553 
 L 121.614072 91.510553 
 L 121.614072 91.862928 
-" clip-path="url(#p18c48b6b06)" style="fill: #4880ba"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-23)"/>
     <path d="M 121.614072 91.510553 
 L 126.124473 91.510553 
 L 126.124473 91.158178 
 L 121.614072 91.158178 
 L 121.614072 91.510553 
-" clip-path="url(#p18c48b6b06)" style="fill: #4981ba"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-24)"/>
     <path d="M 121.614072 91.158178 
 L 126.124473 91.158178 
 L 126.124473 90.805803 
 L 121.614072 90.805803 
 L 121.614072 91.158178 
-" clip-path="url(#p18c48b6b06)" style="fill: #4b82bb"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-25)"/>
     <path d="M 121.614072 90.805803 
 L 126.124473 90.805803 
 L 126.124473 90.453428 
 L 121.614072 90.453428 
 L 121.614072 90.805803 
-" clip-path="url(#p18c48b6b06)" style="fill: #4d84bb"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-26)"/>
     <path d="M 121.614072 90.453428 
 L 126.124473 90.453428 
 L 126.124473 90.101053 
 L 121.614072 90.101053 
 L 121.614072 90.453428 
-" clip-path="url(#p18c48b6b06)" style="fill: #4e85bc"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-27)"/>
     <path d="M 121.614072 90.101053 
 L 126.124473 90.101053 
 L 126.124473 89.748677 
 L 121.614072 89.748677 
 L 121.614072 90.101053 
-" clip-path="url(#p18c48b6b06)" style="fill: #5086bc"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-28)"/>
     <path d="M 121.614072 89.748677 
 L 126.124473 89.748677 
 L 126.124473 89.396302 
 L 121.614072 89.396302 
 L 121.614072 89.748677 
-" clip-path="url(#p18c48b6b06)" style="fill: #5287bd"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-29)"/>
     <path d="M 121.614072 89.396302 
 L 126.124473 89.396302 
 L 126.124473 89.043927 
 L 121.614072 89.043927 
 L 121.614072 89.396302 
-" clip-path="url(#p18c48b6b06)" style="fill: #5388be"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-30)"/>
     <path d="M 121.614072 89.043927 
 L 126.124473 89.043927 
 L 126.124473 88.691552 
 L 121.614072 88.691552 
 L 121.614072 89.043927 
-" clip-path="url(#p18c48b6b06)" style="fill: #5589be"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-31)"/>
     <path d="M 121.614072 88.691552 
 L 126.124473 88.691552 
 L 126.124473 88.339177 
 L 121.614072 88.339177 
 L 121.614072 88.691552 
-" clip-path="url(#p18c48b6b06)" style="fill: #578abf"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-32)"/>
     <path d="M 121.614072 88.339177 
 L 126.124473 88.339177 
 L 126.124473 87.986802 
 L 121.614072 87.986802 
 L 121.614072 88.339177 
-" clip-path="url(#p18c48b6b06)" style="fill: #588cbf"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-33)"/>
     <path d="M 121.614072 87.986802 
 L 126.124473 87.986802 
 L 126.124473 87.634427 
 L 121.614072 87.634427 
 L 121.614072 87.986802 
-" clip-path="url(#p18c48b6b06)" style="fill: #5a8dc0"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-34)"/>
     <path d="M 121.614072 87.634427 
 L 126.124473 87.634427 
 L 126.124473 87.282052 
 L 121.614072 87.282052 
 L 121.614072 87.634427 
-" clip-path="url(#p18c48b6b06)" style="fill: #5c8ec1"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-35)"/>
     <path d="M 121.614072 87.282052 
 L 126.124473 87.282052 
 L 126.124473 86.929677 
 L 121.614072 86.929677 
 L 121.614072 87.282052 
-" clip-path="url(#p18c48b6b06)" style="fill: #5d8fc1"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-36)"/>
     <path d="M 121.614072 86.929677 
 L 126.124473 86.929677 
 L 126.124473 86.577302 
 L 121.614072 86.577302 
 L 121.614072 86.929677 
-" clip-path="url(#p18c48b6b06)" style="fill: #5f90c2"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-37)"/>
     <path d="M 121.614072 86.577302 
 L 126.124473 86.577302 
 L 126.124473 86.224927 
 L 121.614072 86.224927 
 L 121.614072 86.577302 
-" clip-path="url(#p18c48b6b06)" style="fill: #6191c2"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-38)"/>
     <path d="M 121.614072 86.224927 
 L 126.124473 86.224927 
 L 126.124473 85.872551 
 L 121.614072 85.872551 
 L 121.614072 86.224927 
-" clip-path="url(#p18c48b6b06)" style="fill: #6292c3"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-39)"/>
     <path d="M 121.614072 85.872551 
 L 126.124473 85.872551 
 L 126.124473 85.520176 
 L 121.614072 85.520176 
 L 121.614072 85.872551 
-" clip-path="url(#p18c48b6b06)" style="fill: #6493c4"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-40)"/>
     <path d="M 121.614072 85.520176 
 L 126.124473 85.520176 
 L 126.124473 85.167801 
 L 121.614072 85.167801 
 L 121.614072 85.520176 
-" clip-path="url(#p18c48b6b06)" style="fill: #6695c4"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-41)"/>
     <path d="M 121.614072 85.167801 
 L 126.124473 85.167801 
 L 126.124473 84.815426 
 L 121.614072 84.815426 
 L 121.614072 85.167801 
-" clip-path="url(#p18c48b6b06)" style="fill: #6796c5"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-42)"/>
     <path d="M 121.614072 84.815426 
 L 126.124473 84.815426 
 L 126.124473 84.463051 
 L 121.614072 84.463051 
 L 121.614072 84.815426 
-" clip-path="url(#p18c48b6b06)" style="fill: #6997c5"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-43)"/>
     <path d="M 121.614072 84.463051 
 L 126.124473 84.463051 
 L 126.124473 84.110676 
 L 121.614072 84.110676 
 L 121.614072 84.463051 
-" clip-path="url(#p18c48b6b06)" style="fill: #6b98c6"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-44)"/>
     <path d="M 121.614072 84.110676 
 L 126.124473 84.110676 
 L 126.124473 83.758301 
 L 121.614072 83.758301 
 L 121.614072 84.110676 
-" clip-path="url(#p18c48b6b06)" style="fill: #6d99c6"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-45)"/>
     <path d="M 121.614072 83.758301 
 L 126.124473 83.758301 
 L 126.124473 83.405926 
 L 121.614072 83.405926 
 L 121.614072 83.758301 
-" clip-path="url(#p18c48b6b06)" style="fill: #6e9ac7"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-46)"/>
     <path d="M 121.614072 83.405926 
 L 126.124473 83.405926 
 L 126.124473 83.053551 
 L 121.614072 83.053551 
 L 121.614072 83.405926 
-" clip-path="url(#p18c48b6b06)" style="fill: #709bc8"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-47)"/>
     <path d="M 121.614072 83.053551 
 L 126.124473 83.053551 
 L 126.124473 82.701176 
 L 121.614072 82.701176 
 L 121.614072 83.053551 
-" clip-path="url(#p18c48b6b06)" style="fill: #729dc8"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-48)"/>
     <path d="M 121.614072 82.701176 
 L 126.124473 82.701176 
 L 126.124473 82.348801 
 L 121.614072 82.348801 
 L 121.614072 82.701176 
-" clip-path="url(#p18c48b6b06)" style="fill: #739ec9"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-49)"/>
     <path d="M 121.614072 82.348801 
 L 126.124473 82.348801 
 L 126.124473 81.996425 
 L 121.614072 81.996425 
 L 121.614072 82.348801 
-" clip-path="url(#p18c48b6b06)" style="fill: #759fc9"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-50)"/>
     <path d="M 121.614072 81.996425 
 L 126.124473 81.996425 
 L 126.124473 81.64405 
 L 121.614072 81.64405 
 L 121.614072 81.996425 
-" clip-path="url(#p18c48b6b06)" style="fill: #77a0ca"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-51)"/>
     <path d="M 121.614072 81.64405 
 L 126.124473 81.64405 
 L 126.124473 81.291675 
 L 121.614072 81.291675 
 L 121.614072 81.64405 
-" clip-path="url(#p18c48b6b06)" style="fill: #78a1cb"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-52)"/>
     <path d="M 121.614072 81.291675 
 L 126.124473 81.291675 
 L 126.124473 80.9393 
 L 121.614072 80.9393 
 L 121.614072 81.291675 
-" clip-path="url(#p18c48b6b06)" style="fill: #7aa2cb"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-53)"/>
     <path d="M 121.614072 80.9393 
 L 126.124473 80.9393 
 L 126.124473 80.586925 
 L 121.614072 80.586925 
 L 121.614072 80.9393 
-" clip-path="url(#p18c48b6b06)" style="fill: #7ca3cc"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-54)"/>
     <path d="M 121.614072 80.586925 
 L 126.124473 80.586925 
 L 126.124473 80.23455 
 L 121.614072 80.23455 
 L 121.614072 80.586925 
-" clip-path="url(#p18c48b6b06)" style="fill: #7da5cc"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-55)"/>
     <path d="M 121.614072 80.23455 
 L 126.124473 80.23455 
 L 126.124473 79.882175 
 L 121.614072 79.882175 
 L 121.614072 80.23455 
-" clip-path="url(#p18c48b6b06)" style="fill: #7fa6cd"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-56)"/>
     <path d="M 121.614072 79.882175 
 L 126.124473 79.882175 
 L 126.124473 79.5298 
 L 121.614072 79.5298 
 L 121.614072 79.882175 
-" clip-path="url(#p18c48b6b06)" style="fill: #81a7ce"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-57)"/>
     <path d="M 121.614072 79.5298 
 L 126.124473 79.5298 
 L 126.124473 79.177425 
 L 121.614072 79.177425 
 L 121.614072 79.5298 
-" clip-path="url(#p18c48b6b06)" style="fill: #82a8ce"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-58)"/>
     <path d="M 121.614072 79.177425 
 L 126.124473 79.177425 
 L 126.124473 78.82505 
 L 121.614072 78.82505 
 L 121.614072 79.177425 
-" clip-path="url(#p18c48b6b06)" style="fill: #84a9cf"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-59)"/>
     <path d="M 121.614072 78.82505 
 L 126.124473 78.82505 
 L 126.124473 78.472674 
 L 121.614072 78.472674 
 L 121.614072 78.82505 
-" clip-path="url(#p18c48b6b06)" style="fill: #86aacf"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-60)"/>
     <path d="M 121.614072 78.472674 
 L 126.124473 78.472674 
 L 126.124473 78.120299 
 L 121.614072 78.120299 
 L 121.614072 78.472674 
-" clip-path="url(#p18c48b6b06)" style="fill: #87abd0"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-61)"/>
     <path d="M 121.614072 78.120299 
 L 126.124473 78.120299 
 L 126.124473 77.767924 
 L 121.614072 77.767924 
 L 121.614072 78.120299 
-" clip-path="url(#p18c48b6b06)" style="fill: #89add0"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-62)"/>
     <path d="M 121.614072 77.767924 
 L 126.124473 77.767924 
 L 126.124473 77.415549 
 L 121.614072 77.415549 
 L 121.614072 77.767924 
-" clip-path="url(#p18c48b6b06)" style="fill: #8baed1"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-63)"/>
     <path d="M 121.614072 77.415549 
 L 126.124473 77.415549 
 L 126.124473 77.063174 
 L 121.614072 77.063174 
 L 121.614072 77.415549 
-" clip-path="url(#p18c48b6b06)" style="fill: #8cafd2"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-64)"/>
     <path d="M 121.614072 77.063174 
 L 126.124473 77.063174 
 L 126.124473 76.710799 
 L 121.614072 76.710799 
 L 121.614072 77.063174 
-" clip-path="url(#p18c48b6b06)" style="fill: #8eb0d2"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-65)"/>
     <path d="M 121.614072 76.710799 
 L 126.124473 76.710799 
 L 126.124473 76.358424 
 L 121.614072 76.358424 
 L 121.614072 76.710799 
-" clip-path="url(#p18c48b6b06)" style="fill: #90b1d3"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-66)"/>
     <path d="M 121.614072 76.358424 
 L 126.124473 76.358424 
 L 126.124473 76.006049 
 L 121.614072 76.006049 
 L 121.614072 76.358424 
-" clip-path="url(#p18c48b6b06)" style="fill: #91b2d3"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-67)"/>
     <path d="M 121.614072 76.006049 
 L 126.124473 76.006049 
 L 126.124473 75.653674 
 L 121.614072 75.653674 
 L 121.614072 76.006049 
-" clip-path="url(#p18c48b6b06)" style="fill: #93b3d4"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-68)"/>
     <path d="M 121.614072 75.653674 
 L 126.124473 75.653674 
 L 126.124473 75.301299 
 L 121.614072 75.301299 
 L 121.614072 75.653674 
-" clip-path="url(#p18c48b6b06)" style="fill: #95b4d5"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-69)"/>
     <path d="M 121.614072 75.301299 
 L 126.124473 75.301299 
 L 126.124473 74.948924 
 L 121.614072 74.948924 
 L 121.614072 75.301299 
-" clip-path="url(#p18c48b6b06)" style="fill: #96b6d5"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-70)"/>
     <path d="M 121.614072 74.948924 
 L 126.124473 74.948924 
 L 126.124473 74.596548 
 L 121.614072 74.596548 
 L 121.614072 74.948924 
-" clip-path="url(#p18c48b6b06)" style="fill: #98b7d6"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-71)"/>
     <path d="M 121.614072 74.596548 
 L 126.124473 74.596548 
 L 126.124473 74.244173 
 L 121.614072 74.244173 
 L 121.614072 74.596548 
-" clip-path="url(#p18c48b6b06)" style="fill: #9ab8d6"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-72)"/>
     <path d="M 121.614072 74.244173 
 L 126.124473 74.244173 
 L 126.124473 73.891798 
 L 121.614072 73.891798 
 L 121.614072 74.244173 
-" clip-path="url(#p18c48b6b06)" style="fill: #9cb9d7"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-73)"/>
     <path d="M 121.614072 73.891798 
 L 126.124473 73.891798 
 L 126.124473 73.539423 
 L 121.614072 73.539423 
 L 121.614072 73.891798 
-" clip-path="url(#p18c48b6b06)" style="fill: #9dbad8"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-74)"/>
     <path d="M 121.614072 73.539423 
 L 126.124473 73.539423 
 L 126.124473 73.187048 
 L 121.614072 73.187048 
 L 121.614072 73.539423 
-" clip-path="url(#p18c48b6b06)" style="fill: #9fbbd8"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-75)"/>
     <path d="M 121.614072 73.187048 
 L 126.124473 73.187048 
 L 126.124473 72.834673 
 L 121.614072 72.834673 
 L 121.614072 73.187048 
-" clip-path="url(#p18c48b6b06)" style="fill: #a1bcd9"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-76)"/>
     <path d="M 121.614072 72.834673 
 L 126.124473 72.834673 
 L 126.124473 72.482298 
 L 121.614072 72.482298 
 L 121.614072 72.834673 
-" clip-path="url(#p18c48b6b06)" style="fill: #a2bed9"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-77)"/>
     <path d="M 121.614072 72.482298 
 L 126.124473 72.482298 
 L 126.124473 72.129923 
 L 121.614072 72.129923 
 L 121.614072 72.482298 
-" clip-path="url(#p18c48b6b06)" style="fill: #a4bfda"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-78)"/>
     <path d="M 121.614072 72.129923 
 L 126.124473 72.129923 
 L 126.124473 71.777548 
 L 121.614072 71.777548 
 L 121.614072 72.129923 
-" clip-path="url(#p18c48b6b06)" style="fill: #a6c0da"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-79)"/>
     <path d="M 121.614072 71.777548 
 L 126.124473 71.777548 
 L 126.124473 71.425173 
 L 121.614072 71.425173 
 L 121.614072 71.777548 
-" clip-path="url(#p18c48b6b06)" style="fill: #a7c1db"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-80)"/>
     <path d="M 121.614072 71.425173 
 L 126.124473 71.425173 
 L 126.124473 71.072798 
 L 121.614072 71.072798 
 L 121.614072 71.425173 
-" clip-path="url(#p18c48b6b06)" style="fill: #a9c2dc"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-81)"/>
     <path d="M 121.614072 71.072798 
 L 126.124473 71.072798 
 L 126.124473 70.720422 
 L 121.614072 70.720422 
 L 121.614072 71.072798 
-" clip-path="url(#p18c48b6b06)" style="fill: #abc3dc"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-82)"/>
     <path d="M 121.614072 70.720422 
 L 126.124473 70.720422 
 L 126.124473 70.368047 
 L 121.614072 70.368047 
 L 121.614072 70.720422 
-" clip-path="url(#p18c48b6b06)" style="fill: #acc4dd"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-83)"/>
     <path d="M 121.614072 70.368047 
 L 126.124473 70.368047 
 L 126.124473 70.015672 
 L 121.614072 70.015672 
 L 121.614072 70.368047 
-" clip-path="url(#p18c48b6b06)" style="fill: #aec6dd"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-84)"/>
     <path d="M 121.614072 70.015672 
 L 126.124473 70.015672 
 L 126.124473 69.663297 
 L 121.614072 69.663297 
 L 121.614072 70.015672 
-" clip-path="url(#p18c48b6b06)" style="fill: #b0c7de"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-85)"/>
     <path d="M 121.614072 69.663297 
 L 126.124473 69.663297 
 L 126.124473 69.310922 
 L 121.614072 69.310922 
 L 121.614072 69.663297 
-" clip-path="url(#p18c48b6b06)" style="fill: #b1c8df"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-86)"/>
     <path d="M 121.614072 69.310922 
 L 126.124473 69.310922 
 L 126.124473 68.958547 
 L 121.614072 68.958547 
 L 121.614072 69.310922 
-" clip-path="url(#p18c48b6b06)" style="fill: #b3c9df"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-87)"/>
     <path d="M 121.614072 68.958547 
 L 126.124473 68.958547 
 L 126.124473 68.606172 
 L 121.614072 68.606172 
 L 121.614072 68.958547 
-" clip-path="url(#p18c48b6b06)" style="fill: #b5cae0"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-88)"/>
     <path d="M 121.614072 68.606172 
 L 126.124473 68.606172 
 L 126.124473 68.253797 
 L 121.614072 68.253797 
 L 121.614072 68.606172 
-" clip-path="url(#p18c48b6b06)" style="fill: #b6cbe0"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-89)"/>
     <path d="M 121.614072 68.253797 
 L 126.124473 68.253797 
 L 126.124473 67.901422 
 L 121.614072 67.901422 
 L 121.614072 68.253797 
-" clip-path="url(#p18c48b6b06)" style="fill: #b8cce1"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-90)"/>
     <path d="M 121.614072 67.901422 
 L 126.124473 67.901422 
 L 126.124473 67.549047 
 L 121.614072 67.549047 
 L 121.614072 67.901422 
-" clip-path="url(#p18c48b6b06)" style="fill: #bacde2"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-91)"/>
     <path d="M 121.614072 67.549047 
 L 126.124473 67.549047 
 L 126.124473 67.196672 
 L 121.614072 67.196672 
 L 121.614072 67.549047 
-" clip-path="url(#p18c48b6b06)" style="fill: #bbcfe2"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-92)"/>
     <path d="M 121.614072 67.196672 
 L 126.124473 67.196672 
 L 126.124473 66.844296 
 L 121.614072 66.844296 
 L 121.614072 67.196672 
-" clip-path="url(#p18c48b6b06)" style="fill: #bdd0e3"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-93)"/>
     <path d="M 121.614072 66.844296 
 L 126.124473 66.844296 
 L 126.124473 66.491921 
 L 121.614072 66.491921 
 L 121.614072 66.844296 
-" clip-path="url(#p18c48b6b06)" style="fill: #bfd1e3"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-94)"/>
     <path d="M 121.614072 66.491921 
 L 126.124473 66.491921 
 L 126.124473 66.139546 
 L 121.614072 66.139546 
 L 121.614072 66.491921 
-" clip-path="url(#p18c48b6b06)" style="fill: #c0d2e4"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-95)"/>
     <path d="M 121.614072 66.139546 
 L 126.124473 66.139546 
 L 126.124473 65.787171 
 L 121.614072 65.787171 
 L 121.614072 66.139546 
-" clip-path="url(#p18c48b6b06)" style="fill: #c2d3e4"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-96)"/>
     <path d="M 121.614072 65.787171 
 L 126.124473 65.787171 
 L 126.124473 65.434796 
 L 121.614072 65.434796 
 L 121.614072 65.787171 
-" clip-path="url(#p18c48b6b06)" style="fill: #c4d4e5"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-97)"/>
     <path d="M 121.614072 65.434796 
 L 126.124473 65.434796 
 L 126.124473 65.082421 
 L 121.614072 65.082421 
 L 121.614072 65.434796 
-" clip-path="url(#p18c48b6b06)" style="fill: #c5d5e6"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-98)"/>
     <path d="M 121.614072 65.082421 
 L 126.124473 65.082421 
 L 126.124473 64.730046 
 L 121.614072 64.730046 
 L 121.614072 65.082421 
-" clip-path="url(#p18c48b6b06)" style="fill: #c7d7e6"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-99)"/>
     <path d="M 121.614072 64.730046 
 L 126.124473 64.730046 
 L 126.124473 64.377671 
 L 121.614072 64.377671 
 L 121.614072 64.730046 
-" clip-path="url(#p18c48b6b06)" style="fill: #c9d8e7"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-100)"/>
     <path d="M 121.614072 64.377671 
 L 126.124473 64.377671 
 L 126.124473 64.025296 
 L 121.614072 64.025296 
 L 121.614072 64.377671 
-" clip-path="url(#p18c48b6b06)" style="fill: #cbd9e7"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-101)"/>
     <path d="M 121.614072 64.025296 
 L 126.124473 64.025296 
 L 126.124473 63.672921 
 L 121.614072 63.672921 
 L 121.614072 64.025296 
-" clip-path="url(#p18c48b6b06)" style="fill: #ccdae8"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-102)"/>
     <path d="M 121.614072 63.672921 
 L 126.124473 63.672921 
 L 126.124473 63.320546 
 L 121.614072 63.320546 
 L 121.614072 63.672921 
-" clip-path="url(#p18c48b6b06)" style="fill: #cedbe9"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-103)"/>
     <path d="M 121.614072 63.320546 
 L 126.124473 63.320546 
 L 126.124473 62.96817 
 L 121.614072 62.96817 
 L 121.614072 63.320546 
-" clip-path="url(#p18c48b6b06)" style="fill: #d0dce9"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-104)"/>
     <path d="M 121.614072 62.96817 
 L 126.124473 62.96817 
 L 126.124473 62.615795 
 L 121.614072 62.615795 
 L 121.614072 62.96817 
-" clip-path="url(#p18c48b6b06)" style="fill: #d1ddea"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-105)"/>
     <path d="M 121.614072 62.615795 
 L 126.124473 62.615795 
 L 126.124473 62.26342 
 L 121.614072 62.26342 
 L 121.614072 62.615795 
-" clip-path="url(#p18c48b6b06)" style="fill: #d3dfea"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-106)"/>
     <path d="M 121.614072 62.26342 
 L 126.124473 62.26342 
 L 126.124473 61.911045 
 L 121.614072 61.911045 
 L 121.614072 62.26342 
-" clip-path="url(#p18c48b6b06)" style="fill: #d5e0eb"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-107)"/>
     <path d="M 121.614072 61.911045 
 L 126.124473 61.911045 
 L 126.124473 61.55867 
 L 121.614072 61.55867 
 L 121.614072 61.911045 
-" clip-path="url(#p18c48b6b06)" style="fill: #d6e1ec"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-108)"/>
     <path d="M 121.614072 61.55867 
 L 126.124473 61.55867 
 L 126.124473 61.206295 
 L 121.614072 61.206295 
 L 121.614072 61.55867 
-" clip-path="url(#p18c48b6b06)" style="fill: #d8e2ec"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-109)"/>
     <path d="M 121.614072 61.206295 
 L 126.124473 61.206295 
 L 126.124473 60.85392 
 L 121.614072 60.85392 
 L 121.614072 61.206295 
-" clip-path="url(#p18c48b6b06)" style="fill: #dae3ed"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-110)"/>
     <path d="M 121.614072 60.85392 
 L 126.124473 60.85392 
 L 126.124473 60.501545 
 L 121.614072 60.501545 
 L 121.614072 60.85392 
-" clip-path="url(#p18c48b6b06)" style="fill: #dbe4ed"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-111)"/>
     <path d="M 121.614072 60.501545 
 L 126.124473 60.501545 
 L 126.124473 60.14917 
 L 121.614072 60.14917 
 L 121.614072 60.501545 
-" clip-path="url(#p18c48b6b06)" style="fill: #dde5ee"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-112)"/>
     <path d="M 121.614072 60.14917 
 L 126.124473 60.14917 
 L 126.124473 59.796795 
 L 121.614072 59.796795 
 L 121.614072 60.14917 
-" clip-path="url(#p18c48b6b06)" style="fill: #dfe7ee"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-113)"/>
     <path d="M 121.614072 59.796795 
 L 126.124473 59.796795 
 L 126.124473 59.44442 
 L 121.614072 59.44442 
 L 121.614072 59.796795 
-" clip-path="url(#p18c48b6b06)" style="fill: #e0e8ef"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-114)"/>
     <path d="M 121.614072 59.44442 
 L 126.124473 59.44442 
 L 126.124473 59.092044 
 L 121.614072 59.092044 
 L 121.614072 59.44442 
-" clip-path="url(#p18c48b6b06)" style="fill: #e2e9f0"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-115)"/>
     <path d="M 121.614072 59.092044 
 L 126.124473 59.092044 
 L 126.124473 58.739669 
 L 121.614072 58.739669 
 L 121.614072 59.092044 
-" clip-path="url(#p18c48b6b06)" style="fill: #e4eaf0"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-116)"/>
     <path d="M 121.614072 58.739669 
 L 126.124473 58.739669 
 L 126.124473 58.387294 
 L 121.614072 58.387294 
 L 121.614072 58.739669 
-" clip-path="url(#p18c48b6b06)" style="fill: #e5ebf1"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-117)"/>
     <path d="M 121.614072 58.387294 
 L 126.124473 58.387294 
 L 126.124473 58.034919 
 L 121.614072 58.034919 
 L 121.614072 58.387294 
-" clip-path="url(#p18c48b6b06)" style="fill: #e7ecf1"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-118)"/>
     <path d="M 121.614072 58.034919 
 L 126.124473 58.034919 
 L 126.124473 57.682544 
 L 121.614072 57.682544 
 L 121.614072 58.034919 
-" clip-path="url(#p18c48b6b06)" style="fill: #e9edf2"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-119)"/>
     <path d="M 121.614072 57.682544 
 L 126.124473 57.682544 
 L 126.124473 57.330169 
 L 121.614072 57.330169 
 L 121.614072 57.682544 
-" clip-path="url(#p18c48b6b06)" style="fill: #eaeef3"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-120)"/>
     <path d="M 121.614072 57.330169 
 L 126.124473 57.330169 
 L 126.124473 56.977794 
 L 121.614072 56.977794 
 L 121.614072 57.330169 
-" clip-path="url(#p18c48b6b06)" style="fill: #ecf0f3"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-121)"/>
     <path d="M 121.614072 56.977794 
 L 126.124473 56.977794 
 L 126.124473 56.625419 
 L 121.614072 56.625419 
 L 121.614072 56.977794 
-" clip-path="url(#p18c48b6b06)" style="fill: #eef1f4"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-122)"/>
     <path d="M 121.614072 56.625419 
 L 126.124473 56.625419 
 L 126.124473 56.273044 
 L 121.614072 56.273044 
 L 121.614072 56.625419 
-" clip-path="url(#p18c48b6b06)" style="fill: #eff2f4"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-123)"/>
     <path d="M 121.614072 56.273044 
 L 126.124473 56.273044 
 L 126.124473 55.920669 
 L 121.614072 55.920669 
 L 121.614072 56.273044 
-" clip-path="url(#p18c48b6b06)" style="fill: #f1f3f5"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-124)"/>
     <path d="M 121.614072 55.920669 
 L 126.124473 55.920669 
 L 126.124473 55.568293 
 L 121.614072 55.568293 
 L 121.614072 55.920669 
-" clip-path="url(#p18c48b6b06)" style="fill: #f3f4f6"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-125)"/>
     <path d="M 121.614072 55.568293 
 L 126.124473 55.568293 
 L 126.124473 55.215918 
 L 121.614072 55.215918 
 L 121.614072 55.568293 
-" clip-path="url(#p18c48b6b06)" style="fill: #f4f5f6"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-126)"/>
     <path d="M 121.614072 55.215918 
 L 126.124473 55.215918 
 L 126.124473 54.863543 
 L 121.614072 54.863543 
 L 121.614072 55.215918 
-" clip-path="url(#p18c48b6b06)" style="fill: #f6f6f7"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-127)"/>
     <path d="M 121.614072 54.863543 
 L 126.124473 54.863543 
 L 126.124473 54.511168 
 L 121.614072 54.511168 
 L 121.614072 54.863543 
-" clip-path="url(#p18c48b6b06)" style="fill: #f7f6f6"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-128)"/>
     <path d="M 121.614072 54.511168 
 L 126.124473 54.511168 
 L 126.124473 54.158793 
 L 121.614072 54.158793 
 L 121.614072 54.511168 
-" clip-path="url(#p18c48b6b06)" style="fill: #f6f4f5"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-129)"/>
     <path d="M 121.614072 54.158793 
 L 126.124473 54.158793 
 L 126.124473 53.806418 
 L 121.614072 53.806418 
 L 121.614072 54.158793 
-" clip-path="url(#p18c48b6b06)" style="fill: #f6f3f3"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-130)"/>
     <path d="M 121.614072 53.806418 
 L 126.124473 53.806418 
 L 126.124473 53.454043 
 L 121.614072 53.454043 
 L 121.614072 53.806418 
-" clip-path="url(#p18c48b6b06)" style="fill: #f5f1f1"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-131)"/>
     <path d="M 121.614072 53.454043 
 L 126.124473 53.454043 
 L 126.124473 53.101668 
 L 121.614072 53.101668 
 L 121.614072 53.454043 
-" clip-path="url(#p18c48b6b06)" style="fill: #f5eff0"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-132)"/>
     <path d="M 121.614072 53.101668 
 L 126.124473 53.101668 
 L 126.124473 52.749293 
 L 121.614072 52.749293 
 L 121.614072 53.101668 
-" clip-path="url(#p18c48b6b06)" style="fill: #f4edee"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-133)"/>
     <path d="M 121.614072 52.749293 
 L 126.124473 52.749293 
 L 126.124473 52.396918 
 L 121.614072 52.396918 
 L 121.614072 52.749293 
-" clip-path="url(#p18c48b6b06)" style="fill: #f3eced"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-134)"/>
     <path d="M 121.614072 52.396918 
 L 126.124473 52.396918 
 L 126.124473 52.044543 
 L 121.614072 52.044543 
 L 121.614072 52.396918 
-" clip-path="url(#p18c48b6b06)" style="fill: #f3eaeb"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-135)"/>
     <path d="M 121.614072 52.044543 
 L 126.124473 52.044543 
 L 126.124473 51.692167 
 L 121.614072 51.692167 
 L 121.614072 52.044543 
-" clip-path="url(#p18c48b6b06)" style="fill: #f2e8e9"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-136)"/>
     <path d="M 121.614072 51.692167 
 L 126.124473 51.692167 
 L 126.124473 51.339792 
 L 121.614072 51.339792 
 L 121.614072 51.692167 
-" clip-path="url(#p18c48b6b06)" style="fill: #f2e6e8"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-137)"/>
     <path d="M 121.614072 51.339792 
 L 126.124473 51.339792 
 L 126.124473 50.987417 
 L 121.614072 50.987417 
 L 121.614072 51.339792 
-" clip-path="url(#p18c48b6b06)" style="fill: #f1e5e6"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-138)"/>
     <path d="M 121.614072 50.987417 
 L 126.124473 50.987417 
 L 126.124473 50.635042 
 L 121.614072 50.635042 
 L 121.614072 50.987417 
-" clip-path="url(#p18c48b6b06)" style="fill: #f1e3e5"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-139)"/>
     <path d="M 121.614072 50.635042 
 L 126.124473 50.635042 
 L 126.124473 50.282667 
 L 121.614072 50.282667 
 L 121.614072 50.635042 
-" clip-path="url(#p18c48b6b06)" style="fill: #f0e1e3"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-140)"/>
     <path d="M 121.614072 50.282667 
 L 126.124473 50.282667 
 L 126.124473 49.930292 
 L 121.614072 49.930292 
 L 121.614072 50.282667 
-" clip-path="url(#p18c48b6b06)" style="fill: #f0dfe1"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-141)"/>
     <path d="M 121.614072 49.930292 
 L 126.124473 49.930292 
 L 126.124473 49.577917 
 L 121.614072 49.577917 
 L 121.614072 49.930292 
-" clip-path="url(#p18c48b6b06)" style="fill: #efdee0"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-142)"/>
     <path d="M 121.614072 49.577917 
 L 126.124473 49.577917 
 L 126.124473 49.225542 
 L 121.614072 49.225542 
 L 121.614072 49.577917 
-" clip-path="url(#p18c48b6b06)" style="fill: #efdcde"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-143)"/>
     <path d="M 121.614072 49.225542 
 L 126.124473 49.225542 
 L 126.124473 48.873167 
 L 121.614072 48.873167 
 L 121.614072 49.225542 
-" clip-path="url(#p18c48b6b06)" style="fill: #eedadd"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-144)"/>
     <path d="M 121.614072 48.873167 
 L 126.124473 48.873167 
 L 126.124473 48.520792 
 L 121.614072 48.520792 
 L 121.614072 48.873167 
-" clip-path="url(#p18c48b6b06)" style="fill: #eed8db"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-145)"/>
     <path d="M 121.614072 48.520792 
 L 126.124473 48.520792 
 L 126.124473 48.168417 
 L 121.614072 48.168417 
 L 121.614072 48.520792 
-" clip-path="url(#p18c48b6b06)" style="fill: #edd7d9"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-146)"/>
     <path d="M 121.614072 48.168417 
 L 126.124473 48.168417 
 L 126.124473 47.816041 
 L 121.614072 47.816041 
 L 121.614072 48.168417 
-" clip-path="url(#p18c48b6b06)" style="fill: #ecd5d8"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-147)"/>
     <path d="M 121.614072 47.816041 
 L 126.124473 47.816041 
 L 126.124473 47.463666 
 L 121.614072 47.463666 
 L 121.614072 47.816041 
-" clip-path="url(#p18c48b6b06)" style="fill: #ecd3d6"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-148)"/>
     <path d="M 121.614072 47.463666 
 L 126.124473 47.463666 
 L 126.124473 47.111291 
 L 121.614072 47.111291 
 L 121.614072 47.463666 
-" clip-path="url(#p18c48b6b06)" style="fill: #ebd1d5"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-149)"/>
     <path d="M 121.614072 47.111291 
 L 126.124473 47.111291 
 L 126.124473 46.758916 
 L 121.614072 46.758916 
 L 121.614072 47.111291 
-" clip-path="url(#p18c48b6b06)" style="fill: #ebd0d3"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-150)"/>
     <path d="M 121.614072 46.758916 
 L 126.124473 46.758916 
 L 126.124473 46.406541 
 L 121.614072 46.406541 
 L 121.614072 46.758916 
-" clip-path="url(#p18c48b6b06)" style="fill: #eaced1"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-151)"/>
     <path d="M 121.614072 46.406541 
 L 126.124473 46.406541 
 L 126.124473 46.054166 
 L 121.614072 46.054166 
 L 121.614072 46.406541 
-" clip-path="url(#p18c48b6b06)" style="fill: #eaccd0"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-152)"/>
     <path d="M 121.614072 46.054166 
 L 126.124473 46.054166 
 L 126.124473 45.701791 
 L 121.614072 45.701791 
 L 121.614072 46.054166 
-" clip-path="url(#p18c48b6b06)" style="fill: #e9cace"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-153)"/>
     <path d="M 121.614072 45.701791 
 L 126.124473 45.701791 
 L 126.124473 45.349416 
 L 121.614072 45.349416 
 L 121.614072 45.701791 
-" clip-path="url(#p18c48b6b06)" style="fill: #e9c9cd"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-154)"/>
     <path d="M 121.614072 45.349416 
 L 126.124473 45.349416 
 L 126.124473 44.997041 
 L 121.614072 44.997041 
 L 121.614072 45.349416 
-" clip-path="url(#p18c48b6b06)" style="fill: #e8c7cb"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-155)"/>
     <path d="M 121.614072 44.997041 
 L 126.124473 44.997041 
 L 126.124473 44.644666 
 L 121.614072 44.644666 
 L 121.614072 44.997041 
-" clip-path="url(#p18c48b6b06)" style="fill: #e8c5c9"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-156)"/>
     <path d="M 121.614072 44.644666 
 L 126.124473 44.644666 
 L 126.124473 44.292291 
 L 121.614072 44.292291 
 L 121.614072 44.644666 
-" clip-path="url(#p18c48b6b06)" style="fill: #e7c3c8"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-157)"/>
     <path d="M 121.614072 44.292291 
 L 126.124473 44.292291 
 L 126.124473 43.939915 
 L 121.614072 43.939915 
 L 121.614072 44.292291 
-" clip-path="url(#p18c48b6b06)" style="fill: #e6c2c6"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-158)"/>
     <path d="M 121.614072 43.939915 
 L 126.124473 43.939915 
 L 126.124473 43.58754 
 L 121.614072 43.58754 
 L 121.614072 43.939915 
-" clip-path="url(#p18c48b6b06)" style="fill: #e6c0c5"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-159)"/>
     <path d="M 121.614072 43.58754 
 L 126.124473 43.58754 
 L 126.124473 43.235165 
 L 121.614072 43.235165 
 L 121.614072 43.58754 
-" clip-path="url(#p18c48b6b06)" style="fill: #e5bec3"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-160)"/>
     <path d="M 121.614072 43.235165 
 L 126.124473 43.235165 
 L 126.124473 42.88279 
 L 121.614072 42.88279 
 L 121.614072 43.235165 
-" clip-path="url(#p18c48b6b06)" style="fill: #e5bcc1"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-161)"/>
     <path d="M 121.614072 42.88279 
 L 126.124473 42.88279 
 L 126.124473 42.530415 
 L 121.614072 42.530415 
 L 121.614072 42.88279 
-" clip-path="url(#p18c48b6b06)" style="fill: #e4bbc0"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-162)"/>
     <path d="M 121.614072 42.530415 
 L 126.124473 42.530415 
 L 126.124473 42.17804 
 L 121.614072 42.17804 
 L 121.614072 42.530415 
-" clip-path="url(#p18c48b6b06)" style="fill: #e4b9be"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-163)"/>
     <path d="M 121.614072 42.17804 
 L 126.124473 42.17804 
 L 126.124473 41.825665 
 L 121.614072 41.825665 
 L 121.614072 42.17804 
-" clip-path="url(#p18c48b6b06)" style="fill: #e3b7bd"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-164)"/>
     <path d="M 121.614072 41.825665 
 L 126.124473 41.825665 
 L 126.124473 41.47329 
 L 121.614072 41.47329 
 L 121.614072 41.825665 
-" clip-path="url(#p18c48b6b06)" style="fill: #e3b5bb"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-165)"/>
     <path d="M 121.614072 41.47329 
 L 126.124473 41.47329 
 L 126.124473 41.120915 
 L 121.614072 41.120915 
 L 121.614072 41.47329 
-" clip-path="url(#p18c48b6b06)" style="fill: #e2b4b9"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-166)"/>
     <path d="M 121.614072 41.120915 
 L 126.124473 41.120915 
 L 126.124473 40.76854 
 L 121.614072 40.76854 
 L 121.614072 41.120915 
-" clip-path="url(#p18c48b6b06)" style="fill: #e2b2b8"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-167)"/>
     <path d="M 121.614072 40.76854 
 L 126.124473 40.76854 
 L 126.124473 40.416165 
 L 121.614072 40.416165 
 L 121.614072 40.76854 
-" clip-path="url(#p18c48b6b06)" style="fill: #e1b0b6"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-168)"/>
     <path d="M 121.614072 40.416165 
 L 126.124473 40.416165 
 L 126.124473 40.063789 
 L 121.614072 40.063789 
 L 121.614072 40.416165 
-" clip-path="url(#p18c48b6b06)" style="fill: #e1aeb5"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-169)"/>
     <path d="M 121.614072 40.063789 
 L 126.124473 40.063789 
 L 126.124473 39.711414 
 L 121.614072 39.711414 
 L 121.614072 40.063789 
-" clip-path="url(#p18c48b6b06)" style="fill: #e0adb3"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-170)"/>
     <path d="M 121.614072 39.711414 
 L 126.124473 39.711414 
 L 126.124473 39.359039 
 L 121.614072 39.359039 
 L 121.614072 39.711414 
-" clip-path="url(#p18c48b6b06)" style="fill: #dfabb1"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-171)"/>
     <path d="M 121.614072 39.359039 
 L 126.124473 39.359039 
 L 126.124473 39.006664 
 L 121.614072 39.006664 
 L 121.614072 39.359039 
-" clip-path="url(#p18c48b6b06)" style="fill: #dfa9b0"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-172)"/>
     <path d="M 121.614072 39.006664 
 L 126.124473 39.006664 
 L 126.124473 38.654289 
 L 121.614072 38.654289 
 L 121.614072 39.006664 
-" clip-path="url(#p18c48b6b06)" style="fill: #dea7ae"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-173)"/>
     <path d="M 121.614072 38.654289 
 L 126.124473 38.654289 
 L 126.124473 38.301914 
 L 121.614072 38.301914 
 L 121.614072 38.654289 
-" clip-path="url(#p18c48b6b06)" style="fill: #dea6ad"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-174)"/>
     <path d="M 121.614072 38.301914 
 L 126.124473 38.301914 
 L 126.124473 37.949539 
 L 121.614072 37.949539 
 L 121.614072 38.301914 
-" clip-path="url(#p18c48b6b06)" style="fill: #dda4ab"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-175)"/>
     <path d="M 121.614072 37.949539 
 L 126.124473 37.949539 
 L 126.124473 37.597164 
 L 121.614072 37.597164 
 L 121.614072 37.949539 
-" clip-path="url(#p18c48b6b06)" style="fill: #dda2a9"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-176)"/>
     <path d="M 121.614072 37.597164 
 L 126.124473 37.597164 
 L 126.124473 37.244789 
 L 121.614072 37.244789 
 L 121.614072 37.597164 
-" clip-path="url(#p18c48b6b06)" style="fill: #dca0a8"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-177)"/>
     <path d="M 121.614072 37.244789 
 L 126.124473 37.244789 
 L 126.124473 36.892414 
 L 121.614072 36.892414 
 L 121.614072 37.244789 
-" clip-path="url(#p18c48b6b06)" style="fill: #dc9fa6"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-178)"/>
     <path d="M 121.614072 36.892414 
 L 126.124473 36.892414 
 L 126.124473 36.540039 
 L 121.614072 36.540039 
 L 121.614072 36.892414 
-" clip-path="url(#p18c48b6b06)" style="fill: #db9da5"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-179)"/>
     <path d="M 121.614072 36.540039 
 L 126.124473 36.540039 
 L 126.124473 36.187663 
 L 121.614072 36.187663 
 L 121.614072 36.540039 
-" clip-path="url(#p18c48b6b06)" style="fill: #db9ba3"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-180)"/>
     <path d="M 121.614072 36.187663 
 L 126.124473 36.187663 
 L 126.124473 35.835288 
 L 121.614072 35.835288 
 L 121.614072 36.187663 
-" clip-path="url(#p18c48b6b06)" style="fill: #da99a1"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-181)"/>
     <path d="M 121.614072 35.835288 
 L 126.124473 35.835288 
 L 126.124473 35.482913 
 L 121.614072 35.482913 
 L 121.614072 35.835288 
-" clip-path="url(#p18c48b6b06)" style="fill: #da98a0"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-182)"/>
     <path d="M 121.614072 35.482913 
 L 126.124473 35.482913 
 L 126.124473 35.130538 
 L 121.614072 35.130538 
 L 121.614072 35.482913 
-" clip-path="url(#p18c48b6b06)" style="fill: #d9969e"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-183)"/>
     <path d="M 121.614072 35.130538 
 L 126.124473 35.130538 
 L 126.124473 34.778163 
 L 121.614072 34.778163 
 L 121.614072 35.130538 
-" clip-path="url(#p18c48b6b06)" style="fill: #d8949d"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-184)"/>
     <path d="M 121.614072 34.778163 
 L 126.124473 34.778163 
 L 126.124473 34.425788 
 L 121.614072 34.425788 
 L 121.614072 34.778163 
-" clip-path="url(#p18c48b6b06)" style="fill: #d8929b"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-185)"/>
     <path d="M 121.614072 34.425788 
 L 126.124473 34.425788 
 L 126.124473 34.073413 
 L 121.614072 34.073413 
 L 121.614072 34.425788 
-" clip-path="url(#p18c48b6b06)" style="fill: #d79199"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-186)"/>
     <path d="M 121.614072 34.073413 
 L 126.124473 34.073413 
 L 126.124473 33.721038 
 L 121.614072 33.721038 
 L 121.614072 34.073413 
-" clip-path="url(#p18c48b6b06)" style="fill: #d78f98"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-187)"/>
     <path d="M 121.614072 33.721038 
 L 126.124473 33.721038 
 L 126.124473 33.368663 
 L 121.614072 33.368663 
 L 121.614072 33.721038 
-" clip-path="url(#p18c48b6b06)" style="fill: #d68d96"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-188)"/>
     <path d="M 121.614072 33.368663 
 L 126.124473 33.368663 
 L 126.124473 33.016288 
 L 121.614072 33.016288 
 L 121.614072 33.368663 
-" clip-path="url(#p18c48b6b06)" style="fill: #d68b95"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-189)"/>
     <path d="M 121.614072 33.016288 
 L 126.124473 33.016288 
 L 126.124473 32.663912 
 L 121.614072 32.663912 
 L 121.614072 33.016288 
-" clip-path="url(#p18c48b6b06)" style="fill: #d58a93"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-190)"/>
     <path d="M 121.614072 32.663912 
 L 126.124473 32.663912 
 L 126.124473 32.311537 
 L 121.614072 32.311537 
 L 121.614072 32.663912 
-" clip-path="url(#p18c48b6b06)" style="fill: #d58891"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-191)"/>
     <path d="M 121.614072 32.311537 
 L 126.124473 32.311537 
 L 126.124473 31.959162 
 L 121.614072 31.959162 
 L 121.614072 32.311537 
-" clip-path="url(#p18c48b6b06)" style="fill: #d48690"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-192)"/>
     <path d="M 121.614072 31.959162 
 L 126.124473 31.959162 
 L 126.124473 31.606787 
 L 121.614072 31.606787 
 L 121.614072 31.959162 
-" clip-path="url(#p18c48b6b06)" style="fill: #d4848e"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-193)"/>
     <path d="M 121.614072 31.606787 
 L 126.124473 31.606787 
 L 126.124473 31.254412 
 L 121.614072 31.254412 
 L 121.614072 31.606787 
-" clip-path="url(#p18c48b6b06)" style="fill: #d3838d"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-194)"/>
     <path d="M 121.614072 31.254412 
 L 126.124473 31.254412 
 L 126.124473 30.902037 
 L 121.614072 30.902037 
 L 121.614072 31.254412 
-" clip-path="url(#p18c48b6b06)" style="fill: #d2818b"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-195)"/>
     <path d="M 121.614072 30.902037 
 L 126.124473 30.902037 
 L 126.124473 30.549662 
 L 121.614072 30.549662 
 L 121.614072 30.902037 
-" clip-path="url(#p18c48b6b06)" style="fill: #d27f89"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-196)"/>
     <path d="M 121.614072 30.549662 
 L 126.124473 30.549662 
 L 126.124473 30.197287 
 L 121.614072 30.197287 
 L 121.614072 30.549662 
-" clip-path="url(#p18c48b6b06)" style="fill: #d17d88"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-197)"/>
     <path d="M 121.614072 30.197287 
 L 126.124473 30.197287 
 L 126.124473 29.844912 
 L 121.614072 29.844912 
 L 121.614072 30.197287 
-" clip-path="url(#p18c48b6b06)" style="fill: #d17c86"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-198)"/>
     <path d="M 121.614072 29.844912 
 L 126.124473 29.844912 
 L 126.124473 29.492537 
 L 121.614072 29.492537 
 L 121.614072 29.844912 
-" clip-path="url(#p18c48b6b06)" style="fill: #d07a85"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-199)"/>
     <path d="M 121.614072 29.492537 
 L 126.124473 29.492537 
 L 126.124473 29.140162 
 L 121.614072 29.140162 
 L 121.614072 29.492537 
-" clip-path="url(#p18c48b6b06)" style="fill: #d07883"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-200)"/>
     <path d="M 121.614072 29.140162 
 L 126.124473 29.140162 
 L 126.124473 28.787786 
 L 121.614072 28.787786 
 L 121.614072 29.140162 
-" clip-path="url(#p18c48b6b06)" style="fill: #cf7681"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-201)"/>
     <path d="M 121.614072 28.787786 
 L 126.124473 28.787786 
 L 126.124473 28.435411 
 L 121.614072 28.435411 
 L 121.614072 28.787786 
-" clip-path="url(#p18c48b6b06)" style="fill: #cf7580"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-202)"/>
     <path d="M 121.614072 28.435411 
 L 126.124473 28.435411 
 L 126.124473 28.083036 
 L 121.614072 28.083036 
 L 121.614072 28.435411 
-" clip-path="url(#p18c48b6b06)" style="fill: #ce737e"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-203)"/>
     <path d="M 121.614072 28.083036 
 L 126.124473 28.083036 
 L 126.124473 27.730661 
 L 121.614072 27.730661 
 L 121.614072 28.083036 
-" clip-path="url(#p18c48b6b06)" style="fill: #ce717d"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-204)"/>
     <path d="M 121.614072 27.730661 
 L 126.124473 27.730661 
 L 126.124473 27.378286 
 L 121.614072 27.378286 
 L 121.614072 27.730661 
-" clip-path="url(#p18c48b6b06)" style="fill: #cd6f7b"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-205)"/>
     <path d="M 121.614072 27.378286 
 L 126.124473 27.378286 
 L 126.124473 27.025911 
 L 121.614072 27.025911 
 L 121.614072 27.378286 
-" clip-path="url(#p18c48b6b06)" style="fill: #cd6e79"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-206)"/>
     <path d="M 121.614072 27.025911 
 L 126.124473 27.025911 
 L 126.124473 26.673536 
 L 121.614072 26.673536 
 L 121.614072 27.025911 
-" clip-path="url(#p18c48b6b06)" style="fill: #cc6c78"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-207)"/>
     <path d="M 121.614072 26.673536 
 L 126.124473 26.673536 
 L 126.124473 26.321161 
 L 121.614072 26.321161 
 L 121.614072 26.673536 
-" clip-path="url(#p18c48b6b06)" style="fill: #cb6a76"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-208)"/>
     <path d="M 121.614072 26.321161 
 L 126.124473 26.321161 
 L 126.124473 25.968786 
 L 121.614072 25.968786 
 L 121.614072 26.321161 
-" clip-path="url(#p18c48b6b06)" style="fill: #cb6875"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-209)"/>
     <path d="M 121.614072 25.968786 
 L 126.124473 25.968786 
 L 126.124473 25.616411 
 L 121.614072 25.616411 
 L 121.614072 25.968786 
-" clip-path="url(#p18c48b6b06)" style="fill: #ca6773"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-210)"/>
     <path d="M 121.614072 25.616411 
 L 126.124473 25.616411 
 L 126.124473 25.264036 
 L 121.614072 25.264036 
 L 121.614072 25.616411 
-" clip-path="url(#p18c48b6b06)" style="fill: #ca6571"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-211)"/>
     <path d="M 121.614072 25.264036 
 L 126.124473 25.264036 
 L 126.124473 24.91166 
 L 121.614072 24.91166 
 L 121.614072 25.264036 
-" clip-path="url(#p18c48b6b06)" style="fill: #c96370"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-212)"/>
     <path d="M 121.614072 24.91166 
 L 126.124473 24.91166 
 L 126.124473 24.559285 
 L 121.614072 24.559285 
 L 121.614072 24.91166 
-" clip-path="url(#p18c48b6b06)" style="fill: #c9616e"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-213)"/>
     <path d="M 121.614072 24.559285 
 L 126.124473 24.559285 
 L 126.124473 24.20691 
 L 121.614072 24.20691 
 L 121.614072 24.559285 
-" clip-path="url(#p18c48b6b06)" style="fill: #c8606d"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-214)"/>
     <path d="M 121.614072 24.20691 
 L 126.124473 24.20691 
 L 126.124473 23.854535 
 L 121.614072 23.854535 
 L 121.614072 24.20691 
-" clip-path="url(#p18c48b6b06)" style="fill: #c85e6b"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-215)"/>
     <path d="M 121.614072 23.854535 
 L 126.124473 23.854535 
 L 126.124473 23.50216 
 L 121.614072 23.50216 
 L 121.614072 23.854535 
-" clip-path="url(#p18c48b6b06)" style="fill: #c75c69"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-216)"/>
     <path d="M 121.614072 23.50216 
 L 126.124473 23.50216 
 L 126.124473 23.149785 
 L 121.614072 23.149785 
 L 121.614072 23.50216 
-" clip-path="url(#p18c48b6b06)" style="fill: #c75a68"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-217)"/>
     <path d="M 121.614072 23.149785 
 L 126.124473 23.149785 
 L 126.124473 22.79741 
 L 121.614072 22.79741 
 L 121.614072 23.149785 
-" clip-path="url(#p18c48b6b06)" style="fill: #c65966"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-218)"/>
     <path d="M 121.614072 22.79741 
 L 126.124473 22.79741 
 L 126.124473 22.445035 
 L 121.614072 22.445035 
 L 121.614072 22.79741 
-" clip-path="url(#p18c48b6b06)" style="fill: #c55765"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-219)"/>
     <path d="M 121.614072 22.445035 
 L 126.124473 22.445035 
 L 126.124473 22.09266 
 L 121.614072 22.09266 
 L 121.614072 22.445035 
-" clip-path="url(#p18c48b6b06)" style="fill: #c55563"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-220)"/>
     <path d="M 121.614072 22.09266 
 L 126.124473 22.09266 
 L 126.124473 21.740285 
 L 121.614072 21.740285 
 L 121.614072 22.09266 
-" clip-path="url(#p18c48b6b06)" style="fill: #c45361"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-221)"/>
     <path d="M 121.614072 21.740285 
 L 126.124473 21.740285 
 L 126.124473 21.38791 
 L 121.614072 21.38791 
 L 121.614072 21.740285 
-" clip-path="url(#p18c48b6b06)" style="fill: #c45260"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-222)"/>
     <path d="M 121.614072 21.38791 
 L 126.124473 21.38791 
 L 126.124473 21.035534 
 L 121.614072 21.035534 
 L 121.614072 21.38791 
-" clip-path="url(#p18c48b6b06)" style="fill: #c3505e"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-223)"/>
     <path d="M 121.614072 21.035534 
 L 126.124473 21.035534 
 L 126.124473 20.683159 
 L 121.614072 20.683159 
 L 121.614072 21.035534 
-" clip-path="url(#p18c48b6b06)" style="fill: #c34e5d"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-224)"/>
     <path d="M 121.614072 20.683159 
 L 126.124473 20.683159 
 L 126.124473 20.330784 
 L 121.614072 20.330784 
 L 121.614072 20.683159 
-" clip-path="url(#p18c48b6b06)" style="fill: #c24c5b"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-225)"/>
     <path d="M 121.614072 20.330784 
 L 126.124473 20.330784 
 L 126.124473 19.978409 
 L 121.614072 19.978409 
 L 121.614072 20.330784 
-" clip-path="url(#p18c48b6b06)" style="fill: #c24b59"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-226)"/>
     <path d="M 121.614072 19.978409 
 L 126.124473 19.978409 
 L 126.124473 19.626034 
 L 121.614072 19.626034 
 L 121.614072 19.978409 
-" clip-path="url(#p18c48b6b06)" style="fill: #c14958"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-227)"/>
     <path d="M 121.614072 19.626034 
 L 126.124473 19.626034 
 L 126.124473 19.273659 
 L 121.614072 19.273659 
 L 121.614072 19.626034 
-" clip-path="url(#p18c48b6b06)" style="fill: #c14756"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-228)"/>
     <path d="M 121.614072 19.273659 
 L 126.124473 19.273659 
 L 126.124473 18.921284 
 L 121.614072 18.921284 
 L 121.614072 19.273659 
-" clip-path="url(#p18c48b6b06)" style="fill: #c04555"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-229)"/>
     <path d="M 121.614072 18.921284 
 L 126.124473 18.921284 
 L 126.124473 18.568909 
 L 121.614072 18.568909 
 L 121.614072 18.921284 
-" clip-path="url(#p18c48b6b06)" style="fill: #c04453"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-230)"/>
     <path d="M 121.614072 18.568909 
 L 126.124473 18.568909 
 L 126.124473 18.216534 
 L 121.614072 18.216534 
 L 121.614072 18.568909 
-" clip-path="url(#p18c48b6b06)" style="fill: #bf4251"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-231)"/>
     <path d="M 121.614072 18.216534 
 L 126.124473 18.216534 
 L 126.124473 17.864159 
 L 121.614072 17.864159 
 L 121.614072 18.216534 
-" clip-path="url(#p18c48b6b06)" style="fill: #be4050"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-232)"/>
     <path d="M 121.614072 17.864159 
 L 126.124473 17.864159 
 L 126.124473 17.511784 
 L 121.614072 17.511784 
 L 121.614072 17.864159 
-" clip-path="url(#p18c48b6b06)" style="fill: #be3e4e"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-233)"/>
     <path d="M 121.614072 17.511784 
 L 126.124473 17.511784 
 L 126.124473 17.159408 
 L 121.614072 17.159408 
 L 121.614072 17.511784 
-" clip-path="url(#p18c48b6b06)" style="fill: #bd3d4d"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-234)"/>
     <path d="M 121.614072 17.159408 
 L 126.124473 17.159408 
 L 126.124473 16.807033 
 L 121.614072 16.807033 
 L 121.614072 17.159408 
-" clip-path="url(#p18c48b6b06)" style="fill: #bd3b4b"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-235)"/>
     <path d="M 121.614072 16.807033 
 L 126.124473 16.807033 
 L 126.124473 16.454658 
 L 121.614072 16.454658 
 L 121.614072 16.807033 
-" clip-path="url(#p18c48b6b06)" style="fill: #bc3949"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-236)"/>
     <path d="M 121.614072 16.454658 
 L 126.124473 16.454658 
 L 126.124473 16.102283 
 L 121.614072 16.102283 
 L 121.614072 16.454658 
-" clip-path="url(#p18c48b6b06)" style="fill: #bc3748"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-237)"/>
     <path d="M 121.614072 16.102283 
 L 126.124473 16.102283 
 L 126.124473 15.749908 
 L 121.614072 15.749908 
 L 121.614072 16.102283 
-" clip-path="url(#p18c48b6b06)" style="fill: #bb3646"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-238)"/>
     <path d="M 121.614072 15.749908 
 L 126.124473 15.749908 
 L 126.124473 15.397533 
 L 121.614072 15.397533 
 L 121.614072 15.749908 
-" clip-path="url(#p18c48b6b06)" style="fill: #bb3445"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-239)"/>
     <path d="M 121.614072 15.397533 
 L 126.124473 15.397533 
 L 126.124473 15.045158 
 L 121.614072 15.045158 
 L 121.614072 15.397533 
-" clip-path="url(#p18c48b6b06)" style="fill: #ba3243"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-240)"/>
     <path d="M 121.614072 15.045158 
 L 126.124473 15.045158 
 L 126.124473 14.692783 
 L 121.614072 14.692783 
 L 121.614072 15.045158 
-" clip-path="url(#p18c48b6b06)" style="fill: #ba3041"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-241)"/>
     <path d="M 121.614072 14.692783 
 L 126.124473 14.692783 
 L 126.124473 14.340408 
 L 121.614072 14.340408 
 L 121.614072 14.692783 
-" clip-path="url(#p18c48b6b06)" style="fill: #b92f40"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-242)"/>
     <path d="M 121.614072 14.340408 
 L 126.124473 14.340408 
 L 126.124473 13.988033 
 L 121.614072 13.988033 
 L 121.614072 14.340408 
-" clip-path="url(#p18c48b6b06)" style="fill: #b82d3e"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-243)"/>
     <path d="M 121.614072 13.988033 
 L 126.124473 13.988033 
 L 126.124473 13.635658 
 L 121.614072 13.635658 
 L 121.614072 13.988033 
-" clip-path="url(#p18c48b6b06)" style="fill: #b82b3d"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-244)"/>
     <path d="M 121.614072 13.635658 
 L 126.124473 13.635658 
 L 126.124473 13.283282 
 L 121.614072 13.283282 
 L 121.614072 13.635658 
-" clip-path="url(#p18c48b6b06)" style="fill: #b7293b"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-245)"/>
     <path d="M 121.614072 13.283282 
 L 126.124473 13.283282 
 L 126.124473 12.930907 
 L 121.614072 12.930907 
 L 121.614072 13.283282 
-" clip-path="url(#p18c48b6b06)" style="fill: #b72839"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-246)"/>
     <path d="M 121.614072 12.930907 
 L 126.124473 12.930907 
 L 126.124473 12.578532 
 L 121.614072 12.578532 
 L 121.614072 12.930907 
-" clip-path="url(#p18c48b6b06)" style="fill: #b62638"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-247)"/>
     <path d="M 121.614072 12.578532 
 L 126.124473 12.578532 
 L 126.124473 12.226157 
 L 121.614072 12.226157 
 L 121.614072 12.578532 
-" clip-path="url(#p18c48b6b06)" style="fill: #b62436"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-248)"/>
     <path d="M 121.614072 12.226157 
 L 126.124473 12.226157 
 L 126.124473 11.873782 
 L 121.614072 11.873782 
 L 121.614072 12.226157 
-" clip-path="url(#p18c48b6b06)" style="fill: #b52235"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-249)"/>
     <path d="M 121.614072 11.873782 
 L 126.124473 11.873782 
 L 126.124473 11.521407 
 L 121.614072 11.521407 
 L 121.614072 11.873782 
-" clip-path="url(#p18c48b6b06)" style="fill: #b52133"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-250)"/>
     <path d="M 121.614072 11.521407 
 L 126.124473 11.521407 
 L 126.124473 11.169032 
 L 121.614072 11.169032 
 L 121.614072 11.521407 
-" clip-path="url(#p18c48b6b06)" style="fill: #b41f31"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-251)"/>
     <path d="M 121.614072 11.169032 
 L 126.124473 11.169032 
 L 126.124473 10.816657 
 L 121.614072 10.816657 
 L 121.614072 11.169032 
-" clip-path="url(#p18c48b6b06)" style="fill: #b41d30"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-252)"/>
     <path d="M 121.614072 10.816657 
 L 126.124473 10.816657 
 L 126.124473 10.464282 
 L 121.614072 10.464282 
 L 121.614072 10.816657 
-" clip-path="url(#p18c48b6b06)" style="fill: #b31b2e"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-253)"/>
     <path d="M 121.614072 10.464282 
 L 126.124473 10.464282 
 L 126.124473 10.111907 
 L 121.614072 10.111907 
 L 121.614072 10.464282 
-" clip-path="url(#p18c48b6b06)" style="fill: #b31a2d"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-254)"/>
     <path d="M 121.614072 10.111907 
 L 126.124473 10.111907 
 L 126.124473 9.759531 
 L 121.614072 9.759531 
 L 121.614072 10.111907 
-" clip-path="url(#p18c48b6b06)" style="fill: #b2182b"/>
+" clip-path="url(#p18c48b6b06)" style="fill: var(--diverging-255)"/>
    </g>
    <g id="matplotlib.axis_3"/>
    <g id="matplotlib.axis_4">

@@ -15,6 +15,21 @@ window.JCT_NAMING_PREVIEW = (() => {
   const SERIES = { main: 'Main manuscript', supplementary: 'Supplementary', extended_data: 'Extended Data' };
   const STATUS = { publisher_requirement: 'Publisher requirement', project_recommendation: 'Project recommendation', unverified: 'Unverified' };
   const state = { series: 'main', number: 1, count: 3, start: 0, view: 'preview', author: 'Gonzalez' };
+  let colourOptions = { palette: 'Okabe-Ito', cvd: 'normal' };
+
+  function applyColours(preview, options = colourOptions) {
+    colourOptions = options;
+    const palette = options.palette.toLowerCase().replaceAll(' ', '-');
+    // An absent fragment uses the SVG's default Okabe-Ito palette.
+    const fragment = palette === 'okabe-ito' && options.cvd === 'normal' ? '' : `#${palette}-${options.cvd}`;
+    preview.dataset.palette = options.palette;
+    preview.dataset.cvd = options.cvd;
+    preview.querySelectorAll('img.biology-plot').forEach(image => {
+      image.src = image.getAttribute('src').split('#')[0] + fragment;
+    });
+    const label = preview.querySelector('.naming-colour-label');
+    if (label) label.textContent = `Figure palette: ${options.palette}${options.cvd === 'normal' ? '' : ` · ${options.cvd} simulation`}`;
+  }
 
   function el(tag, className = '', text) {
     const node = document.createElement(tag);
@@ -48,7 +63,8 @@ window.JCT_NAMING_PREVIEW = (() => {
     return button;
   }
 
-  function render(preview, data) {
+  function render(preview, data, options = colourOptions) {
+    colourOptions = options;
     preview.replaceChildren();
     const naming = data.naming_conventions;
     const profile = window.JCT_BIOLOGY_PROFILES?.[data.metadata.journal_name];
@@ -220,10 +236,12 @@ window.JCT_NAMING_PREVIEW = (() => {
     const settings = el('div', 'naming-applied-settings');
     const fonts = typography;
     settings.append(el('p', '', `${data.metadata.journal_name} · labels ${fonts.panel_label.size} pt · axes ${fonts.axis_title.size} pt · ticks ${fonts.tick_label.size} pt · minimum stroke ${data.line_weights.min_allowed_weight} pt`));
+    settings.append(el('p', 'naming-colour-label'));
     const details = disclosure('Applied settings & source guidance',
       el('p', '', `Artwork: ${profile.font}${profile.font !== profile.requested_font ? ` (${profile.requested_font} substitute)` : ''}. Embedded editable text; vector plots. Panel layouts scale together on smaller screens.`),
       el('p', '', `Captions and main tables use the manuscript font: ${body.font_family}, ${body.font_size_pt} pt. Report text uses ${manuscript.spacing.line_spacing} spacing. Nature Extended Data tables use 7 pt sans-serif text.`),
       el('p', '', 'SVGs are browser previews. Submission files must use the formats listed below. Naming rules marked unverified still need publisher confirmation.'),
+      el('p', '', 'Figure colours follow the scientific palette selector above. Heatmaps use palette-derived colours around a neutral zero; enrichment uses a sequential scale. Colour-vision simulations also apply to plots and colour bars. These palette choices are examples, not journal-mandated colours.'),
       el('p', '', `Main figure vector formats: ${data.export_requirements.preferred_vector_formats.map(item => item.format).join(', ')}. Raster resolution: ${data.export_requirements.resolution_dpi.line_art} dpi (line art), ${data.export_requirements.resolution_dpi.combination_art} dpi (mixed artwork), ${data.export_requirements.resolution_dpi.photographic_halftone} dpi (photographs).`));
     const source = el('a', '', 'Publisher instructions ↗');
     source.href = data.metadata.guidelines_url;
@@ -292,6 +310,7 @@ window.JCT_NAMING_PREVIEW = (() => {
       reference.classList.add('naming-reference');
       const layout = profile.layouts[state.count];
       canvas.append(el('p', 'naming-dimensions', `${layout.width_mm.toFixed(1)} × ${layout.height_mm.toFixed(1)} mm artwork · ${layout.columns} ${layout.columns === 1 ? 'column' : 'columns'} of panels · caption below`), grid, reference);
+      applyColours(preview);
     }
     function buildReport() {
       report.replaceChildren();
@@ -350,6 +369,7 @@ window.JCT_NAMING_PREVIEW = (() => {
         el('p', '', 'Single-panel figures omit panel letters; multi-panel captions follow the selected journal’s panel labels. Tables, supplementary items and Extended Data have independent number sequences. This is a layout demonstration, not a submission-ready manuscript.'),
         el('p', '', 'Plots were generated reproducibly with Matplotlib. No clinical data, differential-expression tests, dimensionality reduction, or phylogenetic inference were performed.'));
       report.append(notes);
+      applyColours(preview);
     }
     function setView(view) {
       state.view = view;
@@ -364,5 +384,5 @@ window.JCT_NAMING_PREVIEW = (() => {
     draw();
     setView(state.view);
   }
-  return { render };
+  return { render, applyColours };
 })();

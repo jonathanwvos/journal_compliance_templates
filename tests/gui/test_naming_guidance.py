@@ -213,3 +213,65 @@ def test_stale_artwork_is_not_shown_as_matching(page, web_server_url):
     page.goto(web_server_url)
     expect(page.locator('#naming-preview')).to_contain_text('artwork needs rebuilding')
     expect(page.locator('#naming-preview img')).to_have_count(0)
+
+
+@pytest.mark.parametrize('source', ['http', 'file', 'pages'])
+def test_plot_pixels_follow_palette_and_cvd(page, web_server_url, source):
+    from io import BytesIO
+    from pathlib import Path
+    from PIL import Image
+    root = Path(__file__).resolve().parents[2]
+    url = web_server_url if source == 'http' else (root / ('docs' if source == 'pages' else 'web') / 'index.html').as_uri()
+    page.goto(url)
+    page.locator('#naming-panel-count').select_option('10')
+    plots = page.locator('#naming-figure-workspace .biology-plot')
+
+    def pixels():
+        # Actual raster output catches fragment selectors that load but don't recolour.
+        results = []
+        for plot in plots.all():
+            plot.evaluate('(img) => img.decode()')
+            results.append(plot.screenshot())
+        return results
+
+    baseline = pixels()
+    for palette, tree_colour in [('Viridis', (68, 1, 84)), ('Tol Bright', (68, 119, 170))]:
+        page.locator(f'[data-palette="{palette}"]').click()
+        changed = pixels()
+        assert all(a != b for a, b in zip(baseline, changed)), 'Every plot must change colour, including tree and colour bars'
+        assert sum(pixel == tree_colour for pixel in Image.open(BytesIO(changed[0])).convert('RGB').getdata()) > 5
+    normal = pixels()
+    page.locator('[data-cvd="deuteranopia"]').click()
+    assert all(a != b for a, b in zip(normal, pixels()))
+    page.locator('[data-cvd="normal"]').click()
+    page.locator('[data-palette="Okabe-Ito"]').click()
+    assert pixels() == baseline
+
+
+def test_palette_persists_across_journals_layouts_and_report(app_page):
+    page = app_page.page
+    page.locator('[data-palette="Viridis"]').click()
+    page.locator('[data-cvd="tritanopia"]').click()
+    preview = page.locator('#naming-preview')
+
+    def check_palette():
+        expect(preview.locator('.naming-colour-label')).to_have_text('Figure palette: Viridis · tritanopia simulation')
+        assert preview.locator('img').evaluate_all('(imgs) => imgs.length > 0 && imgs.every(i => i.src.endsWith("#viridis-tritanopia"))')
+
+    for journal in ['nature', 'ieee', 'acs', 'science', 'cell', 'jco']:
+        page.locator(f'.journal-tab[data-journal="{journal}"]').click()
+        for count in [1, 2, 3, 10]:
+            page.locator('#naming-panel-count').select_option(str(count))
+            check_palette()
+        for series in ['main', 'supplementary'] + (['extended_data'] if journal == 'nature' else []):
+            page.locator('#naming-series').select_option(series)
+            check_palette()
+        page.get_by_role('button', name='Mock report', exact=True).click()
+        check_palette()
+        # Update an already-built report, then check the preview retained its layout.
+        page.locator('[data-palette="Tol Bright"]').click()
+        assert preview.locator('img').evaluate_all('(imgs) => imgs.every(i => i.src.endsWith("#tol-bright-tritanopia"))')
+        page.locator('[data-palette="Viridis"]').click()
+        page.get_by_role('button', name='Figure preview', exact=True).click()
+        expect(page.locator('#naming-panel-count')).to_have_value('10')
+        check_palette()

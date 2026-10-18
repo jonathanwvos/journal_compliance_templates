@@ -19,7 +19,31 @@
  <defs><style>@font-face {font-family: 'Liberation Sans'; src: url(data:font/ttf;base64,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);}</style>
   <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
  </defs>
- <g id="figure_1">
+ <style>#figure_1, #okabe-ito-normal:target ~ #figure_1 {--sequential-0:#f7f7f7;--sequential-1:#f6f6f7;--sequential-10:#edf2f4;--sequential-100:#96c3dc;--sequential-101:#95c2dc;--sequential-102:#94c2db;--sequential-103:#93c1db;--sequential-104:#92c1db;--sequential-105:#91c0db;--sequential-106:#90c0da;--sequential-107:#8fbfda;--sequential-108:#8ebfda;--sequential-109:#8dbeda;--sequential-11:#ecf1f4;--sequential-110:#8cbed9;--sequential-111:#8bbdd9;--sequential-112:#8bbdd9;--sequential-113:#8abcd8;--sequential-114:#89bcd8;--sequential-115:#88bbd8;--sequential-116:#87bad8;--sequential-117:#86bad7;--sequential-118:#85b9d7;--sequential-119:#84b9d7;--sequential-12:#ebf1f4;--sequential-120:#83b8d7;--sequential-121:#82b8d6;--sequential-122:#81b7d6;--sequential-123:#80b7d6;--sequential-124:#7fb6d5;--sequential-125:#7eb6d5;--sequential-126:#7db5d5;--sequential-127:#7cb5d5;--sequential-128:#7bb4d4;--sequential-129:#7ab4d4;--sequential-13:#eaf0f3;--sequential-130:#79b3d4;--sequential-131:#78b3d4;--sequential-132:#77b2d3;--sequential-133:#76b2d3;--sequential-134:#75b1d3;--sequential-135:#74b1d2;--sequential-136:#73b0d2;--sequential-137:#72b0d2;--sequential-138:#71afd2;--sequential-139:#70afd1;--sequential-14:#e9f0f3;--sequential-140:#6faed1;--sequential-141:#6eadd1;--sequential-142:#6dadd1;--sequential-143:#6cacd0;--sequential-144:#6cacd0;--sequential-145:#6babd0;--sequential-146:#6aabcf;--sequential-147:#69aacf;--sequential-148:#68aacf;--sequential-149:#67a9cf;--sequential-15:#e8eff3;--sequential-150:#66a9ce;--sequential-151:#65a8ce;--sequential-152:#64a8ce;--sequential-153:#63a7ce;--sequential-154:#62a7cd;--sequential-155:#61a6cd;--sequential-156:#60a6cd;--sequential-157:#5fa5cd;--sequential-158:#5ea5cc;--sequential-159:#5da4cc;--sequential-16:#e8eff3;--sequential-160:#5ca4cc;--sequential-161:#5ba3cb;--sequential-162:#5aa3cb;--sequential-163:#59a2cb;--sequential-164:#58a1cb;--sequential-165:#57a1ca;--sequential-166:#56a0ca;--sequential-167:#55a0ca;--sequential-168:#549fca;--sequential-169:#539fc9;--sequential-17:#e7eef2;--sequential-170:#529ec9;--sequential-171:#519ec9;--sequential-172:#509dc8;--sequential-173:#4f9dc8;--sequential-174:#4e9cc8;--sequential-175:#4d9cc8;--sequential-176:#4d9bc7;--sequential-177:#4c9bc7;--sequential-178:#4b9ac7;--sequential-179:#4a9ac7;--sequential-18:#e6eef2;--sequential-180:#4999c6;--sequential-181:#4899c6;--sequential-182:#4798c6;--sequential-183:#4698c5;--sequential-184:#4597c5;--sequential-185:#4497c5;--sequential-186:#4396c5;--sequential-187:#4295c4;--sequential-188:#4195c4;--sequential-189:#4094c4;--sequential-19:#e5edf2;--sequential-190:#3f94c4;--sequential-191:#3e93c3;--sequential-192:#3d93c3;--sequential-193:#3c92c3;--sequential-194:#3b92c3;--sequential-195:#3a91c2;--sequential-196:#3991c2;--sequential-197:#3890c2;--sequential-198:#3790c1;--sequential-199:#368fc1;--sequential-2:#f5f6f6;--sequential-20:#e4edf2;--sequential-200:#358fc1;--sequential-201:#348ec1;--sequential-202:#338ec0;--sequential-203:#328dc0;--sequential-204:#318dc0;--sequential-205:#308cc0;--sequential-206:#2f8cbf;--sequential-207:#2e8bbf;--sequential-208:#2e8bbf;--sequential-209:#2d8abe;--sequential-21:#e3ecf1;--sequential-210:#2c89be;--sequential-211:#2b89be;--sequential-212:#2a88be;--sequential-213:#2988bd;--sequential-214:#2887bd;--sequential-215:#2787bd;--sequential-216:#2686bd;--sequential-217:#2586bc;--sequential-218:#2485bc;--sequential-219:#2385bc;--sequential-22:#e2ecf1;--sequential-220:#2284bb;--sequential-221:#2184bb;--sequential-222:#2083bb;--sequential-223:#1f83bb;--sequential-224:#1e82ba;--sequential-225:#1d82ba;--sequential-226:#1c81ba;--sequential-227:#1b81ba;--sequential-228:#1a80b9;--sequential-229:#1980b9;--sequential-23:#e1ebf1;--sequential-230:#187fb9;--sequential-231:#177fb8;--sequential-232:#167eb8;--sequential-233:#157db8;--sequential-234:#147db8;--sequential-235:#137cb7;--sequential-236:#127cb7;--sequential-237:#117bb7;--sequential-238:#107bb7;--sequential-239:#0f7ab6;--sequential-24:#e0eaf1;--sequential-240:#0f7ab6;--sequential-241:#0e79b6;--sequential-242:#0d79b6;--sequential-243:#0c78b5;--sequential-244:#0b78b5;--sequential-245:#0a77b5;--sequential-246:#0977b4;--sequential-247:#0876b4;--sequential-248:#0776b4;--sequential-249:#0675b4;--sequential-25:#dfeaf0;--sequential-250:#0575b3;--sequential-251:#0474b3;--sequential-252:#0374b3;--sequential-253:#0273b3;--sequential-254:#0173b2;--sequential-255:#0072b2;--sequential-26:#dee9f0;--sequential-27:#dde9f0;--sequential-28:#dce8ef;--sequential-29:#dbe8ef;--sequential-3:#f4f5f6;--sequential-30:#dae7ef;--sequential-31:#d9e7ef;--sequential-32:#d8e6ee;--sequential-33:#d7e6ee;--sequential-34:#d6e5ee;--sequential-35:#d5e5ee;--sequential-36:#d4e4ed;--sequential-37:#d3e4ed;--sequential-38:#d2e3ed;--sequential-39:#d1e3ec;--sequential-4:#f3f5f6;--sequential-40:#d0e2ec;--sequential-41:#cfe2ec;--sequential-42:#cee1ec;--sequential-43:#cde1eb;--sequential-44:#cce0eb;--sequential-45:#cbe0eb;--sequential-46:#cadfeb;--sequential-47:#c9deea;--sequential-48:#c9deea;--sequential-49:#c8ddea;--sequential-5:#f2f4f6;--sequential-50:#c7dde9;--sequential-51:#c6dce9;--sequential-52:#c5dce9;--sequential-53:#c4dbe9;--sequential-54:#c3dbe8;--sequential-55:#c2dae8;--sequential-56:#c1dae8;--sequential-57:#c0d9e8;--sequential-58:#bfd9e7;--sequential-59:#bed8e7;--sequential-6:#f1f4f5;--sequential-60:#bdd8e7;--sequential-61:#bcd7e6;--sequential-62:#bbd7e6;--sequential-63:#bad6e6;--sequential-64:#b9d6e6;--sequential-65:#b8d5e5;--sequential-66:#b7d5e5;--sequential-67:#b6d4e5;--sequential-68:#b5d4e5;--sequential-69:#b4d3e4;--sequential-7:#f0f3f5;--sequential-70:#b3d2e4;--sequential-71:#b2d2e4;--sequential-72:#b1d1e4;--sequential-73:#b0d1e3;--sequential-74:#afd0e3;--sequential-75:#aed0e3;--sequential-76:#adcfe2;--sequential-77:#accfe2;--sequential-78:#abcee2;--sequential-79:#aacee2;--sequential-8:#eff3f5;--sequential-80:#aacde1;--sequential-81:#a9cde1;--sequential-82:#a8cce1;--sequential-83:#a7cce1;--sequential-84:#a6cbe0;--sequential-85:#a5cbe0;--sequential-86:#a4cae0;--sequential-87:#a3cadf;--sequential-88:#a2c9df;--sequential-89:#a1c9df;--sequential-9:#eef2f5;--sequential-90:#a0c8df;--sequential-91:#9fc8de;--sequential-92:#9ec7de;--sequential-93:#9dc6de;--sequential-94:#9cc6de;--sequential-95:#9bc5dd;--sequential-96:#9ac5dd;--sequential-97:#99c4dd;--sequential-98:#98c4dc;--sequential-99:#97c3dc}
+#okabe-ito-deuteranopia:target ~ #figure_1 {--sequential-0:#f7f7f7;--sequential-1:#f6f6f7;--sequential-10:#efeef3;--sequential-100:#a7a3d4;--sequential-101:#a6a3d4;--sequential-102:#a5a2d3;--sequential-103:#a4a1d3;--sequential-104:#a4a0d3;--sequential-105:#a39fd3;--sequential-106:#a29ed2;--sequential-107:#a19dd2;--sequential-108:#a09dd2;--sequential-109:#9f9cd2;--sequential-11:#eeeef3;--sequential-110:#9f9bd1;--sequential-111:#9e9ad1;--sequential-112:#9e9ad1;--sequential-113:#9d99d0;--sequential-114:#9c98d0;--sequential-115:#9b97cf;--sequential-116:#9a96cf;--sequential-117:#9a96ce;--sequential-118:#9995ce;--sequential-119:#9894ce;--sequential-12:#ededf3;--sequential-120:#9793ce;--sequential-121:#9692cd;--sequential-122:#9591cd;--sequential-123:#9591cd;--sequential-124:#9490cc;--sequential-125:#938fcc;--sequential-126:#928ecb;--sequential-127:#918dcb;--sequential-128:#908cca;--sequential-129:#908bca;--sequential-13:#ececf2;--sequential-130:#8f8aca;--sequential-131:#8e8aca;--sequential-132:#8d89c9;--sequential-133:#8c88c9;--sequential-134:#8b87c9;--sequential-135:#8b86c8;--sequential-136:#8a85c8;--sequential-137:#8985c8;--sequential-138:#8884c7;--sequential-139:#8883c7;--sequential-14:#ecebf2;--sequential-140:#8782c6;--sequential-141:#8681c6;--sequential-142:#8580c6;--sequential-143:#847fc5;--sequential-144:#847fc5;--sequential-145:#837ec5;--sequential-146:#827ec4;--sequential-147:#817cc4;--sequential-148:#817cc4;--sequential-149:#807bc4;--sequential-15:#ebeaf2;--sequential-150:#7f7ac3;--sequential-151:#7e79c3;--sequential-152:#7e78c3;--sequential-153:#7d77c2;--sequential-154:#7c77c2;--sequential-155:#7b76c1;--sequential-156:#7a75c1;--sequential-157:#7974c1;--sequential-158:#7973c0;--sequential-159:#7872c0;--sequential-16:#ebeaf2;--sequential-160:#7772c0;--sequential-161:#7671bf;--sequential-162:#7570bf;--sequential-163:#746fbf;--sequential-164:#736ebe;--sequential-165:#736dbe;--sequential-166:#726cbd;--sequential-167:#716bbd;--sequential-168:#706abd;--sequential-169:#706abc;--sequential-17:#eae9f1;--sequential-170:#6f69bc;--sequential-171:#6e68bc;--sequential-172:#6d67bb;--sequential-173:#6c66bb;--sequential-174:#6b65bb;--sequential-175:#6b65bb;--sequential-176:#6a64ba;--sequential-177:#6a64ba;--sequential-178:#6963ba;--sequential-179:#6862ba;--sequential-18:#e9e8f1;--sequential-180:#6761b9;--sequential-181:#6660b9;--sequential-182:#655fb8;--sequential-183:#655fb8;--sequential-184:#645eb7;--sequential-185:#635db7;--sequential-186:#625cb7;--sequential-187:#615bb6;--sequential-188:#615ab6;--sequential-189:#6059b6;--sequential-19:#e8e7f0;--sequential-190:#5f59b6;--sequential-191:#5e57b5;--sequential-192:#5d57b5;--sequential-193:#5c56b4;--sequential-194:#5c55b4;--sequential-195:#5b54b3;--sequential-196:#5a53b3;--sequential-197:#5952b3;--sequential-198:#5852b2;--sequential-199:#5751b2;--sequential-2:#f5f5f6;--sequential-20:#e7e7f0;--sequential-200:#5750b2;--sequential-201:#564fb2;--sequential-202:#554eb1;--sequential-203:#544db1;--sequential-204:#544db1;--sequential-205:#534cb0;--sequential-206:#524bb0;--sequential-207:#514aaf;--sequential-208:#514aaf;--sequential-209:#5049ae;--sequential-21:#e6e6f0;--sequential-210:#4f48ae;--sequential-211:#4e47ae;--sequential-212:#4d46ae;--sequential-213:#4d46ad;--sequential-214:#4c45ad;--sequential-215:#4b44ad;--sequential-216:#4a43ad;--sequential-217:#4942ac;--sequential-218:#4841ab;--sequential-219:#4840ab;--sequential-22:#e6e5f0;--sequential-220:#473fab;--sequential-221:#463fab;--sequential-222:#453eaa;--sequential-223:#453daa;--sequential-224:#443ca9;--sequential-225:#433ba9;--sequential-226:#423aa9;--sequential-227:#413aa9;--sequential-228:#4039a8;--sequential-229:#4038a8;--sequential-23:#e5e4ef;--sequential-230:#3f37a8;--sequential-231:#3e36a7;--sequential-232:#3d35a7;--sequential-233:#3c34a6;--sequential-234:#3b33a6;--sequential-235:#3a33a5;--sequential-236:#3a32a5;--sequential-237:#3931a5;--sequential-238:#3830a5;--sequential-239:#372fa4;--sequential-24:#e4e3ef;--sequential-240:#372fa4;--sequential-241:#362ea4;--sequential-242:#352da4;--sequential-243:#352ca3;--sequential-244:#342ca3;--sequential-245:#332ba2;--sequential-246:#322aa2;--sequential-247:#3129a1;--sequential-248:#3128a1;--sequential-249:#3027a1;--sequential-25:#e3e2ee;--sequential-250:#2f27a0;--sequential-251:#2e26a0;--sequential-252:#2d25a0;--sequential-253:#2c24a0;--sequential-254:#2c239f;--sequential-255:#2b229f;--sequential-26:#e2e1ee;--sequential-27:#e2e1ee;--sequential-28:#e1e0ed;--sequential-29:#e0dfed;--sequential-3:#f4f4f6;--sequential-30:#dfdeed;--sequential-31:#dedded;--sequential-32:#dddcec;--sequential-33:#dddbec;--sequential-34:#dcdbeb;--sequential-35:#dbdaeb;--sequential-36:#dad9ea;--sequential-37:#d9d8ea;--sequential-38:#d8d7ea;--sequential-39:#d8d6e9;--sequential-4:#f4f4f6;--sequential-40:#d7d5e9;--sequential-41:#d6d5e9;--sequential-42:#d5d4e9;--sequential-43:#d5d3e8;--sequential-44:#d4d2e8;--sequential-45:#d3d1e8;--sequential-46:#d2d0e7;--sequential-47:#d1cfe6;--sequential-48:#d1cfe6;--sequential-49:#d0cee6;--sequential-5:#f3f3f5;--sequential-50:#cfcee5;--sequential-51:#cecde5;--sequential-52:#cecce5;--sequential-53:#cdcbe5;--sequential-54:#cccae4;--sequential-55:#cbc9e4;--sequential-56:#cac9e4;--sequential-57:#c9c7e3;--sequential-58:#c9c7e3;--sequential-59:#c8c6e3;--sequential-6:#f2f2f5;--sequential-60:#c7c5e3;--sequential-61:#c6c4e2;--sequential-62:#c5c3e2;--sequential-63:#c4c2e1;--sequential-64:#c4c2e1;--sequential-65:#c3c1e0;--sequential-66:#c2c0e0;--sequential-67:#c1bfe0;--sequential-68:#c1bee0;--sequential-69:#c0bddf;--sequential-7:#f1f1f4;--sequential-70:#bfbcdf;--sequential-71:#bebcdf;--sequential-72:#bdbbde;--sequential-73:#bcbade;--sequential-74:#bbb9dd;--sequential-75:#bbb8dd;--sequential-76:#bab7dc;--sequential-77:#b9b7dc;--sequential-78:#b8b5dc;--sequential-79:#b8b5dc;--sequential-8:#f1f0f4;--sequential-80:#b7b4db;--sequential-81:#b7b4db;--sequential-82:#b6b3db;--sequential-83:#b5b2db;--sequential-84:#b4b1da;--sequential-85:#b3b0da;--sequential-86:#b2afd9;--sequential-87:#b2afd9;--sequential-88:#b1aed8;--sequential-89:#b0add8;--sequential-9:#f0eff4;--sequential-90:#afacd8;--sequential-91:#aeabd7;--sequential-92:#adaad7;--sequential-93:#aca9d7;--sequential-94:#aca9d7;--sequential-95:#aba8d6;--sequential-96:#aaa7d6;--sequential-97:#a9a6d6;--sequential-98:#a9a5d5;--sequential-99:#a8a4d4}
+#okabe-ito-protanopia:target ~ #figure_1 {--sequential-0:#f7f7f7;--sequential-1:#f6f6f7;--sequential-10:#efeff4;--sequential-100:#a9aad6;--sequential-101:#a8a9d6;--sequential-102:#a8a8d5;--sequential-103:#a7a7d5;--sequential-104:#a6a7d5;--sequential-105:#a5a6d4;--sequential-106:#a5a5d4;--sequential-107:#a4a4d3;--sequential-108:#a3a4d3;--sequential-109:#a2a3d3;--sequential-11:#eeeef3;--sequential-110:#a2a2d2;--sequential-111:#a1a1d2;--sequential-112:#a1a1d2;--sequential-113:#a0a0d1;--sequential-114:#9fa0d1;--sequential-115:#9e9fd1;--sequential-116:#9d9ed1;--sequential-117:#9d9dd0;--sequential-118:#9c9cd0;--sequential-119:#9b9bd0;--sequential-12:#eeeef3;--sequential-120:#9a9acf;--sequential-121:#999acf;--sequential-122:#9899ce;--sequential-123:#9898ce;--sequential-124:#9797cd;--sequential-125:#9697cd;--sequential-126:#9596cd;--sequential-127:#9595cd;--sequential-128:#9494cc;--sequential-129:#9394cc;--sequential-13:#ededf2;--sequential-130:#9293cc;--sequential-131:#9292cc;--sequential-132:#9191cb;--sequential-133:#9091cb;--sequential-134:#8f90cb;--sequential-135:#8e8fca;--sequential-136:#8d8eca;--sequential-137:#8d8dca;--sequential-138:#8c8cca;--sequential-139:#8b8cc9;--sequential-14:#ececf2;--sequential-140:#8a8bc9;--sequential-141:#898ac8;--sequential-142:#8989c8;--sequential-143:#8888c7;--sequential-144:#8888c7;--sequential-145:#8787c7;--sequential-146:#8687c6;--sequential-147:#8586c6;--sequential-148:#8585c6;--sequential-149:#8484c6;--sequential-15:#ebebf2;--sequential-150:#8384c5;--sequential-151:#8283c5;--sequential-152:#8182c5;--sequential-153:#8081c5;--sequential-154:#8080c4;--sequential-155:#7f7fc4;--sequential-156:#7e7fc4;--sequential-157:#7d7ec3;--sequential-158:#7d7dc3;--sequential-159:#7c7cc2;--sequential-16:#ebebf2;--sequential-160:#7b7cc2;--sequential-161:#7a7bc1;--sequential-162:#7a7ac1;--sequential-163:#7979c1;--sequential-164:#7878c1;--sequential-165:#7778c0;--sequential-166:#7677c0;--sequential-167:#7576c0;--sequential-168:#7475c0;--sequential-169:#7475bf;--sequential-17:#eaeaf1;--sequential-170:#7374bf;--sequential-171:#7273bf;--sequential-172:#7172be;--sequential-173:#7171be;--sequential-174:#7070bd;--sequential-175:#6f70bd;--sequential-176:#6f6fbc;--sequential-177:#6e6fbc;--sequential-178:#6d6ebc;--sequential-179:#6d6dbc;--sequential-18:#e9eaf1;--sequential-180:#6c6cbb;--sequential-181:#6b6cbb;--sequential-182:#6a6bbb;--sequential-183:#6a6aba;--sequential-184:#6969ba;--sequential-185:#6869ba;--sequential-186:#6768ba;--sequential-187:#6667b9;--sequential-188:#6566b9;--sequential-189:#6465b8;--sequential-19:#e8e9f1;--sequential-190:#6465b8;--sequential-191:#6364b7;--sequential-192:#6263b7;--sequential-193:#6162b7;--sequential-194:#6161b7;--sequential-195:#6060b6;--sequential-196:#5f60b6;--sequential-197:#5e5fb6;--sequential-198:#5e5eb5;--sequential-199:#5d5db5;--sequential-2:#f5f5f6;--sequential-20:#e8e8f1;--sequential-200:#5c5db5;--sequential-201:#5b5cb5;--sequential-202:#5a5bb4;--sequential-203:#595ab4;--sequential-204:#595ab4;--sequential-205:#5859b3;--sequential-206:#5758b3;--sequential-207:#5657b2;--sequential-208:#5657b2;--sequential-209:#5556b1;--sequential-21:#e7e7f0;--sequential-210:#5455b1;--sequential-211:#5455b1;--sequential-212:#5354b1;--sequential-213:#5253b0;--sequential-214:#5152b0;--sequential-215:#5151b0;--sequential-216:#5050b0;--sequential-217:#4f50af;--sequential-218:#4e4faf;--sequential-219:#4d4eaf;--sequential-22:#e6e6f0;--sequential-220:#4c4dae;--sequential-221:#4c4dae;--sequential-222:#4b4cad;--sequential-223:#4a4bad;--sequential-224:#494aac;--sequential-225:#494aac;--sequential-226:#4849ac;--sequential-227:#4748ac;--sequential-228:#4647ab;--sequential-229:#4647ab;--sequential-23:#e5e5f0;--sequential-230:#4546ab;--sequential-231:#4445aa;--sequential-232:#4344aa;--sequential-233:#4243aa;--sequential-234:#4142aa;--sequential-235:#4041a9;--sequential-236:#4041a9;--sequential-237:#3f40a8;--sequential-238:#3e3fa8;--sequential-239:#3d3ea7;--sequential-24:#e4e4ef;--sequential-240:#3d3ea7;--sequential-241:#3c3da7;--sequential-242:#3c3da7;--sequential-243:#3b3ca6;--sequential-244:#3a3ba6;--sequential-245:#393aa6;--sequential-246:#393aa5;--sequential-247:#3839a5;--sequential-248:#3738a5;--sequential-249:#3637a5;--sequential-25:#e4e4ef;--sequential-250:#3537a4;--sequential-251:#3436a4;--sequential-252:#3435a4;--sequential-253:#3334a4;--sequential-254:#3233a3;--sequential-255:#3132a3;--sequential-26:#e3e3ee;--sequential-27:#e2e2ee;--sequential-28:#e1e1ed;--sequential-29:#e1e1ed;--sequential-3:#f4f4f6;--sequential-30:#e0e0ed;--sequential-31:#dfdfed;--sequential-32:#dedeec;--sequential-33:#dddeec;--sequential-34:#dcddec;--sequential-35:#dcdcec;--sequential-36:#dbdbeb;--sequential-37:#dadbeb;--sequential-38:#d9daeb;--sequential-39:#d9d9ea;--sequential-4:#f4f4f6;--sequential-40:#d8d8ea;--sequential-41:#d7d7ea;--sequential-42:#d6d6e9;--sequential-43:#d6d6e9;--sequential-44:#d5d5e8;--sequential-45:#d4d4e8;--sequential-46:#d3d3e8;--sequential-47:#d2d2e7;--sequential-48:#d2d2e7;--sequential-49:#d1d1e7;--sequential-5:#f3f3f6;--sequential-50:#d1d1e6;--sequential-51:#d0d0e6;--sequential-52:#cfcfe6;--sequential-53:#cecee6;--sequential-54:#cdcee5;--sequential-55:#cccde5;--sequential-56:#cccce5;--sequential-57:#cbcbe4;--sequential-58:#cacae4;--sequential-59:#c9c9e3;--sequential-6:#f2f2f5;--sequential-60:#c9c9e3;--sequential-61:#c8c8e2;--sequential-62:#c7c7e2;--sequential-63:#c6c6e2;--sequential-64:#c6c6e2;--sequential-65:#c5c5e1;--sequential-66:#c4c4e1;--sequential-67:#c3c3e1;--sequential-68:#c2c3e1;--sequential-69:#c1c2e0;--sequential-7:#f1f1f5;--sequential-70:#c0c1e0;--sequential-71:#c0c0e0;--sequential-72:#bfbfdf;--sequential-73:#bebfdf;--sequential-74:#bdbede;--sequential-75:#bdbdde;--sequential-76:#bcbcdd;--sequential-77:#bbbbdd;--sequential-78:#babadd;--sequential-79:#babadd;--sequential-8:#f1f1f5;--sequential-80:#b9b9dc;--sequential-81:#b9b9dc;--sequential-82:#b8b8dc;--sequential-83:#b7b7dc;--sequential-84:#b6b6db;--sequential-85:#b5b6db;--sequential-86:#b4b5db;--sequential-87:#b4b4da;--sequential-88:#b3b3da;--sequential-89:#b2b3da;--sequential-9:#f0f0f4;--sequential-90:#b1b2d9;--sequential-91:#b1b1d9;--sequential-92:#b0b0d8;--sequential-93:#afafd8;--sequential-94:#aeafd8;--sequential-95:#adaed7;--sequential-96:#adadd7;--sequential-97:#acacd7;--sequential-98:#ababd6;--sequential-99:#aaaad6}
+#okabe-ito-tritanopia:target ~ #figure_1 {--sequential-0:#f7f7f7;--sequential-1:#f6f7f7;--sequential-10:#edf3f3;--sequential-100:#98d1d0;--sequential-101:#97d1d0;--sequential-102:#96d0cf;--sequential-103:#95d0cf;--sequential-104:#94d0cf;--sequential-105:#93cfce;--sequential-106:#92cfce;--sequential-107:#91cecd;--sequential-108:#90cecd;--sequential-109:#8fcecd;--sequential-11:#ecf3f3;--sequential-110:#8fcdcc;--sequential-111:#8dcdcc;--sequential-112:#8dcdcc;--sequential-113:#8ccccb;--sequential-114:#8ccccb;--sequential-115:#8bcbca;--sequential-116:#8acbca;--sequential-117:#89cac9;--sequential-118:#88cac9;--sequential-119:#87cac9;--sequential-12:#ebf3f3;--sequential-120:#86cac8;--sequential-121:#85c9c8;--sequential-122:#84c9c7;--sequential-123:#83c9c7;--sequential-124:#82c8c6;--sequential-125:#81c8c6;--sequential-126:#80c7c6;--sequential-127:#7fc7c6;--sequential-128:#7ec6c5;--sequential-129:#7dc6c5;--sequential-13:#eaf2f2;--sequential-130:#7cc6c4;--sequential-131:#7bc6c4;--sequential-132:#7ac5c3;--sequential-133:#79c5c3;--sequential-134:#78c4c3;--sequential-135:#77c4c2;--sequential-136:#76c3c2;--sequential-137:#75c3c2;--sequential-138:#74c3c1;--sequential-139:#73c2c1;--sequential-14:#e9f2f2;--sequential-140:#72c2c0;--sequential-141:#71c1c0;--sequential-142:#70c1c0;--sequential-143:#6fc0bf;--sequential-144:#6fc0bf;--sequential-145:#6ec0be;--sequential-146:#6dbfbe;--sequential-147:#6cbfbd;--sequential-148:#6bbfbd;--sequential-149:#6abfbd;--sequential-15:#e8f1f1;--sequential-150:#69bebc;--sequential-151:#68bebc;--sequential-152:#67bebc;--sequential-153:#66bdbb;--sequential-154:#65bdbb;--sequential-155:#64bcba;--sequential-156:#64bcba;--sequential-157:#63bcba;--sequential-158:#62bbb9;--sequential-159:#61bbb9;--sequential-16:#e8f1f1;--sequential-160:#60bbb9;--sequential-161:#5fbab8;--sequential-162:#5ebab8;--sequential-163:#5db9b8;--sequential-164:#5cb9b7;--sequential-165:#5bb8b7;--sequential-166:#5ab8b6;--sequential-167:#59b8b6;--sequential-168:#58b7b6;--sequential-169:#57b7b5;--sequential-17:#e7f0f0;--sequential-170:#56b6b5;--sequential-171:#55b6b5;--sequential-172:#54b5b4;--sequential-173:#53b5b4;--sequential-174:#52b5b3;--sequential-175:#51b5b3;--sequential-176:#51b4b2;--sequential-177:#50b4b2;--sequential-178:#4fb4b2;--sequential-179:#4eb4b2;--sequential-18:#e6f0f0;--sequential-180:#4db3b1;--sequential-181:#4cb3b1;--sequential-182:#4bb2b0;--sequential-183:#4ab2b0;--sequential-184:#49b1af;--sequential-185:#48b1af;--sequential-186:#47b1af;--sequential-187:#46b0ae;--sequential-188:#45b0ae;--sequential-189:#44afad;--sequential-19:#e5f0f0;--sequential-190:#43afad;--sequential-191:#42aeac;--sequential-192:#41aeac;--sequential-193:#40aeac;--sequential-194:#3faeac;--sequential-195:#3eadab;--sequential-196:#3dadab;--sequential-197:#3cacaa;--sequential-198:#3bacaa;--sequential-199:#3aaba9;--sequential-2:#f5f6f6;--sequential-20:#e4f0f0;--sequential-200:#3aaba9;--sequential-201:#39aba9;--sequential-202:#38aaa8;--sequential-203:#37aaa8;--sequential-204:#36aaa8;--sequential-205:#35a9a7;--sequential-206:#34a9a7;--sequential-207:#33a8a6;--sequential-208:#33a8a6;--sequential-209:#32a7a5;--sequential-21:#e3efef;--sequential-210:#31a7a5;--sequential-211:#30a7a5;--sequential-212:#2fa7a4;--sequential-213:#2ea6a4;--sequential-214:#2da6a3;--sequential-215:#2ca6a3;--sequential-216:#2ba5a3;--sequential-217:#2aa5a2;--sequential-218:#29a4a2;--sequential-219:#28a4a2;--sequential-22:#e3efef;--sequential-220:#27a3a1;--sequential-221:#26a3a1;--sequential-222:#25a3a0;--sequential-223:#24a3a0;--sequential-224:#23a29f;--sequential-225:#22a29f;--sequential-226:#21a19f;--sequential-227:#20a19f;--sequential-228:#1fa09e;--sequential-229:#1ea09e;--sequential-23:#e2eeee;--sequential-230:#1da09d;--sequential-231:#1c9f9d;--sequential-232:#1b9f9c;--sequential-233:#1a9e9c;--sequential-234:#199e9c;--sequential-235:#189d9b;--sequential-236:#179d9b;--sequential-237:#169d9b;--sequential-238:#159d9b;--sequential-239:#149c9a;--sequential-24:#e1eeee;--sequential-240:#149c9a;--sequential-241:#139c99;--sequential-242:#129c99;--sequential-243:#119b98;--sequential-244:#109b98;--sequential-245:#0f9a98;--sequential-246:#0f9a97;--sequential-247:#0e9997;--sequential-248:#0d9997;--sequential-249:#0c9996;--sequential-25:#e0eded;--sequential-250:#0b9896;--sequential-251:#0a9895;--sequential-252:#099895;--sequential-253:#089795;--sequential-254:#079794;--sequential-255:#069694;--sequential-26:#dfeded;--sequential-27:#deeded;--sequential-28:#ddecec;--sequential-29:#dcecec;--sequential-3:#f4f6f6;--sequential-30:#dbeceb;--sequential-31:#daeceb;--sequential-32:#d9ebea;--sequential-33:#d8ebea;--sequential-34:#d7eaea;--sequential-35:#d6eaea;--sequential-36:#d5e9e9;--sequential-37:#d4e9e9;--sequential-38:#d3e9e8;--sequential-39:#d2e8e8;--sequential-4:#f3f6f6;--sequential-40:#d1e8e7;--sequential-41:#d0e8e7;--sequential-42:#cfe7e7;--sequential-43:#cee7e6;--sequential-44:#cde6e6;--sequential-45:#cce6e6;--sequential-46:#cbe6e5;--sequential-47:#cae5e4;--sequential-48:#cae5e4;--sequential-49:#c9e4e4;--sequential-5:#f2f5f5;--sequential-50:#c8e4e3;--sequential-51:#c7e3e3;--sequential-52:#c6e3e3;--sequential-53:#c5e3e2;--sequential-54:#c4e2e2;--sequential-55:#c3e2e1;--sequential-56:#c2e2e1;--sequential-57:#c1e2e1;--sequential-58:#c0e1e0;--sequential-59:#bfe1e0;--sequential-6:#f1f5f5;--sequential-60:#bee1e0;--sequential-61:#bde0df;--sequential-62:#bce0df;--sequential-63:#bbdfde;--sequential-64:#badfde;--sequential-65:#b9dedd;--sequential-66:#b9dedd;--sequential-67:#b8dedd;--sequential-68:#b7dedd;--sequential-69:#b6dddc;--sequential-7:#f0f4f4;--sequential-70:#b5dcdb;--sequential-71:#b4dcdb;--sequential-72:#b3dcdb;--sequential-73:#b2dbda;--sequential-74:#b1dbda;--sequential-75:#b0dbda;--sequential-76:#afdad9;--sequential-77:#aedad9;--sequential-78:#add9d9;--sequential-79:#acd9d9;--sequential-8:#eff4f4;--sequential-80:#acd8d8;--sequential-81:#abd8d8;--sequential-82:#aad8d7;--sequential-83:#a9d8d7;--sequential-84:#a8d7d6;--sequential-85:#a7d7d6;--sequential-86:#a6d6d6;--sequential-87:#a5d6d5;--sequential-88:#a4d5d5;--sequential-89:#a3d5d5;--sequential-9:#eef4f4;--sequential-90:#a2d5d4;--sequential-91:#a1d4d4;--sequential-92:#a0d4d3;--sequential-93:#9fd4d3;--sequential-94:#9ed4d3;--sequential-95:#9dd3d2;--sequential-96:#9cd3d2;--sequential-97:#9bd2d1;--sequential-98:#9ad2d1;--sequential-99:#99d1d0}
+#viridis-normal:target ~ #figure_1 {--sequential-0:#440154;--sequential-1:#440255;--sequential-10:#430e5d;--sequential-100:#2c768c;--sequential-101:#2c778c;--sequential-102:#2b788c;--sequential-103:#2b798c;--sequential-104:#2b7a8c;--sequential-105:#2a7b8c;--sequential-106:#2a7c8c;--sequential-107:#297d8c;--sequential-108:#297e8c;--sequential-109:#297f8c;--sequential-11:#420f5d;--sequential-110:#28808c;--sequential-111:#28818c;--sequential-112:#27828c;--sequential-113:#27838c;--sequential-114:#27848c;--sequential-115:#26858c;--sequential-116:#26868c;--sequential-117:#25878c;--sequential-118:#25888c;--sequential-119:#24898c;--sequential-12:#42105e;--sequential-120:#248a8c;--sequential-121:#248b8c;--sequential-122:#238c8c;--sequential-123:#238d8c;--sequential-124:#228e8c;--sequential-125:#228f8c;--sequential-126:#22908c;--sequential-127:#21918c;--sequential-128:#21918c;--sequential-129:#22928b;--sequential-13:#42125f;--sequential-130:#23938a;--sequential-131:#24948a;--sequential-132:#259589;--sequential-133:#269688;--sequential-134:#279788;--sequential-135:#289887;--sequential-136:#299886;--sequential-137:#2a9986;--sequential-138:#2b9a85;--sequential-139:#2c9b84;--sequential-14:#421360;--sequential-140:#2d9c84;--sequential-141:#2e9d83;--sequential-142:#2f9e82;--sequential-143:#309f82;--sequential-144:#319f81;--sequential-145:#32a080;--sequential-146:#33a180;--sequential-147:#34a27f;--sequential-148:#35a37e;--sequential-149:#36a47e;--sequential-15:#421461;--sequential-150:#37a57d;--sequential-151:#37a67d;--sequential-152:#38a77c;--sequential-153:#39a77b;--sequential-154:#3aa87b;--sequential-155:#3ba97a;--sequential-156:#3caa79;--sequential-157:#3dab79;--sequential-158:#3eac78;--sequential-159:#3fad77;--sequential-16:#421562;--sequential-160:#40ae77;--sequential-161:#41ae76;--sequential-162:#42af75;--sequential-163:#43b075;--sequential-164:#44b174;--sequential-165:#45b273;--sequential-166:#46b373;--sequential-167:#47b472;--sequential-168:#48b571;--sequential-169:#49b571;--sequential-17:#421763;--sequential-170:#4ab670;--sequential-171:#4bb76f;--sequential-172:#4cb86f;--sequential-173:#4db96e;--sequential-174:#4dba6d;--sequential-175:#4ebb6d;--sequential-176:#4fbc6c;--sequential-177:#50bc6b;--sequential-178:#51bd6b;--sequential-179:#52be6a;--sequential-18:#411864;--sequential-180:#53bf69;--sequential-181:#54c069;--sequential-182:#55c168;--sequential-183:#56c267;--sequential-184:#57c367;--sequential-185:#58c466;--sequential-186:#59c465;--sequential-187:#5ac565;--sequential-188:#5bc664;--sequential-189:#5cc763;--sequential-19:#411964;--sequential-190:#5dc863;--sequential-191:#5ec962;--sequential-192:#60c961;--sequential-193:#62ca60;--sequential-194:#65ca5f;--sequential-195:#67cb5e;--sequential-196:#6acb5d;--sequential-197:#6ccc5c;--sequential-198:#6fcc5c;--sequential-199:#71cd5b;--sequential-2:#440456;--sequential-20:#411a65;--sequential-200:#74cd5a;--sequential-201:#76ce59;--sequential-202:#79ce58;--sequential-203:#7bcf57;--sequential-204:#7ecf56;--sequential-205:#80cf55;--sequential-206:#83d054;--sequential-207:#85d053;--sequential-208:#88d152;--sequential-209:#8ad151;--sequential-21:#411c66;--sequential-210:#8dd250;--sequential-211:#8fd24f;--sequential-212:#92d34e;--sequential-213:#94d34d;--sequential-214:#97d44c;--sequential-215:#99d44b;--sequential-216:#9cd54a;--sequential-217:#9ed549;--sequential-218:#a1d648;--sequential-219:#a3d647;--sequential-22:#411d67;--sequential-220:#a6d746;--sequential-221:#a8d746;--sequential-222:#abd745;--sequential-223:#add844;--sequential-224:#b0d843;--sequential-225:#b2d942;--sequential-226:#b5d941;--sequential-227:#b7da40;--sequential-228:#bada3f;--sequential-229:#bcdb3e;--sequential-23:#411e68;--sequential-230:#bfdb3d;--sequential-231:#c1dc3c;--sequential-232:#c4dc3b;--sequential-233:#c6dd3a;--sequential-234:#c9dd39;--sequential-235:#cbde38;--sequential-236:#cede37;--sequential-237:#d0df36;--sequential-238:#d3df35;--sequential-239:#d5df34;--sequential-24:#411f69;--sequential-240:#d8e033;--sequential-241:#dae032;--sequential-242:#dde131;--sequential-243:#dfe130;--sequential-244:#e2e230;--sequential-245:#e4e22f;--sequential-246:#e7e32e;--sequential-247:#e9e32d;--sequential-248:#ece42c;--sequential-249:#eee42b;--sequential-25:#40216a;--sequential-250:#f1e52a;--sequential-251:#f3e529;--sequential-252:#f6e628;--sequential-253:#f8e627;--sequential-254:#fbe726;--sequential-255:#fde725;--sequential-26:#40226a;--sequential-27:#40236b;--sequential-28:#40256c;--sequential-29:#40266d;--sequential-3:#440557;--sequential-30:#40276e;--sequential-31:#40286f;--sequential-32:#3f2a70;--sequential-33:#3f2b70;--sequential-34:#3f2c71;--sequential-35:#3f2d72;--sequential-36:#3f2f73;--sequential-37:#3f3074;--sequential-38:#3f3175;--sequential-39:#3e3376;--sequential-4:#430657;--sequential-40:#3e3477;--sequential-41:#3e3577;--sequential-42:#3e3678;--sequential-43:#3e3879;--sequential-44:#3e397a;--sequential-45:#3e3a7b;--sequential-46:#3e3b7c;--sequential-47:#3d3d7d;--sequential-48:#3d3e7d;--sequential-49:#3d3f7e;--sequential-5:#430758;--sequential-50:#3d417f;--sequential-51:#3d4280;--sequential-52:#3d4381;--sequential-53:#3d4482;--sequential-54:#3c4683;--sequential-55:#3c4783;--sequential-56:#3c4884;--sequential-57:#3c4985;--sequential-58:#3c4b86;--sequential-59:#3c4c87;--sequential-6:#430959;--sequential-60:#3c4d88;--sequential-61:#3b4f89;--sequential-62:#3b5089;--sequential-63:#3b518a;--sequential-64:#3b528b;--sequential-65:#3a538b;--sequential-66:#3a548b;--sequential-67:#3a558b;--sequential-68:#39568b;--sequential-69:#39578b;--sequential-7:#430a5a;--sequential-70:#38588b;--sequential-71:#38598b;--sequential-72:#385a8b;--sequential-73:#375b8b;--sequential-74:#375c8b;--sequential-75:#365d8b;--sequential-76:#365e8b;--sequential-77:#365f8b;--sequential-78:#35608b;--sequential-79:#35618b;--sequential-8:#430b5b;--sequential-80:#34628b;--sequential-81:#34638b;--sequential-82:#34648b;--sequential-83:#33658b;--sequential-84:#33668b;--sequential-85:#32678b;--sequential-86:#32688b;--sequential-87:#32698b;--sequential-88:#316a8b;--sequential-89:#316b8b;--sequential-9:#430c5c;--sequential-90:#306c8b;--sequential-91:#306d8b;--sequential-92:#2f6e8b;--sequential-93:#2f6f8b;--sequential-94:#2f708b;--sequential-95:#2e718b;--sequential-96:#2e728c;--sequential-97:#2d738c;--sequential-98:#2d748c;--sequential-99:#2d758c}
+#viridis-deuteranopia:target ~ #figure_1 {--sequential-0:#2b303b;--sequential-1:#2b303c;--sequential-10:#2f3345;--sequential-100:#484285;--sequential-101:#484286;--sequential-102:#484286;--sequential-103:#484286;--sequential-104:#494387;--sequential-105:#484287;--sequential-106:#494387;--sequential-107:#494288;--sequential-108:#494388;--sequential-109:#494388;--sequential-11:#2f3346;--sequential-110:#494288;--sequential-111:#494389;--sequential-112:#494289;--sequential-113:#4a4389;--sequential-114:#4a438a;--sequential-115:#4a428a;--sequential-116:#4a438a;--sequential-117:#4a428b;--sequential-118:#4a438b;--sequential-119:#4a428b;--sequential-12:#2f3347;--sequential-120:#4a438b;--sequential-121:#4b438c;--sequential-122:#4a438c;--sequential-123:#4b438c;--sequential-124:#4b428d;--sequential-125:#4b438d;--sequential-126:#4b438d;--sequential-127:#4b438e;--sequential-128:#4b438e;--sequential-129:#4c448d;--sequential-13:#303448;--sequential-130:#4d458d;--sequential-131:#4e468d;--sequential-132:#4f478d;--sequential-133:#50488c;--sequential-134:#51498c;--sequential-135:#524a8c;--sequential-136:#534a8b;--sequential-137:#544b8c;--sequential-138:#554c8b;--sequential-139:#564d8b;--sequential-14:#303449;--sequential-140:#574e8b;--sequential-141:#584f8b;--sequential-142:#59508a;--sequential-143:#5a518b;--sequential-144:#5a528a;--sequential-145:#5b538a;--sequential-146:#5c548a;--sequential-147:#5d558a;--sequential-148:#5e5689;--sequential-149:#5f5789;--sequential-15:#31344a;--sequential-150:#605889;--sequential-151:#615889;--sequential-152:#625989;--sequential-153:#625a88;--sequential-154:#635b89;--sequential-155:#645c88;--sequential-156:#655d88;--sequential-157:#665e88;--sequential-158:#675f88;--sequential-159:#686087;--sequential-16:#31354b;--sequential-160:#696188;--sequential-161:#6a6287;--sequential-162:#6b6386;--sequential-163:#6c6487;--sequential-164:#6d6586;--sequential-165:#6e6686;--sequential-166:#6f6786;--sequential-167:#706886;--sequential-168:#716985;--sequential-169:#726985;--sequential-17:#32354c;--sequential-170:#736a85;--sequential-171:#746b85;--sequential-172:#756c85;--sequential-173:#766d84;--sequential-174:#766e84;--sequential-175:#776f84;--sequential-176:#787084;--sequential-177:#797083;--sequential-178:#7a7184;--sequential-179:#7b7283;--sequential-18:#32354d;--sequential-180:#7c7383;--sequential-181:#7d7483;--sequential-182:#7e7583;--sequential-183:#7f7682;--sequential-184:#807783;--sequential-185:#817882;--sequential-186:#817982;--sequential-187:#827a82;--sequential-188:#837b81;--sequential-189:#847c81;--sequential-19:#32354e;--sequential-190:#857d81;--sequential-191:#867e81;--sequential-192:#877f80;--sequential-193:#898180;--sequential-194:#8b837f;--sequential-195:#8d857f;--sequential-196:#8e877e;--sequential-197:#90897e;--sequential-198:#928b7e;--sequential-199:#948d7d;--sequential-2:#2c313d;--sequential-20:#32354e;--sequential-200:#958f7d;--sequential-201:#97907c;--sequential-202:#99937b;--sequential-203:#9b947b;--sequential-204:#9c967a;--sequential-205:#9e987a;--sequential-206:#a09a79;--sequential-207:#a19b79;--sequential-208:#a39e78;--sequential-209:#a59f77;--sequential-21:#333650;--sequential-210:#a7a277;--sequential-211:#a8a376;--sequential-212:#aaa576;--sequential-213:#aca775;--sequential-214:#aea975;--sequential-215:#afab74;--sequential-216:#b1ad74;--sequential-217:#b3af73;--sequential-218:#b5b173;--sequential-219:#b6b272;--sequential-22:#343651;--sequential-220:#b8b572;--sequential-221:#bab672;--sequential-222:#bbb871;--sequential-223:#bdba70;--sequential-224:#bfbc70;--sequential-225:#c1be6f;--sequential-226:#c3c06f;--sequential-227:#c4c26e;--sequential-228:#c6c46e;--sequential-229:#c8c56d;--sequential-23:#343652;--sequential-230:#cac76c;--sequential-231:#cbc96c;--sequential-232:#cdcb6b;--sequential-233:#cfcd6b;--sequential-234:#d1cf6a;--sequential-235:#d2d16a;--sequential-236:#d4d369;--sequential-237:#d6d469;--sequential-238:#d8d768;--sequential-239:#d9d867;--sequential-24:#343753;--sequential-240:#dbda67;--sequential-241:#dcdc66;--sequential-242:#dfde66;--sequential-243:#e0e065;--sequential-244:#e2e265;--sequential-245:#e3e365;--sequential-246:#e6e664;--sequential-247:#e7e764;--sequential-248:#e9ea63;--sequential-249:#eaeb63;--sequential-25:#343754;--sequential-250:#eded62;--sequential-251:#eeef61;--sequential-252:#f0f161;--sequential-253:#f1f360;--sequential-254:#f3f560;--sequential-255:#f5f65f;--sequential-26:#353754;--sequential-27:#353755;--sequential-28:#363857;--sequential-29:#363858;--sequential-3:#2c313e;--sequential-30:#373959;--sequential-31:#37395a;--sequential-32:#37395b;--sequential-33:#38395b;--sequential-34:#38395c;--sequential-35:#383a5d;--sequential-36:#393a5f;--sequential-37:#393b60;--sequential-38:#3a3b61;--sequential-39:#3a3b62;--sequential-4:#2c313f;--sequential-40:#3a3b63;--sequential-41:#3b3b63;--sequential-42:#3b3c64;--sequential-43:#3c3c66;--sequential-44:#3c3d67;--sequential-45:#3d3d68;--sequential-46:#3d3d69;--sequential-47:#3d3d6a;--sequential-48:#3d3d6a;--sequential-49:#3e3e6b;--sequential-5:#2d3140;--sequential-50:#3f3e6c;--sequential-51:#3f3f6d;--sequential-52:#3f3f6e;--sequential-53:#403f6f;--sequential-54:#403f71;--sequential-55:#403f71;--sequential-56:#414072;--sequential-57:#414073;--sequential-58:#424174;--sequential-59:#424175;--sequential-6:#2d3241;--sequential-60:#424176;--sequential-61:#434178;--sequential-62:#434178;--sequential-63:#434279;--sequential-64:#44427a;--sequential-65:#43427a;--sequential-66:#44427a;--sequential-67:#44427b;--sequential-68:#44427b;--sequential-69:#44427b;--sequential-7:#2e3242;--sequential-70:#44427c;--sequential-71:#44427c;--sequential-72:#45427c;--sequential-73:#45427d;--sequential-74:#45427d;--sequential-75:#45427d;--sequential-76:#45427e;--sequential-77:#45427e;--sequential-78:#45427e;--sequential-79:#46427e;--sequential-8:#2e3243;--sequential-80:#45427f;--sequential-81:#46427f;--sequential-82:#46427f;--sequential-83:#464280;--sequential-84:#464280;--sequential-85:#464280;--sequential-86:#464281;--sequential-87:#474281;--sequential-88:#464281;--sequential-89:#474281;--sequential-9:#2e3344;--sequential-90:#474282;--sequential-91:#474282;--sequential-92:#474282;--sequential-93:#474283;--sequential-94:#474283;--sequential-95:#474283;--sequential-96:#484284;--sequential-97:#474285;--sequential-98:#484285;--sequential-99:#484385}
+#viridis-protanopia:target ~ #figure_1 {--sequential-0:#272640;--sequential-1:#272741;--sequential-10:#2c2c4a;--sequential-100:#4c4d87;--sequential-101:#4c4d87;--sequential-102:#4c4d87;--sequential-103:#4d4d87;--sequential-104:#4d4e88;--sequential-105:#4d4e88;--sequential-106:#4e4e88;--sequential-107:#4d4e88;--sequential-108:#4e4f89;--sequential-109:#4e4f89;--sequential-11:#2c2b4a;--sequential-110:#4e4f89;--sequential-111:#4f4f89;--sequential-112:#4e4f8a;--sequential-113:#4f508a;--sequential-114:#4f508a;--sequential-115:#4f508a;--sequential-116:#50508b;--sequential-117:#4f508b;--sequential-118:#50518b;--sequential-119:#50518b;--sequential-12:#2c2c4b;--sequential-120:#50518c;--sequential-121:#51528c;--sequential-122:#50518c;--sequential-123:#51528c;--sequential-124:#51528c;--sequential-125:#51528d;--sequential-126:#52538d;--sequential-127:#51538d;--sequential-128:#51538d;--sequential-129:#52548d;--sequential-13:#2d2d4c;--sequential-130:#53558c;--sequential-131:#54568c;--sequential-132:#55578c;--sequential-133:#56588b;--sequential-134:#57598c;--sequential-135:#585a8b;--sequential-136:#595a8a;--sequential-137:#5a5b8b;--sequential-138:#5b5c8a;--sequential-139:#5c5d8a;--sequential-14:#2e2d4d;--sequential-140:#5d5e8a;--sequential-141:#5e5f89;--sequential-142:#5f6089;--sequential-143:#606189;--sequential-144:#616288;--sequential-145:#626388;--sequential-146:#636488;--sequential-147:#646587;--sequential-148:#656687;--sequential-149:#666787;--sequential-15:#2e2e4e;--sequential-150:#676887;--sequential-151:#676887;--sequential-152:#686986;--sequential-153:#696a86;--sequential-154:#6a6b86;--sequential-155:#6b6c85;--sequential-156:#6c6d85;--sequential-157:#6d6e85;--sequential-158:#6e6f85;--sequential-159:#6f7084;--sequential-16:#2f2e4f;--sequential-160:#707184;--sequential-161:#707184;--sequential-162:#717283;--sequential-163:#727383;--sequential-164:#737483;--sequential-165:#747582;--sequential-166:#757682;--sequential-167:#767782;--sequential-168:#777881;--sequential-169:#787981;--sequential-17:#2f2f51;--sequential-170:#797a81;--sequential-171:#7a7b80;--sequential-172:#7b7c81;--sequential-173:#7c7d80;--sequential-174:#7c7d80;--sequential-175:#7d7e80;--sequential-176:#7e7f7f;--sequential-177:#7f807f;--sequential-178:#80817f;--sequential-179:#81827e;--sequential-18:#2f2f52;--sequential-180:#82837e;--sequential-181:#83847e;--sequential-182:#84857e;--sequential-183:#85867d;--sequential-184:#86877d;--sequential-185:#87887d;--sequential-186:#87887c;--sequential-187:#88897c;--sequential-188:#898a7c;--sequential-189:#8a8b7b;--sequential-19:#302f52;--sequential-190:#8b8c7b;--sequential-191:#8c8d7b;--sequential-192:#8d8e7a;--sequential-193:#8f907a;--sequential-194:#919279;--sequential-195:#929378;--sequential-196:#949578;--sequential-197:#969677;--sequential-198:#979877;--sequential-199:#999a77;--sequential-2:#282842;--sequential-20:#303053;--sequential-200:#9b9b76;--sequential-201:#9c9d75;--sequential-202:#9e9f75;--sequential-203:#9fa074;--sequential-204:#a1a273;--sequential-205:#a2a373;--sequential-206:#a4a572;--sequential-207:#a5a671;--sequential-208:#a8a871;--sequential-209:#a9a970;--sequential-21:#313154;--sequential-210:#abab6f;--sequential-211:#acad6f;--sequential-212:#aeaf6e;--sequential-213:#afb06d;--sequential-214:#b1b26d;--sequential-215:#b3b36c;--sequential-216:#b5b56c;--sequential-217:#b6b66b;--sequential-218:#b8b86a;--sequential-219:#b9ba6a;--sequential-22:#313155;--sequential-220:#bbbc69;--sequential-221:#bcbd69;--sequential-222:#bebe68;--sequential-223:#c0c068;--sequential-224:#c1c267;--sequential-225:#c3c367;--sequential-226:#c5c566;--sequential-227:#c6c665;--sequential-228:#c8c865;--sequential-229:#c9ca64;--sequential-23:#323256;--sequential-230:#cbcb63;--sequential-231:#cdcd63;--sequential-232:#cecf62;--sequential-233:#d0d061;--sequential-234:#d2d261;--sequential-235:#d3d360;--sequential-236:#d5d55f;--sequential-237:#d6d75f;--sequential-238:#d8d85e;--sequential-239:#d9d95d;--sequential-24:#323257;--sequential-240:#dbdc5d;--sequential-241:#dddd5c;--sequential-242:#dfdf5c;--sequential-243:#e0e05b;--sequential-244:#e2e25b;--sequential-245:#e3e35a;--sequential-246:#e5e55a;--sequential-247:#e6e659;--sequential-248:#e9e859;--sequential-249:#eaea58;--sequential-25:#333258;--sequential-250:#ecec57;--sequential-251:#eded56;--sequential-252:#efef56;--sequential-253:#f0f055;--sequential-254:#f2f255;--sequential-255:#f3f354;--sequential-26:#333359;--sequential-27:#33335a;--sequential-28:#34345b;--sequential-29:#35355c;--sequential-3:#292843;--sequential-30:#35355d;--sequential-31:#36355e;--sequential-32:#36365f;--sequential-33:#36365f;--sequential-34:#373760;--sequential-35:#373761;--sequential-36:#383863;--sequential-37:#393864;--sequential-38:#393965;--sequential-39:#393966;--sequential-4:#292843;--sequential-40:#3a3a67;--sequential-41:#3a3a67;--sequential-42:#3b3a68;--sequential-43:#3b3b69;--sequential-44:#3c3c6a;--sequential-45:#3c3c6b;--sequential-46:#3d3d6c;--sequential-47:#3d3d6e;--sequential-48:#3d3d6e;--sequential-49:#3e3e6f;--sequential-5:#292844;--sequential-50:#3f3f70;--sequential-51:#3f3f71;--sequential-52:#404072;--sequential-53:#404073;--sequential-54:#404074;--sequential-55:#414174;--sequential-56:#414175;--sequential-57:#424276;--sequential-58:#424378;--sequential-59:#434379;--sequential-6:#2a2946;--sequential-60:#43447a;--sequential-61:#44447b;--sequential-62:#44447b;--sequential-63:#45457c;--sequential-64:#45457d;--sequential-65:#45457d;--sequential-66:#45457e;--sequential-67:#46467e;--sequential-68:#46467e;--sequential-69:#46467e;--sequential-7:#2a2a47;--sequential-70:#46467f;--sequential-71:#46477f;--sequential-72:#47477f;--sequential-73:#47477f;--sequential-74:#474780;--sequential-75:#474780;--sequential-76:#474880;--sequential-77:#484880;--sequential-78:#484881;--sequential-79:#484881;--sequential-8:#2b2a48;--sequential-80:#484881;--sequential-81:#484981;--sequential-82:#494982;--sequential-83:#494982;--sequential-84:#494a82;--sequential-85:#494982;--sequential-86:#494a83;--sequential-87:#4a4a83;--sequential-88:#4a4a83;--sequential-89:#4a4b83;--sequential-9:#2b2b49;--sequential-90:#4a4b83;--sequential-91:#4a4b84;--sequential-92:#4a4b84;--sequential-93:#4b4b84;--sequential-94:#4b4c84;--sequential-95:#4b4c85;--sequential-96:#4b4c86;--sequential-97:#4b4c86;--sequential-98:#4c4c86;--sequential-99:#4c4d86}
+#viridis-tritanopia:target ~ #figure_1 {--sequential-0:#41302d;--sequential-1:#41312e;--sequential-10:#403b37;--sequential-100:#308282;--sequential-101:#308382;--sequential-102:#2f8383;--sequential-103:#2f8483;--sequential-104:#2f8483;--sequential-105:#2e8584;--sequential-106:#2e8584;--sequential-107:#2d8685;--sequential-108:#2d8685;--sequential-109:#2d8686;--sequential-11:#3f3b38;--sequential-110:#2c8786;--sequential-111:#2c8787;--sequential-112:#2c8887;--sequential-113:#2c8888;--sequential-114:#2c8988;--sequential-115:#2b8989;--sequential-116:#2b8989;--sequential-117:#2a8a8a;--sequential-118:#2a8a8a;--sequential-119:#298b8b;--sequential-12:#403c39;--sequential-120:#298b8b;--sequential-121:#298c8c;--sequential-122:#288c8c;--sequential-123:#288c8c;--sequential-124:#278d8d;--sequential-125:#278d8d;--sequential-126:#288e8e;--sequential-127:#278e8e;--sequential-128:#278e8e;--sequential-129:#288e8e;--sequential-13:#403e3a;--sequential-130:#298e8e;--sequential-131:#2a8e8f;--sequential-132:#2b8e8f;--sequential-133:#2c8e8f;--sequential-134:#2d8e8f;--sequential-135:#2e8e8f;--sequential-136:#2f8e8f;--sequential-137:#308e8f;--sequential-138:#318e8f;--sequential-139:#328e8f;--sequential-14:#403f3b;--sequential-140:#338e8f;--sequential-141:#348e8f;--sequential-142:#358e8f;--sequential-143:#368f90;--sequential-144:#378e8f;--sequential-145:#378e8f;--sequential-146:#398e90;--sequential-147:#398e90;--sequential-148:#3b8e90;--sequential-149:#3b8e90;--sequential-15:#40403c;--sequential-150:#3d8e90;--sequential-151:#3d8f90;--sequential-152:#3e8f90;--sequential-153:#3f8e90;--sequential-154:#3f8e90;--sequential-155:#418e90;--sequential-156:#428e90;--sequential-157:#438f91;--sequential-158:#448f91;--sequential-159:#458e91;--sequential-16:#40413d;--sequential-160:#468f91;--sequential-161:#468e91;--sequential-162:#478e91;--sequential-163:#488f91;--sequential-164:#498e91;--sequential-165:#4a8e91;--sequential-166:#4b8f91;--sequential-167:#4c8f91;--sequential-168:#4d8e91;--sequential-169:#4e8e91;--sequential-17:#40423f;--sequential-170:#4f8e91;--sequential-171:#508e91;--sequential-172:#518f92;--sequential-173:#528e92;--sequential-174:#528e92;--sequential-175:#538f92;--sequential-176:#548f92;--sequential-177:#558e91;--sequential-178:#568f92;--sequential-179:#578e92;--sequential-18:#3f4340;--sequential-180:#588e92;--sequential-181:#598f92;--sequential-182:#5a8f92;--sequential-183:#5b8e92;--sequential-184:#5c8f93;--sequential-185:#5d8f93;--sequential-186:#5e8e92;--sequential-187:#5f8f93;--sequential-188:#608e93;--sequential-189:#618e93;--sequential-19:#3f4440;--sequential-190:#628f93;--sequential-191:#638f93;--sequential-192:#658e92;--sequential-193:#678e92;--sequential-194:#6a8d92;--sequential-195:#6c8d92;--sequential-196:#6f8d91;--sequential-197:#718c91;--sequential-198:#748c91;--sequential-199:#768c91;--sequential-2:#41322f;--sequential-20:#3f4541;--sequential-200:#788c91;--sequential-201:#7a8c91;--sequential-202:#7d8b90;--sequential-203:#7f8b90;--sequential-204:#828a8f;--sequential-205:#848a8f;--sequential-206:#878a8f;--sequential-207:#89898e;--sequential-208:#8c898e;--sequential-209:#8e888e;--sequential-21:#3f4643;--sequential-210:#90888e;--sequential-211:#92888d;--sequential-212:#95888d;--sequential-213:#97878d;--sequential-214:#9a878d;--sequential-215:#9c868c;--sequential-216:#9f868c;--sequential-217:#a1868c;--sequential-218:#a4858b;--sequential-219:#a6858b;--sequential-22:#3f4744;--sequential-220:#a8858b;--sequential-221:#aa858b;--sequential-222:#ad848a;--sequential-223:#af848a;--sequential-224:#b2848a;--sequential-225:#b4838a;--sequential-226:#b78389;--sequential-227:#b98389;--sequential-228:#bc8289;--sequential-229:#be8289;--sequential-23:#3f4845;--sequential-230:#c08188;--sequential-231:#c28188;--sequential-232:#c58187;--sequential-233:#c78187;--sequential-234:#ca8087;--sequential-235:#cc8087;--sequential-236:#cf7f86;--sequential-237:#d17f86;--sequential-238:#d47f86;--sequential-239:#d67e85;--sequential-24:#3f4946;--sequential-240:#d87e85;--sequential-241:#da7d85;--sequential-242:#dd7d85;--sequential-243:#df7d84;--sequential-244:#e27d85;--sequential-245:#e47d84;--sequential-246:#e77c84;--sequential-247:#e97c83;--sequential-248:#ec7c83;--sequential-249:#ee7b83;--sequential-25:#3e4a47;--sequential-250:#f07b83;--sequential-251:#f27a82;--sequential-252:#f57a82;--sequential-253:#f77a82;--sequential-254:#fa7a82;--sequential-255:#fc7981;--sequential-26:#3f4b48;--sequential-27:#3f4c49;--sequential-28:#3f4d4a;--sequential-29:#3f4e4b;--sequential-3:#413330;--sequential-30:#3f4f4c;--sequential-31:#3f504d;--sequential-32:#3e524f;--sequential-33:#3e524f;--sequential-34:#3e5350;--sequential-35:#3e5451;--sequential-36:#3e5653;--sequential-37:#3e5754;--sequential-38:#3e5855;--sequential-39:#3d5956;--sequential-4:#403431;--sequential-40:#3d5a57;--sequential-41:#3e5a58;--sequential-42:#3e5b59;--sequential-43:#3e5d5a;--sequential-44:#3e5e5b;--sequential-45:#3e5f5c;--sequential-46:#3e605d;--sequential-47:#3d615f;--sequential-48:#3d625f;--sequential-49:#3d6360;--sequential-5:#403532;--sequential-50:#3d6462;--sequential-51:#3d6563;--sequential-52:#3d6664;--sequential-53:#3d6765;--sequential-54:#3d6966;--sequential-55:#3d6967;--sequential-56:#3d6a68;--sequential-57:#3d6b69;--sequential-58:#3d6c6a;--sequential-59:#3d6d6b;--sequential-6:#403633;--sequential-60:#3d6e6c;--sequential-61:#3c706d;--sequential-62:#3c706e;--sequential-63:#3c716f;--sequential-64:#3c7270;--sequential-65:#3b7370;--sequential-66:#3b7371;--sequential-67:#3b7471;--sequential-68:#3a7472;--sequential-69:#3b7472;--sequential-7:#403734;--sequential-70:#3a7573;--sequential-71:#3a7573;--sequential-72:#3a7674;--sequential-73:#397674;--sequential-74:#397775;--sequential-75:#387775;--sequential-76:#387876;--sequential-77:#387876;--sequential-78:#377877;--sequential-79:#377977;--sequential-8:#403835;--sequential-80:#367978;--sequential-81:#367a78;--sequential-82:#367a78;--sequential-83:#367b79;--sequential-84:#367b79;--sequential-85:#357b7a;--sequential-86:#357c7a;--sequential-87:#357c7b;--sequential-88:#347d7b;--sequential-89:#347d7c;--sequential-9:#403936;--sequential-90:#337e7c;--sequential-91:#337e7d;--sequential-92:#327e7d;--sequential-93:#327f7e;--sequential-94:#327f7e;--sequential-95:#31807f;--sequential-96:#318180;--sequential-97:#318180;--sequential-98:#318281;--sequential-99:#318281}
+#tol-bright-normal:target ~ #figure_1 {--sequential-0:#f7f7f7;--sequential-1:#f6f6f7;--sequential-10:#f0f2f4;--sequential-100:#b1c5d9;--sequential-101:#b0c4d9;--sequential-102:#afc4d8;--sequential-103:#afc3d8;--sequential-104:#aec3d8;--sequential-105:#adc2d7;--sequential-106:#adc2d7;--sequential-107:#acc1d7;--sequential-108:#abc1d6;--sequential-109:#aac0d6;--sequential-11:#eff1f4;--sequential-110:#aac0d6;--sequential-111:#a9bfd5;--sequential-112:#a8bfd5;--sequential-113:#a8bed5;--sequential-114:#a7bed5;--sequential-115:#a6bdd4;--sequential-116:#a6bdd4;--sequential-117:#a5bcd4;--sequential-118:#a4bcd3;--sequential-119:#a3bbd3;--sequential-12:#eff1f3;--sequential-120:#a3bbd3;--sequential-121:#a2bad2;--sequential-122:#a1bad2;--sequential-123:#a1b9d2;--sequential-124:#a0b9d2;--sequential-125:#9fb8d1;--sequential-126:#9fb8d1;--sequential-127:#9eb7d1;--sequential-128:#9db7d0;--sequential-129:#9cb6d0;--sequential-13:#eef0f3;--sequential-130:#9cb6d0;--sequential-131:#9bb5cf;--sequential-132:#9ab5cf;--sequential-133:#9ab4cf;--sequential-134:#99b4cf;--sequential-135:#98b3ce;--sequential-136:#98b3ce;--sequential-137:#97b2ce;--sequential-138:#96b2cd;--sequential-139:#95b1cd;--sequential-14:#edf0f3;--sequential-140:#95b1cd;--sequential-141:#94b0cc;--sequential-142:#93b0cc;--sequential-143:#93afcc;--sequential-144:#92afcc;--sequential-145:#91aecb;--sequential-146:#91aecb;--sequential-147:#90adcb;--sequential-148:#8fadca;--sequential-149:#8eacca;--sequential-15:#eceff2;--sequential-150:#8eacca;--sequential-151:#8dabc9;--sequential-152:#8cabc9;--sequential-153:#8caac9;--sequential-154:#8baac8;--sequential-155:#8aa9c8;--sequential-156:#89a9c8;--sequential-157:#89a8c8;--sequential-158:#88a8c7;--sequential-159:#87a7c7;--sequential-16:#eceff2;--sequential-160:#87a7c7;--sequential-161:#86a6c6;--sequential-162:#85a6c6;--sequential-163:#85a5c6;--sequential-164:#84a5c5;--sequential-165:#83a4c5;--sequential-166:#82a4c5;--sequential-167:#82a3c5;--sequential-168:#81a3c4;--sequential-169:#80a2c4;--sequential-17:#ebeef2;--sequential-170:#80a2c4;--sequential-171:#7fa1c3;--sequential-172:#7ea1c3;--sequential-173:#7ea0c3;--sequential-174:#7da0c2;--sequential-175:#7c9fc2;--sequential-176:#7b9fc2;--sequential-177:#7b9ec2;--sequential-178:#7a9ec1;--sequential-179:#799dc1;--sequential-18:#eaeef2;--sequential-180:#799dc1;--sequential-181:#789cc0;--sequential-182:#779cc0;--sequential-183:#779bc0;--sequential-184:#769bbf;--sequential-185:#759abf;--sequential-186:#749abf;--sequential-187:#7499bf;--sequential-188:#7399be;--sequential-189:#7298be;--sequential-19:#eaedf1;--sequential-190:#7298be;--sequential-191:#7197bd;--sequential-192:#7097bd;--sequential-193:#7096bd;--sequential-194:#6f96bc;--sequential-195:#6e95bc;--sequential-196:#6d95bc;--sequential-197:#6d94bc;--sequential-198:#6c94bb;--sequential-199:#6b93bb;--sequential-2:#f6f6f6;--sequential-20:#e9edf1;--sequential-200:#6b93bb;--sequential-201:#6a92ba;--sequential-202:#6992ba;--sequential-203:#6991ba;--sequential-204:#6891b9;--sequential-205:#6790b9;--sequential-206:#6690b9;--sequential-207:#668fb8;--sequential-208:#658fb8;--sequential-209:#648eb8;--sequential-21:#e8ecf1;--sequential-210:#648eb8;--sequential-211:#638db7;--sequential-212:#628db7;--sequential-213:#618cb7;--sequential-214:#618cb6;--sequential-215:#608bb6;--sequential-216:#5f8bb6;--sequential-217:#5f8ab5;--sequential-218:#5e8ab5;--sequential-219:#5d89b5;--sequential-22:#e8ecf0;--sequential-220:#5d89b5;--sequential-221:#5c88b4;--sequential-222:#5b88b4;--sequential-223:#5a87b4;--sequential-224:#5a87b3;--sequential-225:#5986b3;--sequential-226:#5886b3;--sequential-227:#5885b2;--sequential-228:#5785b2;--sequential-229:#5684b2;--sequential-23:#e7ebf0;--sequential-230:#5684b2;--sequential-231:#5583b1;--sequential-232:#5483b1;--sequential-233:#5382b1;--sequential-234:#5382b0;--sequential-235:#5281b0;--sequential-236:#5181b0;--sequential-237:#5180af;--sequential-238:#5080af;--sequential-239:#4f7faf;--sequential-24:#e6ebf0;--sequential-240:#4f7faf;--sequential-241:#4e7eae;--sequential-242:#4d7eae;--sequential-243:#4c7dae;--sequential-244:#4c7dad;--sequential-245:#4b7cad;--sequential-246:#4a7cad;--sequential-247:#4a7bac;--sequential-248:#497bac;--sequential-249:#487aac;--sequential-25:#e5eaef;--sequential-250:#487aac;--sequential-251:#4779ab;--sequential-252:#4679ab;--sequential-253:#4578ab;--sequential-254:#4578aa;--sequential-255:#4477aa;--sequential-26:#e5eaef;--sequential-27:#e4e9ef;--sequential-28:#e3e9ef;--sequential-29:#e3e8ee;--sequential-3:#f5f5f6;--sequential-30:#e2e8ee;--sequential-31:#e1e7ee;--sequential-32:#e1e7ed;--sequential-33:#e0e6ed;--sequential-34:#dfe6ed;--sequential-35:#dee5ec;--sequential-36:#dee5ec;--sequential-37:#dde4ec;--sequential-38:#dce4ec;--sequential-39:#dce3eb;--sequential-4:#f4f5f6;--sequential-40:#dbe3eb;--sequential-41:#dae2eb;--sequential-42:#dae2ea;--sequential-43:#d9e1ea;--sequential-44:#d8e1ea;--sequential-45:#d7e0e9;--sequential-46:#d7e0e9;--sequential-47:#d6dfe9;--sequential-48:#d5dfe9;--sequential-49:#d5dee8;--sequential-5:#f3f4f5;--sequential-50:#d4dee8;--sequential-51:#d3dde8;--sequential-52:#d2dde7;--sequential-53:#d2dce7;--sequential-54:#d1dce7;--sequential-55:#d0dbe6;--sequential-56:#d0dbe6;--sequential-57:#cfdae6;--sequential-58:#cedae5;--sequential-59:#ced9e5;--sequential-6:#f3f4f5;--sequential-60:#cdd9e5;--sequential-61:#ccd8e5;--sequential-62:#cbd8e4;--sequential-63:#cbd7e4;--sequential-64:#cad7e4;--sequential-65:#c9d6e3;--sequential-66:#c9d6e3;--sequential-67:#c8d5e3;--sequential-68:#c7d5e2;--sequential-69:#c7d4e2;--sequential-7:#f2f3f5;--sequential-70:#c6d4e2;--sequential-71:#c5d3e2;--sequential-72:#c4d3e1;--sequential-73:#c4d2e1;--sequential-74:#c3d2e1;--sequential-75:#c2d1e0;--sequential-76:#c2d1e0;--sequential-77:#c1d0e0;--sequential-78:#c0d0df;--sequential-79:#c0cfdf;--sequential-8:#f1f3f5;--sequential-80:#bfcfdf;--sequential-81:#becedf;--sequential-82:#bdcede;--sequential-83:#bdcdde;--sequential-84:#bccdde;--sequential-85:#bbccdd;--sequential-86:#bbccdd;--sequential-87:#bacbdd;--sequential-88:#b9cbdc;--sequential-89:#b9cadc;--sequential-9:#f1f2f4;--sequential-90:#b8cadc;--sequential-91:#b7c9dc;--sequential-92:#b6c9db;--sequential-93:#b6c8db;--sequential-94:#b5c8db;--sequential-95:#b4c7da;--sequential-96:#b4c7da;--sequential-97:#b3c6da;--sequential-98:#b2c6d9;--sequential-99:#b2c5d9}
+#tol-bright-deuteranopia:target ~ #figure_1 {--sequential-0:#f7f7f7;--sequential-1:#f6f6f7;--sequential-10:#f1f1f3;--sequential-100:#b9b7d3;--sequential-101:#b8b6d3;--sequential-102:#b7b5d2;--sequential-103:#b7b5d2;--sequential-104:#b6b4d2;--sequential-105:#b5b3d1;--sequential-106:#b5b3d1;--sequential-107:#b4b2d0;--sequential-108:#b3b2d0;--sequential-109:#b2b1cf;--sequential-11:#f0f0f3;--sequential-110:#b2b1cf;--sequential-111:#b1b0ce;--sequential-112:#b1afce;--sequential-113:#b0afce;--sequential-114:#b0aece;--sequential-115:#afadcd;--sequential-116:#afadcd;--sequential-117:#aeaccd;--sequential-118:#adabcc;--sequential-119:#acaacc;--sequential-12:#f0f0f2;--sequential-120:#acaacc;--sequential-121:#aba9cb;--sequential-122:#aaa9cb;--sequential-123:#aaa8cb;--sequential-124:#a9a7cb;--sequential-125:#a8a7ca;--sequential-126:#a8a7ca;--sequential-127:#a7a6c9;--sequential-128:#a7a5c9;--sequential-129:#a6a4c8;--sequential-13:#efeff2;--sequential-130:#a6a4c8;--sequential-131:#a5a3c7;--sequential-132:#a4a2c7;--sequential-133:#a4a2c7;--sequential-134:#a3a1c7;--sequential-135:#a2a0c6;--sequential-136:#a2a0c6;--sequential-137:#a19fc6;--sequential-138:#a19ec5;--sequential-139:#a09dc5;--sequential-14:#eeeef2;--sequential-140:#a09dc5;--sequential-141:#9f9cc4;--sequential-142:#9e9cc4;--sequential-143:#9d9bc3;--sequential-144:#9d9bc3;--sequential-145:#9c9ac2;--sequential-146:#9c9ac2;--sequential-147:#9b99c2;--sequential-148:#9a98c1;--sequential-149:#9997c1;--sequential-15:#ededf1;--sequential-150:#9997c1;--sequential-151:#9896c0;--sequential-152:#9895c0;--sequential-153:#9795c0;--sequential-154:#9794bf;--sequential-155:#9693bf;--sequential-156:#9593bf;--sequential-157:#9592be;--sequential-158:#9492be;--sequential-159:#9391bd;--sequential-16:#ededf1;--sequential-160:#9391bd;--sequential-161:#9290bc;--sequential-162:#918fbc;--sequential-163:#918fbc;--sequential-164:#908ebb;--sequential-165:#8f8dbb;--sequential-166:#8f8cbb;--sequential-167:#8e8cbb;--sequential-168:#8e8bba;--sequential-169:#8d8aba;--sequential-17:#ececf1;--sequential-170:#8d8aba;--sequential-171:#8c89b9;--sequential-172:#8b89b9;--sequential-173:#8b88b8;--sequential-174:#8a88b8;--sequential-175:#8987b7;--sequential-176:#8986b7;--sequential-177:#8886b7;--sequential-178:#8885b6;--sequential-179:#8784b6;--sequential-18:#ebebf1;--sequential-180:#8784b6;--sequential-181:#8683b5;--sequential-182:#8582b5;--sequential-183:#8482b5;--sequential-184:#8481b4;--sequential-185:#8380b4;--sequential-186:#827fb4;--sequential-187:#827fb4;--sequential-188:#817eb3;--sequential-189:#807db3;--sequential-19:#ebebf0;--sequential-190:#807db3;--sequential-191:#7f7cb2;--sequential-192:#7f7cb2;--sequential-193:#7e7bb1;--sequential-194:#7e7bb1;--sequential-195:#7d7ab0;--sequential-196:#7c79b0;--sequential-197:#7c79b0;--sequential-198:#7b78af;--sequential-199:#7a77af;--sequential-2:#f6f6f6;--sequential-20:#ebeaf0;--sequential-200:#7a77af;--sequential-201:#7976ae;--sequential-202:#7875ae;--sequential-203:#7875ae;--sequential-204:#7774ad;--sequential-205:#7673ad;--sequential-206:#7673ad;--sequential-207:#7572ac;--sequential-208:#7572ac;--sequential-209:#7471ab;--sequential-21:#eae9f0;--sequential-210:#7471ab;--sequential-211:#7370aa;--sequential-212:#726faa;--sequential-213:#716eaa;--sequential-214:#716ea9;--sequential-215:#706da9;--sequential-216:#706ca9;--sequential-217:#6f6ca8;--sequential-218:#6f6ba8;--sequential-219:#6e6aa8;--sequential-22:#eae9ef;--sequential-220:#6e6aa8;--sequential-221:#6d69a7;--sequential-222:#6c69a7;--sequential-223:#6b68a7;--sequential-224:#6b68a6;--sequential-225:#6a66a5;--sequential-226:#6966a5;--sequential-227:#6966a4;--sequential-228:#6865a4;--sequential-229:#6764a4;--sequential-23:#e9e8ee;--sequential-230:#6764a4;--sequential-231:#6663a3;--sequential-232:#6662a3;--sequential-233:#6561a3;--sequential-234:#6561a2;--sequential-235:#6460a2;--sequential-236:#635fa2;--sequential-237:#635fa1;--sequential-238:#625ea1;--sequential-239:#615da1;--sequential-24:#e8e7ee;--sequential-240:#615da1;--sequential-241:#605ca0;--sequential-242:#5f5ca0;--sequential-243:#5e5b9f;--sequential-244:#5e5b9f;--sequential-245:#5d5a9e;--sequential-246:#5d599e;--sequential-247:#5c599d;--sequential-248:#5c589d;--sequential-249:#5b579d;--sequential-25:#e7e7ed;--sequential-250:#5b579d;--sequential-251:#5a569c;--sequential-252:#59559c;--sequential-253:#58549c;--sequential-254:#58549b;--sequential-255:#57539b;--sequential-26:#e7e7ed;--sequential-27:#e6e6ed;--sequential-28:#e5e5ed;--sequential-29:#e5e4ec;--sequential-3:#f5f5f6;--sequential-30:#e4e4ec;--sequential-31:#e3e3ec;--sequential-32:#e3e3eb;--sequential-33:#e2e2eb;--sequential-34:#e2e1eb;--sequential-35:#e1e0ea;--sequential-36:#e1e0ea;--sequential-37:#e0dfea;--sequential-38:#dfdeea;--sequential-39:#dfdee9;--sequential-4:#f4f4f6;--sequential-40:#dedde9;--sequential-41:#dddce8;--sequential-42:#dddce8;--sequential-43:#dcdbe7;--sequential-44:#dbdbe7;--sequential-45:#dadae6;--sequential-46:#dadae6;--sequential-47:#d9d9e6;--sequential-48:#d9d8e6;--sequential-49:#d8d8e5;--sequential-5:#f3f3f5;--sequential-50:#d8d7e5;--sequential-51:#d7d6e5;--sequential-52:#d6d5e4;--sequential-53:#d6d5e4;--sequential-54:#d5d4e4;--sequential-55:#d4d3e3;--sequential-56:#d4d3e3;--sequential-57:#d3d2e2;--sequential-58:#d3d2e2;--sequential-59:#d2d1e1;--sequential-6:#f3f3f5;--sequential-60:#d2d1e1;--sequential-61:#d1d0e1;--sequential-62:#d0cfe0;--sequential-63:#d0cfe0;--sequential-64:#cfcee0;--sequential-65:#cecddf;--sequential-66:#cecddf;--sequential-67:#cdccdf;--sequential-68:#cccbde;--sequential-69:#cccbde;--sequential-7:#f2f2f4;--sequential-70:#cbcade;--sequential-71:#cac9dd;--sequential-72:#cac9dd;--sequential-73:#c9c8dc;--sequential-74:#c9c7dc;--sequential-75:#c8c6db;--sequential-76:#c8c6db;--sequential-77:#c7c5db;--sequential-78:#c6c5db;--sequential-79:#c6c4da;--sequential-8:#f2f2f4;--sequential-80:#c5c4da;--sequential-81:#c4c3da;--sequential-82:#c3c2d9;--sequential-83:#c3c2d9;--sequential-84:#c2c1d9;--sequential-85:#c1c0d8;--sequential-86:#c1c0d8;--sequential-87:#c0bfd8;--sequential-88:#c0bed7;--sequential-89:#bfbed7;--sequential-9:#f1f1f3;--sequential-90:#bfbdd7;--sequential-91:#bebcd6;--sequential-92:#bdbcd6;--sequential-93:#bdbbd5;--sequential-94:#bcbbd5;--sequential-95:#bbbad4;--sequential-96:#bbbad4;--sequential-97:#bab9d4;--sequential-98:#bab8d3;--sequential-99:#b9b8d3}
+#tol-bright-protanopia:target ~ #figure_1 {--sequential-0:#f7f7f7;--sequential-1:#f6f6f7;--sequential-10:#f1f1f4;--sequential-100:#babad4;--sequential-101:#b9b9d4;--sequential-102:#b8b8d3;--sequential-103:#b8b8d3;--sequential-104:#b7b7d3;--sequential-105:#b6b6d2;--sequential-106:#b6b6d2;--sequential-107:#b5b5d2;--sequential-108:#b5b5d1;--sequential-109:#b4b4d1;--sequential-11:#f0f0f3;--sequential-110:#b4b4d1;--sequential-111:#b3b3d0;--sequential-112:#b2b2d0;--sequential-113:#b2b2cf;--sequential-114:#b1b1cf;--sequential-115:#b0b0ce;--sequential-116:#b0b0ce;--sequential-117:#afafce;--sequential-118:#aeafcd;--sequential-119:#adaecd;--sequential-12:#f0f0f3;--sequential-120:#adaecd;--sequential-121:#acadcc;--sequential-122:#acaccc;--sequential-123:#abaccc;--sequential-124:#ababcc;--sequential-125:#aaaacb;--sequential-126:#aaaacb;--sequential-127:#a9a9cb;--sequential-128:#a8a8ca;--sequential-129:#a7a7ca;--sequential-13:#efeff2;--sequential-130:#a7a7ca;--sequential-131:#a6a6c9;--sequential-132:#a6a6c9;--sequential-133:#a5a5c8;--sequential-134:#a5a5c8;--sequential-135:#a4a4c7;--sequential-136:#a4a4c7;--sequential-137:#a3a3c7;--sequential-138:#a2a2c6;--sequential-139:#a1a1c6;--sequential-14:#eeeef2;--sequential-140:#a1a1c6;--sequential-141:#a0a0c5;--sequential-142:#a0a0c5;--sequential-143:#9f9fc5;--sequential-144:#9f9fc5;--sequential-145:#9e9ec4;--sequential-146:#9e9ec4;--sequential-147:#9d9dc4;--sequential-148:#9c9cc3;--sequential-149:#9b9bc3;--sequential-15:#ededf1;--sequential-150:#9b9bc3;--sequential-151:#9a9ac2;--sequential-152:#999ac2;--sequential-153:#9999c1;--sequential-154:#9899c1;--sequential-155:#9798c0;--sequential-156:#9797c0;--sequential-157:#9697c0;--sequential-158:#9696bf;--sequential-159:#9595bf;--sequential-16:#ededf1;--sequential-160:#9595bf;--sequential-161:#9494be;--sequential-162:#9394be;--sequential-163:#9393be;--sequential-164:#9293bd;--sequential-165:#9192bd;--sequential-166:#9191bd;--sequential-167:#9091bd;--sequential-168:#9090bc;--sequential-169:#8f8fbc;--sequential-17:#ececf1;--sequential-170:#8f8fbc;--sequential-171:#8e8ebb;--sequential-172:#8d8dbb;--sequential-173:#8d8dbb;--sequential-174:#8c8cba;--sequential-175:#8b8bba;--sequential-176:#8b8bba;--sequential-177:#8a8ab9;--sequential-178:#8a8ab9;--sequential-179:#8989b8;--sequential-18:#ececf1;--sequential-180:#8989b8;--sequential-181:#8888b7;--sequential-182:#8787b7;--sequential-183:#8787b7;--sequential-184:#8686b6;--sequential-185:#8585b6;--sequential-186:#8485b6;--sequential-187:#8484b6;--sequential-188:#8384b5;--sequential-189:#8283b5;--sequential-19:#ebebf0;--sequential-190:#8283b5;--sequential-191:#8182b4;--sequential-192:#8181b4;--sequential-193:#8081b4;--sequential-194:#8080b3;--sequential-195:#7f7fb3;--sequential-196:#7e7fb3;--sequential-197:#7e7eb2;--sequential-198:#7d7eb2;--sequential-199:#7c7db1;--sequential-2:#f6f6f6;--sequential-20:#ebebf0;--sequential-200:#7c7db1;--sequential-201:#7b7cb0;--sequential-202:#7b7bb0;--sequential-203:#7a7bb0;--sequential-204:#7a7aaf;--sequential-205:#7979af;--sequential-206:#7879af;--sequential-207:#7878ae;--sequential-208:#7778ae;--sequential-209:#7677ae;--sequential-21:#eaeaf0;--sequential-210:#7677ae;--sequential-211:#7576ad;--sequential-212:#7575ad;--sequential-213:#7474ad;--sequential-214:#7474ac;--sequential-215:#7373ac;--sequential-216:#7272ac;--sequential-217:#7272ab;--sequential-218:#7171ab;--sequential-219:#7070aa;--sequential-22:#eaeaef;--sequential-220:#7070aa;--sequential-221:#6f6fa9;--sequential-222:#6e6fa9;--sequential-223:#6d6ea9;--sequential-224:#6d6ea8;--sequential-225:#6c6da8;--sequential-226:#6c6ca8;--sequential-227:#6b6ca7;--sequential-228:#6b6ba7;--sequential-229:#6a6aa7;--sequential-23:#e9e9ef;--sequential-230:#6a6aa7;--sequential-231:#6969a6;--sequential-232:#6869a6;--sequential-233:#6768a6;--sequential-234:#6768a5;--sequential-235:#6667a5;--sequential-236:#6666a5;--sequential-237:#6566a4;--sequential-238:#6565a4;--sequential-239:#6464a3;--sequential-24:#e8e8ef;--sequential-240:#6464a3;--sequential-241:#6363a2;--sequential-242:#6263a2;--sequential-243:#6162a2;--sequential-244:#6162a1;--sequential-245:#6061a1;--sequential-246:#6060a1;--sequential-247:#5f60a0;--sequential-248:#5f5fa0;--sequential-249:#5e5ea0;--sequential-25:#e7e7ee;--sequential-250:#5e5ea0;--sequential-251:#5d5d9f;--sequential-252:#5c5d9f;--sequential-253:#5b5c9f;--sequential-254:#5b5c9e;--sequential-255:#5a5b9e;--sequential-26:#e7e7ee;--sequential-27:#e6e6ee;--sequential-28:#e6e6ee;--sequential-29:#e5e5ed;--sequential-3:#f5f5f6;--sequential-30:#e5e5ed;--sequential-31:#e4e4ec;--sequential-32:#e4e4ec;--sequential-33:#e3e3eb;--sequential-34:#e2e2eb;--sequential-35:#e1e1ea;--sequential-36:#e1e1ea;--sequential-37:#e0e0ea;--sequential-38:#dfe0ea;--sequential-39:#dfdfe9;--sequential-4:#f4f4f6;--sequential-40:#dedfe9;--sequential-41:#dddee9;--sequential-42:#dddee8;--sequential-43:#dcdde8;--sequential-44:#dcdce8;--sequential-45:#dbdbe7;--sequential-46:#dbdbe7;--sequential-47:#dadae7;--sequential-48:#d9d9e7;--sequential-49:#d9d9e6;--sequential-5:#f3f3f5;--sequential-50:#d8d8e6;--sequential-51:#d7d7e5;--sequential-52:#d7d7e5;--sequential-53:#d6d6e4;--sequential-54:#d6d6e4;--sequential-55:#d5d5e3;--sequential-56:#d5d5e3;--sequential-57:#d4d4e3;--sequential-58:#d3d3e2;--sequential-59:#d3d3e2;--sequential-6:#f3f3f5;--sequential-60:#d2d2e2;--sequential-61:#d1d1e2;--sequential-62:#d1d1e1;--sequential-63:#d0d0e1;--sequential-64:#d0d0e1;--sequential-65:#cfcfe0;--sequential-66:#cfcfe0;--sequential-67:#cecee0;--sequential-68:#cdcddf;--sequential-69:#cdcddf;--sequential-7:#f2f2f5;--sequential-70:#ccccdf;--sequential-71:#cbcbde;--sequential-72:#cacbde;--sequential-73:#cacadd;--sequential-74:#c9cadd;--sequential-75:#c8c9dc;--sequential-76:#c8c9dc;--sequential-77:#c7c8dc;--sequential-78:#c7c7db;--sequential-79:#c6c7db;--sequential-8:#f2f2f5;--sequential-80:#c6c6db;--sequential-81:#c5c5db;--sequential-82:#c4c5da;--sequential-83:#c4c4da;--sequential-84:#c3c4da;--sequential-85:#c2c3d9;--sequential-86:#c2c3d9;--sequential-87:#c1c2d9;--sequential-88:#c1c1d8;--sequential-89:#c0c1d8;--sequential-9:#f1f1f4;--sequential-90:#c0c0d8;--sequential-91:#bfbfd7;--sequential-92:#bebed7;--sequential-93:#bebed6;--sequential-94:#bdbdd6;--sequential-95:#bcbcd5;--sequential-96:#bcbcd5;--sequential-97:#bbbbd5;--sequential-98:#bbbbd4;--sequential-99:#babad4}
+#tol-bright-tritanopia:target ~ #figure_1 {--sequential-0:#f7f7f7;--sequential-1:#f6f7f7;--sequential-10:#f0f3f3;--sequential-100:#b2d0d0;--sequential-101:#b1d0cf;--sequential-102:#b0cfcf;--sequential-103:#b0cfce;--sequential-104:#afcfce;--sequential-105:#aececd;--sequential-106:#aececd;--sequential-107:#adcdcd;--sequential-108:#accdcc;--sequential-109:#abcccc;--sequential-11:#eff3f3;--sequential-110:#abcccc;--sequential-111:#aacbcb;--sequential-112:#a9cbcb;--sequential-113:#a9cbca;--sequential-114:#a8cbca;--sequential-115:#a7cac9;--sequential-116:#a7cac9;--sequential-117:#a6cac9;--sequential-118:#a5c9c8;--sequential-119:#a4c9c8;--sequential-12:#eff2f2;--sequential-120:#a4c9c8;--sequential-121:#a3c8c7;--sequential-122:#a2c8c7;--sequential-123:#a2c7c6;--sequential-124:#a1c7c6;--sequential-125:#a0c6c5;--sequential-126:#a0c6c5;--sequential-127:#9fc6c5;--sequential-128:#9ec5c4;--sequential-129:#9dc5c4;--sequential-13:#eef2f2;--sequential-130:#9dc5c4;--sequential-131:#9cc4c3;--sequential-132:#9bc4c3;--sequential-133:#9bc3c2;--sequential-134:#9ac3c2;--sequential-135:#99c2c1;--sequential-136:#99c2c1;--sequential-137:#98c2c1;--sequential-138:#97c1c0;--sequential-139:#96c1c0;--sequential-14:#edf2f2;--sequential-140:#96c1c0;--sequential-141:#95c0bf;--sequential-142:#94c0bf;--sequential-143:#94bfbe;--sequential-144:#93bfbe;--sequential-145:#92bebd;--sequential-146:#92bebd;--sequential-147:#91bebd;--sequential-148:#91bdbc;--sequential-149:#90bdbc;--sequential-15:#ecf1f1;--sequential-150:#90bdbc;--sequential-151:#8fbcbb;--sequential-152:#8ebcbb;--sequential-153:#8ebcba;--sequential-154:#8dbbba;--sequential-155:#8cbbb9;--sequential-156:#8bbbb9;--sequential-157:#8bbab9;--sequential-158:#8abab8;--sequential-159:#89b9b8;--sequential-16:#ecf1f1;--sequential-160:#89b9b8;--sequential-161:#88b8b7;--sequential-162:#87b8b7;--sequential-163:#87b8b6;--sequential-164:#86b7b6;--sequential-165:#85b7b5;--sequential-166:#84b7b5;--sequential-167:#84b6b5;--sequential-168:#83b6b4;--sequential-169:#82b5b4;--sequential-17:#ebf0f0;--sequential-170:#82b5b4;--sequential-171:#81b4b3;--sequential-172:#80b4b3;--sequential-173:#80b4b2;--sequential-174:#7fb3b2;--sequential-175:#7eb3b1;--sequential-176:#7db3b1;--sequential-177:#7db2b1;--sequential-178:#7cb2b0;--sequential-179:#7bb1b0;--sequential-18:#eaf0f0;--sequential-180:#7bb1b0;--sequential-181:#7ab0af;--sequential-182:#79b0af;--sequential-183:#79b0ae;--sequential-184:#78afae;--sequential-185:#77afad;--sequential-186:#76afad;--sequential-187:#76afad;--sequential-188:#75aeac;--sequential-189:#74aeac;--sequential-19:#eaefef;--sequential-190:#74aeac;--sequential-191:#73adab;--sequential-192:#72adab;--sequential-193:#72acaa;--sequential-194:#71acaa;--sequential-195:#70aba9;--sequential-196:#6faba9;--sequential-197:#6faba9;--sequential-198:#6eaaa8;--sequential-199:#6daaa8;--sequential-2:#f6f6f6;--sequential-20:#e9efef;--sequential-200:#6daaa8;--sequential-201:#6ca9a7;--sequential-202:#6ba9a7;--sequential-203:#6ba8a7;--sequential-204:#6aa8a6;--sequential-205:#69a7a6;--sequential-206:#68a7a6;--sequential-207:#68a6a5;--sequential-208:#67a6a5;--sequential-209:#66a6a4;--sequential-21:#e8efef;--sequential-210:#66a6a4;--sequential-211:#65a5a3;--sequential-212:#64a5a3;--sequential-213:#63a4a3;--sequential-214:#63a4a2;--sequential-215:#62a3a2;--sequential-216:#61a3a2;--sequential-217:#61a2a1;--sequential-218:#60a2a1;--sequential-219:#5fa2a0;--sequential-22:#e8eeee;--sequential-220:#5fa2a0;--sequential-221:#5ea19f;--sequential-222:#5da19f;--sequential-223:#5ca19f;--sequential-224:#5ca09e;--sequential-225:#5ba09e;--sequential-226:#5aa09e;--sequential-227:#5a9f9d;--sequential-228:#599f9d;--sequential-229:#589e9c;--sequential-23:#e7eeee;--sequential-230:#589e9c;--sequential-231:#579d9b;--sequential-232:#569d9b;--sequential-233:#559d9b;--sequential-234:#559c9a;--sequential-235:#549c9a;--sequential-236:#539c9a;--sequential-237:#539b99;--sequential-238:#529b99;--sequential-239:#519a98;--sequential-24:#e6eeee;--sequential-240:#519a98;--sequential-241:#509997;--sequential-242:#4f9997;--sequential-243:#4e9997;--sequential-244:#4e9896;--sequential-245:#4d9896;--sequential-246:#4d9896;--sequential-247:#4c9795;--sequential-248:#4b9795;--sequential-249:#4a9694;--sequential-25:#e5eded;--sequential-250:#4a9694;--sequential-251:#4a9593;--sequential-252:#499593;--sequential-253:#489593;--sequential-254:#489492;--sequential-255:#479492;--sequential-26:#e5eded;--sequential-27:#e4ecec;--sequential-28:#e3ecec;--sequential-29:#e3ebeb;--sequential-3:#f5f6f6;--sequential-30:#e2ebeb;--sequential-31:#e1ebeb;--sequential-32:#e1eaea;--sequential-33:#e0eaea;--sequential-34:#dfeaea;--sequential-35:#dee9e9;--sequential-36:#dee9e9;--sequential-37:#dde9e8;--sequential-38:#dce9e8;--sequential-39:#dce8e7;--sequential-4:#f4f6f6;--sequential-40:#dbe8e7;--sequential-41:#dae7e7;--sequential-42:#dae7e6;--sequential-43:#d9e6e6;--sequential-44:#d8e6e6;--sequential-45:#d7e5e5;--sequential-46:#d7e5e5;--sequential-47:#d6e5e4;--sequential-48:#d6e5e4;--sequential-49:#d5e4e3;--sequential-5:#f3f5f5;--sequential-50:#d5e4e3;--sequential-51:#d3e3e3;--sequential-52:#d3e3e2;--sequential-53:#d3e2e2;--sequential-54:#d2e2e2;--sequential-55:#d1e1e1;--sequential-56:#d1e1e1;--sequential-57:#d0e1e0;--sequential-58:#cfe0e0;--sequential-59:#cfe0df;--sequential-6:#f3f5f5;--sequential-60:#cee0df;--sequential-61:#cddfdf;--sequential-62:#ccdfde;--sequential-63:#ccdede;--sequential-64:#cbdede;--sequential-65:#cadddd;--sequential-66:#cadddd;--sequential-67:#c9dddc;--sequential-68:#c8dcdc;--sequential-69:#c8dcdb;--sequential-7:#f2f4f4;--sequential-70:#c7dcdb;--sequential-71:#c6dcdb;--sequential-72:#c5dbda;--sequential-73:#c5dbda;--sequential-74:#c4dbda;--sequential-75:#c3dad9;--sequential-76:#c3dad9;--sequential-77:#c2d9d8;--sequential-78:#c1d9d8;--sequential-79:#c1d8d7;--sequential-8:#f1f4f4;--sequential-80:#c0d8d7;--sequential-81:#bfd8d7;--sequential-82:#bed7d6;--sequential-83:#bed7d6;--sequential-84:#bdd7d6;--sequential-85:#bcd6d5;--sequential-86:#bcd6d5;--sequential-87:#bbd5d4;--sequential-88:#bad5d4;--sequential-89:#bad4d3;--sequential-9:#f1f3f3;--sequential-90:#b9d4d3;--sequential-91:#b8d4d3;--sequential-92:#b7d3d2;--sequential-93:#b7d3d2;--sequential-94:#b6d3d2;--sequential-95:#b5d2d1;--sequential-96:#b5d2d1;--sequential-97:#b4d1d1;--sequential-98:#b3d1d0;--sequential-99:#b3d0d0}</style>
+<g id="okabe-ito-normal"/>
+<g id="okabe-ito-deuteranopia"/>
+<g id="okabe-ito-protanopia"/>
+<g id="okabe-ito-tritanopia"/>
+<g id="viridis-normal"/>
+<g id="viridis-deuteranopia"/>
+<g id="viridis-protanopia"/>
+<g id="viridis-tritanopia"/>
+<g id="tol-bright-normal"/>
+<g id="tol-bright-deuteranopia"/>
+<g id="tol-bright-protanopia"/>
+<g id="tol-bright-tritanopia"/>
+<g id="figure_1">
   <g id="patch_1">
    <path d="M 0 190.148031 
 L 243.779528 190.148031 
@@ -48,7 +72,7 @@ C 169.224808 144.299464 168.579573 145.857198 168.579573 147.481228
 C 168.579573 149.105259 169.224808 150.662992 170.373171 151.811355 
 C 171.521534 152.959718 173.079267 153.604953 174.703298 153.604953 
 z
-" clip-path="url(#pe6ff7a4dd5)" style="fill: #a2da37; stroke: #a2da37"/>
+" clip-path="url(#pe6ff7a4dd5)" style="fill: var(--sequential-220); stroke: var(--sequential-220)"/>
     <path d="M 139.656641 120.584848 
 C 141.109218 120.584848 142.502497 120.007733 143.529624 118.980605 
 C 144.556751 117.953478 145.133866 116.560199 145.133866 115.107622 
@@ -59,7 +83,7 @@ C 134.75653 112.261766 134.179415 113.655045 134.179415 115.107622
 C 134.179415 116.560199 134.75653 117.953478 135.783657 118.980605 
 C 136.810785 120.007733 138.204063 120.584848 139.656641 120.584848 
 z
-" clip-path="url(#pe6ff7a4dd5)" style="fill: #26ad81; stroke: #26ad81"/>
+" clip-path="url(#pe6ff7a4dd5)" style="fill: var(--sequential-158); stroke: var(--sequential-158)"/>
     <path d="M 114.623314 87.477432 
 C 115.881283 87.477432 117.087898 86.977636 117.977416 86.088118 
 C 118.866934 85.198599 119.366731 83.991985 119.366731 82.734016 
@@ -70,7 +94,7 @@ C 110.379694 80.269432 109.879898 81.476047 109.879898 82.734016
 C 109.879898 83.991985 110.379694 85.198599 111.269212 86.088118 
 C 112.15873 86.977636 113.365345 87.477432 114.623314 87.477432 
 z
-" clip-path="url(#pe6ff7a4dd5)" style="fill: #26828e; stroke: #26828e"/>
+" clip-path="url(#pe6ff7a4dd5)" style="fill: var(--sequential-112); stroke: var(--sequential-112)"/>
     <path d="M 99.603318 54.391538 
 C 100.672386 54.391538 101.697812 53.966793 102.453757 53.210848 
 C 103.209702 52.454903 103.634447 51.429477 103.634447 50.360409 
@@ -81,7 +105,7 @@ C 95.996935 48.265916 95.572189 49.291342 95.572189 50.360409
 C 95.572189 51.429477 95.996935 52.454903 96.75288 53.210848 
 C 97.508825 53.966793 98.53425 54.391538 99.603318 54.391538 
 z
-" clip-path="url(#pe6ff7a4dd5)" style="fill: #32648e; stroke: #32648e"/>
+" clip-path="url(#pe6ff7a4dd5)" style="fill: var(--sequential-81); stroke: var(--sequential-81)"/>
     <path d="M 74.569992 21.340905 
 C 75.45951 21.340905 76.312716 20.987496 76.9417 20.358511 
 C 77.570684 19.729527 77.924094 18.876321 77.924094 17.986803 
@@ -92,7 +116,7 @@ C 71.569299 16.244079 71.21589 17.097285 71.21589 17.986803
 C 71.21589 18.876321 71.569299 19.729527 72.198284 20.358511 
 C 72.827268 20.987496 73.680474 21.340905 74.569992 21.340905 
 z
-" clip-path="url(#pe6ff7a4dd5)" style="fill: #453781; stroke: #453781"/>
+" clip-path="url(#pe6ff7a4dd5)" style="fill: var(--sequential-40); stroke: var(--sequential-40)"/>
    </g>
    <g id="matplotlib.axis_1">
     <g id="xtick_1">
@@ -261,1537 +285,1537 @@ L 219.633345 151.527929
 L 219.633345 150.990477 
 L 212.753954 150.990477 
 L 212.753954 151.527929 
-" clip-path="url(#p0082cdab20)" style="fill: #440154"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-0)"/>
     <path d="M 212.753954 150.990477 
 L 219.633345 150.990477 
 L 219.633345 150.453024 
 L 212.753954 150.453024 
 L 212.753954 150.990477 
-" clip-path="url(#p0082cdab20)" style="fill: #440256"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-1)"/>
     <path d="M 212.753954 150.453024 
 L 219.633345 150.453024 
 L 219.633345 149.915572 
 L 212.753954 149.915572 
 L 212.753954 150.453024 
-" clip-path="url(#p0082cdab20)" style="fill: #450457"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-2)"/>
     <path d="M 212.753954 149.915572 
 L 219.633345 149.915572 
 L 219.633345 149.378119 
 L 212.753954 149.378119 
 L 212.753954 149.915572 
-" clip-path="url(#p0082cdab20)" style="fill: #450559"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-3)"/>
     <path d="M 212.753954 149.378119 
 L 219.633345 149.378119 
 L 219.633345 148.840667 
 L 212.753954 148.840667 
 L 212.753954 149.378119 
-" clip-path="url(#p0082cdab20)" style="fill: #46075a"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-4)"/>
     <path d="M 212.753954 148.840667 
 L 219.633345 148.840667 
 L 219.633345 148.303214 
 L 212.753954 148.303214 
 L 212.753954 148.840667 
-" clip-path="url(#p0082cdab20)" style="fill: #46085c"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-5)"/>
     <path d="M 212.753954 148.303214 
 L 219.633345 148.303214 
 L 219.633345 147.765762 
 L 212.753954 147.765762 
 L 212.753954 148.303214 
-" clip-path="url(#p0082cdab20)" style="fill: #460a5d"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-6)"/>
     <path d="M 212.753954 147.765762 
 L 219.633345 147.765762 
 L 219.633345 147.22831 
 L 212.753954 147.22831 
 L 212.753954 147.765762 
-" clip-path="url(#p0082cdab20)" style="fill: #460b5e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-7)"/>
     <path d="M 212.753954 147.22831 
 L 219.633345 147.22831 
 L 219.633345 146.690857 
 L 212.753954 146.690857 
 L 212.753954 147.22831 
-" clip-path="url(#p0082cdab20)" style="fill: #470d60"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-8)"/>
     <path d="M 212.753954 146.690857 
 L 219.633345 146.690857 
 L 219.633345 146.153405 
 L 212.753954 146.153405 
 L 212.753954 146.690857 
-" clip-path="url(#p0082cdab20)" style="fill: #470e61"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-9)"/>
     <path d="M 212.753954 146.153405 
 L 219.633345 146.153405 
 L 219.633345 145.615952 
 L 212.753954 145.615952 
 L 212.753954 146.153405 
-" clip-path="url(#p0082cdab20)" style="fill: #471063"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-10)"/>
     <path d="M 212.753954 145.615952 
 L 219.633345 145.615952 
 L 219.633345 145.0785 
 L 212.753954 145.0785 
 L 212.753954 145.615952 
-" clip-path="url(#p0082cdab20)" style="fill: #471164"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-11)"/>
     <path d="M 212.753954 145.0785 
 L 219.633345 145.0785 
 L 219.633345 144.541047 
 L 212.753954 144.541047 
 L 212.753954 145.0785 
-" clip-path="url(#p0082cdab20)" style="fill: #471365"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-12)"/>
     <path d="M 212.753954 144.541047 
 L 219.633345 144.541047 
 L 219.633345 144.003595 
 L 212.753954 144.003595 
 L 212.753954 144.541047 
-" clip-path="url(#p0082cdab20)" style="fill: #481467"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-13)"/>
     <path d="M 212.753954 144.003595 
 L 219.633345 144.003595 
 L 219.633345 143.466142 
 L 212.753954 143.466142 
 L 212.753954 144.003595 
-" clip-path="url(#p0082cdab20)" style="fill: #481668"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-14)"/>
     <path d="M 212.753954 143.466142 
 L 219.633345 143.466142 
 L 219.633345 142.92869 
 L 212.753954 142.92869 
 L 212.753954 143.466142 
-" clip-path="url(#p0082cdab20)" style="fill: #481769"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-15)"/>
     <path d="M 212.753954 142.92869 
 L 219.633345 142.92869 
 L 219.633345 142.391238 
 L 212.753954 142.391238 
 L 212.753954 142.92869 
-" clip-path="url(#p0082cdab20)" style="fill: #48186a"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-16)"/>
     <path d="M 212.753954 142.391238 
 L 219.633345 142.391238 
 L 219.633345 141.853785 
 L 212.753954 141.853785 
 L 212.753954 142.391238 
-" clip-path="url(#p0082cdab20)" style="fill: #481a6c"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-17)"/>
     <path d="M 212.753954 141.853785 
 L 219.633345 141.853785 
 L 219.633345 141.316333 
 L 212.753954 141.316333 
 L 212.753954 141.853785 
-" clip-path="url(#p0082cdab20)" style="fill: #481b6d"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-18)"/>
     <path d="M 212.753954 141.316333 
 L 219.633345 141.316333 
 L 219.633345 140.77888 
 L 212.753954 140.77888 
 L 212.753954 141.316333 
-" clip-path="url(#p0082cdab20)" style="fill: #481c6e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-19)"/>
     <path d="M 212.753954 140.77888 
 L 219.633345 140.77888 
 L 219.633345 140.241428 
 L 212.753954 140.241428 
 L 212.753954 140.77888 
-" clip-path="url(#p0082cdab20)" style="fill: #481d6f"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-20)"/>
     <path d="M 212.753954 140.241428 
 L 219.633345 140.241428 
 L 219.633345 139.703975 
 L 212.753954 139.703975 
 L 212.753954 140.241428 
-" clip-path="url(#p0082cdab20)" style="fill: #481f70"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-21)"/>
     <path d="M 212.753954 139.703975 
 L 219.633345 139.703975 
 L 219.633345 139.166523 
 L 212.753954 139.166523 
 L 212.753954 139.703975 
-" clip-path="url(#p0082cdab20)" style="fill: #482071"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-22)"/>
     <path d="M 212.753954 139.166523 
 L 219.633345 139.166523 
 L 219.633345 138.62907 
 L 212.753954 138.62907 
 L 212.753954 139.166523 
-" clip-path="url(#p0082cdab20)" style="fill: #482173"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-23)"/>
     <path d="M 212.753954 138.62907 
 L 219.633345 138.62907 
 L 219.633345 138.091618 
 L 212.753954 138.091618 
 L 212.753954 138.62907 
-" clip-path="url(#p0082cdab20)" style="fill: #482374"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-24)"/>
     <path d="M 212.753954 138.091618 
 L 219.633345 138.091618 
 L 219.633345 137.554165 
 L 212.753954 137.554165 
 L 212.753954 138.091618 
-" clip-path="url(#p0082cdab20)" style="fill: #482475"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-25)"/>
     <path d="M 212.753954 137.554165 
 L 219.633345 137.554165 
 L 219.633345 137.016713 
 L 212.753954 137.016713 
 L 212.753954 137.554165 
-" clip-path="url(#p0082cdab20)" style="fill: #482576"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-26)"/>
     <path d="M 212.753954 137.016713 
 L 219.633345 137.016713 
 L 219.633345 136.479261 
 L 212.753954 136.479261 
 L 212.753954 137.016713 
-" clip-path="url(#p0082cdab20)" style="fill: #482677"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-27)"/>
     <path d="M 212.753954 136.479261 
 L 219.633345 136.479261 
 L 219.633345 135.941808 
 L 212.753954 135.941808 
 L 212.753954 136.479261 
-" clip-path="url(#p0082cdab20)" style="fill: #482878"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-28)"/>
     <path d="M 212.753954 135.941808 
 L 219.633345 135.941808 
 L 219.633345 135.404356 
 L 212.753954 135.404356 
 L 212.753954 135.941808 
-" clip-path="url(#p0082cdab20)" style="fill: #482979"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-29)"/>
     <path d="M 212.753954 135.404356 
 L 219.633345 135.404356 
 L 219.633345 134.866903 
 L 212.753954 134.866903 
 L 212.753954 135.404356 
-" clip-path="url(#p0082cdab20)" style="fill: #472a7a"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-30)"/>
     <path d="M 212.753954 134.866903 
 L 219.633345 134.866903 
 L 219.633345 134.329451 
 L 212.753954 134.329451 
 L 212.753954 134.866903 
-" clip-path="url(#p0082cdab20)" style="fill: #472c7a"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-31)"/>
     <path d="M 212.753954 134.329451 
 L 219.633345 134.329451 
 L 219.633345 133.791998 
 L 212.753954 133.791998 
 L 212.753954 134.329451 
-" clip-path="url(#p0082cdab20)" style="fill: #472d7b"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-32)"/>
     <path d="M 212.753954 133.791998 
 L 219.633345 133.791998 
 L 219.633345 133.254546 
 L 212.753954 133.254546 
 L 212.753954 133.791998 
-" clip-path="url(#p0082cdab20)" style="fill: #472e7c"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-33)"/>
     <path d="M 212.753954 133.254546 
 L 219.633345 133.254546 
 L 219.633345 132.717093 
 L 212.753954 132.717093 
 L 212.753954 133.254546 
-" clip-path="url(#p0082cdab20)" style="fill: #472f7d"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-34)"/>
     <path d="M 212.753954 132.717093 
 L 219.633345 132.717093 
 L 219.633345 132.179641 
 L 212.753954 132.179641 
 L 212.753954 132.717093 
-" clip-path="url(#p0082cdab20)" style="fill: #46307e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-35)"/>
     <path d="M 212.753954 132.179641 
 L 219.633345 132.179641 
 L 219.633345 131.642189 
 L 212.753954 131.642189 
 L 212.753954 132.179641 
-" clip-path="url(#p0082cdab20)" style="fill: #46327e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-36)"/>
     <path d="M 212.753954 131.642189 
 L 219.633345 131.642189 
 L 219.633345 131.104736 
 L 212.753954 131.104736 
 L 212.753954 131.642189 
-" clip-path="url(#p0082cdab20)" style="fill: #46337f"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-37)"/>
     <path d="M 212.753954 131.104736 
 L 219.633345 131.104736 
 L 219.633345 130.567284 
 L 212.753954 130.567284 
 L 212.753954 131.104736 
-" clip-path="url(#p0082cdab20)" style="fill: #463480"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-38)"/>
     <path d="M 212.753954 130.567284 
 L 219.633345 130.567284 
 L 219.633345 130.029831 
 L 212.753954 130.029831 
 L 212.753954 130.567284 
-" clip-path="url(#p0082cdab20)" style="fill: #453581"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-39)"/>
     <path d="M 212.753954 130.029831 
 L 219.633345 130.029831 
 L 219.633345 129.492379 
 L 212.753954 129.492379 
 L 212.753954 130.029831 
-" clip-path="url(#p0082cdab20)" style="fill: #453781"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-40)"/>
     <path d="M 212.753954 129.492379 
 L 219.633345 129.492379 
 L 219.633345 128.954926 
 L 212.753954 128.954926 
 L 212.753954 129.492379 
-" clip-path="url(#p0082cdab20)" style="fill: #453882"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-41)"/>
     <path d="M 212.753954 128.954926 
 L 219.633345 128.954926 
 L 219.633345 128.417474 
 L 212.753954 128.417474 
 L 212.753954 128.954926 
-" clip-path="url(#p0082cdab20)" style="fill: #443983"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-42)"/>
     <path d="M 212.753954 128.417474 
 L 219.633345 128.417474 
 L 219.633345 127.880021 
 L 212.753954 127.880021 
 L 212.753954 128.417474 
-" clip-path="url(#p0082cdab20)" style="fill: #443a83"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-43)"/>
     <path d="M 212.753954 127.880021 
 L 219.633345 127.880021 
 L 219.633345 127.342569 
 L 212.753954 127.342569 
 L 212.753954 127.880021 
-" clip-path="url(#p0082cdab20)" style="fill: #443b84"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-44)"/>
     <path d="M 212.753954 127.342569 
 L 219.633345 127.342569 
 L 219.633345 126.805117 
 L 212.753954 126.805117 
 L 212.753954 127.342569 
-" clip-path="url(#p0082cdab20)" style="fill: #433d84"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-45)"/>
     <path d="M 212.753954 126.805117 
 L 219.633345 126.805117 
 L 219.633345 126.267664 
 L 212.753954 126.267664 
 L 212.753954 126.805117 
-" clip-path="url(#p0082cdab20)" style="fill: #433e85"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-46)"/>
     <path d="M 212.753954 126.267664 
 L 219.633345 126.267664 
 L 219.633345 125.730212 
 L 212.753954 125.730212 
 L 212.753954 126.267664 
-" clip-path="url(#p0082cdab20)" style="fill: #423f85"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-47)"/>
     <path d="M 212.753954 125.730212 
 L 219.633345 125.730212 
 L 219.633345 125.192759 
 L 212.753954 125.192759 
 L 212.753954 125.730212 
-" clip-path="url(#p0082cdab20)" style="fill: #424086"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-48)"/>
     <path d="M 212.753954 125.192759 
 L 219.633345 125.192759 
 L 219.633345 124.655307 
 L 212.753954 124.655307 
 L 212.753954 125.192759 
-" clip-path="url(#p0082cdab20)" style="fill: #424186"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-49)"/>
     <path d="M 212.753954 124.655307 
 L 219.633345 124.655307 
 L 219.633345 124.117854 
 L 212.753954 124.117854 
 L 212.753954 124.655307 
-" clip-path="url(#p0082cdab20)" style="fill: #414287"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-50)"/>
     <path d="M 212.753954 124.117854 
 L 219.633345 124.117854 
 L 219.633345 123.580402 
 L 212.753954 123.580402 
 L 212.753954 124.117854 
-" clip-path="url(#p0082cdab20)" style="fill: #414487"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-51)"/>
     <path d="M 212.753954 123.580402 
 L 219.633345 123.580402 
 L 219.633345 123.042949 
 L 212.753954 123.042949 
 L 212.753954 123.580402 
-" clip-path="url(#p0082cdab20)" style="fill: #404588"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-52)"/>
     <path d="M 212.753954 123.042949 
 L 219.633345 123.042949 
 L 219.633345 122.505497 
 L 212.753954 122.505497 
 L 212.753954 123.042949 
-" clip-path="url(#p0082cdab20)" style="fill: #404688"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-53)"/>
     <path d="M 212.753954 122.505497 
 L 219.633345 122.505497 
 L 219.633345 121.968044 
 L 212.753954 121.968044 
 L 212.753954 122.505497 
-" clip-path="url(#p0082cdab20)" style="fill: #3f4788"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-54)"/>
     <path d="M 212.753954 121.968044 
 L 219.633345 121.968044 
 L 219.633345 121.430592 
 L 212.753954 121.430592 
 L 212.753954 121.968044 
-" clip-path="url(#p0082cdab20)" style="fill: #3f4889"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-55)"/>
     <path d="M 212.753954 121.430592 
 L 219.633345 121.430592 
 L 219.633345 120.89314 
 L 212.753954 120.89314 
 L 212.753954 121.430592 
-" clip-path="url(#p0082cdab20)" style="fill: #3e4989"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-56)"/>
     <path d="M 212.753954 120.89314 
 L 219.633345 120.89314 
 L 219.633345 120.355687 
 L 212.753954 120.355687 
 L 212.753954 120.89314 
-" clip-path="url(#p0082cdab20)" style="fill: #3e4a89"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-57)"/>
     <path d="M 212.753954 120.355687 
 L 219.633345 120.355687 
 L 219.633345 119.818235 
 L 212.753954 119.818235 
 L 212.753954 120.355687 
-" clip-path="url(#p0082cdab20)" style="fill: #3e4c8a"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-58)"/>
     <path d="M 212.753954 119.818235 
 L 219.633345 119.818235 
 L 219.633345 119.280782 
 L 212.753954 119.280782 
 L 212.753954 119.818235 
-" clip-path="url(#p0082cdab20)" style="fill: #3d4d8a"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-59)"/>
     <path d="M 212.753954 119.280782 
 L 219.633345 119.280782 
 L 219.633345 118.74333 
 L 212.753954 118.74333 
 L 212.753954 119.280782 
-" clip-path="url(#p0082cdab20)" style="fill: #3d4e8a"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-60)"/>
     <path d="M 212.753954 118.74333 
 L 219.633345 118.74333 
 L 219.633345 118.205877 
 L 212.753954 118.205877 
 L 212.753954 118.74333 
-" clip-path="url(#p0082cdab20)" style="fill: #3c4f8a"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-61)"/>
     <path d="M 212.753954 118.205877 
 L 219.633345 118.205877 
 L 219.633345 117.668425 
 L 212.753954 117.668425 
 L 212.753954 118.205877 
-" clip-path="url(#p0082cdab20)" style="fill: #3c508b"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-62)"/>
     <path d="M 212.753954 117.668425 
 L 219.633345 117.668425 
 L 219.633345 117.130972 
 L 212.753954 117.130972 
 L 212.753954 117.668425 
-" clip-path="url(#p0082cdab20)" style="fill: #3b518b"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-63)"/>
     <path d="M 212.753954 117.130972 
 L 219.633345 117.130972 
 L 219.633345 116.59352 
 L 212.753954 116.59352 
 L 212.753954 117.130972 
-" clip-path="url(#p0082cdab20)" style="fill: #3b528b"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-64)"/>
     <path d="M 212.753954 116.59352 
 L 219.633345 116.59352 
 L 219.633345 116.056068 
 L 212.753954 116.056068 
 L 212.753954 116.59352 
-" clip-path="url(#p0082cdab20)" style="fill: #3a538b"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-65)"/>
     <path d="M 212.753954 116.056068 
 L 219.633345 116.056068 
 L 219.633345 115.518615 
 L 212.753954 115.518615 
 L 212.753954 116.056068 
-" clip-path="url(#p0082cdab20)" style="fill: #3a548c"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-66)"/>
     <path d="M 212.753954 115.518615 
 L 219.633345 115.518615 
 L 219.633345 114.981163 
 L 212.753954 114.981163 
 L 212.753954 115.518615 
-" clip-path="url(#p0082cdab20)" style="fill: #39558c"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-67)"/>
     <path d="M 212.753954 114.981163 
 L 219.633345 114.981163 
 L 219.633345 114.44371 
 L 212.753954 114.44371 
 L 212.753954 114.981163 
-" clip-path="url(#p0082cdab20)" style="fill: #39568c"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-68)"/>
     <path d="M 212.753954 114.44371 
 L 219.633345 114.44371 
 L 219.633345 113.906258 
 L 212.753954 113.906258 
 L 212.753954 114.44371 
-" clip-path="url(#p0082cdab20)" style="fill: #38588c"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-69)"/>
     <path d="M 212.753954 113.906258 
 L 219.633345 113.906258 
 L 219.633345 113.368805 
 L 212.753954 113.368805 
 L 212.753954 113.906258 
-" clip-path="url(#p0082cdab20)" style="fill: #38598c"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-70)"/>
     <path d="M 212.753954 113.368805 
 L 219.633345 113.368805 
 L 219.633345 112.831353 
 L 212.753954 112.831353 
 L 212.753954 113.368805 
-" clip-path="url(#p0082cdab20)" style="fill: #375a8c"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-71)"/>
     <path d="M 212.753954 112.831353 
 L 219.633345 112.831353 
 L 219.633345 112.2939 
 L 212.753954 112.2939 
 L 212.753954 112.831353 
-" clip-path="url(#p0082cdab20)" style="fill: #375b8d"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-72)"/>
     <path d="M 212.753954 112.2939 
 L 219.633345 112.2939 
 L 219.633345 111.756448 
 L 212.753954 111.756448 
 L 212.753954 112.2939 
-" clip-path="url(#p0082cdab20)" style="fill: #365c8d"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-73)"/>
     <path d="M 212.753954 111.756448 
 L 219.633345 111.756448 
 L 219.633345 111.218996 
 L 212.753954 111.218996 
 L 212.753954 111.756448 
-" clip-path="url(#p0082cdab20)" style="fill: #365d8d"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-74)"/>
     <path d="M 212.753954 111.218996 
 L 219.633345 111.218996 
 L 219.633345 110.681543 
 L 212.753954 110.681543 
 L 212.753954 111.218996 
-" clip-path="url(#p0082cdab20)" style="fill: #355e8d"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-75)"/>
     <path d="M 212.753954 110.681543 
 L 219.633345 110.681543 
 L 219.633345 110.144091 
 L 212.753954 110.144091 
 L 212.753954 110.681543 
-" clip-path="url(#p0082cdab20)" style="fill: #355f8d"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-76)"/>
     <path d="M 212.753954 110.144091 
 L 219.633345 110.144091 
 L 219.633345 109.606638 
 L 212.753954 109.606638 
 L 212.753954 110.144091 
-" clip-path="url(#p0082cdab20)" style="fill: #34608d"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-77)"/>
     <path d="M 212.753954 109.606638 
 L 219.633345 109.606638 
 L 219.633345 109.069186 
 L 212.753954 109.069186 
 L 212.753954 109.606638 
-" clip-path="url(#p0082cdab20)" style="fill: #34618d"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-78)"/>
     <path d="M 212.753954 109.069186 
 L 219.633345 109.069186 
 L 219.633345 108.531733 
 L 212.753954 108.531733 
 L 212.753954 109.069186 
-" clip-path="url(#p0082cdab20)" style="fill: #33628d"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-79)"/>
     <path d="M 212.753954 108.531733 
 L 219.633345 108.531733 
 L 219.633345 107.994281 
 L 212.753954 107.994281 
 L 212.753954 108.531733 
-" clip-path="url(#p0082cdab20)" style="fill: #33638d"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-80)"/>
     <path d="M 212.753954 107.994281 
 L 219.633345 107.994281 
 L 219.633345 107.456828 
 L 212.753954 107.456828 
 L 212.753954 107.994281 
-" clip-path="url(#p0082cdab20)" style="fill: #32648e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-81)"/>
     <path d="M 212.753954 107.456828 
 L 219.633345 107.456828 
 L 219.633345 106.919376 
 L 212.753954 106.919376 
 L 212.753954 107.456828 
-" clip-path="url(#p0082cdab20)" style="fill: #32658e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-82)"/>
     <path d="M 212.753954 106.919376 
 L 219.633345 106.919376 
 L 219.633345 106.381923 
 L 212.753954 106.381923 
 L 212.753954 106.919376 
-" clip-path="url(#p0082cdab20)" style="fill: #31668e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-83)"/>
     <path d="M 212.753954 106.381923 
 L 219.633345 106.381923 
 L 219.633345 105.844471 
 L 212.753954 105.844471 
 L 212.753954 106.381923 
-" clip-path="url(#p0082cdab20)" style="fill: #31678e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-84)"/>
     <path d="M 212.753954 105.844471 
 L 219.633345 105.844471 
 L 219.633345 105.307019 
 L 212.753954 105.307019 
 L 212.753954 105.844471 
-" clip-path="url(#p0082cdab20)" style="fill: #31688e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-85)"/>
     <path d="M 212.753954 105.307019 
 L 219.633345 105.307019 
 L 219.633345 104.769566 
 L 212.753954 104.769566 
 L 212.753954 105.307019 
-" clip-path="url(#p0082cdab20)" style="fill: #30698e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-86)"/>
     <path d="M 212.753954 104.769566 
 L 219.633345 104.769566 
 L 219.633345 104.232114 
 L 212.753954 104.232114 
 L 212.753954 104.769566 
-" clip-path="url(#p0082cdab20)" style="fill: #306a8e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-87)"/>
     <path d="M 212.753954 104.232114 
 L 219.633345 104.232114 
 L 219.633345 103.694661 
 L 212.753954 103.694661 
 L 212.753954 104.232114 
-" clip-path="url(#p0082cdab20)" style="fill: #2f6b8e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-88)"/>
     <path d="M 212.753954 103.694661 
 L 219.633345 103.694661 
 L 219.633345 103.157209 
 L 212.753954 103.157209 
 L 212.753954 103.694661 
-" clip-path="url(#p0082cdab20)" style="fill: #2f6c8e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-89)"/>
     <path d="M 212.753954 103.157209 
 L 219.633345 103.157209 
 L 219.633345 102.619756 
 L 212.753954 102.619756 
 L 212.753954 103.157209 
-" clip-path="url(#p0082cdab20)" style="fill: #2e6d8e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-90)"/>
     <path d="M 212.753954 102.619756 
 L 219.633345 102.619756 
 L 219.633345 102.082304 
 L 212.753954 102.082304 
 L 212.753954 102.619756 
-" clip-path="url(#p0082cdab20)" style="fill: #2e6e8e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-91)"/>
     <path d="M 212.753954 102.082304 
 L 219.633345 102.082304 
 L 219.633345 101.544851 
 L 212.753954 101.544851 
 L 212.753954 102.082304 
-" clip-path="url(#p0082cdab20)" style="fill: #2e6f8e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-92)"/>
     <path d="M 212.753954 101.544851 
 L 219.633345 101.544851 
 L 219.633345 101.007399 
 L 212.753954 101.007399 
 L 212.753954 101.544851 
-" clip-path="url(#p0082cdab20)" style="fill: #2d708e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-93)"/>
     <path d="M 212.753954 101.007399 
 L 219.633345 101.007399 
 L 219.633345 100.469947 
 L 212.753954 100.469947 
 L 212.753954 101.007399 
-" clip-path="url(#p0082cdab20)" style="fill: #2d718e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-94)"/>
     <path d="M 212.753954 100.469947 
 L 219.633345 100.469947 
 L 219.633345 99.932494 
 L 212.753954 99.932494 
 L 212.753954 100.469947 
-" clip-path="url(#p0082cdab20)" style="fill: #2c718e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-95)"/>
     <path d="M 212.753954 99.932494 
 L 219.633345 99.932494 
 L 219.633345 99.395042 
 L 212.753954 99.395042 
 L 212.753954 99.932494 
-" clip-path="url(#p0082cdab20)" style="fill: #2c728e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-96)"/>
     <path d="M 212.753954 99.395042 
 L 219.633345 99.395042 
 L 219.633345 98.857589 
 L 212.753954 98.857589 
 L 212.753954 99.395042 
-" clip-path="url(#p0082cdab20)" style="fill: #2c738e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-97)"/>
     <path d="M 212.753954 98.857589 
 L 219.633345 98.857589 
 L 219.633345 98.320137 
 L 212.753954 98.320137 
 L 212.753954 98.857589 
-" clip-path="url(#p0082cdab20)" style="fill: #2b748e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-98)"/>
     <path d="M 212.753954 98.320137 
 L 219.633345 98.320137 
 L 219.633345 97.782684 
 L 212.753954 97.782684 
 L 212.753954 98.320137 
-" clip-path="url(#p0082cdab20)" style="fill: #2b758e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-99)"/>
     <path d="M 212.753954 97.782684 
 L 219.633345 97.782684 
 L 219.633345 97.245232 
 L 212.753954 97.245232 
 L 212.753954 97.782684 
-" clip-path="url(#p0082cdab20)" style="fill: #2a768e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-100)"/>
     <path d="M 212.753954 97.245232 
 L 219.633345 97.245232 
 L 219.633345 96.707779 
 L 212.753954 96.707779 
 L 212.753954 97.245232 
-" clip-path="url(#p0082cdab20)" style="fill: #2a778e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-101)"/>
     <path d="M 212.753954 96.707779 
 L 219.633345 96.707779 
 L 219.633345 96.170327 
 L 212.753954 96.170327 
 L 212.753954 96.707779 
-" clip-path="url(#p0082cdab20)" style="fill: #2a788e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-102)"/>
     <path d="M 212.753954 96.170327 
 L 219.633345 96.170327 
 L 219.633345 95.632875 
 L 212.753954 95.632875 
 L 212.753954 96.170327 
-" clip-path="url(#p0082cdab20)" style="fill: #29798e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-103)"/>
     <path d="M 212.753954 95.632875 
 L 219.633345 95.632875 
 L 219.633345 95.095422 
 L 212.753954 95.095422 
 L 212.753954 95.632875 
-" clip-path="url(#p0082cdab20)" style="fill: #297a8e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-104)"/>
     <path d="M 212.753954 95.095422 
 L 219.633345 95.095422 
 L 219.633345 94.55797 
 L 212.753954 94.55797 
 L 212.753954 95.095422 
-" clip-path="url(#p0082cdab20)" style="fill: #297b8e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-105)"/>
     <path d="M 212.753954 94.55797 
 L 219.633345 94.55797 
 L 219.633345 94.020517 
 L 212.753954 94.020517 
 L 212.753954 94.55797 
-" clip-path="url(#p0082cdab20)" style="fill: #287c8e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-106)"/>
     <path d="M 212.753954 94.020517 
 L 219.633345 94.020517 
 L 219.633345 93.483065 
 L 212.753954 93.483065 
 L 212.753954 94.020517 
-" clip-path="url(#p0082cdab20)" style="fill: #287d8e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-107)"/>
     <path d="M 212.753954 93.483065 
 L 219.633345 93.483065 
 L 219.633345 92.945612 
 L 212.753954 92.945612 
 L 212.753954 93.483065 
-" clip-path="url(#p0082cdab20)" style="fill: #277e8e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-108)"/>
     <path d="M 212.753954 92.945612 
 L 219.633345 92.945612 
 L 219.633345 92.40816 
 L 212.753954 92.40816 
 L 212.753954 92.945612 
-" clip-path="url(#p0082cdab20)" style="fill: #277f8e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-109)"/>
     <path d="M 212.753954 92.40816 
 L 219.633345 92.40816 
 L 219.633345 91.870707 
 L 212.753954 91.870707 
 L 212.753954 92.40816 
-" clip-path="url(#p0082cdab20)" style="fill: #27808e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-110)"/>
     <path d="M 212.753954 91.870707 
 L 219.633345 91.870707 
 L 219.633345 91.333255 
 L 212.753954 91.333255 
 L 212.753954 91.870707 
-" clip-path="url(#p0082cdab20)" style="fill: #26818e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-111)"/>
     <path d="M 212.753954 91.333255 
 L 219.633345 91.333255 
 L 219.633345 90.795802 
 L 212.753954 90.795802 
 L 212.753954 91.333255 
-" clip-path="url(#p0082cdab20)" style="fill: #26828e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-112)"/>
     <path d="M 212.753954 90.795802 
 L 219.633345 90.795802 
 L 219.633345 90.25835 
 L 212.753954 90.25835 
 L 212.753954 90.795802 
-" clip-path="url(#p0082cdab20)" style="fill: #26828e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-113)"/>
     <path d="M 212.753954 90.25835 
 L 219.633345 90.25835 
 L 219.633345 89.720898 
 L 212.753954 89.720898 
 L 212.753954 90.25835 
-" clip-path="url(#p0082cdab20)" style="fill: #25838e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-114)"/>
     <path d="M 212.753954 89.720898 
 L 219.633345 89.720898 
 L 219.633345 89.183445 
 L 212.753954 89.183445 
 L 212.753954 89.720898 
-" clip-path="url(#p0082cdab20)" style="fill: #25848e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-115)"/>
     <path d="M 212.753954 89.183445 
 L 219.633345 89.183445 
 L 219.633345 88.645993 
 L 212.753954 88.645993 
 L 212.753954 89.183445 
-" clip-path="url(#p0082cdab20)" style="fill: #25858e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-116)"/>
     <path d="M 212.753954 88.645993 
 L 219.633345 88.645993 
 L 219.633345 88.10854 
 L 212.753954 88.10854 
 L 212.753954 88.645993 
-" clip-path="url(#p0082cdab20)" style="fill: #24868e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-117)"/>
     <path d="M 212.753954 88.10854 
 L 219.633345 88.10854 
 L 219.633345 87.571088 
 L 212.753954 87.571088 
 L 212.753954 88.10854 
-" clip-path="url(#p0082cdab20)" style="fill: #24878e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-118)"/>
     <path d="M 212.753954 87.571088 
 L 219.633345 87.571088 
 L 219.633345 87.033635 
 L 212.753954 87.033635 
 L 212.753954 87.571088 
-" clip-path="url(#p0082cdab20)" style="fill: #23888e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-119)"/>
     <path d="M 212.753954 87.033635 
 L 219.633345 87.033635 
 L 219.633345 86.496183 
 L 212.753954 86.496183 
 L 212.753954 87.033635 
-" clip-path="url(#p0082cdab20)" style="fill: #23898e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-120)"/>
     <path d="M 212.753954 86.496183 
 L 219.633345 86.496183 
 L 219.633345 85.95873 
 L 212.753954 85.95873 
 L 212.753954 86.496183 
-" clip-path="url(#p0082cdab20)" style="fill: #238a8d"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-121)"/>
     <path d="M 212.753954 85.95873 
 L 219.633345 85.95873 
 L 219.633345 85.421278 
 L 212.753954 85.421278 
 L 212.753954 85.95873 
-" clip-path="url(#p0082cdab20)" style="fill: #228b8d"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-122)"/>
     <path d="M 212.753954 85.421278 
 L 219.633345 85.421278 
 L 219.633345 84.883826 
 L 212.753954 84.883826 
 L 212.753954 85.421278 
-" clip-path="url(#p0082cdab20)" style="fill: #228c8d"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-123)"/>
     <path d="M 212.753954 84.883826 
 L 219.633345 84.883826 
 L 219.633345 84.346373 
 L 212.753954 84.346373 
 L 212.753954 84.883826 
-" clip-path="url(#p0082cdab20)" style="fill: #228d8d"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-124)"/>
     <path d="M 212.753954 84.346373 
 L 219.633345 84.346373 
 L 219.633345 83.808921 
 L 212.753954 83.808921 
 L 212.753954 84.346373 
-" clip-path="url(#p0082cdab20)" style="fill: #218e8d"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-125)"/>
     <path d="M 212.753954 83.808921 
 L 219.633345 83.808921 
 L 219.633345 83.271468 
 L 212.753954 83.271468 
 L 212.753954 83.808921 
-" clip-path="url(#p0082cdab20)" style="fill: #218f8d"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-126)"/>
     <path d="M 212.753954 83.271468 
 L 219.633345 83.271468 
 L 219.633345 82.734016 
 L 212.753954 82.734016 
 L 212.753954 83.271468 
-" clip-path="url(#p0082cdab20)" style="fill: #21908d"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-127)"/>
     <path d="M 212.753954 82.734016 
 L 219.633345 82.734016 
 L 219.633345 82.196563 
 L 212.753954 82.196563 
 L 212.753954 82.734016 
-" clip-path="url(#p0082cdab20)" style="fill: #21918c"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-128)"/>
     <path d="M 212.753954 82.196563 
 L 219.633345 82.196563 
 L 219.633345 81.659111 
 L 212.753954 81.659111 
 L 212.753954 82.196563 
-" clip-path="url(#p0082cdab20)" style="fill: #20928c"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-129)"/>
     <path d="M 212.753954 81.659111 
 L 219.633345 81.659111 
 L 219.633345 81.121658 
 L 212.753954 81.121658 
 L 212.753954 81.659111 
-" clip-path="url(#p0082cdab20)" style="fill: #20928c"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-130)"/>
     <path d="M 212.753954 81.121658 
 L 219.633345 81.121658 
 L 219.633345 80.584206 
 L 212.753954 80.584206 
 L 212.753954 81.121658 
-" clip-path="url(#p0082cdab20)" style="fill: #20938c"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-131)"/>
     <path d="M 212.753954 80.584206 
 L 219.633345 80.584206 
 L 219.633345 80.046754 
 L 212.753954 80.046754 
 L 212.753954 80.584206 
-" clip-path="url(#p0082cdab20)" style="fill: #1f948c"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-132)"/>
     <path d="M 212.753954 80.046754 
 L 219.633345 80.046754 
 L 219.633345 79.509301 
 L 212.753954 79.509301 
 L 212.753954 80.046754 
-" clip-path="url(#p0082cdab20)" style="fill: #1f958b"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-133)"/>
     <path d="M 212.753954 79.509301 
 L 219.633345 79.509301 
 L 219.633345 78.971849 
 L 212.753954 78.971849 
 L 212.753954 79.509301 
-" clip-path="url(#p0082cdab20)" style="fill: #1f968b"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-134)"/>
     <path d="M 212.753954 78.971849 
 L 219.633345 78.971849 
 L 219.633345 78.434396 
 L 212.753954 78.434396 
 L 212.753954 78.971849 
-" clip-path="url(#p0082cdab20)" style="fill: #1f978b"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-135)"/>
     <path d="M 212.753954 78.434396 
 L 219.633345 78.434396 
 L 219.633345 77.896944 
 L 212.753954 77.896944 
 L 212.753954 78.434396 
-" clip-path="url(#p0082cdab20)" style="fill: #1f988b"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-136)"/>
     <path d="M 212.753954 77.896944 
 L 219.633345 77.896944 
 L 219.633345 77.359491 
 L 212.753954 77.359491 
 L 212.753954 77.896944 
-" clip-path="url(#p0082cdab20)" style="fill: #1f998a"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-137)"/>
     <path d="M 212.753954 77.359491 
 L 219.633345 77.359491 
 L 219.633345 76.822039 
 L 212.753954 76.822039 
 L 212.753954 77.359491 
-" clip-path="url(#p0082cdab20)" style="fill: #1f9a8a"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-138)"/>
     <path d="M 212.753954 76.822039 
 L 219.633345 76.822039 
 L 219.633345 76.284586 
 L 212.753954 76.284586 
 L 212.753954 76.822039 
-" clip-path="url(#p0082cdab20)" style="fill: #1e9b8a"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-139)"/>
     <path d="M 212.753954 76.284586 
 L 219.633345 76.284586 
 L 219.633345 75.747134 
 L 212.753954 75.747134 
 L 212.753954 76.284586 
-" clip-path="url(#p0082cdab20)" style="fill: #1e9c89"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-140)"/>
     <path d="M 212.753954 75.747134 
 L 219.633345 75.747134 
 L 219.633345 75.209681 
 L 212.753954 75.209681 
 L 212.753954 75.747134 
-" clip-path="url(#p0082cdab20)" style="fill: #1e9d89"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-141)"/>
     <path d="M 212.753954 75.209681 
 L 219.633345 75.209681 
 L 219.633345 74.672229 
 L 212.753954 74.672229 
 L 212.753954 75.209681 
-" clip-path="url(#p0082cdab20)" style="fill: #1f9e89"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-142)"/>
     <path d="M 212.753954 74.672229 
 L 219.633345 74.672229 
 L 219.633345 74.134777 
 L 212.753954 74.134777 
 L 212.753954 74.672229 
-" clip-path="url(#p0082cdab20)" style="fill: #1f9f88"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-143)"/>
     <path d="M 212.753954 74.134777 
 L 219.633345 74.134777 
 L 219.633345 73.597324 
 L 212.753954 73.597324 
 L 212.753954 74.134777 
-" clip-path="url(#p0082cdab20)" style="fill: #1fa088"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-144)"/>
     <path d="M 212.753954 73.597324 
 L 219.633345 73.597324 
 L 219.633345 73.059872 
 L 212.753954 73.059872 
 L 212.753954 73.597324 
-" clip-path="url(#p0082cdab20)" style="fill: #1fa188"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-145)"/>
     <path d="M 212.753954 73.059872 
 L 219.633345 73.059872 
 L 219.633345 72.522419 
 L 212.753954 72.522419 
 L 212.753954 73.059872 
-" clip-path="url(#p0082cdab20)" style="fill: #1fa187"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-146)"/>
     <path d="M 212.753954 72.522419 
 L 219.633345 72.522419 
 L 219.633345 71.984967 
 L 212.753954 71.984967 
 L 212.753954 72.522419 
-" clip-path="url(#p0082cdab20)" style="fill: #1fa287"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-147)"/>
     <path d="M 212.753954 71.984967 
 L 219.633345 71.984967 
 L 219.633345 71.447514 
 L 212.753954 71.447514 
 L 212.753954 71.984967 
-" clip-path="url(#p0082cdab20)" style="fill: #20a386"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-148)"/>
     <path d="M 212.753954 71.447514 
 L 219.633345 71.447514 
 L 219.633345 70.910062 
 L 212.753954 70.910062 
 L 212.753954 71.447514 
-" clip-path="url(#p0082cdab20)" style="fill: #20a486"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-149)"/>
     <path d="M 212.753954 70.910062 
 L 219.633345 70.910062 
 L 219.633345 70.372609 
 L 212.753954 70.372609 
 L 212.753954 70.910062 
-" clip-path="url(#p0082cdab20)" style="fill: #21a585"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-150)"/>
     <path d="M 212.753954 70.372609 
 L 219.633345 70.372609 
 L 219.633345 69.835157 
 L 212.753954 69.835157 
 L 212.753954 70.372609 
-" clip-path="url(#p0082cdab20)" style="fill: #21a685"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-151)"/>
     <path d="M 212.753954 69.835157 
 L 219.633345 69.835157 
 L 219.633345 69.297705 
 L 212.753954 69.297705 
 L 212.753954 69.835157 
-" clip-path="url(#p0082cdab20)" style="fill: #22a785"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-152)"/>
     <path d="M 212.753954 69.297705 
 L 219.633345 69.297705 
 L 219.633345 68.760252 
 L 212.753954 68.760252 
 L 212.753954 69.297705 
-" clip-path="url(#p0082cdab20)" style="fill: #22a884"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-153)"/>
     <path d="M 212.753954 68.760252 
 L 219.633345 68.760252 
 L 219.633345 68.2228 
 L 212.753954 68.2228 
 L 212.753954 68.760252 
-" clip-path="url(#p0082cdab20)" style="fill: #23a983"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-154)"/>
     <path d="M 212.753954 68.2228 
 L 219.633345 68.2228 
 L 219.633345 67.685347 
 L 212.753954 67.685347 
 L 212.753954 68.2228 
-" clip-path="url(#p0082cdab20)" style="fill: #24aa83"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-155)"/>
     <path d="M 212.753954 67.685347 
 L 219.633345 67.685347 
 L 219.633345 67.147895 
 L 212.753954 67.147895 
 L 212.753954 67.685347 
-" clip-path="url(#p0082cdab20)" style="fill: #25ab82"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-156)"/>
     <path d="M 212.753954 67.147895 
 L 219.633345 67.147895 
 L 219.633345 66.610442 
 L 212.753954 66.610442 
 L 212.753954 67.147895 
-" clip-path="url(#p0082cdab20)" style="fill: #25ac82"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-157)"/>
     <path d="M 212.753954 66.610442 
 L 219.633345 66.610442 
 L 219.633345 66.07299 
 L 212.753954 66.07299 
 L 212.753954 66.610442 
-" clip-path="url(#p0082cdab20)" style="fill: #26ad81"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-158)"/>
     <path d="M 212.753954 66.07299 
 L 219.633345 66.07299 
 L 219.633345 65.535537 
 L 212.753954 65.535537 
 L 212.753954 66.07299 
-" clip-path="url(#p0082cdab20)" style="fill: #27ad81"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-159)"/>
     <path d="M 212.753954 65.535537 
 L 219.633345 65.535537 
 L 219.633345 64.998085 
 L 212.753954 64.998085 
 L 212.753954 65.535537 
-" clip-path="url(#p0082cdab20)" style="fill: #28ae80"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-160)"/>
     <path d="M 212.753954 64.998085 
 L 219.633345 64.998085 
 L 219.633345 64.460633 
 L 212.753954 64.460633 
 L 212.753954 64.998085 
-" clip-path="url(#p0082cdab20)" style="fill: #29af7f"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-161)"/>
     <path d="M 212.753954 64.460633 
 L 219.633345 64.460633 
 L 219.633345 63.92318 
 L 212.753954 63.92318 
 L 212.753954 64.460633 
-" clip-path="url(#p0082cdab20)" style="fill: #2ab07f"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-162)"/>
     <path d="M 212.753954 63.92318 
 L 219.633345 63.92318 
 L 219.633345 63.385728 
 L 212.753954 63.385728 
 L 212.753954 63.92318 
-" clip-path="url(#p0082cdab20)" style="fill: #2cb17e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-163)"/>
     <path d="M 212.753954 63.385728 
 L 219.633345 63.385728 
 L 219.633345 62.848275 
 L 212.753954 62.848275 
 L 212.753954 63.385728 
-" clip-path="url(#p0082cdab20)" style="fill: #2db27d"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-164)"/>
     <path d="M 212.753954 62.848275 
 L 219.633345 62.848275 
 L 219.633345 62.310823 
 L 212.753954 62.310823 
 L 212.753954 62.848275 
-" clip-path="url(#p0082cdab20)" style="fill: #2eb37c"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-165)"/>
     <path d="M 212.753954 62.310823 
 L 219.633345 62.310823 
 L 219.633345 61.77337 
 L 212.753954 61.77337 
 L 212.753954 62.310823 
-" clip-path="url(#p0082cdab20)" style="fill: #2fb47c"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-166)"/>
     <path d="M 212.753954 61.77337 
 L 219.633345 61.77337 
 L 219.633345 61.235918 
 L 212.753954 61.235918 
 L 212.753954 61.77337 
-" clip-path="url(#p0082cdab20)" style="fill: #31b57b"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-167)"/>
     <path d="M 212.753954 61.235918 
 L 219.633345 61.235918 
 L 219.633345 60.698465 
 L 212.753954 60.698465 
 L 212.753954 61.235918 
-" clip-path="url(#p0082cdab20)" style="fill: #32b67a"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-168)"/>
     <path d="M 212.753954 60.698465 
 L 219.633345 60.698465 
 L 219.633345 60.161013 
 L 212.753954 60.161013 
 L 212.753954 60.698465 
-" clip-path="url(#p0082cdab20)" style="fill: #34b679"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-169)"/>
     <path d="M 212.753954 60.161013 
 L 219.633345 60.161013 
 L 219.633345 59.62356 
 L 212.753954 59.62356 
 L 212.753954 60.161013 
-" clip-path="url(#p0082cdab20)" style="fill: #35b779"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-170)"/>
     <path d="M 212.753954 59.62356 
 L 219.633345 59.62356 
 L 219.633345 59.086108 
 L 212.753954 59.086108 
 L 212.753954 59.62356 
-" clip-path="url(#p0082cdab20)" style="fill: #37b878"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-171)"/>
     <path d="M 212.753954 59.086108 
 L 219.633345 59.086108 
 L 219.633345 58.548656 
 L 212.753954 58.548656 
 L 212.753954 59.086108 
-" clip-path="url(#p0082cdab20)" style="fill: #38b977"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-172)"/>
     <path d="M 212.753954 58.548656 
 L 219.633345 58.548656 
 L 219.633345 58.011203 
 L 212.753954 58.011203 
 L 212.753954 58.548656 
-" clip-path="url(#p0082cdab20)" style="fill: #3aba76"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-173)"/>
     <path d="M 212.753954 58.011203 
 L 219.633345 58.011203 
 L 219.633345 57.473751 
 L 212.753954 57.473751 
 L 212.753954 58.011203 
-" clip-path="url(#p0082cdab20)" style="fill: #3bbb75"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-174)"/>
     <path d="M 212.753954 57.473751 
 L 219.633345 57.473751 
 L 219.633345 56.936298 
 L 212.753954 56.936298 
 L 212.753954 57.473751 
-" clip-path="url(#p0082cdab20)" style="fill: #3dbc74"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-175)"/>
     <path d="M 212.753954 56.936298 
 L 219.633345 56.936298 
 L 219.633345 56.398846 
 L 212.753954 56.398846 
 L 212.753954 56.936298 
-" clip-path="url(#p0082cdab20)" style="fill: #3fbc73"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-176)"/>
     <path d="M 212.753954 56.398846 
 L 219.633345 56.398846 
 L 219.633345 55.861393 
 L 212.753954 55.861393 
 L 212.753954 56.398846 
-" clip-path="url(#p0082cdab20)" style="fill: #40bd72"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-177)"/>
     <path d="M 212.753954 55.861393 
 L 219.633345 55.861393 
 L 219.633345 55.323941 
 L 212.753954 55.323941 
 L 212.753954 55.861393 
-" clip-path="url(#p0082cdab20)" style="fill: #42be71"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-178)"/>
     <path d="M 212.753954 55.323941 
 L 219.633345 55.323941 
 L 219.633345 54.786488 
 L 212.753954 54.786488 
 L 212.753954 55.323941 
-" clip-path="url(#p0082cdab20)" style="fill: #44bf70"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-179)"/>
     <path d="M 212.753954 54.786488 
 L 219.633345 54.786488 
 L 219.633345 54.249036 
 L 212.753954 54.249036 
 L 212.753954 54.786488 
-" clip-path="url(#p0082cdab20)" style="fill: #46c06f"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-180)"/>
     <path d="M 212.753954 54.249036 
 L 219.633345 54.249036 
 L 219.633345 53.711584 
 L 212.753954 53.711584 
 L 212.753954 54.249036 
-" clip-path="url(#p0082cdab20)" style="fill: #48c16e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-181)"/>
     <path d="M 212.753954 53.711584 
 L 219.633345 53.711584 
 L 219.633345 53.174131 
 L 212.753954 53.174131 
 L 212.753954 53.711584 
-" clip-path="url(#p0082cdab20)" style="fill: #4ac16d"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-182)"/>
     <path d="M 212.753954 53.174131 
 L 219.633345 53.174131 
 L 219.633345 52.636679 
 L 212.753954 52.636679 
 L 212.753954 53.174131 
-" clip-path="url(#p0082cdab20)" style="fill: #4cc26c"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-183)"/>
     <path d="M 212.753954 52.636679 
 L 219.633345 52.636679 
 L 219.633345 52.099226 
 L 212.753954 52.099226 
 L 212.753954 52.636679 
-" clip-path="url(#p0082cdab20)" style="fill: #4ec36b"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-184)"/>
     <path d="M 212.753954 52.099226 
 L 219.633345 52.099226 
 L 219.633345 51.561774 
 L 212.753954 51.561774 
 L 212.753954 52.099226 
-" clip-path="url(#p0082cdab20)" style="fill: #50c46a"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-185)"/>
     <path d="M 212.753954 51.561774 
 L 219.633345 51.561774 
 L 219.633345 51.024321 
 L 212.753954 51.024321 
 L 212.753954 51.561774 
-" clip-path="url(#p0082cdab20)" style="fill: #52c569"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-186)"/>
     <path d="M 212.753954 51.024321 
 L 219.633345 51.024321 
 L 219.633345 50.486869 
 L 212.753954 50.486869 
 L 212.753954 51.024321 
-" clip-path="url(#p0082cdab20)" style="fill: #54c568"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-187)"/>
     <path d="M 212.753954 50.486869 
 L 219.633345 50.486869 
 L 219.633345 49.949416 
 L 212.753954 49.949416 
 L 212.753954 50.486869 
-" clip-path="url(#p0082cdab20)" style="fill: #56c667"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-188)"/>
     <path d="M 212.753954 49.949416 
 L 219.633345 49.949416 
 L 219.633345 49.411964 
 L 212.753954 49.411964 
 L 212.753954 49.949416 
-" clip-path="url(#p0082cdab20)" style="fill: #58c765"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-189)"/>
     <path d="M 212.753954 49.411964 
 L 219.633345 49.411964 
 L 219.633345 48.874512 
 L 212.753954 48.874512 
 L 212.753954 49.411964 
-" clip-path="url(#p0082cdab20)" style="fill: #5ac864"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-190)"/>
     <path d="M 212.753954 48.874512 
 L 219.633345 48.874512 
 L 219.633345 48.337059 
 L 212.753954 48.337059 
 L 212.753954 48.874512 
-" clip-path="url(#p0082cdab20)" style="fill: #5cc863"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-191)"/>
     <path d="M 212.753954 48.337059 
 L 219.633345 48.337059 
 L 219.633345 47.799607 
 L 212.753954 47.799607 
 L 212.753954 48.337059 
-" clip-path="url(#p0082cdab20)" style="fill: #5ec962"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-192)"/>
     <path d="M 212.753954 47.799607 
 L 219.633345 47.799607 
 L 219.633345 47.262154 
 L 212.753954 47.262154 
 L 212.753954 47.799607 
-" clip-path="url(#p0082cdab20)" style="fill: #60ca60"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-193)"/>
     <path d="M 212.753954 47.262154 
 L 219.633345 47.262154 
 L 219.633345 46.724702 
 L 212.753954 46.724702 
 L 212.753954 47.262154 
-" clip-path="url(#p0082cdab20)" style="fill: #63cb5f"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-194)"/>
     <path d="M 212.753954 46.724702 
 L 219.633345 46.724702 
 L 219.633345 46.187249 
 L 212.753954 46.187249 
 L 212.753954 46.724702 
-" clip-path="url(#p0082cdab20)" style="fill: #65cb5e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-195)"/>
     <path d="M 212.753954 46.187249 
 L 219.633345 46.187249 
 L 219.633345 45.649797 
 L 212.753954 45.649797 
 L 212.753954 46.187249 
-" clip-path="url(#p0082cdab20)" style="fill: #67cc5c"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-196)"/>
     <path d="M 212.753954 45.649797 
 L 219.633345 45.649797 
 L 219.633345 45.112344 
 L 212.753954 45.112344 
 L 212.753954 45.649797 
-" clip-path="url(#p0082cdab20)" style="fill: #69cd5b"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-197)"/>
     <path d="M 212.753954 45.112344 
 L 219.633345 45.112344 
 L 219.633345 44.574892 
 L 212.753954 44.574892 
 L 212.753954 45.112344 
-" clip-path="url(#p0082cdab20)" style="fill: #6ccd5a"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-198)"/>
     <path d="M 212.753954 44.574892 
 L 219.633345 44.574892 
 L 219.633345 44.037439 
 L 212.753954 44.037439 
 L 212.753954 44.574892 
-" clip-path="url(#p0082cdab20)" style="fill: #6ece58"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-199)"/>
     <path d="M 212.753954 44.037439 
 L 219.633345 44.037439 
 L 219.633345 43.499987 
 L 212.753954 43.499987 
 L 212.753954 44.037439 
-" clip-path="url(#p0082cdab20)" style="fill: #70cf57"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-200)"/>
     <path d="M 212.753954 43.499987 
 L 219.633345 43.499987 
 L 219.633345 42.962535 
 L 212.753954 42.962535 
 L 212.753954 43.499987 
-" clip-path="url(#p0082cdab20)" style="fill: #73d056"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-201)"/>
     <path d="M 212.753954 42.962535 
 L 219.633345 42.962535 
 L 219.633345 42.425082 
 L 212.753954 42.425082 
 L 212.753954 42.962535 
-" clip-path="url(#p0082cdab20)" style="fill: #75d054"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-202)"/>
     <path d="M 212.753954 42.425082 
 L 219.633345 42.425082 
 L 219.633345 41.88763 
 L 212.753954 41.88763 
 L 212.753954 42.425082 
-" clip-path="url(#p0082cdab20)" style="fill: #77d153"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-203)"/>
     <path d="M 212.753954 41.88763 
 L 219.633345 41.88763 
 L 219.633345 41.350177 
 L 212.753954 41.350177 
 L 212.753954 41.88763 
-" clip-path="url(#p0082cdab20)" style="fill: #7ad151"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-204)"/>
     <path d="M 212.753954 41.350177 
 L 219.633345 41.350177 
 L 219.633345 40.812725 
 L 212.753954 40.812725 
 L 212.753954 41.350177 
-" clip-path="url(#p0082cdab20)" style="fill: #7cd250"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-205)"/>
     <path d="M 212.753954 40.812725 
 L 219.633345 40.812725 
 L 219.633345 40.275272 
 L 212.753954 40.275272 
 L 212.753954 40.812725 
-" clip-path="url(#p0082cdab20)" style="fill: #7fd34e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-206)"/>
     <path d="M 212.753954 40.275272 
 L 219.633345 40.275272 
 L 219.633345 39.73782 
 L 212.753954 39.73782 
 L 212.753954 40.275272 
-" clip-path="url(#p0082cdab20)" style="fill: #81d34d"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-207)"/>
     <path d="M 212.753954 39.73782 
 L 219.633345 39.73782 
 L 219.633345 39.200367 
 L 212.753954 39.200367 
 L 212.753954 39.73782 
-" clip-path="url(#p0082cdab20)" style="fill: #84d44b"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-208)"/>
     <path d="M 212.753954 39.200367 
 L 219.633345 39.200367 
 L 219.633345 38.662915 
 L 212.753954 38.662915 
 L 212.753954 39.200367 
-" clip-path="url(#p0082cdab20)" style="fill: #86d549"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-209)"/>
     <path d="M 212.753954 38.662915 
 L 219.633345 38.662915 
 L 219.633345 38.125463 
 L 212.753954 38.125463 
 L 212.753954 38.662915 
-" clip-path="url(#p0082cdab20)" style="fill: #89d548"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-210)"/>
     <path d="M 212.753954 38.125463 
 L 219.633345 38.125463 
 L 219.633345 37.58801 
 L 212.753954 37.58801 
 L 212.753954 38.125463 
-" clip-path="url(#p0082cdab20)" style="fill: #8bd646"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-211)"/>
     <path d="M 212.753954 37.58801 
 L 219.633345 37.58801 
 L 219.633345 37.050558 
 L 212.753954 37.050558 
 L 212.753954 37.58801 
-" clip-path="url(#p0082cdab20)" style="fill: #8ed645"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-212)"/>
     <path d="M 212.753954 37.050558 
 L 219.633345 37.050558 
 L 219.633345 36.513105 
 L 212.753954 36.513105 
 L 212.753954 37.050558 
-" clip-path="url(#p0082cdab20)" style="fill: #90d743"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-213)"/>
     <path d="M 212.753954 36.513105 
 L 219.633345 36.513105 
 L 219.633345 35.975653 
 L 212.753954 35.975653 
 L 212.753954 36.513105 
-" clip-path="url(#p0082cdab20)" style="fill: #93d741"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-214)"/>
     <path d="M 212.753954 35.975653 
 L 219.633345 35.975653 
 L 219.633345 35.4382 
 L 212.753954 35.4382 
 L 212.753954 35.975653 
-" clip-path="url(#p0082cdab20)" style="fill: #95d840"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-215)"/>
     <path d="M 212.753954 35.4382 
 L 219.633345 35.4382 
 L 219.633345 34.900748 
 L 212.753954 34.900748 
 L 212.753954 35.4382 
-" clip-path="url(#p0082cdab20)" style="fill: #98d83e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-216)"/>
     <path d="M 212.753954 34.900748 
 L 219.633345 34.900748 
 L 219.633345 34.363295 
 L 212.753954 34.363295 
 L 212.753954 34.900748 
-" clip-path="url(#p0082cdab20)" style="fill: #9bd93c"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-217)"/>
     <path d="M 212.753954 34.363295 
 L 219.633345 34.363295 
 L 219.633345 33.825843 
 L 212.753954 33.825843 
 L 212.753954 34.363295 
-" clip-path="url(#p0082cdab20)" style="fill: #9dd93b"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-218)"/>
     <path d="M 212.753954 33.825843 
 L 219.633345 33.825843 
 L 219.633345 33.288391 
 L 212.753954 33.288391 
 L 212.753954 33.825843 
-" clip-path="url(#p0082cdab20)" style="fill: #a0da39"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-219)"/>
     <path d="M 212.753954 33.288391 
 L 219.633345 33.288391 
 L 219.633345 32.750938 
 L 212.753954 32.750938 
 L 212.753954 33.288391 
-" clip-path="url(#p0082cdab20)" style="fill: #a2da37"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-220)"/>
     <path d="M 212.753954 32.750938 
 L 219.633345 32.750938 
 L 219.633345 32.213486 
 L 212.753954 32.213486 
 L 212.753954 32.750938 
-" clip-path="url(#p0082cdab20)" style="fill: #a5db36"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-221)"/>
     <path d="M 212.753954 32.213486 
 L 219.633345 32.213486 
 L 219.633345 31.676033 
 L 212.753954 31.676033 
 L 212.753954 32.213486 
-" clip-path="url(#p0082cdab20)" style="fill: #a8db34"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-222)"/>
     <path d="M 212.753954 31.676033 
 L 219.633345 31.676033 
 L 219.633345 31.138581 
 L 212.753954 31.138581 
 L 212.753954 31.676033 
-" clip-path="url(#p0082cdab20)" style="fill: #aadc32"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-223)"/>
     <path d="M 212.753954 31.138581 
 L 219.633345 31.138581 
 L 219.633345 30.601128 
 L 212.753954 30.601128 
 L 212.753954 31.138581 
-" clip-path="url(#p0082cdab20)" style="fill: #addc30"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-224)"/>
     <path d="M 212.753954 30.601128 
 L 219.633345 30.601128 
 L 219.633345 30.063676 
 L 212.753954 30.063676 
 L 212.753954 30.601128 
-" clip-path="url(#p0082cdab20)" style="fill: #b0dd2f"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-225)"/>
     <path d="M 212.753954 30.063676 
 L 219.633345 30.063676 
 L 219.633345 29.526223 
 L 212.753954 29.526223 
 L 212.753954 30.063676 
-" clip-path="url(#p0082cdab20)" style="fill: #b2dd2d"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-226)"/>
     <path d="M 212.753954 29.526223 
 L 219.633345 29.526223 
 L 219.633345 28.988771 
 L 212.753954 28.988771 
 L 212.753954 29.526223 
-" clip-path="url(#p0082cdab20)" style="fill: #b5de2b"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-227)"/>
     <path d="M 212.753954 28.988771 
 L 219.633345 28.988771 
 L 219.633345 28.451318 
 L 212.753954 28.451318 
 L 212.753954 28.988771 
-" clip-path="url(#p0082cdab20)" style="fill: #b8de29"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-228)"/>
     <path d="M 212.753954 28.451318 
 L 219.633345 28.451318 
 L 219.633345 27.913866 
 L 212.753954 27.913866 
 L 212.753954 28.451318 
-" clip-path="url(#p0082cdab20)" style="fill: #bade28"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-229)"/>
     <path d="M 212.753954 27.913866 
 L 219.633345 27.913866 
 L 219.633345 27.376414 
 L 212.753954 27.376414 
 L 212.753954 27.913866 
-" clip-path="url(#p0082cdab20)" style="fill: #bddf26"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-230)"/>
     <path d="M 212.753954 27.376414 
 L 219.633345 27.376414 
 L 219.633345 26.838961 
 L 212.753954 26.838961 
 L 212.753954 27.376414 
-" clip-path="url(#p0082cdab20)" style="fill: #c0df25"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-231)"/>
     <path d="M 212.753954 26.838961 
 L 219.633345 26.838961 
 L 219.633345 26.301509 
 L 212.753954 26.301509 
 L 212.753954 26.838961 
-" clip-path="url(#p0082cdab20)" style="fill: #c2df23"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-232)"/>
     <path d="M 212.753954 26.301509 
 L 219.633345 26.301509 
 L 219.633345 25.764056 
 L 212.753954 25.764056 
 L 212.753954 26.301509 
-" clip-path="url(#p0082cdab20)" style="fill: #c5e021"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-233)"/>
     <path d="M 212.753954 25.764056 
 L 219.633345 25.764056 
 L 219.633345 25.226604 
 L 212.753954 25.226604 
 L 212.753954 25.764056 
-" clip-path="url(#p0082cdab20)" style="fill: #c8e020"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-234)"/>
     <path d="M 212.753954 25.226604 
 L 219.633345 25.226604 
 L 219.633345 24.689151 
 L 212.753954 24.689151 
 L 212.753954 25.226604 
-" clip-path="url(#p0082cdab20)" style="fill: #cae11f"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-235)"/>
     <path d="M 212.753954 24.689151 
 L 219.633345 24.689151 
 L 219.633345 24.151699 
 L 212.753954 24.151699 
 L 212.753954 24.689151 
-" clip-path="url(#p0082cdab20)" style="fill: #cde11d"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-236)"/>
     <path d="M 212.753954 24.151699 
 L 219.633345 24.151699 
 L 219.633345 23.614246 
 L 212.753954 23.614246 
 L 212.753954 24.151699 
-" clip-path="url(#p0082cdab20)" style="fill: #d0e11c"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-237)"/>
     <path d="M 212.753954 23.614246 
 L 219.633345 23.614246 
 L 219.633345 23.076794 
 L 212.753954 23.076794 
 L 212.753954 23.614246 
-" clip-path="url(#p0082cdab20)" style="fill: #d2e21b"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-238)"/>
     <path d="M 212.753954 23.076794 
 L 219.633345 23.076794 
 L 219.633345 22.539342 
 L 212.753954 22.539342 
 L 212.753954 23.076794 
-" clip-path="url(#p0082cdab20)" style="fill: #d5e21a"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-239)"/>
     <path d="M 212.753954 22.539342 
 L 219.633345 22.539342 
 L 219.633345 22.001889 
 L 212.753954 22.001889 
 L 212.753954 22.539342 
-" clip-path="url(#p0082cdab20)" style="fill: #d8e219"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-240)"/>
     <path d="M 212.753954 22.001889 
 L 219.633345 22.001889 
 L 219.633345 21.464437 
 L 212.753954 21.464437 
 L 212.753954 22.001889 
-" clip-path="url(#p0082cdab20)" style="fill: #dae319"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-241)"/>
     <path d="M 212.753954 21.464437 
 L 219.633345 21.464437 
 L 219.633345 20.926984 
 L 212.753954 20.926984 
 L 212.753954 21.464437 
-" clip-path="url(#p0082cdab20)" style="fill: #dde318"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-242)"/>
     <path d="M 212.753954 20.926984 
 L 219.633345 20.926984 
 L 219.633345 20.389532 
 L 212.753954 20.389532 
 L 212.753954 20.926984 
-" clip-path="url(#p0082cdab20)" style="fill: #dfe318"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-243)"/>
     <path d="M 212.753954 20.389532 
 L 219.633345 20.389532 
 L 219.633345 19.852079 
 L 212.753954 19.852079 
 L 212.753954 20.389532 
-" clip-path="url(#p0082cdab20)" style="fill: #e2e418"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-244)"/>
     <path d="M 212.753954 19.852079 
 L 219.633345 19.852079 
 L 219.633345 19.314627 
 L 212.753954 19.314627 
 L 212.753954 19.852079 
-" clip-path="url(#p0082cdab20)" style="fill: #e5e419"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-245)"/>
     <path d="M 212.753954 19.314627 
 L 219.633345 19.314627 
 L 219.633345 18.777174 
 L 212.753954 18.777174 
 L 212.753954 19.314627 
-" clip-path="url(#p0082cdab20)" style="fill: #e7e419"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-246)"/>
     <path d="M 212.753954 18.777174 
 L 219.633345 18.777174 
 L 219.633345 18.239722 
 L 212.753954 18.239722 
 L 212.753954 18.777174 
-" clip-path="url(#p0082cdab20)" style="fill: #eae51a"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-247)"/>
     <path d="M 212.753954 18.239722 
 L 219.633345 18.239722 
 L 219.633345 17.70227 
 L 212.753954 17.70227 
 L 212.753954 18.239722 
-" clip-path="url(#p0082cdab20)" style="fill: #ece51b"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-248)"/>
     <path d="M 212.753954 17.70227 
 L 219.633345 17.70227 
 L 219.633345 17.164817 
 L 212.753954 17.164817 
 L 212.753954 17.70227 
-" clip-path="url(#p0082cdab20)" style="fill: #efe51c"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-249)"/>
     <path d="M 212.753954 17.164817 
 L 219.633345 17.164817 
 L 219.633345 16.627365 
 L 212.753954 16.627365 
 L 212.753954 17.164817 
-" clip-path="url(#p0082cdab20)" style="fill: #f1e51d"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-250)"/>
     <path d="M 212.753954 16.627365 
 L 219.633345 16.627365 
 L 219.633345 16.089912 
 L 212.753954 16.089912 
 L 212.753954 16.627365 
-" clip-path="url(#p0082cdab20)" style="fill: #f4e61e"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-251)"/>
     <path d="M 212.753954 16.089912 
 L 219.633345 16.089912 
 L 219.633345 15.55246 
 L 212.753954 15.55246 
 L 212.753954 16.089912 
-" clip-path="url(#p0082cdab20)" style="fill: #f6e620"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-252)"/>
     <path d="M 212.753954 15.55246 
 L 219.633345 15.55246 
 L 219.633345 15.015007 
 L 212.753954 15.015007 
 L 212.753954 15.55246 
-" clip-path="url(#p0082cdab20)" style="fill: #f8e621"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-253)"/>
     <path d="M 212.753954 15.015007 
 L 219.633345 15.015007 
 L 219.633345 14.477555 
 L 212.753954 14.477555 
 L 212.753954 15.015007 
-" clip-path="url(#p0082cdab20)" style="fill: #fbe723"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-254)"/>
     <path d="M 212.753954 14.477555 
 L 219.633345 14.477555 
 L 219.633345 13.940102 
 L 212.753954 13.940102 
 L 212.753954 14.477555 
-" clip-path="url(#p0082cdab20)" style="fill: #fde725"/>
+" clip-path="url(#p0082cdab20)" style="fill: var(--sequential-255)"/>
    </g>
    <g id="matplotlib.axis_3"/>
    <g id="matplotlib.axis_4">

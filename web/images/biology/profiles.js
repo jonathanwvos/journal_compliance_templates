@@ -151,61 +151,61 @@ window.JCT_BIOLOGY_PROFILES = {
             "plot": "phylogeny",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 21891
+            "bytes": 23141
           },
           {
             "plot": "volcano",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 91955
+            "bytes": 94657
           },
           {
             "plot": "tsne",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 47052
+            "bytes": 50694
           },
           {
             "plot": "umap",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 49035
+            "bytes": 52677
           },
           {
             "plot": "pca",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 47531
+            "bytes": 51173
           },
           {
             "plot": "heatmap",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 76866
+            "bytes": 153608
           },
           {
             "plot": "expression",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 36630
+            "bytes": 39408
           },
           {
             "plot": "library-size",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 20458
+            "bytes": 21628
           },
           {
             "plot": "pseudotime",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 29496
+            "bytes": 31122
           },
           {
             "plot": "enrichment",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 79615
+            "bytes": 159599
           }
         ]
       },
@@ -223,61 +223,61 @@ window.JCT_BIOLOGY_PROFILES = {
             "plot": "phylogeny",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 21900
+            "bytes": 23150
           },
           {
             "plot": "volcano",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 91994
+            "bytes": 94696
           },
           {
             "plot": "tsne",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 47063
+            "bytes": 50705
           },
           {
             "plot": "umap",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 48922
+            "bytes": 52564
           },
           {
             "plot": "pca",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 47551
+            "bytes": 51193
           },
           {
             "plot": "heatmap",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 77024
+            "bytes": 153766
           },
           {
             "plot": "expression",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 36659
+            "bytes": 39437
           },
           {
             "plot": "library-size",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 20452
+            "bytes": 21622
           },
           {
             "plot": "pseudotime",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 29519
+            "bytes": 31145
           },
           {
             "plot": "enrichment",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 79698
+            "bytes": 159682
           }
         ]
       },
@@ -295,61 +295,61 @@ window.JCT_BIOLOGY_PROFILES = {
             "plot": "phylogeny",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 21900
+            "bytes": 23150
           },
           {
             "plot": "volcano",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 91994
+            "bytes": 94696
           },
           {
             "plot": "tsne",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 47063
+            "bytes": 50705
           },
           {
             "plot": "umap",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 48922
+            "bytes": 52564
           },
           {
             "plot": "pca",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 47551
+            "bytes": 51193
           },
           {
             "plot": "heatmap",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 77024
+            "bytes": 153766
           },
           {
             "plot": "expression",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 36659
+            "bytes": 39437
           },
           {
             "plot": "library-size",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 20452
+            "bytes": 21622
           },
           {
             "plot": "pseudotime",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 29519
+            "bytes": 31145
           },
           {
             "plot": "enrichment",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 79698
+            "bytes": 159682
           }
         ]
       },
@@ -367,61 +367,61 @@ window.JCT_BIOLOGY_PROFILES = {
             "plot": "phylogeny",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 19970
+            "bytes": 21220
           },
           {
             "plot": "volcano",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 87912
+            "bytes": 90614
           },
           {
             "plot": "tsne",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 44626
+            "bytes": 48268
           },
           {
             "plot": "umap",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 44324
+            "bytes": 47966
           },
           {
             "plot": "pca",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 43654
+            "bytes": 47296
           },
           {
             "plot": "heatmap",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 74285
+            "bytes": 151027
           },
           {
             "plot": "expression",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 36517
+            "bytes": 39295
           },
           {
             "plot": "library-size",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 19248
+            "bytes": 20418
           },
           {
             "plot": "pseudotime",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 28391
+            "bytes": 30017
           },
           {
             "plot": "enrichment",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 75212
+            "bytes": 155196
           }
         ]
       }
@@ -580,61 +580,61 @@ window.JCT_BIOLOGY_PROFILES = {
             "plot": "phylogeny",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 21872
+            "bytes": 23122
           },
           {
             "plot": "volcano",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 91955
+            "bytes": 94657
           },
           {
             "plot": "tsne",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 47026
+            "bytes": 50668
           },
           {
             "plot": "umap",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 48936
+            "bytes": 52578
           },
           {
             "plot": "pca",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 47527
+            "bytes": 51169
           },
           {
             "plot": "heatmap",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 76393
+            "bytes": 153135
           },
           {
             "plot": "expression",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 36645
+            "bytes": 39423
           },
           {
             "plot": "library-size",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 20436
+            "bytes": 21606
           },
           {
             "plot": "pseudotime",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 29502
+            "bytes": 31128
           },
           {
             "plot": "enrichment",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 79659
+            "bytes": 159643
           }
         ]
       },
@@ -652,61 +652,61 @@ window.JCT_BIOLOGY_PROFILES = {
             "plot": "phylogeny",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 21879
+            "bytes": 23129
           },
           {
             "plot": "volcano",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 91941
+            "bytes": 94643
           },
           {
             "plot": "tsne",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 47029
+            "bytes": 50671
           },
           {
             "plot": "umap",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 48996
+            "bytes": 52638
           },
           {
             "plot": "pca",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 47524
+            "bytes": 51166
           },
           {
             "plot": "heatmap",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 76951
+            "bytes": 153693
           },
           {
             "plot": "expression",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 36616
+            "bytes": 39394
           },
           {
             "plot": "library-size",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 20432
+            "bytes": 21602
           },
           {
             "plot": "pseudotime",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 29483
+            "bytes": 31109
           },
           {
             "plot": "enrichment",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 78862
+            "bytes": 158846
           }
         ]
       },
@@ -724,61 +724,61 @@ window.JCT_BIOLOGY_PROFILES = {
             "plot": "phylogeny",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 21879
+            "bytes": 23129
           },
           {
             "plot": "volcano",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 91941
+            "bytes": 94643
           },
           {
             "plot": "tsne",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 47029
+            "bytes": 50671
           },
           {
             "plot": "umap",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 48996
+            "bytes": 52638
           },
           {
             "plot": "pca",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 47524
+            "bytes": 51166
           },
           {
             "plot": "heatmap",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 76951
+            "bytes": 153693
           },
           {
             "plot": "expression",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 36616
+            "bytes": 39394
           },
           {
             "plot": "library-size",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 20432
+            "bytes": 21602
           },
           {
             "plot": "pseudotime",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 29483
+            "bytes": 31109
           },
           {
             "plot": "enrichment",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 78862
+            "bytes": 158846
           }
         ]
       },
@@ -796,61 +796,61 @@ window.JCT_BIOLOGY_PROFILES = {
             "plot": "phylogeny",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 19961
+            "bytes": 21211
           },
           {
             "plot": "volcano",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 87880
+            "bytes": 90582
           },
           {
             "plot": "tsne",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 44589
+            "bytes": 48231
           },
           {
             "plot": "umap",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 44306
+            "bytes": 47948
           },
           {
             "plot": "pca",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 44670
+            "bytes": 48312
           },
           {
             "plot": "heatmap",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 74366
+            "bytes": 151108
           },
           {
             "plot": "expression",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 36494
+            "bytes": 39272
           },
           {
             "plot": "library-size",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 20398
+            "bytes": 21568
           },
           {
             "plot": "pseudotime",
             "min_font_pt": 7.0,
             "text_inside": true,
-            "bytes": 28251
+            "bytes": 29877
           },
           {
             "plot": "enrichment",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 77454
+            "bytes": 157438
           }
         ]
       }
@@ -1016,61 +1016,61 @@ window.JCT_BIOLOGY_PROFILES = {
             "plot": "phylogeny",
             "min_font_pt": 5.5,
             "text_inside": true,
-            "bytes": 21869
+            "bytes": 23119
           },
           {
             "plot": "volcano",
             "min_font_pt": 5.5,
             "text_inside": true,
-            "bytes": 91946
+            "bytes": 94648
           },
           {
             "plot": "tsne",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 47018
+            "bytes": 50660
           },
           {
             "plot": "umap",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 48893
+            "bytes": 52535
           },
           {
             "plot": "pca",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 47536
+            "bytes": 51178
           },
           {
             "plot": "heatmap",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 76919
+            "bytes": 153661
           },
           {
             "plot": "expression",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 36612
+            "bytes": 39390
           },
           {
             "plot": "library-size",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 20406
+            "bytes": 21576
           },
           {
             "plot": "pseudotime",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 29489
+            "bytes": 31115
           },
           {
             "plot": "enrichment",
             "min_font_pt": 5.5,
             "text_inside": true,
-            "bytes": 79624
+            "bytes": 159608
           }
         ]
       },
@@ -1088,61 +1088,61 @@ window.JCT_BIOLOGY_PROFILES = {
             "plot": "phylogeny",
             "min_font_pt": 5.5,
             "text_inside": true,
-            "bytes": 21839
+            "bytes": 23089
           },
           {
             "plot": "volcano",
             "min_font_pt": 5.5,
             "text_inside": true,
-            "bytes": 91909
+            "bytes": 94611
           },
           {
             "plot": "tsne",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 46976
+            "bytes": 50618
           },
           {
             "plot": "umap",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 48857
+            "bytes": 52499
           },
           {
             "plot": "pca",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 47499
+            "bytes": 51141
           },
           {
             "plot": "heatmap",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 76892
+            "bytes": 153634
           },
           {
             "plot": "expression",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 36598
+            "bytes": 39376
           },
           {
             "plot": "library-size",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 20381
+            "bytes": 21551
           },
           {
             "plot": "pseudotime",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 29459
+            "bytes": 31085
           },
           {
             "plot": "enrichment",
             "min_font_pt": 5.5,
             "text_inside": true,
-            "bytes": 79612
+            "bytes": 159596
           }
         ]
       },
@@ -1160,61 +1160,61 @@ window.JCT_BIOLOGY_PROFILES = {
             "plot": "phylogeny",
             "min_font_pt": 5.5,
             "text_inside": true,
-            "bytes": 21839
+            "bytes": 23089
           },
           {
             "plot": "volcano",
             "min_font_pt": 5.5,
             "text_inside": true,
-            "bytes": 91909
+            "bytes": 94611
           },
           {
             "plot": "tsne",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 46976
+            "bytes": 50618
           },
           {
             "plot": "umap",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 48857
+            "bytes": 52499
           },
           {
             "plot": "pca",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 47499
+            "bytes": 51141
           },
           {
             "plot": "heatmap",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 76892
+            "bytes": 153634
           },
           {
             "plot": "expression",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 36598
+            "bytes": 39376
           },
           {
             "plot": "library-size",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 20381
+            "bytes": 21551
           },
           {
             "plot": "pseudotime",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 29459
+            "bytes": 31085
           },
           {
             "plot": "enrichment",
             "min_font_pt": 5.5,
             "text_inside": true,
-            "bytes": 79612
+            "bytes": 159596
           }
         ]
       },
@@ -1232,61 +1232,61 @@ window.JCT_BIOLOGY_PROFILES = {
             "plot": "phylogeny",
             "min_font_pt": 5.5,
             "text_inside": true,
-            "bytes": 21807
+            "bytes": 23057
           },
           {
             "plot": "volcano",
             "min_font_pt": 5.5,
             "text_inside": true,
-            "bytes": 89748
+            "bytes": 92450
           },
           {
             "plot": "tsne",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 46850
+            "bytes": 50492
           },
           {
             "plot": "umap",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 46154
+            "bytes": 49796
           },
           {
             "plot": "pca",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 45934
+            "bytes": 49576
           },
           {
             "plot": "heatmap",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 74394
+            "bytes": 151136
           },
           {
             "plot": "expression",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 36468
+            "bytes": 39246
           },
           {
             "plot": "library-size",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 20364
+            "bytes": 21534
           },
           {
             "plot": "pseudotime",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 29145
+            "bytes": 30771
           },
           {
             "plot": "enrichment",
             "min_font_pt": 5.5,
             "text_inside": true,
-            "bytes": 77430
+            "bytes": 157414
           }
         ]
       }
@@ -1445,61 +1445,61 @@ window.JCT_BIOLOGY_PROFILES = {
             "plot": "phylogeny",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 23753
+            "bytes": 25003
           },
           {
             "plot": "volcano",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 92134
+            "bytes": 94836
           },
           {
             "plot": "tsne",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 47799
+            "bytes": 51441
           },
           {
             "plot": "umap",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 49130
+            "bytes": 52772
           },
           {
             "plot": "pca",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 48857
+            "bytes": 52499
           },
           {
             "plot": "heatmap",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 77331
+            "bytes": 154073
           },
           {
             "plot": "expression",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 38914
+            "bytes": 41692
           },
           {
             "plot": "library-size",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 21431
+            "bytes": 22601
           },
           {
             "plot": "pseudotime",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 31260
+            "bytes": 32886
           },
           {
             "plot": "enrichment",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 81135
+            "bytes": 161119
           }
         ]
       },
@@ -1517,61 +1517,61 @@ window.JCT_BIOLOGY_PROFILES = {
             "plot": "phylogeny",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 23911
+            "bytes": 25161
           },
           {
             "plot": "volcano",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 92282
+            "bytes": 94984
           },
           {
             "plot": "tsne",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 47929
+            "bytes": 51571
           },
           {
             "plot": "umap",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 49200
+            "bytes": 52842
           },
           {
             "plot": "pca",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 48948
+            "bytes": 52590
           },
           {
             "plot": "heatmap",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 78863
+            "bytes": 155605
           },
           {
             "plot": "expression",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 39089
+            "bytes": 41867
           },
           {
             "plot": "library-size",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 21609
+            "bytes": 22779
           },
           {
             "plot": "pseudotime",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 31379
+            "bytes": 33005
           },
           {
             "plot": "enrichment",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 81215
+            "bytes": 161199
           }
         ]
       },
@@ -1589,61 +1589,61 @@ window.JCT_BIOLOGY_PROFILES = {
             "plot": "phylogeny",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 23911
+            "bytes": 25161
           },
           {
             "plot": "volcano",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 92282
+            "bytes": 94984
           },
           {
             "plot": "tsne",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 47929
+            "bytes": 51571
           },
           {
             "plot": "umap",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 49200
+            "bytes": 52842
           },
           {
             "plot": "pca",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 48948
+            "bytes": 52590
           },
           {
             "plot": "heatmap",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 78863
+            "bytes": 155605
           },
           {
             "plot": "expression",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 39089
+            "bytes": 41867
           },
           {
             "plot": "library-size",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 21609
+            "bytes": 22779
           },
           {
             "plot": "pseudotime",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 31379
+            "bytes": 33005
           },
           {
             "plot": "enrichment",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 81215
+            "bytes": 161199
           }
         ]
       },
@@ -1661,61 +1661,61 @@ window.JCT_BIOLOGY_PROFILES = {
             "plot": "phylogeny",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 23878
+            "bytes": 25128
           },
           {
             "plot": "volcano",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 89752
+            "bytes": 92454
           },
           {
             "plot": "tsne",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 47032
+            "bytes": 50674
           },
           {
             "plot": "umap",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 47530
+            "bytes": 51172
           },
           {
             "plot": "pca",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 46447
+            "bytes": 50089
           },
           {
             "plot": "heatmap",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 76165
+            "bytes": 152907
           },
           {
             "plot": "expression",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 37227
+            "bytes": 40005
           },
           {
             "plot": "library-size",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 20424
+            "bytes": 21594
           },
           {
             "plot": "pseudotime",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 30329
+            "bytes": 31955
           },
           {
             "plot": "enrichment",
             "min_font_pt": 9.0,
             "text_inside": true,
-            "bytes": 79112
+            "bytes": 159096
           }
         ]
       }
@@ -1875,61 +1875,61 @@ window.JCT_BIOLOGY_PROFILES = {
             "plot": "phylogeny",
             "min_font_pt": 5.5,
             "text_inside": true,
-            "bytes": 21856
+            "bytes": 23106
           },
           {
             "plot": "volcano",
             "min_font_pt": 5.5,
             "text_inside": true,
-            "bytes": 91969
+            "bytes": 94671
           },
           {
             "plot": "tsne",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 47017
+            "bytes": 50659
           },
           {
             "plot": "umap",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 48896
+            "bytes": 52538
           },
           {
             "plot": "pca",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 47561
+            "bytes": 51203
           },
           {
             "plot": "heatmap",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 76959
+            "bytes": 153701
           },
           {
             "plot": "expression",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 36614
+            "bytes": 39392
           },
           {
             "plot": "library-size",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 20413
+            "bytes": 21583
           },
           {
             "plot": "pseudotime",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 29442
+            "bytes": 31068
           },
           {
             "plot": "enrichment",
             "min_font_pt": 5.5,
             "text_inside": true,
-            "bytes": 79692
+            "bytes": 159676
           }
         ]
       },
@@ -1947,61 +1947,61 @@ window.JCT_BIOLOGY_PROFILES = {
             "plot": "phylogeny",
             "min_font_pt": 5.5,
             "text_inside": true,
-            "bytes": 21888
+            "bytes": 23138
           },
           {
             "plot": "volcano",
             "min_font_pt": 5.5,
             "text_inside": true,
-            "bytes": 91972
+            "bytes": 94674
           },
           {
             "plot": "tsne",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 47029
+            "bytes": 50671
           },
           {
             "plot": "umap",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 48917
+            "bytes": 52559
           },
           {
             "plot": "pca",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 47574
+            "bytes": 51216
           },
           {
             "plot": "heatmap",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 76929
+            "bytes": 153671
           },
           {
             "plot": "expression",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 36619
+            "bytes": 39397
           },
           {
             "plot": "library-size",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 20412
+            "bytes": 21582
           },
           {
             "plot": "pseudotime",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 29440
+            "bytes": 31066
           },
           {
             "plot": "enrichment",
             "min_font_pt": 5.5,
             "text_inside": true,
-            "bytes": 79730
+            "bytes": 159714
           }
         ]
       },
@@ -2019,61 +2019,61 @@ window.JCT_BIOLOGY_PROFILES = {
             "plot": "phylogeny",
             "min_font_pt": 5.5,
             "text_inside": true,
-            "bytes": 21888
+            "bytes": 23138
           },
           {
             "plot": "volcano",
             "min_font_pt": 5.5,
             "text_inside": true,
-            "bytes": 91972
+            "bytes": 94674
           },
           {
             "plot": "tsne",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 47029
+            "bytes": 50671
           },
           {
             "plot": "umap",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 48917
+            "bytes": 52559
           },
           {
             "plot": "pca",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 47574
+            "bytes": 51216
           },
           {
             "plot": "heatmap",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 76929
+            "bytes": 153671
           },
           {
             "plot": "expression",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 36619
+            "bytes": 39397
           },
           {
             "plot": "library-size",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 20412
+            "bytes": 21582
           },
           {
             "plot": "pseudotime",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 29440
+            "bytes": 31066
           },
           {
             "plot": "enrichment",
             "min_font_pt": 5.5,
             "text_inside": true,
-            "bytes": 79730
+            "bytes": 159714
           }
         ]
       },
@@ -2091,61 +2091,61 @@ window.JCT_BIOLOGY_PROFILES = {
             "plot": "phylogeny",
             "min_font_pt": 5.5,
             "text_inside": true,
-            "bytes": 21772
+            "bytes": 23022
           },
           {
             "plot": "volcano",
             "min_font_pt": 5.5,
             "text_inside": true,
-            "bytes": 87855
+            "bytes": 90557
           },
           {
             "plot": "tsne",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 46069
+            "bytes": 49711
           },
           {
             "plot": "umap",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 46122
+            "bytes": 49764
           },
           {
             "plot": "pca",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 46264
+            "bytes": 49906
           },
           {
             "plot": "heatmap",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 74161
+            "bytes": 150903
           },
           {
             "plot": "expression",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 36470
+            "bytes": 39248
           },
           {
             "plot": "library-size",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 19176
+            "bytes": 20346
           },
           {
             "plot": "pseudotime",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 29062
+            "bytes": 30688
           },
           {
             "plot": "enrichment",
             "min_font_pt": 5.5,
             "text_inside": true,
-            "bytes": 77381
+            "bytes": 157365
           }
         ]
       }
@@ -2297,61 +2297,61 @@ window.JCT_BIOLOGY_PROFILES = {
             "plot": "phylogeny",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 19924
+            "bytes": 21174
           },
           {
             "plot": "volcano",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 89751
+            "bytes": 92453
           },
           {
             "plot": "tsne",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 44609
+            "bytes": 48251
           },
           {
             "plot": "umap",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 44325
+            "bytes": 47967
           },
           {
             "plot": "pca",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 44705
+            "bytes": 48347
           },
           {
             "plot": "heatmap",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 74381
+            "bytes": 151123
           },
           {
             "plot": "expression",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 36475
+            "bytes": 39253
           },
           {
             "plot": "library-size",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 20399
+            "bytes": 21569
           },
           {
             "plot": "pseudotime",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 29166
+            "bytes": 30792
           },
           {
             "plot": "enrichment",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 77457
+            "bytes": 157441
           }
         ]
       },
@@ -2369,61 +2369,61 @@ window.JCT_BIOLOGY_PROFILES = {
             "plot": "phylogeny",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 21828
+            "bytes": 23078
           },
           {
             "plot": "volcano",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 91944
+            "bytes": 94646
           },
           {
             "plot": "tsne",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 47032
+            "bytes": 50674
           },
           {
             "plot": "umap",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 48902
+            "bytes": 52544
           },
           {
             "plot": "pca",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 47552
+            "bytes": 51194
           },
           {
             "plot": "heatmap",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 76960
+            "bytes": 153702
           },
           {
             "plot": "expression",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 36582
+            "bytes": 39360
           },
           {
             "plot": "library-size",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 20418
+            "bytes": 21588
           },
           {
             "plot": "pseudotime",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 29513
+            "bytes": 31139
           },
           {
             "plot": "enrichment",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 79657
+            "bytes": 159641
           }
         ]
       },
@@ -2441,61 +2441,61 @@ window.JCT_BIOLOGY_PROFILES = {
             "plot": "phylogeny",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 21828
+            "bytes": 23078
           },
           {
             "plot": "volcano",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 91944
+            "bytes": 94646
           },
           {
             "plot": "tsne",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 47032
+            "bytes": 50674
           },
           {
             "plot": "umap",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 48902
+            "bytes": 52544
           },
           {
             "plot": "pca",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 47552
+            "bytes": 51194
           },
           {
             "plot": "heatmap",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 76960
+            "bytes": 153702
           },
           {
             "plot": "expression",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 36582
+            "bytes": 39360
           },
           {
             "plot": "library-size",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 20418
+            "bytes": 21588
           },
           {
             "plot": "pseudotime",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 29513
+            "bytes": 31139
           },
           {
             "plot": "enrichment",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 79657
+            "bytes": 159641
           }
         ]
       },
@@ -2513,61 +2513,61 @@ window.JCT_BIOLOGY_PROFILES = {
             "plot": "phylogeny",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 19919
+            "bytes": 21169
           },
           {
             "plot": "volcano",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 89760
+            "bytes": 92462
           },
           {
             "plot": "tsne",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 45681
+            "bytes": 49323
           },
           {
             "plot": "umap",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 44340
+            "bytes": 47982
           },
           {
             "plot": "pca",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 45999
+            "bytes": 49641
           },
           {
             "plot": "heatmap",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 74352
+            "bytes": 151094
           },
           {
             "plot": "expression",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 36438
+            "bytes": 39216
           },
           {
             "plot": "library-size",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 20402
+            "bytes": 21572
           },
           {
             "plot": "pseudotime",
             "min_font_pt": 6.5,
             "text_inside": true,
-            "bytes": 29180
+            "bytes": 30806
           },
           {
             "plot": "enrichment",
             "min_font_pt": 6.0,
             "text_inside": true,
-            "bytes": 77442
+            "bytes": 157426
           }
         ]
       }

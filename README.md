@@ -149,6 +149,12 @@ phylogenetic trees, volcano plots, t-SNE, UMAP, PCA, expression heatmaps, boxplo
 sequencing depth, pseudotime, and pathway enrichment. Each figure and caption shares
 one box; supporting rules and filenames remain collapsed.
 
+The scientific palette selector (Okabe-Ito, Viridis, or Tol Bright) also updates
+every example plot and the mock report, including legends and colour bars. Heatmaps
+use palette-derived diverging colours with a neutral zero; enrichment plots use
+sequential scales. Colour-vision simulations apply to the artwork too. The selected
+palette persists when switching journals or layouts; the page theme remains separate.
+
 The **Mock report** view includes all four layouts and a table in each available
 series (Science’s table is supplementary to keep its four-item main limit).
 Numbering, plot typography, strokes, captions, tables and report text follow the
@@ -166,6 +172,8 @@ and keeps heatmaps and colour bars vector. Tests inspect the resulting SVG sizes
 text, strokes and absence of raster images. Liberation fonts are bundled under OFL
 as explicitly labelled substitutes when the preferred commercial fonts are absent.
 These SVGs are browser previews, not final submission-format exports.
+Palette and simulation variants use embedded CSS with SVG fragment targets, so
+the same assets work on GitHub Pages and when opening `index.html` locally.
 
 #### Guidance reviewed for these examples (18 October 2026)
 

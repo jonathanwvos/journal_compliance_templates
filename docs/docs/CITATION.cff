@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this framework or templates in your academic research or publications, please cite it as below."
+title: "Journal Compliance Templates: Machine-Readable Formatting Specifications for Scientific Publishing"
+authors:
+  - family-names: "Vos"
+    given-names: "Jonathan W."
+    email: "jonathanwvos@gmail.com"
+url: "https://github.com/jonathanwvos/journal_compliance_templates"
+repository-code: "https://github.com/jonathanwvos/journal_compliance_templates"
+keywords:
+  - "scientific publishing"
+  - "compliance templates"
+  - "data visualization"
+  - "reproducible research"
+  - "matplotlib"
+  - "nature"
+  - "academic writing"
+license: "MIT"
+version: "0.1.0"
+date-released: 2026-09-11

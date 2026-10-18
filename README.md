@@ -74,6 +74,16 @@ Run the server script or CLI:
 ```
 Then navigate to `http://localhost:8000` to interactively explore templates, test CVD simulations, copy palette formats, and 1-click download pre-built `.mplstyle`, R themes, and SVG grids.
 
+#### GitHub Pages
+
+`docs/index.html` is the GitHub Pages copy of `web/index.html`. The `docs/`
+directory includes the site's scripts, styles, data, figures, fonts and downloads;
+`.nojekyll` enables static-file serving. Edit the source files in `web/`, then run
+`uv run jct build` to refresh the copy before committing and pushing `docs/`.
+
+In **Settings → Pages**, choose **Deploy from a branch**, select your publishing
+branch and **/docs**, then save. See the [GitHub Pages publishing instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+
 ### 5. Automated Browser GUI QA Testing
 Run the automated end-to-end browser QA tests to verify the UI:
 ```bash

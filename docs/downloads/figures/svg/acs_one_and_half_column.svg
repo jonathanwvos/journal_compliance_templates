@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   version="1.1"
+   width="114.00mm"
+   height="85.50mm"
+   viewBox="0 0 114.00 85.50">
+
+  <defs>
+    <style type="text/css">
+      .guide-line { stroke: #0284C7; stroke-width: 0.2; stroke-dasharray: 1, 1; fill: none; }
+      .margin-box { stroke: #E0E7FF; stroke-width: 0.15; fill: none; }
+      .gutter-box { fill: #FEF3C7; opacity: 0.4; stroke: #F59E0B; stroke-width: 0.1; stroke-dasharray: 0.5, 0.5; }
+      .info-text { font-family: 'Arial', Helvetica, Arial, sans-serif; font-size: 2.2px; fill: #64748B; }
+      .header-title { font-family: 'Arial', Helvetica, Arial, sans-serif; font-size: 2.8px; font-weight: bold; fill: #0F172A; }
+      .ladder-text { font-family: 'Arial', Helvetica, Arial, sans-serif; fill: #334155; }
+      .danger-text { font-family: 'Arial', Helvetica, Arial, sans-serif; font-size: 1.8px; font-weight: bold; fill: #E11D48; }
+    </style>
+  </defs>
+
+  <!-- ===================================================================== -->
+  <!-- LAYER 1: GUIDES, MARGINS & COMPLIANCE REFERENCES (LOCKED)            -->
+  <!-- ===================================================================== -->
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Guides and Compliance (Template)"
+     id="layer-guides"
+     style="display:inline;">
+
+    <!-- Outer Physical Canvas Boundary -->
+    <rect
+       x="0"
+       y="0"
+       width="114.00"
+       height="85.50"
+       fill="#FFFFFF"
+       stroke="#CBD5E1"
+       stroke-width="0.3" />
+
+    <!-- Safe Margin Boundary (2 mm inside) -->
+    <rect
+       x="2.0"
+       y="2.0"
+       width="110.00"
+       height="81.50"
+       class="margin-box" />
+
+    <!-- Top Metadata Header -->
+    <text x="3.0" y="5.0" class="header-title">Journal of the American Chemical Society — Intermediate 1.5-column width (4.5 in / 114.0 mm / 27 picas)</text>
+    <text x="3.0" y="8.0" class="info-text">
+      Canvas: 114.0 × 85.5 mm | Min Gutter: 3.0 mm | Min Font: 6.0 pt | Line Art: 1200 DPI
+    </text>
+
+    <!-- Visual Panel Boundary Guides (Equal Dual Panel Split Sample) -->
+    <rect
+       x="3.0"
+       y="11.0"
+       width="52.50"
+       height="63.50"
+       class="guide-line" />
+    <rect
+       x="58.50"
+       y="11.0"
+       width="52.50"
+       height="63.50"
+       class="guide-line" />
+
+    <!-- Gutter Zone Indicator -->
+    <rect
+       x="55.50"
+       y="11.0"
+       width="3.00"
+       height="63.50"
+       class="gutter-box">
+      <title>Minimum Gutter: 3.0 mm</title>
+    </rect>
+
+    <!-- Typographical Size Scale Reference (Side Ladder) -->
+    <g transform="translate(86.00, 15.0)">
+      <text x="0" y="0" class="info-text" style="font-weight: bold;">Size Scale:</text>
+      <text x="0" y="4.0" class="ladder-text" style="font-size: 3.18px; font-weight: bold;">A (9.0 pt)</text>
+      <text x="0" y="7.5" class="ladder-text" style="font-size: 2.82px;">Title (8.0 pt)</text>
+      <text x="0" y="10.5" class="ladder-text" style="font-size: 2.47px;">Tick (7.0 pt)</text>
+      <text x="0" y="13.5" class="danger-text">Floor: 6.0 pt</text>
+    </g>
+
+    <!-- Embedded Color Swatches (Okabe-Ito) -->
+    <text x="4.0" y="76.50" class="info-text" style="font-size: 1.8px; font-weight: bold;">
+      Okabe-Ito Swatches (Eye-dropper ready):
+    </text>
+    <g id="palette-swatches">
+      <rect x="4.00" y="77.50" width="4.00" height="4.00" fill="#0072B2" stroke="#333333" stroke-width="0.15" rx="0.4"><title>#0072B2</title></rect>
+      <rect x="9.50" y="77.50" width="4.00" height="4.00" fill="#D55E00" stroke="#333333" stroke-width="0.15" rx="0.4"><title>#D55E00</title></rect>
+      <rect x="15.00" y="77.50" width="4.00" height="4.00" fill="#009E73" stroke="#333333" stroke-width="0.15" rx="0.4"><title>#009E73</title></rect>
+      <rect x="20.50" y="77.50" width="4.00" height="4.00" fill="#F0E442" stroke="#333333" stroke-width="0.15" rx="0.4"><title>#F0E442</title></rect>
+      <rect x="26.00" y="77.50" width="4.00" height="4.00" fill="#56B4E9" stroke="#333333" stroke-width="0.15" rx="0.4"><title>#56B4E9</title></rect>
+      <rect x="31.50" y="77.50" width="4.00" height="4.00" fill="#E69F00" stroke="#333333" stroke-width="0.15" rx="0.4"><title>#E69F00</title></rect>
+      <rect x="37.00" y="77.50" width="4.00" height="4.00" fill="#CC79A7" stroke="#333333" stroke-width="0.15" rx="0.4"><title>#CC79A7</title></rect>
+      <rect x="42.50" y="77.50" width="4.00" height="4.00" fill="#000000" stroke="#333333" stroke-width="0.15" rx="0.4"><title>#000000</title></rect>
+    </g>
+
+    <!-- AI Disclosure Policy Watermark -->
+    <text x="110.00" y="82.00" text-anchor="end" class="info-text" style="font-size: 1.7px;">
+      AI Policy: No generative AI images. Disclose text/code in Acknowledgment.
+    </text>
+  </g>
+
+  <!-- ===================================================================== -->
+  <!-- LAYER 2: USER ARTWORK (ACTIVE / UNLOCKED)                             -->
+  <!-- Place your vector figures, plots, and annotations here                -->
+  <!-- ===================================================================== -->
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Artwork (Draw Here)"
+     id="layer-artwork"
+     style="display:inline;">
+    <!-- Paste your plots and artwork panels into this layer -->
+  </g>
+
+</svg>

@@ -129,6 +129,13 @@ def main():
     if (REPO_ROOT / "CITATION.cff").exists():
         shutil.copy2(REPO_ROOT / "CITATION.cff", web_docs / "CITATION.cff")
 
+    # GitHub Pages branch publishing serves /docs as the site root. Copy the
+    # complete site so relative URLs also work at /<repository-name>/.
+    pages_dir = REPO_ROOT / "docs"
+    shutil.copytree(REPO_ROOT / "web", pages_dir, dirs_exist_ok=True)
+    (pages_dir / ".nojekyll").write_text("", encoding="utf-8")
+    print(f"Synced GitHub Pages site to {pages_dir}")
+
     print(f"\nAggregated manifest written to:")
     print(f"  - {all_out}")
     print(f"  - {web_out}")

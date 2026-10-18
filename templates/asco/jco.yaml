@@ -82,7 +82,7 @@ line_weights:
   tick_marks: 0.5
   data_lines_normal: 1.0
   data_lines_thick: 1.5
-  grid_lines: 0.25
+  grid_lines: 0.5
   min_allowed_weight: 0.5
 
 # ------------------------------------------------------------------------------
@@ -150,7 +150,7 @@ manuscript_layout:
     line_numbering: "continuous"
   body_typography:
     font_family: "Arial"
-    font_size_pt: 11.0
+    font_size_pt: 12.0  # ASCO Manuscript Format: 12-point common font
   heading_hierarchy:
     title:
       size_pt: 18.0
@@ -263,12 +263,14 @@ naming_conventions:
     examples:
     - Fig. 1. Study design. A Recruitment. B Sampling. C Analysis.
   - id: caption_placement
-    guidance: Confirm whether captions belong beside figures, at the end of the manuscript, or in a separate
-      document for the submission stage.
-    status: unverified
-    source_url: https://ascopubs.org/journal/jco/author-instructions
+    guidance: Include figure legends in the manuscript file, double-spaced. Define panel labels and abbreviations in the legend.
+    status: publisher_requirement
+    source_url: https://ascopubs.org/authors/manuscript-format
+    source_section: Figure Legends
+    verified_on: '2026-10-18'
     examples:
-    - Keep captions in figure-number order wherever the journal requests them.
+    - Double-space each figure legend in the manuscript.
+
   tables:
   - id: table_numbering
     guidance: Number tables independently of figures, starting at 1 in first-citation order.

@@ -18,6 +18,10 @@ from journal_compliance_templates.exporters.figures.r_theme_generator import (
     generate_r_theme_content,
     save_r_theme,
 )
+from journal_compliance_templates.exporters.figures.rust_generator import (
+    generate_rust_theme_content,
+    save_rust_theme,
+)
 from journal_compliance_templates.exporters.figures.svg_grid_generator import (
     generate_svg_grid_content,
     save_svg_grid,
@@ -31,6 +35,8 @@ __all__ = [
     "save_mplstyle",
     "generate_r_theme_content",
     "save_r_theme",
+    "generate_rust_theme_content",
+    "save_rust_theme",
     "generate_svg_grid_content",
     "save_svg_grid",
     "generate_all_figure_assets",
@@ -55,15 +61,18 @@ def generate_all_figure_assets(
     """
     mpl_dir = output_dir / "matplotlib"
     r_dir = output_dir / "r"
+    rust_dir = output_dir / "rust"
     svg_dir = output_dir / "svg"
     
     mpl_dir.mkdir(parents=True, exist_ok=True)
     r_dir.mkdir(parents=True, exist_ok=True)
+    rust_dir.mkdir(parents=True, exist_ok=True)
     svg_dir.mkdir(parents=True, exist_ok=True)
     
     generated: Dict[str, List[Path]] = {
         "matplotlib": [],
         "r": [],
+        "rust": [],
         "svg": [],
     }
     
@@ -96,8 +105,18 @@ def generate_all_figure_assets(
             r_alias = r_dir / f"theme_{parent_key}.R"
             save_r_theme(journal_data, r_alias, palette_name=palette_name)
             generated["r"].append(r_alias)
+
+        # 3. Rust Plotters theme module
+        rust_file = rust_dir / f"theme_{journal_key}.rs"
+        save_rust_theme(journal_data, rust_file, palette_name=palette_name)
+        generated["rust"].append(rust_file)
+        
+        if parent_key != "templates" and parent_key != journal_key:
+            rust_alias = rust_dir / f"theme_{parent_key}.rs"
+            save_rust_theme(journal_data, rust_alias, palette_name=palette_name)
+            generated["rust"].append(rust_alias)
             
-        # 3. SVG Grids for each column configuration
+        # 4. SVG Grids for each column configuration
         col_widths = journal_data.get("figure_geometry", {}).get("column_widths", {})
         for col_name in col_widths.keys():
             svg_file = svg_dir / f"{journal_key}_{col_name}.svg"

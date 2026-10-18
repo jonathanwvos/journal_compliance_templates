@@ -131,6 +131,47 @@ schema, and `web/data/journals.js`. The latter is generated fallback data for of
 loading and must not be edited by hand. The Rust model exposes optional typed
 `NamingConventions` and preserves the rules through YAML and JSON serialization.
 
+### Biological figure examples and mock report
+
+The naming widget supports main, supplementary, and (for Nature) Extended Data
+figures, with 1, 2, 3, or 10 plots per figure. Choose the first plot to explore
+phylogenetic trees, volcano plots, t-SNE, UMAP, PCA, expression heatmaps, boxplots,
+sequencing depth, pseudotime, and pathway enrichment. Each figure and caption shares
+one box; supporting rules and filenames remain collapsed.
+
+The **Mock report** view includes all four layouts and a table in each available
+series (Science’s table is supplementary to keep its four-item main limit).
+Numbering, plot typography, strokes, captions, tables and report text follow the
+selected template. Artwork scales as a whole on phones, preserving panel geometry. All data are synthetic. Embeddings, trajectories, and trees
+are illustrative; no biological inference was performed.
+
+SVGs in `web/images/biology/` are generated assets. Recreate them from their source
+with `uv run --extra dev python scripts/build_biology_examples.py`. They are checked
+in for offline use; the normal template build does not require Matplotlib. The
+renderer is in `web/naming-preview.js`. Each journal has 40 assets (ten plot types
+at four layout sizes). `profiles.js` records the source settings, physical geometry
+and text checks; the UI refuses to display stale artwork after template changes.
+The generator checks text bounds and minimum sizes, embeds editable font subsets,
+and keeps heatmaps and colour bars vector. Tests inspect the resulting SVG sizes,
+text, strokes and absence of raster images. Liberation fonts are bundled under OFL
+as explicitly labelled substitutes when the preferred commercial fonts are absent.
+These SVGs are browser previews, not final submission-format exports.
+
+#### Guidance reviewed for these examples (18 October 2026)
+
+- [Nature figure specifications](https://research-figure-guide.nature.com/figures/preparing-figures-our-specifications/): editable, embedded text; 5–7 pt lettering and 8 pt bold lowercase panel labels.
+- [Nature Extended Data](https://research-figure-guide.nature.com/figures/extended-data-formatting-guidelines/): 180 × 170 mm, 0.25–1 pt strokes, 7 pt tables with horizontal rules, and separate final-file formats. The template uses the conservative 170 mm height cap across these examples.
+- [IEEE file formatting](https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/file-formatting/): approximately 9–10 pt type, surname-based figure/table filenames and a 220 mm height limit. `{author5}` uses the first five surname letters.
+- [IEEE size guidance](https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/resolution-and-size/): 88.9 and 182 mm widths.
+- [JACS Appendix 2](https://researcher-resources.acs.org/publish/author_guidelines?coden=jacsat): 660 pt depth including captions and 0.5 pt minimum strokes. The examples reserve 55 mm for captions.
+- [ASCO manuscript format](https://ascopubs.org/authors/manuscript-format): 12 pt manuscript text, double-spaced legends, and tables at the end of the manuscript.
+
+JACS and ASCO were available through indexed publisher text. Science and Cell’s
+current pages could not be retrieved; their existing template settings are applied,
+not newly verified. Naming evidence retains its own status. The report is an
+artefact showcase with a manuscript-structure checklist, not a complete manuscript
+or an article-type/submission-stage validation. No publisher certification is claimed.
+
 ## Project Structure
 
 ```

@@ -81,9 +81,9 @@
     <!-- Typographical Size Scale Reference (Side Ladder) -->
     <g transform="translate(60.90, 15.0)">
       <text x="0" y="0" class="info-text" style="font-weight: bold;">Size Scale:</text>
-      <text x="0" y="4.0" class="ladder-text" style="font-size: 2.82px; font-weight: bold;">a (8.0 pt)</text>
-      <text x="0" y="7.5" class="ladder-text" style="font-size: 2.82px;">Title (8.0 pt)</text>
-      <text x="0" y="10.5" class="ladder-text" style="font-size: 2.47px;">Tick (7.0 pt)</text>
+      <text x="0" y="4.0" class="ladder-text" style="font-size: 3.18px; font-weight: bold;">a (9.0 pt)</text>
+      <text x="0" y="7.5" class="ladder-text" style="font-size: 3.18px;">Title (9.0 pt)</text>
+      <text x="0" y="10.5" class="ladder-text" style="font-size: 3.18px;">Tick (9.0 pt)</text>
       <text x="0" y="13.5" class="danger-text">Floor: 6.0 pt</text>
     </g>
 

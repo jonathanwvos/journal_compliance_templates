@@ -6,8 +6,8 @@
 # ==============================================================================
 # Sizing Reference:
 #   Single column width: 88.9 mm
-#   Double column width: 181.9 mm
-#   Max figure height:   241.3 mm
+#   Double column width: 182.0 mm
+#   Max figure height:   220.0 mm
 #   Line art DPI:        1000
 # ==============================================================================
 
@@ -30,41 +30,41 @@ palette_ieee <- c(
 
 #' IEEE Transactions Publication Theme for ggplot2
 #'
-#' @param base_size Base font size in points (default: 7.0 pt)
+#' @param base_size Base font size in points (default: 9.0 pt)
 #' @param base_family Base font family (default: "Times New Roman")
 #' @return A ggplot2 theme object
 #' @export
-theme_ieee <- function(base_size = 7.0, base_family = "Times New Roman") {
+theme_ieee <- function(base_size = 9.0, base_family = "Times New Roman") {
   ggplot2::theme_classic(base_size = base_size, base_family = base_family) +
     ggplot2::theme(
       # Typography Hierarchy
       plot.title = ggplot2::element_text(
-        size = 8.0,
+        size = 9.0,
         face = "bold",
         margin = ggplot2::margin(b = 4)
       ),
       plot.tag = ggplot2::element_text(
-        size = 8.0,
+        size = 9.0,
         face = "bold",
         hjust = 0,
         vjust = 1
       ),
       axis.title = ggplot2::element_text(
-        size = 8.0,
+        size = 9.0,
         face = "regular"
       ),
       axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 3)),
       axis.title.y = ggplot2::element_text(margin = ggplot2::margin(r = 3)),
       axis.text = ggplot2::element_text(
-        size = 7.0,
+        size = 9.0,
         color = "#000000"
       ),
       legend.title = ggplot2::element_text(
-        size = 7.5,
+        size = 9.0,
         face = "bold"
       ),
       legend.text = ggplot2::element_text(
-        size = 7.0
+        size = 9.0
       ),
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_blank(),
@@ -121,13 +121,13 @@ ggsave_ieee <- function(filename,
     column,
     single = 88.9,
     one_and_half = 88.9,
-    double = 181.9
+    double = 182.0
   )
   
   if (is.null(height_mm)) {
-    height_mm <- min(241.3, width_mm * 0.75)
+    height_mm <- min(220.0, width_mm * 0.75)
   } else {
-    height_mm <- min(241.3, height_mm)
+    height_mm <- min(220.0, height_mm)
   }
   
   ggplot2::ggsave(

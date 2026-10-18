@@ -12,7 +12,7 @@ window.JCT_FALLBACK_JOURNALS = {
     },
     "figure_geometry": {
       "default_unit": "mm",
-      "max_height": 235.0,
+      "max_height": 232.8,
       "column_widths": {
         "single_column": {
           "width": 82.5,
@@ -76,7 +76,7 @@ window.JCT_FALLBACK_JOURNALS = {
       "tick_marks": 0.5,
       "data_lines_normal": 1.0,
       "data_lines_thick": 1.5,
-      "grid_lines": 0.25,
+      "grid_lines": 0.5,
       "min_allowed_weight": 0.5
     },
     "panel_labeling": {
@@ -424,7 +424,7 @@ window.JCT_FALLBACK_JOURNALS = {
     },
     "figure_geometry": {
       "default_unit": "mm",
-      "max_height": 235.0,
+      "max_height": 232.8,
       "column_widths": {
         "single_column": {
           "width": 82.5,
@@ -488,7 +488,7 @@ window.JCT_FALLBACK_JOURNALS = {
       "tick_marks": 0.5,
       "data_lines_normal": 1.0,
       "data_lines_thick": 1.5,
-      "grid_lines": 0.25,
+      "grid_lines": 0.5,
       "min_allowed_weight": 0.5
     },
     "panel_labeling": {
@@ -895,7 +895,7 @@ window.JCT_FALLBACK_JOURNALS = {
       "tick_marks": 0.5,
       "data_lines_normal": 1.0,
       "data_lines_thick": 1.5,
-      "grid_lines": 0.25,
+      "grid_lines": 0.5,
       "min_allowed_weight": 0.5
     },
     "panel_labeling": {
@@ -963,7 +963,7 @@ window.JCT_FALLBACK_JOURNALS = {
       },
       "body_typography": {
         "font_family": "Arial",
-        "font_size_pt": 11.0
+        "font_size_pt": 12.0
       },
       "heading_hierarchy": {
         "title": {
@@ -1082,11 +1082,13 @@ window.JCT_FALLBACK_JOURNALS = {
         },
         {
           "id": "caption_placement",
-          "guidance": "Confirm whether captions belong beside figures, at the end of the manuscript, or in a separate document for the submission stage.",
-          "status": "unverified",
-          "source_url": "https://ascopubs.org/journal/jco/author-instructions",
+          "guidance": "Include figure legends in the manuscript file, double-spaced. Define panel labels and abbreviations in the legend.",
+          "status": "publisher_requirement",
+          "source_url": "https://ascopubs.org/authors/manuscript-format",
+          "source_section": "Figure Legends",
+          "verified_on": "2026-10-18",
           "examples": [
-            "Keep captions in figure-number order wherever the journal requests them."
+            "Double-space each figure legend in the manuscript."
           ]
         }
       ],
@@ -1307,7 +1309,7 @@ window.JCT_FALLBACK_JOURNALS = {
       "tick_marks": 0.5,
       "data_lines_normal": 1.0,
       "data_lines_thick": 1.5,
-      "grid_lines": 0.25,
+      "grid_lines": 0.5,
       "min_allowed_weight": 0.5
     },
     "panel_labeling": {
@@ -1375,7 +1377,7 @@ window.JCT_FALLBACK_JOURNALS = {
       },
       "body_typography": {
         "font_family": "Arial",
-        "font_size_pt": 11.0
+        "font_size_pt": 12.0
       },
       "heading_hierarchy": {
         "title": {
@@ -1494,11 +1496,13 @@ window.JCT_FALLBACK_JOURNALS = {
         },
         {
           "id": "caption_placement",
-          "guidance": "Confirm whether captions belong beside figures, at the end of the manuscript, or in a separate document for the submission stage.",
-          "status": "unverified",
-          "source_url": "https://ascopubs.org/journal/jco/author-instructions",
+          "guidance": "Include figure legends in the manuscript file, double-spaced. Define panel labels and abbreviations in the legend.",
+          "status": "publisher_requirement",
+          "source_url": "https://ascopubs.org/authors/manuscript-format",
+          "source_section": "Figure Legends",
+          "verified_on": "2026-10-18",
           "examples": [
-            "Keep captions in figure-number order wherever the journal requests them."
+            "Double-space each figure legend in the manuscript."
           ]
         }
       ],
@@ -2498,15 +2502,15 @@ window.JCT_FALLBACK_JOURNALS = {
     },
     "figure_geometry": {
       "default_unit": "mm",
-      "max_height": 241.3,
+      "max_height": 220.0,
       "column_widths": {
         "single_column": {
           "width": 88.9,
           "description": "Standard single column width (3.5 in / 88.9 mm / 21 picas)"
         },
         "double_column": {
-          "width": 181.9,
-          "description": "Full-width double column spread (7.16 in / 181.9 mm / 43 picas)"
+          "width": 182.0,
+          "description": "Full-width double column spread (7.16 in / 182.0 mm / 43 picas)"
         }
       },
       "panel_spacing": {
@@ -2527,27 +2531,27 @@ window.JCT_FALLBACK_JOURNALS = {
       "font_sizes": {
         "unit": "pt",
         "panel_label": {
-          "size": 8.0,
+          "size": 9.0,
           "weight": "bold"
         },
         "axis_title": {
-          "size": 8.0,
+          "size": 9.0,
           "weight": "regular"
         },
         "tick_label": {
-          "size": 7.0,
+          "size": 9.0,
           "weight": "regular"
         },
         "legend_title": {
-          "size": 7.5,
+          "size": 9.0,
           "weight": "bold"
         },
         "legend_text": {
-          "size": 7.0,
+          "size": 9.0,
           "weight": "regular"
         },
         "annotation": {
-          "size": 6.5,
+          "size": 9.0,
           "weight": "regular"
         },
         "min_allowed_size": 6.0
@@ -2559,7 +2563,7 @@ window.JCT_FALLBACK_JOURNALS = {
       "tick_marks": 0.5,
       "data_lines_normal": 1.0,
       "data_lines_thick": 1.5,
-      "grid_lines": 0.25,
+      "grid_lines": 0.5,
       "min_allowed_weight": 0.5
     },
     "panel_labeling": {
@@ -2851,24 +2855,30 @@ window.JCT_FALLBACK_JOURNALS = {
       "filenames": [
         {
           "id": "figure_filenames",
-          "guidance": "Project filename recommendation for separate files only. Replace {ext} with an accepted format for this item and submission stage; this does not require a separate upload.",
-          "status": "project_recommendation",
-          "pattern": "figure_{number:02d}.{ext}",
+          "guidance": "Use the first five letters of the primary author's surname (Gonzalez is shown here), followed by the item number. Tables insert .t before the number. Replace {ext} with an accepted format.",
+          "status": "publisher_requirement",
+          "source_url": "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/file-formatting/",
+          "source_section": "File Naming Conventions",
+          "verified_on": "2026-10-18",
+          "pattern": "{author5}{number}.{ext}",
           "examples": [
-            "figure_01.{ext}",
-            "figure_02.{ext}",
-            "figure_03.{ext}"
+            "gonza1.{ext}",
+            "gonza2.{ext}",
+            "gonza3.{ext}"
           ]
         },
         {
           "id": "table_filenames",
-          "guidance": "Project filename recommendation for separate files only. Replace {ext} with an accepted format for this item and submission stage; this does not require a separate upload.",
-          "status": "project_recommendation",
-          "pattern": "table_{number:02d}.{ext}",
+          "guidance": "Use the first five letters of the primary author's surname (Gonzalez is shown here), followed by the item number. Tables insert .t before the number. Replace {ext} with an accepted format.",
+          "status": "publisher_requirement",
+          "source_url": "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/file-formatting/",
+          "source_section": "File Naming Conventions",
+          "verified_on": "2026-10-18",
+          "pattern": "{author5}.t{number}.{ext}",
           "examples": [
-            "table_01.{ext}",
-            "table_02.{ext}",
-            "table_03.{ext}"
+            "gonza.t1.{ext}",
+            "gonza.t2.{ext}",
+            "gonza.t3.{ext}"
           ]
         },
         {
@@ -2877,9 +2887,9 @@ window.JCT_FALLBACK_JOURNALS = {
           "status": "project_recommendation",
           "examples": [
             "figure_captions.docx",
-            "figure_01_caption.docx",
-            "figure_02_caption.docx",
-            "figure_03_caption.docx"
+            "gonza1_caption.docx",
+            "gonza2_caption.docx",
+            "gonza3_caption.docx"
           ]
         },
         {
@@ -2895,7 +2905,7 @@ window.JCT_FALLBACK_JOURNALS = {
         },
         {
           "id": "filename_priority",
-          "guidance": "Publisher and submission-portal instructions override these project filenames. Zero-padding is at least two digits and does not truncate larger numbers. IEEE table_01 identifies TABLE I.",
+          "guidance": "Publisher and submission-portal instructions override project filenames. The surname example Gonzalez gives gonza1 for Fig. 1 and gonza.t1 for TABLE I.",
           "status": "project_recommendation",
           "examples": [
             "figure_10.{ext}",
@@ -2917,15 +2927,15 @@ window.JCT_FALLBACK_JOURNALS = {
     },
     "figure_geometry": {
       "default_unit": "mm",
-      "max_height": 241.3,
+      "max_height": 220.0,
       "column_widths": {
         "single_column": {
           "width": 88.9,
           "description": "Standard single column width (3.5 in / 88.9 mm / 21 picas)"
         },
         "double_column": {
-          "width": 181.9,
-          "description": "Full-width double column spread (7.16 in / 181.9 mm / 43 picas)"
+          "width": 182.0,
+          "description": "Full-width double column spread (7.16 in / 182.0 mm / 43 picas)"
         }
       },
       "panel_spacing": {
@@ -2946,27 +2956,27 @@ window.JCT_FALLBACK_JOURNALS = {
       "font_sizes": {
         "unit": "pt",
         "panel_label": {
-          "size": 8.0,
+          "size": 9.0,
           "weight": "bold"
         },
         "axis_title": {
-          "size": 8.0,
+          "size": 9.0,
           "weight": "regular"
         },
         "tick_label": {
-          "size": 7.0,
+          "size": 9.0,
           "weight": "regular"
         },
         "legend_title": {
-          "size": 7.5,
+          "size": 9.0,
           "weight": "bold"
         },
         "legend_text": {
-          "size": 7.0,
+          "size": 9.0,
           "weight": "regular"
         },
         "annotation": {
-          "size": 6.5,
+          "size": 9.0,
           "weight": "regular"
         },
         "min_allowed_size": 6.0
@@ -2978,7 +2988,7 @@ window.JCT_FALLBACK_JOURNALS = {
       "tick_marks": 0.5,
       "data_lines_normal": 1.0,
       "data_lines_thick": 1.5,
-      "grid_lines": 0.25,
+      "grid_lines": 0.5,
       "min_allowed_weight": 0.5
     },
     "panel_labeling": {
@@ -3270,24 +3280,30 @@ window.JCT_FALLBACK_JOURNALS = {
       "filenames": [
         {
           "id": "figure_filenames",
-          "guidance": "Project filename recommendation for separate files only. Replace {ext} with an accepted format for this item and submission stage; this does not require a separate upload.",
-          "status": "project_recommendation",
-          "pattern": "figure_{number:02d}.{ext}",
+          "guidance": "Use the first five letters of the primary author's surname (Gonzalez is shown here), followed by the item number. Tables insert .t before the number. Replace {ext} with an accepted format.",
+          "status": "publisher_requirement",
+          "source_url": "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/file-formatting/",
+          "source_section": "File Naming Conventions",
+          "verified_on": "2026-10-18",
+          "pattern": "{author5}{number}.{ext}",
           "examples": [
-            "figure_01.{ext}",
-            "figure_02.{ext}",
-            "figure_03.{ext}"
+            "gonza1.{ext}",
+            "gonza2.{ext}",
+            "gonza3.{ext}"
           ]
         },
         {
           "id": "table_filenames",
-          "guidance": "Project filename recommendation for separate files only. Replace {ext} with an accepted format for this item and submission stage; this does not require a separate upload.",
-          "status": "project_recommendation",
-          "pattern": "table_{number:02d}.{ext}",
+          "guidance": "Use the first five letters of the primary author's surname (Gonzalez is shown here), followed by the item number. Tables insert .t before the number. Replace {ext} with an accepted format.",
+          "status": "publisher_requirement",
+          "source_url": "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/file-formatting/",
+          "source_section": "File Naming Conventions",
+          "verified_on": "2026-10-18",
+          "pattern": "{author5}.t{number}.{ext}",
           "examples": [
-            "table_01.{ext}",
-            "table_02.{ext}",
-            "table_03.{ext}"
+            "gonza.t1.{ext}",
+            "gonza.t2.{ext}",
+            "gonza.t3.{ext}"
           ]
         },
         {
@@ -3296,9 +3312,9 @@ window.JCT_FALLBACK_JOURNALS = {
           "status": "project_recommendation",
           "examples": [
             "figure_captions.docx",
-            "figure_01_caption.docx",
-            "figure_02_caption.docx",
-            "figure_03_caption.docx"
+            "gonza1_caption.docx",
+            "gonza2_caption.docx",
+            "gonza3_caption.docx"
           ]
         },
         {
@@ -3314,7 +3330,7 @@ window.JCT_FALLBACK_JOURNALS = {
         },
         {
           "id": "filename_priority",
-          "guidance": "Publisher and submission-portal instructions override these project filenames. Zero-padding is at least two digits and does not truncate larger numbers. IEEE table_01 identifies TABLE I.",
+          "guidance": "Publisher and submission-portal instructions override project filenames. The surname example Gonzalez gives gonza1 for Fig. 1 and gonza.t1 for TABLE I.",
           "status": "project_recommendation",
           "examples": [
             "figure_10.{ext}",
@@ -3336,7 +3352,7 @@ window.JCT_FALLBACK_JOURNALS = {
     },
     "figure_geometry": {
       "default_unit": "mm",
-      "max_height": 225.0,
+      "max_height": 170.0,
       "column_widths": {
         "single_column": {
           "width": 89.0,
@@ -3398,7 +3414,7 @@ window.JCT_FALLBACK_JOURNALS = {
       "axis_lines": 0.5,
       "tick_marks": 0.5,
       "data_lines_normal": 1.0,
-      "data_lines_thick": 1.5,
+      "data_lines_thick": 1.0,
       "grid_lines": 0.25,
       "min_allowed_weight": 0.25
     },

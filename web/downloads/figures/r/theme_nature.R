@@ -7,7 +7,7 @@
 # Sizing Reference:
 #   Single column width: 89.0 mm
 #   Double column width: 180.0 mm
-#   Max figure height:   225.0 mm
+#   Max figure height:   170.0 mm
 #   Line art DPI:        1000
 # ==============================================================================
 
@@ -125,9 +125,9 @@ ggsave_nature <- function(filename,
   )
   
   if (is.null(height_mm)) {
-    height_mm <- min(225.0, width_mm * 0.75)
+    height_mm <- min(170.0, width_mm * 0.75)
   } else {
-    height_mm <- min(225.0, height_mm)
+    height_mm <- min(170.0, height_mm)
   }
   
   ggplot2::ggsave(

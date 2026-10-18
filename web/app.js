@@ -99,6 +99,9 @@ function renderJournalView() {
   document.getElementById("lineart-dpi-val").textContent =
     data.export_requirements.resolution_dpi.line_art + " DPI";
 
+  document.getElementById("font-fallback-val").textContent = `Fallback: ${data.figure_typography.family_preferences.fallback.join(', ')}`;
+  document.getElementById("raster-dpi-val").textContent = `Combos: ${data.export_requirements.resolution_dpi.combination_art} / Photos: ${data.export_requirements.resolution_dpi.photographic_halftone}`;
+
   // Column Buttons & Geometry Visualizer
   updateColumnButtons();
   updateVisualizer();
@@ -126,6 +129,7 @@ function renderNamingGuidance() {
   const container = document.getElementById("naming-guidance");
   document.getElementById("naming-journal-name").textContent = currentJournalData.metadata.journal_name;
   container.replaceChildren();
+  document.getElementById("naming-preview").replaceChildren();
   const naming = currentJournalData.naming_conventions;
   if (!naming) {
     container.textContent = "Naming guidance is not available for this template version.";
@@ -150,7 +154,6 @@ function renderNamingGuidance() {
     const details = document.createElement("details");
     details.className = "naming-group";
     details.dataset.namingGroup = key;
-    details.open = key === "figures";
     const summary = document.createElement("summary");
     summary.textContent = title;
     details.append(summary);
@@ -158,6 +161,8 @@ function renderNamingGuidance() {
       const article = document.createElement("article");
       article.className = "naming-rule";
       article.dataset.ruleId = rule.id;
+      article.id = `naming-rule-${rule.id}`;
+      article.tabIndex = -1;
       const badge = document.createElement("span");
       badge.className = `naming-status ${rule.status}`;
       badge.textContent = statuses[rule.status] || statuses.unverified;
@@ -196,6 +201,7 @@ function renderNamingGuidance() {
     }
     container.append(details);
   }
+  window.JCT_NAMING_PREVIEW.render(document.getElementById("naming-preview"), currentJournalData);
 }
 
 function renderFigureDownloads() {
@@ -255,6 +261,11 @@ function renderFigureDownloads() {
 
 function updateColumnButtons() {
   const geom = currentJournalData.figure_geometry;
+  const labels = {single_column: '1 Column', one_and_half_column: '1.5 Column', double_column: '2 Column'};
+  document.querySelectorAll('.col-btn').forEach(button => {
+    const column = geom.column_widths[button.dataset.col];
+    if (column) button.textContent = `${labels[button.dataset.col]} (${column.width} mm)`;
+  });
   const btn15 = document.querySelector('.col-btn[data-col="one_and_half_column"]');
   if (btn15) {
     if (!geom.column_widths.one_and_half_column) {
@@ -293,7 +304,7 @@ function renderTypographyPreview() {
   const panelSample = panelPunct ? (panelPunct.includes("a") ? (panelCase === "uppercase" ? panelPunct.toUpperCase() : panelPunct) : (panelCase === "uppercase" ? `A${panelPunct}` : `a${panelPunct}`)) : (panelCase === "uppercase" ? "A" : "a");
 
   const stage = document.getElementById("typo-stage");
-  stage.style.fontFamily = `"${primaryFont}", Helvetica, Arial, sans-serif`;
+  stage.style.fontFamily = `"${primaryFont}", ${primaryFont.includes("Times") ? '"Liberation Serif", serif' : '"Liberation Sans", sans-serif'}`;
   stage.innerHTML = `
     <div class="typo-row">
       <span class="typo-label">Panel Label (${typo.panel_label.size} pt ${typo.panel_label.weight})</span>
@@ -316,8 +327,8 @@ function renderTypographyPreview() {
       <span class="typo-preview" style="font-size: ${typo.annotation.size * 2}px; color: #475569;">* p < 0.01, two-tailed unpaired t-test</span>
     </div>
     <div class="typo-row" style="background: #FFF1F2; padding: 6px; border-radius: 4px; border: 1px solid #FECDD3;">
-      <span class="typo-label" style="color: #E11D48; font-weight: 700;">Rejection Floor</span>
-      <span class="typo-preview" style="font-size: 11px; color: #9F1239;">Text < ${typo.min_allowed_size} pt triggers automated production rejection.</span>
+      <span class="typo-label" style="color: #E11D48; font-weight: 700;">Template Minimum</span>
+      <span class="typo-preview" style="font-size: 11px; color: #9F1239;">Template minimum: ${typo.min_allowed_size} pt at publication size.</span>
     </div>
   `;
 }
@@ -735,7 +746,7 @@ ${pyDictLines}
 # 2. Compliant Typography & Geometry Parameters
 # Single column: ${singleInches} in (${data.figure_geometry.column_widths.single_column.width} mm) | Double column: ${doubleInches} in (${data.figure_geometry.column_widths.double_column.width} mm)
 plt.rcParams.update({
-    "font.family": "${data.figure_typography.family_preferences.fallback[0]}",
+    "font.family": ${JSON.stringify([data.figure_typography.family_preferences.primary, ...data.figure_typography.family_preferences.fallback])},
     "font.sans-serif": ["${data.figure_typography.family_preferences.primary}", "Arial"],
     "font.size": ${data.figure_typography.font_sizes.tick_label.size},
     "axes.labelsize": ${data.figure_typography.font_sizes.axis_title.size},
@@ -748,11 +759,13 @@ plt.rcParams.update({
     "axes.prop_cycle": cycler(color=list(palette.values())),
     "figure.dpi": 300,
     "savefig.dpi": ${data.export_requirements.resolution_dpi.line_art},
-    "savefig.bbox": "tight",
+    "savefig.bbox": None,  # Preserve the requested physical dimensions
+    "pdf.fonttype": 42,
+    "svg.fonttype": "none",
 })
 
 # 3. Example Publication-Ready Figure
-fig, ax = plt.subplots(figsize=(${singleInches}, 2.5))
+fig, ax = plt.subplots(figsize=(${singleInches}, 2.5), layout="constrained")
 ax.plot([0, 1, 2], [10, 20, 15], color=palette["${primaryColorSlug}"], label="Control (${colorItems.find(c => c.slug === primaryColorSlug).name})")
 ax.plot([0, 1, 2], [5, 12, 18], color=palette["${secondaryColorSlug}"], label="Treated (${colorItems.find(c => c.slug === secondaryColorSlug).name})")
 ax.set_xlabel("Time (h)")
@@ -778,7 +791,7 @@ ${rVectorLines}
 
 # 2. Journal Compliant Theme
 theme_${currentJournalKey} <- function() {
-  theme_classic(base_size = ${data.figure_typography.font_sizes.tick_label.size}, base_family = "${data.figure_typography.family_preferences.fallback[0]}") +
+  theme_classic(base_size = ${data.figure_typography.font_sizes.tick_label.size}, base_family = "${data.figure_typography.family_preferences.primary}") +
     theme(
       axis.title = element_text(size = ${data.figure_typography.font_sizes.axis_title.size}),
       axis.text = element_text(size = ${data.figure_typography.font_sizes.tick_label.size}),

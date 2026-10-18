@@ -56,7 +56,7 @@ lines.markeredgewidth: 0.5
 patch.linewidth: 0.5
 
 # Grid Lines
-grid.linewidth: 0.25
+grid.linewidth: 0.5
 grid.linestyle: --
 grid.alpha: 0.6
 
@@ -81,11 +81,11 @@ figure.titleweight: bold
 # Production Export Settings (Vector & TrueType embedding)
 savefig.dpi: 1000
 savefig.format: pdf
-savefig.bbox: tight
+savefig.bbox: standard
 savefig.pad_inches: 0.02
 savefig.transparent: False
 
 # Embed TrueType / PostScript fonts directly (Do NOT rasterize to Type 3 bitmap)
 pdf.fonttype: 42
 ps.fonttype: 42
-svg.fonttype: path
+svg.fonttype: none

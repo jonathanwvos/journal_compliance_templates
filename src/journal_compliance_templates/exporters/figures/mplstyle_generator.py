@@ -157,14 +157,14 @@ figure.titleweight: bold
 # Production Export Settings (Vector & TrueType embedding)
 savefig.dpi: {export['resolution_dpi']['line_art']}
 savefig.format: pdf
-savefig.bbox: tight
+savefig.bbox: standard
 savefig.pad_inches: 0.02
 savefig.transparent: False
 
 # Embed TrueType / PostScript fonts directly (Do NOT rasterize to Type 3 bitmap)
 pdf.fonttype: 42
 ps.fonttype: 42
-svg.fonttype: path
+svg.fonttype: none
 """
     return content
 

@@ -39,7 +39,7 @@ def test_naming_semantics_and_evidence(path):
                 assert len(rule['examples']) >= 3
             if group == 'filenames':
                 filenames.extend(rule['examples'])
-                assert rule['status'] == 'project_recommendation'
+                assert rule['status'] == ('publisher_requirement' if path.stem == 'ieee_transactions' and rule['id'] in ['figure_filenames', 'table_filenames'] else 'project_recommendation')
     assert len(ids) == len(set(ids))
     assert len(sequences) == len(set(sequences))
     assert len(filenames) == len(set(filenames))
@@ -55,11 +55,10 @@ def test_naming_semantics_and_evidence(path):
     for label, description in zip(labels, ['Recruitment', 'Sampling', 'Analysis']):
         assert f'{label} {description}.' in panel_caption
     assert panel_caption.startswith(figures[0] + '.')
-    assert get_rule(naming, 'filenames', 'figure_filenames')['examples'] == [
-        'figure_01.{ext}', 'figure_02.{ext}', 'figure_03.{ext}'
-    ]
+    expected = [f'gonza{n}.{{ext}}' if path.stem == 'ieee_transactions' else f'figure_{n:02d}.{{ext}}' for n in range(1, 4)]
+    assert get_rule(naming, 'filenames', 'figure_filenames')['examples'] == expected
     caption_files = get_rule(naming, 'filenames', 'caption_filenames')['examples']
-    assert all(f'figure_{n:02d}_caption.docx' in caption_files for n in range(1, 4))
+    assert all((f'gonza{n}_caption.docx' if path.stem == 'ieee_transactions' else f'figure_{n:02d}_caption.docx') in caption_files for n in range(1, 4))
 
 
 @pytest.mark.parametrize('path', TEMPLATES, ids=lambda p: p.stem)

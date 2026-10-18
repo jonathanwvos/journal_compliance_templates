@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "crates/journal_compliance_templates"
+]
+resolver = "2"

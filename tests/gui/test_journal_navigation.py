@@ -13,7 +13,7 @@ def test_initial_page_load_defaults_to_nature(app_page):
     assert app_page.get_active_journal_name() == "Nature"
     assert "Nature Portfolio" in app_page.get_active_publisher()
     assert "89 mm" in app_page.get_metric("1-Column Width")
-    assert "225 mm" in app_page.get_metric("Max Figure Height")
+    assert "170 mm" in app_page.get_metric("Max Figure Height")
     assert "Helvetica" in app_page.get_metric("Primary Typeface")
     assert "5 pt" in app_page.get_metric("Min Allowed Font")
     assert "1000 DPI" in app_page.get_metric("Vector / Line DPI")
@@ -55,4 +55,4 @@ def test_column_visualizer_toggles_and_conditional_15_column(app_page):
     assert "88.9 mm" in app_page.get_figure_box_text()
     
     app_page.select_column("double_column")
-    assert "181.9 mm" in app_page.get_figure_box_text()
+    assert "182 mm" in app_page.get_figure_box_text()

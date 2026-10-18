@@ -7,7 +7,7 @@
 # Sizing Reference:
 #   Single column width: 89.0 mm (3.50 in)
 #   Double column width: 180.0 mm (7.09 in)
-#   Max figure height:   225.0 mm (8.86 in)
+#   Max figure height:   170.0 mm (6.69 in)
 # ==============================================================================
 
 # Font Configuration
@@ -81,11 +81,11 @@ figure.titleweight: bold
 # Production Export Settings (Vector & TrueType embedding)
 savefig.dpi: 1000
 savefig.format: pdf
-savefig.bbox: tight
+savefig.bbox: standard
 savefig.pad_inches: 0.02
 savefig.transparent: False
 
 # Embed TrueType / PostScript fonts directly (Do NOT rasterize to Type 3 bitmap)
 pdf.fonttype: 42
 ps.fonttype: 42
-svg.fonttype: path
+svg.fonttype: none

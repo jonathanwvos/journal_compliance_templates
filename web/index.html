@@ -51,27 +51,27 @@
     <div class="journal-selector">
       <button class="journal-tab active" data-journal="nature">
         <span>Nature</span>
-        <span class="status-badge verified">Verified</span>
+        <span class="status-badge verified">Template</span>
       </button>
       <button class="journal-tab" data-journal="ieee">
         <span>IEEE Transactions</span>
-        <span class="status-badge verified">Verified</span>
+        <span class="status-badge verified">Template</span>
       </button>
       <button class="journal-tab" data-journal="acs">
         <span>ACS (JACS)</span>
-        <span class="status-badge verified">Verified</span>
+        <span class="status-badge verified">Template</span>
       </button>
       <button class="journal-tab" data-journal="science">
         <span>Science (AAAS)</span>
-        <span class="status-badge verified">Verified</span>
+        <span class="status-badge verified">Template</span>
       </button>
       <button class="journal-tab" data-journal="cell">
         <span>Cell Press</span>
-        <span class="status-badge verified">Verified</span>
+        <span class="status-badge verified">Template</span>
       </button>
       <button class="journal-tab" data-journal="jco">
         <span>JCO (ASCO)</span>
-        <span class="status-badge verified">Verified</span>
+        <span class="status-badge verified">Template</span>
       </button>
     </div>
 
@@ -84,7 +84,7 @@
         </div>
         <div class="meta-badges">
           <div class="badge-item">ISSN: <span id="issn-val" style="color:var(--text-primary);">1476-4687</span></div>
-          <div class="badge-item">Verified: <span id="verified-val" style="color:var(--text-primary);">2026-09-11</span></div>
+          <div class="badge-item">Template reviewed: <span id="verified-val" style="color:var(--text-primary);">2026-09-11</span></div>
           <div class="badge-item"><a id="guidelines-link" href="#" target="_blank">Official Guidelines &nearr;</a></div>
         </div>
       </div>
@@ -98,23 +98,23 @@
         </div>
         <div class="metric-box">
           <div class="metric-label">Max Figure Height</div>
-          <div class="metric-value" id="max-height-val">225 mm</div>
+          <div class="metric-value" id="max-height-val">170 mm</div>
           <div class="metric-sub">Includes caption clearance</div>
         </div>
         <div class="metric-box">
           <div class="metric-label">Primary Typeface</div>
           <div class="metric-value" id="font-family-val">Helvetica</div>
-          <div class="metric-sub">Fallback: Arial</div>
+          <div class="metric-sub" id="font-fallback-val">Fallback: Arial</div>
         </div>
         <div class="metric-box">
           <div class="metric-label">Min Allowed Font</div>
           <div class="metric-value" id="min-font-val" style="color:var(--accent-primary);">5.0 pt</div>
-          <div class="metric-sub">Rejection threshold</div>
+          <div class="metric-sub">Template minimum</div>
         </div>
         <div class="metric-box">
           <div class="metric-label">Vector / Line DPI</div>
           <div class="metric-value" id="lineart-dpi-val">1000 DPI</div>
-          <div class="metric-sub">Combos: 600 / Photos: 300</div>
+          <div class="metric-sub" id="raster-dpi-val">Combos: 600 / Photos: 300</div>
         </div>
       </div>
     </section>
@@ -162,7 +162,7 @@
           <span>🔤 Typographical Scale Preview</span>
         </div>
         <p class="card-desc">
-          Live point-size preview demonstrating hierarchy across figure panels and annotations.
+          Enlarged 1.5× for viewing; point sizes refer to the printed figure.
         </p>
         
         <div id="typo-stage" class="typography-stage">
@@ -239,9 +239,8 @@
     <section class="card naming-card" aria-labelledby="naming-title">
       <h2 id="naming-title" class="card-title">Figure, Caption &amp; Table Naming</h2>
       <p class="card-desc">Examples for <strong id="naming-journal-name"></strong>.
-        Publisher requirements have source links and verification dates. Project recommendations
-        are suggested conventions; unverified guidance needs checking against current journal instructions.
-        Filename examples apply only when separate files are requested.</p>
+        Illustrative layouts; expand the rules for requirements and verification.</p>
+      <div id="naming-preview"></div>
       <div id="naming-guidance"></div>
     </section>
 
@@ -396,6 +395,8 @@
   </footer>
 
   <script src="data/journals.js"></script>
+  <script src="images/biology/profiles.js"></script>
+  <script src="naming-preview.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

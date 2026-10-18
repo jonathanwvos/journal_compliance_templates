@@ -24,7 +24,7 @@ metadata:
 # ------------------------------------------------------------------------------
 figure_geometry:
   default_unit: "mm"
-  max_height: 225.0  # Max height allowing caption space on a 270 mm page
+  max_height: 170.0  # Conservative cap shared with Extended Data; research-figure-guide.nature.com/figures/extended-data-formatting-guidelines/
   column_widths:
     single_column:
       width: 89.0
@@ -81,7 +81,7 @@ line_weights:
   axis_lines: 0.5
   tick_marks: 0.5
   data_lines_normal: 1.0
-  data_lines_thick: 1.5
+  data_lines_thick: 1.0  # Extended Data strokes must be at most 1 pt
   grid_lines: 0.25
   min_allowed_weight: 0.25
 

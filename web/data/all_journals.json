@@ -1,6 +1,6 @@
 {
   "jacs": {
-    "schema_version": "1.0.0",
+    "schema_version": "1.1.0",
     "metadata": {
       "publisher": "American Chemical Society (ACS)",
       "journal_name": "Journal of the American Chemical Society",
@@ -189,10 +189,230 @@
       "preferred_disclosure_placement": "Acknowledgment",
       "policy_url": "https://publish.acs.org/publish/author_guidelines?coden=jacsat#policies_ai",
       "official_statement_template": "The author(s) declare that [TOOL NAME, VERSION, e.g., Claude 3.5 / ChatGPT] was used for [SPECIFY FUNCTION: e.g., language editing and drafting assistance]. The author(s) have reviewed, verified, and take full responsibility for all content and data reported in this manuscript.\n"
+    },
+    "naming_conventions": {
+      "figures": [
+        {
+          "id": "figure_numbering",
+          "guidance": "Number main figures independently of tables, starting at 1 in first-citation order.",
+          "status": "unverified",
+          "source_url": "https://publish.acs.org/publish/author_guidelines?coden=jacsat",
+          "source_section": "Figure numbering: confirm current journal instructions",
+          "pattern": "Figure {number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "main_figures"
+          },
+          "examples": [
+            "Figure 1",
+            "Figure 2",
+            "Figure 3"
+          ]
+        },
+        {
+          "id": "figure_references",
+          "guidance": "Provisional reference examples; confirm abbreviation, pluralization, and range style in current journal instructions.",
+          "status": "unverified",
+          "examples": [
+            "Figure 1",
+            "Figures 1 and 3",
+            "Figures 1\u20133"
+          ],
+          "source_url": "https://publish.acs.org/publish/author_guidelines?coden=jacsat"
+        },
+        {
+          "id": "panel_references",
+          "guidance": "Use panel_labeling for letter case and punctuation. Panels share their parent figure number; these reference examples follow the existing panel labels.",
+          "status": "project_recommendation",
+          "examples": [
+            "Figure 1A",
+            "Figure 1A and 1C",
+            "Figure 1A\u2013C"
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "id": "caption_heading",
+          "guidance": "Match each caption to its figure number and begin with a concise title. Punctuation in these examples is a project convention unless separately verified.",
+          "status": "project_recommendation",
+          "pattern": "Figure {number}. {title}",
+          "examples": [
+            "Figure 1. Study design.",
+            "Figure 2. Measured response.",
+            "Figure 3. Validation results."
+          ]
+        },
+        {
+          "id": "caption_panels",
+          "guidance": "Describe all panels in label order under one figure caption. Reuse the exact panel letters; do not number captions separately.",
+          "status": "project_recommendation",
+          "examples": [
+            "Figure 1. Study design. A Recruitment. B Sampling. C Analysis."
+          ]
+        },
+        {
+          "id": "caption_content",
+          "guidance": "Place a caption below each figure with its number and a brief description understandable on its own.",
+          "status": "publisher_requirement",
+          "source_url": "https://researcher-resources.acs.org/publish/author_guidelines/pdf?coden=jacsat",
+          "source_section": "Graphics: Figures (indexed official guideline excerpt)",
+          "verified_on": "2026-10-18",
+          "examples": [
+            "Figure 1. Reaction setup and measured response."
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "id": "table_numbering",
+          "guidance": "Number tables independently of figures, starting at 1 in first-citation order.",
+          "status": "unverified",
+          "source_url": "https://publish.acs.org/publish/author_guidelines?coden=jacsat",
+          "source_section": "Table numbering: confirm current journal instructions",
+          "pattern": "Table {number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "main_tables"
+          },
+          "examples": [
+            "Table 1",
+            "Table 2",
+            "Table 3"
+          ]
+        },
+        {
+          "id": "table_title",
+          "guidance": "Give each table a short descriptive title after its number; confirm placement for the submission stage.",
+          "status": "project_recommendation",
+          "pattern": "Table {number}. {title}",
+          "examples": [
+            "Table 1. Participant characteristics.",
+            "Table 2. Model parameters.",
+            "Table 3. Validation metrics."
+          ]
+        },
+        {
+          "id": "table_references",
+          "guidance": "Use the table sequence in text references. These grouped and range examples are project recommendations.",
+          "status": "project_recommendation",
+          "examples": [
+            "Table 1",
+            "Tables 1 and 3",
+            "Tables 1\u20133"
+          ]
+        }
+      ],
+      "supplementary": [
+        {
+          "id": "supplementary_figure_numbering",
+          "guidance": "Use a separate sequence for this supplementary item type. These labels are provisional; confirm the journal\u2019s current supporting-information or appendix convention.",
+          "status": "unverified",
+          "source_url": "https://publish.acs.org/publish/author_guidelines?coden=jacsat",
+          "pattern": "Figure S{number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "supplementary_figures"
+          },
+          "examples": [
+            "Figure S1",
+            "Figure S2",
+            "Figure S3"
+          ]
+        },
+        {
+          "id": "supplementary_table_numbering",
+          "guidance": "Use a separate sequence for this supplementary item type. These labels are provisional; confirm the journal\u2019s current supporting-information or appendix convention.",
+          "status": "unverified",
+          "source_url": "https://publish.acs.org/publish/author_guidelines?coden=jacsat",
+          "pattern": "Table S{number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "supplementary_tables"
+          },
+          "examples": [
+            "Table S1",
+            "Table S2",
+            "Table S3"
+          ]
+        },
+        {
+          "id": "supplementary_captions",
+          "guidance": "Match supplementary captions and table titles to their supplementary identifiers, keeping them separate from main-item sequences.",
+          "status": "project_recommendation",
+          "examples": [
+            "Figure S1. Additional measurements.",
+            "Table S1. Additional model parameters."
+          ]
+        }
+      ],
+      "filenames": [
+        {
+          "id": "figure_filenames",
+          "guidance": "Project filename recommendation for separate files only. Replace {ext} with an accepted format for this item and submission stage; this does not require a separate upload.",
+          "status": "project_recommendation",
+          "pattern": "figure_{number:02d}.{ext}",
+          "examples": [
+            "figure_01.{ext}",
+            "figure_02.{ext}",
+            "figure_03.{ext}"
+          ]
+        },
+        {
+          "id": "table_filenames",
+          "guidance": "Project filename recommendation for separate files only. Replace {ext} with an accepted format for this item and submission stage; this does not require a separate upload.",
+          "status": "project_recommendation",
+          "pattern": "table_{number:02d}.{ext}",
+          "examples": [
+            "table_01.{ext}",
+            "table_02.{ext}",
+            "table_03.{ext}"
+          ]
+        },
+        {
+          "id": "caption_filenames",
+          "guidance": "If caption documents are requested, use one combined document or matching figure stems for individual documents. DOCX examples apply only when the journal accepts DOCX.",
+          "status": "project_recommendation",
+          "examples": [
+            "figure_captions.docx",
+            "figure_01_caption.docx",
+            "figure_02_caption.docx",
+            "figure_03_caption.docx"
+          ]
+        },
+        {
+          "id": "supplementary_filenames",
+          "guidance": "Prefix separate supplementary files to prevent collisions with main items. Use an accepted extension; keep the same numeric identifier as the supplementary label.",
+          "status": "project_recommendation",
+          "examples": [
+            "supplementary_figure_01.{ext}",
+            "supplementary_figure_02.{ext}",
+            "supplementary_table_01.{ext}",
+            "supplementary_figure_01_caption.docx"
+          ]
+        },
+        {
+          "id": "filename_priority",
+          "guidance": "Publisher and submission-portal instructions override these project filenames. Zero-padding is at least two digits and does not truncate larger numbers.",
+          "status": "project_recommendation",
+          "examples": [
+            "figure_10.{ext}",
+            "figure_100.{ext}"
+          ]
+        }
+      ]
     }
   },
   "acs": {
-    "schema_version": "1.0.0",
+    "schema_version": "1.1.0",
     "metadata": {
       "publisher": "American Chemical Society (ACS)",
       "journal_name": "Journal of the American Chemical Society",
@@ -381,10 +601,230 @@
       "preferred_disclosure_placement": "Acknowledgment",
       "policy_url": "https://publish.acs.org/publish/author_guidelines?coden=jacsat#policies_ai",
       "official_statement_template": "The author(s) declare that [TOOL NAME, VERSION, e.g., Claude 3.5 / ChatGPT] was used for [SPECIFY FUNCTION: e.g., language editing and drafting assistance]. The author(s) have reviewed, verified, and take full responsibility for all content and data reported in this manuscript.\n"
+    },
+    "naming_conventions": {
+      "figures": [
+        {
+          "id": "figure_numbering",
+          "guidance": "Number main figures independently of tables, starting at 1 in first-citation order.",
+          "status": "unverified",
+          "source_url": "https://publish.acs.org/publish/author_guidelines?coden=jacsat",
+          "source_section": "Figure numbering: confirm current journal instructions",
+          "pattern": "Figure {number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "main_figures"
+          },
+          "examples": [
+            "Figure 1",
+            "Figure 2",
+            "Figure 3"
+          ]
+        },
+        {
+          "id": "figure_references",
+          "guidance": "Provisional reference examples; confirm abbreviation, pluralization, and range style in current journal instructions.",
+          "status": "unverified",
+          "examples": [
+            "Figure 1",
+            "Figures 1 and 3",
+            "Figures 1\u20133"
+          ],
+          "source_url": "https://publish.acs.org/publish/author_guidelines?coden=jacsat"
+        },
+        {
+          "id": "panel_references",
+          "guidance": "Use panel_labeling for letter case and punctuation. Panels share their parent figure number; these reference examples follow the existing panel labels.",
+          "status": "project_recommendation",
+          "examples": [
+            "Figure 1A",
+            "Figure 1A and 1C",
+            "Figure 1A\u2013C"
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "id": "caption_heading",
+          "guidance": "Match each caption to its figure number and begin with a concise title. Punctuation in these examples is a project convention unless separately verified.",
+          "status": "project_recommendation",
+          "pattern": "Figure {number}. {title}",
+          "examples": [
+            "Figure 1. Study design.",
+            "Figure 2. Measured response.",
+            "Figure 3. Validation results."
+          ]
+        },
+        {
+          "id": "caption_panels",
+          "guidance": "Describe all panels in label order under one figure caption. Reuse the exact panel letters; do not number captions separately.",
+          "status": "project_recommendation",
+          "examples": [
+            "Figure 1. Study design. A Recruitment. B Sampling. C Analysis."
+          ]
+        },
+        {
+          "id": "caption_content",
+          "guidance": "Place a caption below each figure with its number and a brief description understandable on its own.",
+          "status": "publisher_requirement",
+          "source_url": "https://researcher-resources.acs.org/publish/author_guidelines/pdf?coden=jacsat",
+          "source_section": "Graphics: Figures (indexed official guideline excerpt)",
+          "verified_on": "2026-10-18",
+          "examples": [
+            "Figure 1. Reaction setup and measured response."
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "id": "table_numbering",
+          "guidance": "Number tables independently of figures, starting at 1 in first-citation order.",
+          "status": "unverified",
+          "source_url": "https://publish.acs.org/publish/author_guidelines?coden=jacsat",
+          "source_section": "Table numbering: confirm current journal instructions",
+          "pattern": "Table {number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "main_tables"
+          },
+          "examples": [
+            "Table 1",
+            "Table 2",
+            "Table 3"
+          ]
+        },
+        {
+          "id": "table_title",
+          "guidance": "Give each table a short descriptive title after its number; confirm placement for the submission stage.",
+          "status": "project_recommendation",
+          "pattern": "Table {number}. {title}",
+          "examples": [
+            "Table 1. Participant characteristics.",
+            "Table 2. Model parameters.",
+            "Table 3. Validation metrics."
+          ]
+        },
+        {
+          "id": "table_references",
+          "guidance": "Use the table sequence in text references. These grouped and range examples are project recommendations.",
+          "status": "project_recommendation",
+          "examples": [
+            "Table 1",
+            "Tables 1 and 3",
+            "Tables 1\u20133"
+          ]
+        }
+      ],
+      "supplementary": [
+        {
+          "id": "supplementary_figure_numbering",
+          "guidance": "Use a separate sequence for this supplementary item type. These labels are provisional; confirm the journal\u2019s current supporting-information or appendix convention.",
+          "status": "unverified",
+          "source_url": "https://publish.acs.org/publish/author_guidelines?coden=jacsat",
+          "pattern": "Figure S{number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "supplementary_figures"
+          },
+          "examples": [
+            "Figure S1",
+            "Figure S2",
+            "Figure S3"
+          ]
+        },
+        {
+          "id": "supplementary_table_numbering",
+          "guidance": "Use a separate sequence for this supplementary item type. These labels are provisional; confirm the journal\u2019s current supporting-information or appendix convention.",
+          "status": "unverified",
+          "source_url": "https://publish.acs.org/publish/author_guidelines?coden=jacsat",
+          "pattern": "Table S{number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "supplementary_tables"
+          },
+          "examples": [
+            "Table S1",
+            "Table S2",
+            "Table S3"
+          ]
+        },
+        {
+          "id": "supplementary_captions",
+          "guidance": "Match supplementary captions and table titles to their supplementary identifiers, keeping them separate from main-item sequences.",
+          "status": "project_recommendation",
+          "examples": [
+            "Figure S1. Additional measurements.",
+            "Table S1. Additional model parameters."
+          ]
+        }
+      ],
+      "filenames": [
+        {
+          "id": "figure_filenames",
+          "guidance": "Project filename recommendation for separate files only. Replace {ext} with an accepted format for this item and submission stage; this does not require a separate upload.",
+          "status": "project_recommendation",
+          "pattern": "figure_{number:02d}.{ext}",
+          "examples": [
+            "figure_01.{ext}",
+            "figure_02.{ext}",
+            "figure_03.{ext}"
+          ]
+        },
+        {
+          "id": "table_filenames",
+          "guidance": "Project filename recommendation for separate files only. Replace {ext} with an accepted format for this item and submission stage; this does not require a separate upload.",
+          "status": "project_recommendation",
+          "pattern": "table_{number:02d}.{ext}",
+          "examples": [
+            "table_01.{ext}",
+            "table_02.{ext}",
+            "table_03.{ext}"
+          ]
+        },
+        {
+          "id": "caption_filenames",
+          "guidance": "If caption documents are requested, use one combined document or matching figure stems for individual documents. DOCX examples apply only when the journal accepts DOCX.",
+          "status": "project_recommendation",
+          "examples": [
+            "figure_captions.docx",
+            "figure_01_caption.docx",
+            "figure_02_caption.docx",
+            "figure_03_caption.docx"
+          ]
+        },
+        {
+          "id": "supplementary_filenames",
+          "guidance": "Prefix separate supplementary files to prevent collisions with main items. Use an accepted extension; keep the same numeric identifier as the supplementary label.",
+          "status": "project_recommendation",
+          "examples": [
+            "supplementary_figure_01.{ext}",
+            "supplementary_figure_02.{ext}",
+            "supplementary_table_01.{ext}",
+            "supplementary_figure_01_caption.docx"
+          ]
+        },
+        {
+          "id": "filename_priority",
+          "guidance": "Publisher and submission-portal instructions override these project filenames. Zero-padding is at least two digits and does not truncate larger numbers.",
+          "status": "project_recommendation",
+          "examples": [
+            "figure_10.{ext}",
+            "figure_100.{ext}"
+          ]
+        }
+      ]
     }
   },
   "jco": {
-    "schema_version": "1.0.0",
+    "schema_version": "1.1.0",
     "metadata": {
       "publisher": "American Society of Clinical Oncology (ASCO)",
       "journal_name": "Journal of Clinical Oncology",
@@ -575,10 +1015,228 @@
       "preferred_disclosure_placement": "Acknowledgment section prior to References",
       "policy_url": "https://ascopubs.org/journal/jco/author-instructions",
       "official_statement_template": "Acknowledgment of AI-assisted writing and technologies: During the preparation of this manuscript, the author(s) used [TOOL NAME, VERSION, e.g., ChatGPT / Claude] for the purpose of [DESCRIBE PURPOSE: e.g., grammar improvement / drafting preliminary summaries of non-clinical literature]. The authors reviewed and edited all generated content and take full responsibility for the integrity, factual accuracy, and originality of the published work.\n"
+    },
+    "naming_conventions": {
+      "figures": [
+        {
+          "id": "figure_numbering",
+          "guidance": "Number main figures independently of tables, starting at 1 in first-citation order.",
+          "status": "unverified",
+          "source_url": "https://ascopubs.org/journal/jco/author-instructions",
+          "source_section": "Figure numbering: confirm current journal instructions",
+          "pattern": "Fig. {number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "main_figures"
+          },
+          "examples": [
+            "Fig. 1",
+            "Fig. 2",
+            "Fig. 3"
+          ]
+        },
+        {
+          "id": "figure_references",
+          "guidance": "Provisional reference examples; confirm abbreviation, pluralization, and range style in current journal instructions.",
+          "status": "unverified",
+          "examples": [
+            "Fig. 1",
+            "Figs. 1 and 3",
+            "Figs. 1\u20133"
+          ],
+          "source_url": "https://ascopubs.org/journal/jco/author-instructions"
+        },
+        {
+          "id": "panel_references",
+          "guidance": "Use panel_labeling for letter case and punctuation. Panels share their parent figure number; these reference examples follow the existing panel labels.",
+          "status": "project_recommendation",
+          "examples": [
+            "Fig. 1A",
+            "Fig. 1A and 1C",
+            "Fig. 1A\u2013C"
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "id": "caption_heading",
+          "guidance": "Match each caption to its figure number and begin with a concise title. Punctuation in these examples is a project convention unless separately verified.",
+          "status": "project_recommendation",
+          "pattern": "Fig. {number}. {title}",
+          "examples": [
+            "Fig. 1. Study design.",
+            "Fig. 2. Measured response.",
+            "Fig. 3. Validation results."
+          ]
+        },
+        {
+          "id": "caption_panels",
+          "guidance": "Describe all panels in label order under one figure caption. Reuse the exact panel letters; do not number captions separately.",
+          "status": "project_recommendation",
+          "examples": [
+            "Fig. 1. Study design. A Recruitment. B Sampling. C Analysis."
+          ]
+        },
+        {
+          "id": "caption_placement",
+          "guidance": "Confirm whether captions belong beside figures, at the end of the manuscript, or in a separate document for the submission stage.",
+          "status": "unverified",
+          "source_url": "https://ascopubs.org/journal/jco/author-instructions",
+          "examples": [
+            "Keep captions in figure-number order wherever the journal requests them."
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "id": "table_numbering",
+          "guidance": "Number tables independently of figures, starting at 1 in first-citation order.",
+          "status": "unverified",
+          "source_url": "https://ascopubs.org/journal/jco/author-instructions",
+          "source_section": "Table numbering: confirm current journal instructions",
+          "pattern": "Table {number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "main_tables"
+          },
+          "examples": [
+            "Table 1",
+            "Table 2",
+            "Table 3"
+          ]
+        },
+        {
+          "id": "table_title",
+          "guidance": "Give each table a short descriptive title after its number; confirm placement for the submission stage.",
+          "status": "project_recommendation",
+          "pattern": "Table {number}. {title}",
+          "examples": [
+            "Table 1. Participant characteristics.",
+            "Table 2. Model parameters.",
+            "Table 3. Validation metrics."
+          ]
+        },
+        {
+          "id": "table_references",
+          "guidance": "Use the table sequence in text references. These grouped and range examples are project recommendations.",
+          "status": "project_recommendation",
+          "examples": [
+            "Table 1",
+            "Tables 1 and 3",
+            "Tables 1\u20133"
+          ]
+        }
+      ],
+      "supplementary": [
+        {
+          "id": "supplementary_figure_numbering",
+          "guidance": "Use a separate sequence for this supplementary item type. These labels are provisional; confirm the journal\u2019s current supporting-information or appendix convention.",
+          "status": "unverified",
+          "source_url": "https://ascopubs.org/journal/jco/author-instructions",
+          "pattern": "Fig. A{number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "supplementary_figures"
+          },
+          "examples": [
+            "Fig. A1",
+            "Fig. A2",
+            "Fig. A3"
+          ]
+        },
+        {
+          "id": "supplementary_table_numbering",
+          "guidance": "Use a separate sequence for this supplementary item type. These labels are provisional; confirm the journal\u2019s current supporting-information or appendix convention.",
+          "status": "unverified",
+          "source_url": "https://ascopubs.org/journal/jco/author-instructions",
+          "pattern": "Table A{number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "supplementary_tables"
+          },
+          "examples": [
+            "Table A1",
+            "Table A2",
+            "Table A3"
+          ]
+        },
+        {
+          "id": "supplementary_captions",
+          "guidance": "Match supplementary captions and table titles to their supplementary identifiers, keeping them separate from main-item sequences.",
+          "status": "project_recommendation",
+          "examples": [
+            "Fig. A1. Additional measurements.",
+            "Table A1. Additional model parameters."
+          ]
+        }
+      ],
+      "filenames": [
+        {
+          "id": "figure_filenames",
+          "guidance": "Project filename recommendation for separate files only. Replace {ext} with an accepted format for this item and submission stage; this does not require a separate upload.",
+          "status": "project_recommendation",
+          "pattern": "figure_{number:02d}.{ext}",
+          "examples": [
+            "figure_01.{ext}",
+            "figure_02.{ext}",
+            "figure_03.{ext}"
+          ]
+        },
+        {
+          "id": "table_filenames",
+          "guidance": "Project filename recommendation for separate files only. Replace {ext} with an accepted format for this item and submission stage; this does not require a separate upload.",
+          "status": "project_recommendation",
+          "pattern": "table_{number:02d}.{ext}",
+          "examples": [
+            "table_01.{ext}",
+            "table_02.{ext}",
+            "table_03.{ext}"
+          ]
+        },
+        {
+          "id": "caption_filenames",
+          "guidance": "If caption documents are requested, use one combined document or matching figure stems for individual documents. DOCX examples apply only when the journal accepts DOCX.",
+          "status": "project_recommendation",
+          "examples": [
+            "figure_captions.docx",
+            "figure_01_caption.docx",
+            "figure_02_caption.docx",
+            "figure_03_caption.docx"
+          ]
+        },
+        {
+          "id": "supplementary_filenames",
+          "guidance": "Prefix separate supplementary files to prevent collisions with main items. Use an accepted extension; keep the same numeric identifier as the supplementary label.",
+          "status": "project_recommendation",
+          "examples": [
+            "supplementary_figure_01.{ext}",
+            "supplementary_figure_02.{ext}",
+            "supplementary_table_01.{ext}",
+            "supplementary_figure_01_caption.docx"
+          ]
+        },
+        {
+          "id": "filename_priority",
+          "guidance": "Publisher and submission-portal instructions override these project filenames. Zero-padding is at least two digits and does not truncate larger numbers.",
+          "status": "project_recommendation",
+          "examples": [
+            "figure_10.{ext}",
+            "figure_100.{ext}"
+          ]
+        }
+      ]
     }
   },
   "asco": {
-    "schema_version": "1.0.0",
+    "schema_version": "1.1.0",
     "metadata": {
       "publisher": "American Society of Clinical Oncology (ASCO)",
       "journal_name": "Journal of Clinical Oncology",
@@ -769,10 +1427,228 @@
       "preferred_disclosure_placement": "Acknowledgment section prior to References",
       "policy_url": "https://ascopubs.org/journal/jco/author-instructions",
       "official_statement_template": "Acknowledgment of AI-assisted writing and technologies: During the preparation of this manuscript, the author(s) used [TOOL NAME, VERSION, e.g., ChatGPT / Claude] for the purpose of [DESCRIBE PURPOSE: e.g., grammar improvement / drafting preliminary summaries of non-clinical literature]. The authors reviewed and edited all generated content and take full responsibility for the integrity, factual accuracy, and originality of the published work.\n"
+    },
+    "naming_conventions": {
+      "figures": [
+        {
+          "id": "figure_numbering",
+          "guidance": "Number main figures independently of tables, starting at 1 in first-citation order.",
+          "status": "unverified",
+          "source_url": "https://ascopubs.org/journal/jco/author-instructions",
+          "source_section": "Figure numbering: confirm current journal instructions",
+          "pattern": "Fig. {number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "main_figures"
+          },
+          "examples": [
+            "Fig. 1",
+            "Fig. 2",
+            "Fig. 3"
+          ]
+        },
+        {
+          "id": "figure_references",
+          "guidance": "Provisional reference examples; confirm abbreviation, pluralization, and range style in current journal instructions.",
+          "status": "unverified",
+          "examples": [
+            "Fig. 1",
+            "Figs. 1 and 3",
+            "Figs. 1\u20133"
+          ],
+          "source_url": "https://ascopubs.org/journal/jco/author-instructions"
+        },
+        {
+          "id": "panel_references",
+          "guidance": "Use panel_labeling for letter case and punctuation. Panels share their parent figure number; these reference examples follow the existing panel labels.",
+          "status": "project_recommendation",
+          "examples": [
+            "Fig. 1A",
+            "Fig. 1A and 1C",
+            "Fig. 1A\u2013C"
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "id": "caption_heading",
+          "guidance": "Match each caption to its figure number and begin with a concise title. Punctuation in these examples is a project convention unless separately verified.",
+          "status": "project_recommendation",
+          "pattern": "Fig. {number}. {title}",
+          "examples": [
+            "Fig. 1. Study design.",
+            "Fig. 2. Measured response.",
+            "Fig. 3. Validation results."
+          ]
+        },
+        {
+          "id": "caption_panels",
+          "guidance": "Describe all panels in label order under one figure caption. Reuse the exact panel letters; do not number captions separately.",
+          "status": "project_recommendation",
+          "examples": [
+            "Fig. 1. Study design. A Recruitment. B Sampling. C Analysis."
+          ]
+        },
+        {
+          "id": "caption_placement",
+          "guidance": "Confirm whether captions belong beside figures, at the end of the manuscript, or in a separate document for the submission stage.",
+          "status": "unverified",
+          "source_url": "https://ascopubs.org/journal/jco/author-instructions",
+          "examples": [
+            "Keep captions in figure-number order wherever the journal requests them."
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "id": "table_numbering",
+          "guidance": "Number tables independently of figures, starting at 1 in first-citation order.",
+          "status": "unverified",
+          "source_url": "https://ascopubs.org/journal/jco/author-instructions",
+          "source_section": "Table numbering: confirm current journal instructions",
+          "pattern": "Table {number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "main_tables"
+          },
+          "examples": [
+            "Table 1",
+            "Table 2",
+            "Table 3"
+          ]
+        },
+        {
+          "id": "table_title",
+          "guidance": "Give each table a short descriptive title after its number; confirm placement for the submission stage.",
+          "status": "project_recommendation",
+          "pattern": "Table {number}. {title}",
+          "examples": [
+            "Table 1. Participant characteristics.",
+            "Table 2. Model parameters.",
+            "Table 3. Validation metrics."
+          ]
+        },
+        {
+          "id": "table_references",
+          "guidance": "Use the table sequence in text references. These grouped and range examples are project recommendations.",
+          "status": "project_recommendation",
+          "examples": [
+            "Table 1",
+            "Tables 1 and 3",
+            "Tables 1\u20133"
+          ]
+        }
+      ],
+      "supplementary": [
+        {
+          "id": "supplementary_figure_numbering",
+          "guidance": "Use a separate sequence for this supplementary item type. These labels are provisional; confirm the journal\u2019s current supporting-information or appendix convention.",
+          "status": "unverified",
+          "source_url": "https://ascopubs.org/journal/jco/author-instructions",
+          "pattern": "Fig. A{number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "supplementary_figures"
+          },
+          "examples": [
+            "Fig. A1",
+            "Fig. A2",
+            "Fig. A3"
+          ]
+        },
+        {
+          "id": "supplementary_table_numbering",
+          "guidance": "Use a separate sequence for this supplementary item type. These labels are provisional; confirm the journal\u2019s current supporting-information or appendix convention.",
+          "status": "unverified",
+          "source_url": "https://ascopubs.org/journal/jco/author-instructions",
+          "pattern": "Table A{number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "supplementary_tables"
+          },
+          "examples": [
+            "Table A1",
+            "Table A2",
+            "Table A3"
+          ]
+        },
+        {
+          "id": "supplementary_captions",
+          "guidance": "Match supplementary captions and table titles to their supplementary identifiers, keeping them separate from main-item sequences.",
+          "status": "project_recommendation",
+          "examples": [
+            "Fig. A1. Additional measurements.",
+            "Table A1. Additional model parameters."
+          ]
+        }
+      ],
+      "filenames": [
+        {
+          "id": "figure_filenames",
+          "guidance": "Project filename recommendation for separate files only. Replace {ext} with an accepted format for this item and submission stage; this does not require a separate upload.",
+          "status": "project_recommendation",
+          "pattern": "figure_{number:02d}.{ext}",
+          "examples": [
+            "figure_01.{ext}",
+            "figure_02.{ext}",
+            "figure_03.{ext}"
+          ]
+        },
+        {
+          "id": "table_filenames",
+          "guidance": "Project filename recommendation for separate files only. Replace {ext} with an accepted format for this item and submission stage; this does not require a separate upload.",
+          "status": "project_recommendation",
+          "pattern": "table_{number:02d}.{ext}",
+          "examples": [
+            "table_01.{ext}",
+            "table_02.{ext}",
+            "table_03.{ext}"
+          ]
+        },
+        {
+          "id": "caption_filenames",
+          "guidance": "If caption documents are requested, use one combined document or matching figure stems for individual documents. DOCX examples apply only when the journal accepts DOCX.",
+          "status": "project_recommendation",
+          "examples": [
+            "figure_captions.docx",
+            "figure_01_caption.docx",
+            "figure_02_caption.docx",
+            "figure_03_caption.docx"
+          ]
+        },
+        {
+          "id": "supplementary_filenames",
+          "guidance": "Prefix separate supplementary files to prevent collisions with main items. Use an accepted extension; keep the same numeric identifier as the supplementary label.",
+          "status": "project_recommendation",
+          "examples": [
+            "supplementary_figure_01.{ext}",
+            "supplementary_figure_02.{ext}",
+            "supplementary_table_01.{ext}",
+            "supplementary_figure_01_caption.docx"
+          ]
+        },
+        {
+          "id": "filename_priority",
+          "guidance": "Publisher and submission-portal instructions override these project filenames. Zero-padding is at least two digits and does not truncate larger numbers.",
+          "status": "project_recommendation",
+          "examples": [
+            "figure_10.{ext}",
+            "figure_100.{ext}"
+          ]
+        }
+      ]
     }
   },
   "cell": {
-    "schema_version": "1.0.0",
+    "schema_version": "1.1.0",
     "metadata": {
       "publisher": "Cell Press (Elsevier)",
       "journal_name": "Cell",
@@ -970,10 +1846,228 @@
       "preferred_disclosure_placement": "Declaration of Generative AI and AI-assisted technologies in the writing process",
       "policy_url": "https://www.elsevier.com/about/policies-and-standards/the-use-of-generative-ai-and-ai-assisted-technologies-in-writing-for-elsevier",
       "official_statement_template": "Declaration of generative AI and AI-assisted technologies in the writing process: During the preparation of this work the author(s) used [NAME TOOL / SERVICE] in order to [REASON]. After using this tool/service, the author(s) reviewed and edited the content as needed and take(s) full responsibility for the content of the publication.\n"
+    },
+    "naming_conventions": {
+      "figures": [
+        {
+          "id": "figure_numbering",
+          "guidance": "Number main figures independently of tables, starting at 1 in first-citation order.",
+          "status": "unverified",
+          "source_url": "https://www.cell.com/cell/authors",
+          "source_section": "Figure numbering: confirm current journal instructions",
+          "pattern": "Figure {number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "main_figures"
+          },
+          "examples": [
+            "Figure 1",
+            "Figure 2",
+            "Figure 3"
+          ]
+        },
+        {
+          "id": "figure_references",
+          "guidance": "Provisional reference examples; confirm abbreviation, pluralization, and range style in current journal instructions.",
+          "status": "unverified",
+          "examples": [
+            "Figure 1",
+            "Figures 1 and 3",
+            "Figures 1\u20133"
+          ],
+          "source_url": "https://www.cell.com/cell/authors"
+        },
+        {
+          "id": "panel_references",
+          "guidance": "Use panel_labeling for letter case and punctuation. Panels share their parent figure number; these reference examples follow the existing panel labels.",
+          "status": "project_recommendation",
+          "examples": [
+            "Figure 1A",
+            "Figure 1A and 1C",
+            "Figure 1A\u2013C"
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "id": "caption_heading",
+          "guidance": "Match each caption to its figure number and begin with a concise title. Punctuation in these examples is a project convention unless separately verified.",
+          "status": "project_recommendation",
+          "pattern": "Figure {number}. {title}",
+          "examples": [
+            "Figure 1. Study design.",
+            "Figure 2. Measured response.",
+            "Figure 3. Validation results."
+          ]
+        },
+        {
+          "id": "caption_panels",
+          "guidance": "Describe all panels in label order under one figure caption. Reuse the exact panel letters; do not number captions separately.",
+          "status": "project_recommendation",
+          "examples": [
+            "Figure 1. Study design. A Recruitment. B Sampling. C Analysis."
+          ]
+        },
+        {
+          "id": "caption_placement",
+          "guidance": "Confirm whether captions belong beside figures, at the end of the manuscript, or in a separate document for the submission stage.",
+          "status": "unverified",
+          "source_url": "https://www.cell.com/cell/authors",
+          "examples": [
+            "Keep captions in figure-number order wherever the journal requests them."
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "id": "table_numbering",
+          "guidance": "Number tables independently of figures, starting at 1 in first-citation order.",
+          "status": "unverified",
+          "source_url": "https://www.cell.com/cell/authors",
+          "source_section": "Table numbering: confirm current journal instructions",
+          "pattern": "Table {number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "main_tables"
+          },
+          "examples": [
+            "Table 1",
+            "Table 2",
+            "Table 3"
+          ]
+        },
+        {
+          "id": "table_title",
+          "guidance": "Give each table a short descriptive title after its number; confirm placement for the submission stage.",
+          "status": "project_recommendation",
+          "pattern": "Table {number}. {title}",
+          "examples": [
+            "Table 1. Participant characteristics.",
+            "Table 2. Model parameters.",
+            "Table 3. Validation metrics."
+          ]
+        },
+        {
+          "id": "table_references",
+          "guidance": "Use the table sequence in text references. These grouped and range examples are project recommendations.",
+          "status": "project_recommendation",
+          "examples": [
+            "Table 1",
+            "Tables 1 and 3",
+            "Tables 1\u20133"
+          ]
+        }
+      ],
+      "supplementary": [
+        {
+          "id": "supplementary_figure_numbering",
+          "guidance": "Use a separate sequence for this supplementary item type. These labels are provisional; confirm the journal\u2019s current supporting-information or appendix convention.",
+          "status": "unverified",
+          "source_url": "https://www.cell.com/cell/authors",
+          "pattern": "Figure S{number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "supplementary_figures"
+          },
+          "examples": [
+            "Figure S1",
+            "Figure S2",
+            "Figure S3"
+          ]
+        },
+        {
+          "id": "supplementary_table_numbering",
+          "guidance": "Use a separate sequence for this supplementary item type. These labels are provisional; confirm the journal\u2019s current supporting-information or appendix convention.",
+          "status": "unverified",
+          "source_url": "https://www.cell.com/cell/authors",
+          "pattern": "Table S{number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "supplementary_tables"
+          },
+          "examples": [
+            "Table S1",
+            "Table S2",
+            "Table S3"
+          ]
+        },
+        {
+          "id": "supplementary_captions",
+          "guidance": "Match supplementary captions and table titles to their supplementary identifiers, keeping them separate from main-item sequences.",
+          "status": "project_recommendation",
+          "examples": [
+            "Figure S1. Additional measurements.",
+            "Table S1. Additional model parameters."
+          ]
+        }
+      ],
+      "filenames": [
+        {
+          "id": "figure_filenames",
+          "guidance": "Project filename recommendation for separate files only. Replace {ext} with an accepted format for this item and submission stage; this does not require a separate upload.",
+          "status": "project_recommendation",
+          "pattern": "figure_{number:02d}.{ext}",
+          "examples": [
+            "figure_01.{ext}",
+            "figure_02.{ext}",
+            "figure_03.{ext}"
+          ]
+        },
+        {
+          "id": "table_filenames",
+          "guidance": "Project filename recommendation for separate files only. Replace {ext} with an accepted format for this item and submission stage; this does not require a separate upload.",
+          "status": "project_recommendation",
+          "pattern": "table_{number:02d}.{ext}",
+          "examples": [
+            "table_01.{ext}",
+            "table_02.{ext}",
+            "table_03.{ext}"
+          ]
+        },
+        {
+          "id": "caption_filenames",
+          "guidance": "If caption documents are requested, use one combined document or matching figure stems for individual documents. DOCX examples apply only when the journal accepts DOCX.",
+          "status": "project_recommendation",
+          "examples": [
+            "figure_captions.docx",
+            "figure_01_caption.docx",
+            "figure_02_caption.docx",
+            "figure_03_caption.docx"
+          ]
+        },
+        {
+          "id": "supplementary_filenames",
+          "guidance": "Prefix separate supplementary files to prevent collisions with main items. Use an accepted extension; keep the same numeric identifier as the supplementary label.",
+          "status": "project_recommendation",
+          "examples": [
+            "supplementary_figure_01.{ext}",
+            "supplementary_figure_02.{ext}",
+            "supplementary_table_01.{ext}",
+            "supplementary_figure_01_caption.docx"
+          ]
+        },
+        {
+          "id": "filename_priority",
+          "guidance": "Publisher and submission-portal instructions override these project filenames. Zero-padding is at least two digits and does not truncate larger numbers.",
+          "status": "project_recommendation",
+          "examples": [
+            "figure_10.{ext}",
+            "figure_100.{ext}"
+          ]
+        }
+      ]
     }
   },
   "elsevier": {
-    "schema_version": "1.0.0",
+    "schema_version": "1.1.0",
     "metadata": {
       "publisher": "Cell Press (Elsevier)",
       "journal_name": "Cell",
@@ -1171,10 +2265,228 @@
       "preferred_disclosure_placement": "Declaration of Generative AI and AI-assisted technologies in the writing process",
       "policy_url": "https://www.elsevier.com/about/policies-and-standards/the-use-of-generative-ai-and-ai-assisted-technologies-in-writing-for-elsevier",
       "official_statement_template": "Declaration of generative AI and AI-assisted technologies in the writing process: During the preparation of this work the author(s) used [NAME TOOL / SERVICE] in order to [REASON]. After using this tool/service, the author(s) reviewed and edited the content as needed and take(s) full responsibility for the content of the publication.\n"
+    },
+    "naming_conventions": {
+      "figures": [
+        {
+          "id": "figure_numbering",
+          "guidance": "Number main figures independently of tables, starting at 1 in first-citation order.",
+          "status": "unverified",
+          "source_url": "https://www.cell.com/cell/authors",
+          "source_section": "Figure numbering: confirm current journal instructions",
+          "pattern": "Figure {number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "main_figures"
+          },
+          "examples": [
+            "Figure 1",
+            "Figure 2",
+            "Figure 3"
+          ]
+        },
+        {
+          "id": "figure_references",
+          "guidance": "Provisional reference examples; confirm abbreviation, pluralization, and range style in current journal instructions.",
+          "status": "unverified",
+          "examples": [
+            "Figure 1",
+            "Figures 1 and 3",
+            "Figures 1\u20133"
+          ],
+          "source_url": "https://www.cell.com/cell/authors"
+        },
+        {
+          "id": "panel_references",
+          "guidance": "Use panel_labeling for letter case and punctuation. Panels share their parent figure number; these reference examples follow the existing panel labels.",
+          "status": "project_recommendation",
+          "examples": [
+            "Figure 1A",
+            "Figure 1A and 1C",
+            "Figure 1A\u2013C"
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "id": "caption_heading",
+          "guidance": "Match each caption to its figure number and begin with a concise title. Punctuation in these examples is a project convention unless separately verified.",
+          "status": "project_recommendation",
+          "pattern": "Figure {number}. {title}",
+          "examples": [
+            "Figure 1. Study design.",
+            "Figure 2. Measured response.",
+            "Figure 3. Validation results."
+          ]
+        },
+        {
+          "id": "caption_panels",
+          "guidance": "Describe all panels in label order under one figure caption. Reuse the exact panel letters; do not number captions separately.",
+          "status": "project_recommendation",
+          "examples": [
+            "Figure 1. Study design. A Recruitment. B Sampling. C Analysis."
+          ]
+        },
+        {
+          "id": "caption_placement",
+          "guidance": "Confirm whether captions belong beside figures, at the end of the manuscript, or in a separate document for the submission stage.",
+          "status": "unverified",
+          "source_url": "https://www.cell.com/cell/authors",
+          "examples": [
+            "Keep captions in figure-number order wherever the journal requests them."
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "id": "table_numbering",
+          "guidance": "Number tables independently of figures, starting at 1 in first-citation order.",
+          "status": "unverified",
+          "source_url": "https://www.cell.com/cell/authors",
+          "source_section": "Table numbering: confirm current journal instructions",
+          "pattern": "Table {number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "main_tables"
+          },
+          "examples": [
+            "Table 1",
+            "Table 2",
+            "Table 3"
+          ]
+        },
+        {
+          "id": "table_title",
+          "guidance": "Give each table a short descriptive title after its number; confirm placement for the submission stage.",
+          "status": "project_recommendation",
+          "pattern": "Table {number}. {title}",
+          "examples": [
+            "Table 1. Participant characteristics.",
+            "Table 2. Model parameters.",
+            "Table 3. Validation metrics."
+          ]
+        },
+        {
+          "id": "table_references",
+          "guidance": "Use the table sequence in text references. These grouped and range examples are project recommendations.",
+          "status": "project_recommendation",
+          "examples": [
+            "Table 1",
+            "Tables 1 and 3",
+            "Tables 1\u20133"
+          ]
+        }
+      ],
+      "supplementary": [
+        {
+          "id": "supplementary_figure_numbering",
+          "guidance": "Use a separate sequence for this supplementary item type. These labels are provisional; confirm the journal\u2019s current supporting-information or appendix convention.",
+          "status": "unverified",
+          "source_url": "https://www.cell.com/cell/authors",
+          "pattern": "Figure S{number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "supplementary_figures"
+          },
+          "examples": [
+            "Figure S1",
+            "Figure S2",
+            "Figure S3"
+          ]
+        },
+        {
+          "id": "supplementary_table_numbering",
+          "guidance": "Use a separate sequence for this supplementary item type. These labels are provisional; confirm the journal\u2019s current supporting-information or appendix convention.",
+          "status": "unverified",
+          "source_url": "https://www.cell.com/cell/authors",
+          "pattern": "Table S{number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "supplementary_tables"
+          },
+          "examples": [
+            "Table S1",
+            "Table S2",
+            "Table S3"
+          ]
+        },
+        {
+          "id": "supplementary_captions",
+          "guidance": "Match supplementary captions and table titles to their supplementary identifiers, keeping them separate from main-item sequences.",
+          "status": "project_recommendation",
+          "examples": [
+            "Figure S1. Additional measurements.",
+            "Table S1. Additional model parameters."
+          ]
+        }
+      ],
+      "filenames": [
+        {
+          "id": "figure_filenames",
+          "guidance": "Project filename recommendation for separate files only. Replace {ext} with an accepted format for this item and submission stage; this does not require a separate upload.",
+          "status": "project_recommendation",
+          "pattern": "figure_{number:02d}.{ext}",
+          "examples": [
+            "figure_01.{ext}",
+            "figure_02.{ext}",
+            "figure_03.{ext}"
+          ]
+        },
+        {
+          "id": "table_filenames",
+          "guidance": "Project filename recommendation for separate files only. Replace {ext} with an accepted format for this item and submission stage; this does not require a separate upload.",
+          "status": "project_recommendation",
+          "pattern": "table_{number:02d}.{ext}",
+          "examples": [
+            "table_01.{ext}",
+            "table_02.{ext}",
+            "table_03.{ext}"
+          ]
+        },
+        {
+          "id": "caption_filenames",
+          "guidance": "If caption documents are requested, use one combined document or matching figure stems for individual documents. DOCX examples apply only when the journal accepts DOCX.",
+          "status": "project_recommendation",
+          "examples": [
+            "figure_captions.docx",
+            "figure_01_caption.docx",
+            "figure_02_caption.docx",
+            "figure_03_caption.docx"
+          ]
+        },
+        {
+          "id": "supplementary_filenames",
+          "guidance": "Prefix separate supplementary files to prevent collisions with main items. Use an accepted extension; keep the same numeric identifier as the supplementary label.",
+          "status": "project_recommendation",
+          "examples": [
+            "supplementary_figure_01.{ext}",
+            "supplementary_figure_02.{ext}",
+            "supplementary_table_01.{ext}",
+            "supplementary_figure_01_caption.docx"
+          ]
+        },
+        {
+          "id": "filename_priority",
+          "guidance": "Publisher and submission-portal instructions override these project filenames. Zero-padding is at least two digits and does not truncate larger numbers.",
+          "status": "project_recommendation",
+          "examples": [
+            "figure_10.{ext}",
+            "figure_100.{ext}"
+          ]
+        }
+      ]
     }
   },
   "ieee_transactions": {
-    "schema_version": "1.0.0",
+    "schema_version": "1.1.0",
     "metadata": {
       "publisher": "IEEE (Institute of Electrical and Electronics Engineers)",
       "journal_name": "IEEE Transactions",
@@ -1365,10 +2677,235 @@
       "preferred_disclosure_placement": "Acknowledgment",
       "policy_url": "https://journals.ieeeauthorcenter.ieee.org/become-an-ieee-journal-author/publishing-ethics/guidelines-and-policies/ieee-principles-for-artificial-intelligence-ai-generated-text/",
       "official_statement_template": "The author(s) acknowledge the use of [TOOL NAME, VERSION, e.g., ChatGPT-4 / Claude 3.5] to assist in [SPECIFY PURPOSE: e.g., editing and improving English prose clarity / formatting references]. The author(s) have reviewed all content and take full responsibility for the accuracy, originality, and integrity of the entire manuscript.\n"
+    },
+    "naming_conventions": {
+      "figures": [
+        {
+          "id": "figure_numbering",
+          "guidance": "Number main figures independently of tables, starting at 1 in first-citation order.",
+          "status": "publisher_requirement",
+          "source_url": "https://journals.ieeeauthorcenter.ieee.org/wp-content/uploads/sites/7/IEEE-Editorial-Style-Manual-for-Authors.pdf",
+          "source_section": "Text Citation of Figures and Tables, p. 14",
+          "verified_on": "2026-10-18",
+          "pattern": "Fig. {number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "main_figures"
+          },
+          "examples": [
+            "Fig. 1",
+            "Fig. 2",
+            "Fig. 3"
+          ]
+        },
+        {
+          "id": "figure_references",
+          "guidance": "Use the same figure identifier in text and captions; use a range only for consecutive figures. These grouped examples are project recommendations.",
+          "status": "project_recommendation",
+          "examples": [
+            "Fig. 1",
+            "Figs. 1 and 3",
+            "Figs. 1\u20133"
+          ]
+        },
+        {
+          "id": "panel_references",
+          "guidance": "Use panel_labeling for letter case and punctuation. Panels share their parent figure number; these reference examples follow the existing panel labels.",
+          "status": "project_recommendation",
+          "examples": [
+            "Fig. 1(a)",
+            "Fig. 1(a) and 1(c)",
+            "Fig. 1(a)\u2013(c)"
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "id": "caption_heading",
+          "guidance": "Start with Fig., the number, a period, and an em space before the caption text.",
+          "status": "publisher_requirement",
+          "source_url": "https://journals.ieeeauthorcenter.ieee.org/wp-content/uploads/sites/7/IEEE-Editorial-Style-Manual-for-Authors.pdf",
+          "source_section": "Text Citation of Figures and Tables, p. 14",
+          "verified_on": "2026-10-18",
+          "pattern": "Fig. {number}.\u2003{title}",
+          "examples": [
+            "Fig. 1.\u2003Study design.",
+            "Fig. 2.\u2003Measured response.",
+            "Fig. 3.\u2003Validation results."
+          ]
+        },
+        {
+          "id": "caption_panels",
+          "guidance": "Describe all panels in label order under one figure caption. Reuse the exact panel letters; do not number captions separately.",
+          "status": "project_recommendation",
+          "examples": [
+            "Fig. 1.\u2003Study design. (a) Recruitment. (b) Sampling. (c) Analysis."
+          ]
+        },
+        {
+          "id": "caption_placement",
+          "guidance": "Confirm whether captions belong beside figures, at the end of the manuscript, or in a separate document for the submission stage.",
+          "status": "unverified",
+          "source_url": "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/",
+          "examples": [
+            "Keep captions in figure-number order wherever the journal requests them."
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "id": "table_numbering",
+          "guidance": "Number tables in first-citation order independently of figures. Use Roman numerals for IEEE table headings.",
+          "status": "publisher_requirement",
+          "source_url": "https://journals.ieeeauthorcenter.ieee.org/wp-content/uploads/sites/7/IEEE-Editorial-Style-Manual-for-Authors.pdf",
+          "source_section": "Text Citation of Figures and Tables, pp. 14\u201315",
+          "verified_on": "2026-10-18",
+          "pattern": "TABLE {number}",
+          "numbering": {
+            "style": "roman_upper",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "main_tables"
+          },
+          "examples": [
+            "TABLE I",
+            "TABLE II",
+            "TABLE III"
+          ]
+        },
+        {
+          "id": "table_title",
+          "guidance": "Center TABLE and its Roman numeral above the table; place the title on the next line without a final period.",
+          "status": "publisher_requirement",
+          "source_url": "https://journals.ieeeauthorcenter.ieee.org/wp-content/uploads/sites/7/IEEE-Editorial-Style-Manual-for-Authors.pdf",
+          "source_section": "Text Citation of Figures and Tables, p. 15",
+          "verified_on": "2026-10-18",
+          "pattern": "TABLE {number}\n{title}",
+          "examples": [
+            "TABLE I\nPARTICIPANT CHARACTERISTICS",
+            "TABLE II\nMODEL PARAMETERS",
+            "TABLE III\nVALIDATION METRICS"
+          ]
+        },
+        {
+          "id": "table_references",
+          "guidance": "Use the table sequence in text references. These grouped and range examples are project recommendations.",
+          "status": "project_recommendation",
+          "examples": [
+            "Table I",
+            "Tables I and III",
+            "Tables I\u2013III"
+          ]
+        }
+      ],
+      "supplementary": [
+        {
+          "id": "supplementary_figure_numbering",
+          "guidance": "Use a separate sequence for this supplementary item type. These labels are provisional; confirm the journal\u2019s current supporting-information or appendix convention.",
+          "status": "unverified",
+          "source_url": "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/",
+          "pattern": "Supplementary Figure {number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "supplementary_figures"
+          },
+          "examples": [
+            "Supplementary Figure 1",
+            "Supplementary Figure 2",
+            "Supplementary Figure 3"
+          ]
+        },
+        {
+          "id": "supplementary_table_numbering",
+          "guidance": "Use a separate sequence for this supplementary item type. These labels are provisional; confirm the journal\u2019s current supporting-information or appendix convention.",
+          "status": "unverified",
+          "source_url": "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/",
+          "pattern": "Supplementary Table {number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "supplementary_tables"
+          },
+          "examples": [
+            "Supplementary Table 1",
+            "Supplementary Table 2",
+            "Supplementary Table 3"
+          ]
+        },
+        {
+          "id": "supplementary_captions",
+          "guidance": "Match supplementary captions and table titles to their supplementary identifiers, keeping them separate from main-item sequences.",
+          "status": "project_recommendation",
+          "examples": [
+            "Supplementary Figure 1. Additional measurements.",
+            "Supplementary Table 1. Additional model parameters."
+          ]
+        }
+      ],
+      "filenames": [
+        {
+          "id": "figure_filenames",
+          "guidance": "Project filename recommendation for separate files only. Replace {ext} with an accepted format for this item and submission stage; this does not require a separate upload.",
+          "status": "project_recommendation",
+          "pattern": "figure_{number:02d}.{ext}",
+          "examples": [
+            "figure_01.{ext}",
+            "figure_02.{ext}",
+            "figure_03.{ext}"
+          ]
+        },
+        {
+          "id": "table_filenames",
+          "guidance": "Project filename recommendation for separate files only. Replace {ext} with an accepted format for this item and submission stage; this does not require a separate upload.",
+          "status": "project_recommendation",
+          "pattern": "table_{number:02d}.{ext}",
+          "examples": [
+            "table_01.{ext}",
+            "table_02.{ext}",
+            "table_03.{ext}"
+          ]
+        },
+        {
+          "id": "caption_filenames",
+          "guidance": "If caption documents are requested, use one combined document or matching figure stems for individual documents. DOCX examples apply only when the journal accepts DOCX.",
+          "status": "project_recommendation",
+          "examples": [
+            "figure_captions.docx",
+            "figure_01_caption.docx",
+            "figure_02_caption.docx",
+            "figure_03_caption.docx"
+          ]
+        },
+        {
+          "id": "supplementary_filenames",
+          "guidance": "Prefix separate supplementary files to prevent collisions with main items. Use an accepted extension; keep the same numeric identifier as the supplementary label.",
+          "status": "project_recommendation",
+          "examples": [
+            "supplementary_figure_01.{ext}",
+            "supplementary_figure_02.{ext}",
+            "supplementary_table_01.{ext}",
+            "supplementary_figure_01_caption.docx"
+          ]
+        },
+        {
+          "id": "filename_priority",
+          "guidance": "Publisher and submission-portal instructions override these project filenames. Zero-padding is at least two digits and does not truncate larger numbers. IEEE table_01 identifies TABLE I.",
+          "status": "project_recommendation",
+          "examples": [
+            "figure_10.{ext}",
+            "figure_100.{ext}"
+          ]
+        }
+      ]
     }
   },
   "ieee": {
-    "schema_version": "1.0.0",
+    "schema_version": "1.1.0",
     "metadata": {
       "publisher": "IEEE (Institute of Electrical and Electronics Engineers)",
       "journal_name": "IEEE Transactions",
@@ -1559,10 +3096,235 @@
       "preferred_disclosure_placement": "Acknowledgment",
       "policy_url": "https://journals.ieeeauthorcenter.ieee.org/become-an-ieee-journal-author/publishing-ethics/guidelines-and-policies/ieee-principles-for-artificial-intelligence-ai-generated-text/",
       "official_statement_template": "The author(s) acknowledge the use of [TOOL NAME, VERSION, e.g., ChatGPT-4 / Claude 3.5] to assist in [SPECIFY PURPOSE: e.g., editing and improving English prose clarity / formatting references]. The author(s) have reviewed all content and take full responsibility for the accuracy, originality, and integrity of the entire manuscript.\n"
+    },
+    "naming_conventions": {
+      "figures": [
+        {
+          "id": "figure_numbering",
+          "guidance": "Number main figures independently of tables, starting at 1 in first-citation order.",
+          "status": "publisher_requirement",
+          "source_url": "https://journals.ieeeauthorcenter.ieee.org/wp-content/uploads/sites/7/IEEE-Editorial-Style-Manual-for-Authors.pdf",
+          "source_section": "Text Citation of Figures and Tables, p. 14",
+          "verified_on": "2026-10-18",
+          "pattern": "Fig. {number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "main_figures"
+          },
+          "examples": [
+            "Fig. 1",
+            "Fig. 2",
+            "Fig. 3"
+          ]
+        },
+        {
+          "id": "figure_references",
+          "guidance": "Use the same figure identifier in text and captions; use a range only for consecutive figures. These grouped examples are project recommendations.",
+          "status": "project_recommendation",
+          "examples": [
+            "Fig. 1",
+            "Figs. 1 and 3",
+            "Figs. 1\u20133"
+          ]
+        },
+        {
+          "id": "panel_references",
+          "guidance": "Use panel_labeling for letter case and punctuation. Panels share their parent figure number; these reference examples follow the existing panel labels.",
+          "status": "project_recommendation",
+          "examples": [
+            "Fig. 1(a)",
+            "Fig. 1(a) and 1(c)",
+            "Fig. 1(a)\u2013(c)"
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "id": "caption_heading",
+          "guidance": "Start with Fig., the number, a period, and an em space before the caption text.",
+          "status": "publisher_requirement",
+          "source_url": "https://journals.ieeeauthorcenter.ieee.org/wp-content/uploads/sites/7/IEEE-Editorial-Style-Manual-for-Authors.pdf",
+          "source_section": "Text Citation of Figures and Tables, p. 14",
+          "verified_on": "2026-10-18",
+          "pattern": "Fig. {number}.\u2003{title}",
+          "examples": [
+            "Fig. 1.\u2003Study design.",
+            "Fig. 2.\u2003Measured response.",
+            "Fig. 3.\u2003Validation results."
+          ]
+        },
+        {
+          "id": "caption_panels",
+          "guidance": "Describe all panels in label order under one figure caption. Reuse the exact panel letters; do not number captions separately.",
+          "status": "project_recommendation",
+          "examples": [
+            "Fig. 1.\u2003Study design. (a) Recruitment. (b) Sampling. (c) Analysis."
+          ]
+        },
+        {
+          "id": "caption_placement",
+          "guidance": "Confirm whether captions belong beside figures, at the end of the manuscript, or in a separate document for the submission stage.",
+          "status": "unverified",
+          "source_url": "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/",
+          "examples": [
+            "Keep captions in figure-number order wherever the journal requests them."
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "id": "table_numbering",
+          "guidance": "Number tables in first-citation order independently of figures. Use Roman numerals for IEEE table headings.",
+          "status": "publisher_requirement",
+          "source_url": "https://journals.ieeeauthorcenter.ieee.org/wp-content/uploads/sites/7/IEEE-Editorial-Style-Manual-for-Authors.pdf",
+          "source_section": "Text Citation of Figures and Tables, pp. 14\u201315",
+          "verified_on": "2026-10-18",
+          "pattern": "TABLE {number}",
+          "numbering": {
+            "style": "roman_upper",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "main_tables"
+          },
+          "examples": [
+            "TABLE I",
+            "TABLE II",
+            "TABLE III"
+          ]
+        },
+        {
+          "id": "table_title",
+          "guidance": "Center TABLE and its Roman numeral above the table; place the title on the next line without a final period.",
+          "status": "publisher_requirement",
+          "source_url": "https://journals.ieeeauthorcenter.ieee.org/wp-content/uploads/sites/7/IEEE-Editorial-Style-Manual-for-Authors.pdf",
+          "source_section": "Text Citation of Figures and Tables, p. 15",
+          "verified_on": "2026-10-18",
+          "pattern": "TABLE {number}\n{title}",
+          "examples": [
+            "TABLE I\nPARTICIPANT CHARACTERISTICS",
+            "TABLE II\nMODEL PARAMETERS",
+            "TABLE III\nVALIDATION METRICS"
+          ]
+        },
+        {
+          "id": "table_references",
+          "guidance": "Use the table sequence in text references. These grouped and range examples are project recommendations.",
+          "status": "project_recommendation",
+          "examples": [
+            "Table I",
+            "Tables I and III",
+            "Tables I\u2013III"
+          ]
+        }
+      ],
+      "supplementary": [
+        {
+          "id": "supplementary_figure_numbering",
+          "guidance": "Use a separate sequence for this supplementary item type. These labels are provisional; confirm the journal\u2019s current supporting-information or appendix convention.",
+          "status": "unverified",
+          "source_url": "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/",
+          "pattern": "Supplementary Figure {number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "supplementary_figures"
+          },
+          "examples": [
+            "Supplementary Figure 1",
+            "Supplementary Figure 2",
+            "Supplementary Figure 3"
+          ]
+        },
+        {
+          "id": "supplementary_table_numbering",
+          "guidance": "Use a separate sequence for this supplementary item type. These labels are provisional; confirm the journal\u2019s current supporting-information or appendix convention.",
+          "status": "unverified",
+          "source_url": "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/",
+          "pattern": "Supplementary Table {number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "supplementary_tables"
+          },
+          "examples": [
+            "Supplementary Table 1",
+            "Supplementary Table 2",
+            "Supplementary Table 3"
+          ]
+        },
+        {
+          "id": "supplementary_captions",
+          "guidance": "Match supplementary captions and table titles to their supplementary identifiers, keeping them separate from main-item sequences.",
+          "status": "project_recommendation",
+          "examples": [
+            "Supplementary Figure 1. Additional measurements.",
+            "Supplementary Table 1. Additional model parameters."
+          ]
+        }
+      ],
+      "filenames": [
+        {
+          "id": "figure_filenames",
+          "guidance": "Project filename recommendation for separate files only. Replace {ext} with an accepted format for this item and submission stage; this does not require a separate upload.",
+          "status": "project_recommendation",
+          "pattern": "figure_{number:02d}.{ext}",
+          "examples": [
+            "figure_01.{ext}",
+            "figure_02.{ext}",
+            "figure_03.{ext}"
+          ]
+        },
+        {
+          "id": "table_filenames",
+          "guidance": "Project filename recommendation for separate files only. Replace {ext} with an accepted format for this item and submission stage; this does not require a separate upload.",
+          "status": "project_recommendation",
+          "pattern": "table_{number:02d}.{ext}",
+          "examples": [
+            "table_01.{ext}",
+            "table_02.{ext}",
+            "table_03.{ext}"
+          ]
+        },
+        {
+          "id": "caption_filenames",
+          "guidance": "If caption documents are requested, use one combined document or matching figure stems for individual documents. DOCX examples apply only when the journal accepts DOCX.",
+          "status": "project_recommendation",
+          "examples": [
+            "figure_captions.docx",
+            "figure_01_caption.docx",
+            "figure_02_caption.docx",
+            "figure_03_caption.docx"
+          ]
+        },
+        {
+          "id": "supplementary_filenames",
+          "guidance": "Prefix separate supplementary files to prevent collisions with main items. Use an accepted extension; keep the same numeric identifier as the supplementary label.",
+          "status": "project_recommendation",
+          "examples": [
+            "supplementary_figure_01.{ext}",
+            "supplementary_figure_02.{ext}",
+            "supplementary_table_01.{ext}",
+            "supplementary_figure_01_caption.docx"
+          ]
+        },
+        {
+          "id": "filename_priority",
+          "guidance": "Publisher and submission-portal instructions override these project filenames. Zero-padding is at least two digits and does not truncate larger numbers. IEEE table_01 identifies TABLE I.",
+          "status": "project_recommendation",
+          "examples": [
+            "figure_10.{ext}",
+            "figure_100.{ext}"
+          ]
+        }
+      ]
     }
   },
   "nature": {
-    "schema_version": "1.0.0",
+    "schema_version": "1.1.0",
     "metadata": {
       "publisher": "Nature Portfolio (Springer Nature)",
       "journal_name": "Nature",
@@ -1754,10 +3516,298 @@
       "preferred_disclosure_placement": "Methods",
       "policy_url": "https://www.nature.com/nature-portfolio/editorial-policies/ai",
       "official_statement_template": "During the preparation of this manuscript, the author(s) used [TOOL NAME, VERSION, e.g., Claude 3.5 Sonnet / ChatGPT] in order to [SPECIFY PURPOSE: e.g., refine prose for readability / assist in drafting Python data processing routines]. The author(s) reviewed and edited the output as needed and take full responsibility for the integrity and accuracy of all published material.\n"
+    },
+    "naming_conventions": {
+      "figures": [
+        {
+          "id": "figure_numbering",
+          "guidance": "Number main figures independently of tables, starting at 1 in first-citation order.",
+          "status": "unverified",
+          "source_url": "https://www.nature.com/nature/for-authors/final-submission",
+          "source_section": "Figure numbering: confirm current journal instructions",
+          "pattern": "Fig. {number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "main_figures"
+          },
+          "examples": [
+            "Fig. 1",
+            "Fig. 2",
+            "Fig. 3"
+          ]
+        },
+        {
+          "id": "figure_references",
+          "guidance": "Use the same figure identifier in text and captions; use a range only for consecutive figures. These grouped examples are project recommendations.",
+          "status": "project_recommendation",
+          "examples": [
+            "Fig. 1",
+            "Figs. 1 and 3",
+            "Figs. 1\u20133"
+          ]
+        },
+        {
+          "id": "panel_references",
+          "guidance": "Use panel_labeling for letter case and punctuation. Panels share their parent figure number; these reference examples follow the existing panel labels.",
+          "status": "project_recommendation",
+          "examples": [
+            "Fig. 1a",
+            "Fig. 1a and 1c",
+            "Fig. 1a\u2013c"
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "id": "caption_heading",
+          "guidance": "Match each caption to its figure number and begin with a concise title. Punctuation in these examples is a project convention unless separately verified.",
+          "status": "project_recommendation",
+          "pattern": "Fig. {number}. {title}",
+          "examples": [
+            "Fig. 1. Study design.",
+            "Fig. 2. Measured response.",
+            "Fig. 3. Validation results."
+          ]
+        },
+        {
+          "id": "caption_panels",
+          "guidance": "Describe all panels in label order under one figure caption. Reuse the exact panel letters; do not number captions separately.",
+          "status": "project_recommendation",
+          "examples": [
+            "Fig. 1. Study design. a Recruitment. b Sampling. c Analysis."
+          ]
+        },
+        {
+          "id": "caption_content",
+          "guidance": "For initial submission, put the legend on the figure page. Start with a short title describing the whole figure, then explain its contents.",
+          "status": "publisher_requirement",
+          "source_url": "https://www.nature.com/nature/for-authors/initial-submission",
+          "source_section": "Figures and figure legends",
+          "verified_on": "2026-10-18",
+          "examples": [
+            "Study design. Recruitment, sampling, and analysis are shown in panels a, b, and c."
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "id": "table_numbering",
+          "guidance": "Number tables independently of figures, starting at 1 in first-citation order.",
+          "status": "unverified",
+          "source_url": "https://www.nature.com/nature/for-authors/final-submission",
+          "source_section": "Table numbering: confirm current journal instructions",
+          "pattern": "Table {number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "main_tables"
+          },
+          "examples": [
+            "Table 1",
+            "Table 2",
+            "Table 3"
+          ]
+        },
+        {
+          "id": "table_title",
+          "guidance": "Give each table a short descriptive title after its number; confirm placement for the submission stage.",
+          "status": "project_recommendation",
+          "pattern": "Table {number}. {title}",
+          "examples": [
+            "Table 1. Participant characteristics.",
+            "Table 2. Model parameters.",
+            "Table 3. Validation metrics."
+          ]
+        },
+        {
+          "id": "table_references",
+          "guidance": "Use the table sequence in text references. These grouped and range examples are project recommendations.",
+          "status": "project_recommendation",
+          "examples": [
+            "Table 1",
+            "Tables 1 and 3",
+            "Tables 1\u20133"
+          ]
+        }
+      ],
+      "supplementary": [
+        {
+          "id": "supplementary_figure_numbering",
+          "guidance": "Use a separate sequence for this supplementary item type. These labels are provisional; confirm the journal\u2019s current supporting-information or appendix convention.",
+          "status": "unverified",
+          "source_url": "https://www.nature.com/nature/for-authors/final-submission",
+          "pattern": "Supplementary Figure {number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "supplementary_figures"
+          },
+          "examples": [
+            "Supplementary Figure 1",
+            "Supplementary Figure 2",
+            "Supplementary Figure 3"
+          ]
+        },
+        {
+          "id": "supplementary_table_numbering",
+          "guidance": "Use a separate sequence for this supplementary item type. These labels are provisional; confirm the journal\u2019s current supporting-information or appendix convention.",
+          "status": "unverified",
+          "source_url": "https://www.nature.com/nature/for-authors/final-submission",
+          "pattern": "Supplementary Table {number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "supplementary_tables"
+          },
+          "examples": [
+            "Supplementary Table 1",
+            "Supplementary Table 2",
+            "Supplementary Table 3"
+          ]
+        },
+        {
+          "id": "supplementary_captions",
+          "guidance": "Match supplementary captions and table titles to their supplementary identifiers, keeping them separate from main-item sequences.",
+          "status": "project_recommendation",
+          "examples": [
+            "Supplementary Figure 1. Additional measurements.",
+            "Supplementary Table 1. Additional model parameters."
+          ]
+        }
+      ],
+      "filenames": [
+        {
+          "id": "figure_filenames",
+          "guidance": "Project filename recommendation for separate files only. Replace {ext} with an accepted format for this item and submission stage; this does not require a separate upload.",
+          "status": "project_recommendation",
+          "pattern": "figure_{number:02d}.{ext}",
+          "examples": [
+            "figure_01.{ext}",
+            "figure_02.{ext}",
+            "figure_03.{ext}"
+          ]
+        },
+        {
+          "id": "table_filenames",
+          "guidance": "Project filename recommendation for separate files only. Replace {ext} with an accepted format for this item and submission stage; this does not require a separate upload.",
+          "status": "project_recommendation",
+          "pattern": "table_{number:02d}.{ext}",
+          "examples": [
+            "table_01.{ext}",
+            "table_02.{ext}",
+            "table_03.{ext}"
+          ]
+        },
+        {
+          "id": "caption_filenames",
+          "guidance": "If caption documents are requested, use one combined document or matching figure stems for individual documents. DOCX examples apply only when the journal accepts DOCX.",
+          "status": "project_recommendation",
+          "examples": [
+            "figure_captions.docx",
+            "figure_01_caption.docx",
+            "figure_02_caption.docx",
+            "figure_03_caption.docx"
+          ]
+        },
+        {
+          "id": "supplementary_filenames",
+          "guidance": "Prefix separate supplementary files to prevent collisions with main items. Use an accepted extension; keep the same numeric identifier as the supplementary label.",
+          "status": "project_recommendation",
+          "examples": [
+            "supplementary_figure_01.{ext}",
+            "supplementary_figure_02.{ext}",
+            "supplementary_table_01.{ext}",
+            "supplementary_figure_01_caption.docx"
+          ]
+        },
+        {
+          "id": "filename_priority",
+          "guidance": "Publisher and submission-portal instructions override these project filenames. Zero-padding is at least two digits and does not truncate larger numbers.",
+          "status": "project_recommendation",
+          "examples": [
+            "figure_10.{ext}",
+            "figure_100.{ext}"
+          ]
+        },
+        {
+          "id": "extended_data_filenames",
+          "guidance": "Prefix separate Extended Data files and match captions by item number. Confirm allowed formats and upload packaging with Nature.",
+          "status": "project_recommendation",
+          "examples": [
+            "extended_data_figure_01.{ext}",
+            "extended_data_figure_02.{ext}",
+            "extended_data_table_01.{ext}",
+            "extended_data_figure_01_caption.docx"
+          ]
+        }
+      ],
+      "extended_data": [
+        {
+          "id": "extended_data_scope",
+          "guidance": "Nature prefers additional figures and small tables as Extended Data. Follow the final-submission formatting instructions if the article is accepted.",
+          "status": "publisher_requirement",
+          "source_url": "https://www.nature.com/nature/for-authors/initial-submission",
+          "source_section": "Extended data; Supplementary information",
+          "verified_on": "2026-10-18",
+          "examples": [
+            "Use Extended Data for additional display items integral to the study."
+          ]
+        },
+        {
+          "id": "extended_data_figure_numbering",
+          "guidance": "Keep this sequence separate from main and supplementary items. Confirm final label and citation styling with Nature.",
+          "status": "unverified",
+          "source_url": "https://www.nature.com/nature/for-authors/final-submission",
+          "pattern": "Extended Data Figure {number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "extended_data_figures"
+          },
+          "examples": [
+            "Extended Data Figure 1",
+            "Extended Data Figure 2",
+            "Extended Data Figure 3"
+          ]
+        },
+        {
+          "id": "extended_data_table_numbering",
+          "guidance": "Keep this sequence separate from main and supplementary items. Confirm final label and citation styling with Nature.",
+          "status": "unverified",
+          "source_url": "https://www.nature.com/nature/for-authors/final-submission",
+          "pattern": "Extended Data Table {number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "extended_data_tables"
+          },
+          "examples": [
+            "Extended Data Table 1",
+            "Extended Data Table 2",
+            "Extended Data Table 3"
+          ]
+        },
+        {
+          "id": "extended_data_captions",
+          "guidance": "Use the Extended Data item identifier in each caption or title.",
+          "status": "project_recommendation",
+          "examples": [
+            "Extended Data Figure 1. Additional measurements.",
+            "Extended Data Table 1. Additional parameters."
+          ]
+        }
+      ]
     }
   },
   "science": {
-    "schema_version": "1.0.0",
+    "schema_version": "1.1.0",
     "metadata": {
       "publisher": "American Association for the Advancement of Science (AAAS)",
       "journal_name": "Science",
@@ -1945,6 +3995,224 @@
       "preferred_disclosure_placement": "Acknowledgments",
       "policy_url": "https://www.science.org/content/page/science-information-authors#editorial-policies",
       "official_statement_template": "The author(s) used [TOOL NAME, VERSION] to assist with [SPECIFY PURPOSE: e.g., improving prose style and grammatical phrasing]. All scientific arguments, calculations, and interpretations were generated and independently verified by the human authors, who accept full responsibility for the veracity and originality of the work.\n"
+    },
+    "naming_conventions": {
+      "figures": [
+        {
+          "id": "figure_numbering",
+          "guidance": "Number main figures independently of tables, starting at 1 in first-citation order.",
+          "status": "unverified",
+          "source_url": "https://www.science.org/content/page/science-information-authors",
+          "source_section": "Figure numbering: confirm current journal instructions",
+          "pattern": "Fig. {number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "main_figures"
+          },
+          "examples": [
+            "Fig. 1",
+            "Fig. 2",
+            "Fig. 3"
+          ]
+        },
+        {
+          "id": "figure_references",
+          "guidance": "Provisional reference examples; confirm abbreviation, pluralization, and range style in current journal instructions.",
+          "status": "unverified",
+          "examples": [
+            "Fig. 1",
+            "Figs. 1 and 3",
+            "Figs. 1\u20133"
+          ],
+          "source_url": "https://www.science.org/content/page/science-information-authors"
+        },
+        {
+          "id": "panel_references",
+          "guidance": "Use panel_labeling for letter case and punctuation. Panels share their parent figure number; these reference examples follow the existing panel labels.",
+          "status": "project_recommendation",
+          "examples": [
+            "Fig. 1A",
+            "Fig. 1A and 1C",
+            "Fig. 1A\u2013C"
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "id": "caption_heading",
+          "guidance": "Match each caption to its figure number and begin with a concise title. Punctuation in these examples is a project convention unless separately verified.",
+          "status": "project_recommendation",
+          "pattern": "Fig. {number}. {title}",
+          "examples": [
+            "Fig. 1. Study design.",
+            "Fig. 2. Measured response.",
+            "Fig. 3. Validation results."
+          ]
+        },
+        {
+          "id": "caption_panels",
+          "guidance": "Describe all panels in label order under one figure caption. Reuse the exact panel letters; do not number captions separately.",
+          "status": "project_recommendation",
+          "examples": [
+            "Fig. 1. Study design. A Recruitment. B Sampling. C Analysis."
+          ]
+        },
+        {
+          "id": "caption_placement",
+          "guidance": "Confirm whether captions belong beside figures, at the end of the manuscript, or in a separate document for the submission stage.",
+          "status": "unverified",
+          "source_url": "https://www.science.org/content/page/science-information-authors",
+          "examples": [
+            "Keep captions in figure-number order wherever the journal requests them."
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "id": "table_numbering",
+          "guidance": "Number tables independently of figures, starting at 1 in first-citation order.",
+          "status": "unverified",
+          "source_url": "https://www.science.org/content/page/science-information-authors",
+          "source_section": "Table numbering: confirm current journal instructions",
+          "pattern": "Table {number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "main_tables"
+          },
+          "examples": [
+            "Table 1",
+            "Table 2",
+            "Table 3"
+          ]
+        },
+        {
+          "id": "table_title",
+          "guidance": "Give each table a short descriptive title after its number; confirm placement for the submission stage.",
+          "status": "project_recommendation",
+          "pattern": "Table {number}. {title}",
+          "examples": [
+            "Table 1. Participant characteristics.",
+            "Table 2. Model parameters.",
+            "Table 3. Validation metrics."
+          ]
+        },
+        {
+          "id": "table_references",
+          "guidance": "Use the table sequence in text references. These grouped and range examples are project recommendations.",
+          "status": "project_recommendation",
+          "examples": [
+            "Table 1",
+            "Tables 1 and 3",
+            "Tables 1\u20133"
+          ]
+        }
+      ],
+      "supplementary": [
+        {
+          "id": "supplementary_figure_numbering",
+          "guidance": "Use a separate sequence for this supplementary item type. These labels are provisional; confirm the journal\u2019s current supporting-information or appendix convention.",
+          "status": "unverified",
+          "source_url": "https://www.science.org/content/page/science-information-authors",
+          "pattern": "fig. S{number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "supplementary_figures"
+          },
+          "examples": [
+            "fig. S1",
+            "fig. S2",
+            "fig. S3"
+          ]
+        },
+        {
+          "id": "supplementary_table_numbering",
+          "guidance": "Use a separate sequence for this supplementary item type. These labels are provisional; confirm the journal\u2019s current supporting-information or appendix convention.",
+          "status": "unverified",
+          "source_url": "https://www.science.org/content/page/science-information-authors",
+          "pattern": "table S{number}",
+          "numbering": {
+            "style": "arabic",
+            "start": 1,
+            "order": "first_citation",
+            "sequence": "supplementary_tables"
+          },
+          "examples": [
+            "table S1",
+            "table S2",
+            "table S3"
+          ]
+        },
+        {
+          "id": "supplementary_captions",
+          "guidance": "Match supplementary captions and table titles to their supplementary identifiers, keeping them separate from main-item sequences.",
+          "status": "project_recommendation",
+          "examples": [
+            "fig. S1. Additional measurements.",
+            "table S1. Additional model parameters."
+          ]
+        }
+      ],
+      "filenames": [
+        {
+          "id": "figure_filenames",
+          "guidance": "Project filename recommendation for separate files only. Replace {ext} with an accepted format for this item and submission stage; this does not require a separate upload.",
+          "status": "project_recommendation",
+          "pattern": "figure_{number:02d}.{ext}",
+          "examples": [
+            "figure_01.{ext}",
+            "figure_02.{ext}",
+            "figure_03.{ext}"
+          ]
+        },
+        {
+          "id": "table_filenames",
+          "guidance": "Project filename recommendation for separate files only. Replace {ext} with an accepted format for this item and submission stage; this does not require a separate upload.",
+          "status": "project_recommendation",
+          "pattern": "table_{number:02d}.{ext}",
+          "examples": [
+            "table_01.{ext}",
+            "table_02.{ext}",
+            "table_03.{ext}"
+          ]
+        },
+        {
+          "id": "caption_filenames",
+          "guidance": "If caption documents are requested, use one combined document or matching figure stems for individual documents. DOCX examples apply only when the journal accepts DOCX.",
+          "status": "project_recommendation",
+          "examples": [
+            "figure_captions.docx",
+            "figure_01_caption.docx",
+            "figure_02_caption.docx",
+            "figure_03_caption.docx"
+          ]
+        },
+        {
+          "id": "supplementary_filenames",
+          "guidance": "Prefix separate supplementary files to prevent collisions with main items. Use an accepted extension; keep the same numeric identifier as the supplementary label.",
+          "status": "project_recommendation",
+          "examples": [
+            "supplementary_figure_01.{ext}",
+            "supplementary_figure_02.{ext}",
+            "supplementary_table_01.{ext}",
+            "supplementary_figure_01_caption.docx"
+          ]
+        },
+        {
+          "id": "filename_priority",
+          "guidance": "Publisher and submission-portal instructions override these project filenames. Zero-padding is at least two digits and does not truncate larger numbers.",
+          "status": "project_recommendation",
+          "examples": [
+            "figure_10.{ext}",
+            "figure_100.{ext}"
+          ]
+        }
+      ]
     }
   }
 }

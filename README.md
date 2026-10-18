@@ -89,6 +89,48 @@ For guidelines and documentation on manually coding new GUI tests, see [`tests/g
 
 ---
 
+## Figure, caption, and table naming
+
+All six bundled templates use `schema_version: "1.1.0"` and provide
+`naming_conventions` for figures, captions, tables, supplementary material, and
+submission filenames. Nature also includes `extended_data`. The section is optional
+in the v1 schema so existing 1.0.0 templates remain valid.
+
+Each group contains rules with an `id`, `guidance`, `status`, and illustrative
+`examples`. Rules can include a `pattern` and `numbering` with `style` (`arabic` or
+`roman_upper`), `start`, `order` (`first_citation`), and a distinct `sequence` name.
+Patterns use named placeholders such as `{number}`, `{title}`, and `{ext}`;
+`{number:02d}` means a minimum of two digits. These fields describe conventions;
+they do not rename or validate manuscript files.
+
+- `publisher_requirement`: verified official guidance, with `source_url`,
+  `source_section`, and `verified_on`.
+- `project_recommendation`: a suggested convention, not a publisher mandate.
+- `unverified`: provisional guidance with a journal link; confirm it before submission.
+
+Rule verification dates apply only to that rule. Existing template verification
+metadata does not imply that every new naming rule has been verified. In particular,
+some publisher pages could not be accessed during this update.
+
+Keep main figure and table sequences independent, and use separate supplementary
+and Extended Data sequences. Captions share their figure number. Panel examples
+follow the existing `panel_labeling` case and punctuation. IEEE table headings use
+Roman numerals, whereas project filenames use decimal identifiers (`table_01`
+corresponds to `TABLE I`).
+
+When separate files are requested, recommended names include `figure_01.{ext}`,
+`table_01.{ext}`, `figure_captions.docx`, and `figure_01_caption.docx`. Supplementary
+and Extended Data files use `supplementary_` and `extended_data_` prefixes.
+Choose extensions and packaging accepted by the journal; these examples do not
+require separate uploads or establish DOCX as an accepted format. Publisher and
+submission-portal requirements take precedence over project recommendations.
+
+The explorer displays these rules with evidence labels and examples. Run
+`uv run jct build` after editing YAML or the schema to regenerate JSON, the web
+schema, and `web/data/journals.js`. The latter is generated fallback data for offline
+loading and must not be edited by hand. The Rust model exposes optional typed
+`NamingConventions` and preserves the rules through YAML and JSON serialization.
+
 ## Project Structure
 
 ```

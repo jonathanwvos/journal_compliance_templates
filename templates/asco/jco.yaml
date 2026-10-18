@@ -3,7 +3,7 @@
 # Official JCO guidelines: https://ascopubs.org/journal/jco/author-instructions
 # ==============================================================================
 
-schema_version: "1.0.0"
+schema_version: "1.1.0"
 
 metadata:
   publisher: "American Society of Clinical Oncology (ASCO)"
@@ -207,3 +207,180 @@ ai_policy:
     for the purpose of [DESCRIBE PURPOSE: e.g., grammar improvement / drafting preliminary summaries of non-clinical literature].
     The authors reviewed and edited all generated content and take full responsibility for the integrity,
     factual accuracy, and originality of the published work.
+
+# ------------------------------------------------------------------------------
+# Naming conventions: requirements, project recommendations, and unverified guidance
+# Each rule carries its own evidence status; examples are illustrative.
+# ------------------------------------------------------------------------------
+naming_conventions:
+  figures:
+  - id: figure_numbering
+    guidance: Number main figures independently of tables, starting at 1 in first-citation order.
+    status: unverified
+    source_url: https://ascopubs.org/journal/jco/author-instructions
+    source_section: 'Figure numbering: confirm current journal instructions'
+    pattern: Fig. {number}
+    numbering:
+      style: arabic
+      start: 1
+      order: first_citation
+      sequence: main_figures
+    examples:
+    - Fig. 1
+    - Fig. 2
+    - Fig. 3
+  - id: figure_references
+    guidance: Provisional reference examples; confirm abbreviation, pluralization, and range style in
+      current journal instructions.
+    status: unverified
+    examples:
+    - Fig. 1
+    - Figs. 1 and 3
+    - Figs. 1–3
+    source_url: https://ascopubs.org/journal/jco/author-instructions
+  - id: panel_references
+    guidance: Use panel_labeling for letter case and punctuation. Panels share their parent figure number;
+      these reference examples follow the existing panel labels.
+    status: project_recommendation
+    examples:
+    - Fig. 1A
+    - Fig. 1A and 1C
+    - Fig. 1A–C
+  captions:
+  - id: caption_heading
+    guidance: Match each caption to its figure number and begin with a concise title. Punctuation in these
+      examples is a project convention unless separately verified.
+    status: project_recommendation
+    pattern: Fig. {number}. {title}
+    examples:
+    - Fig. 1. Study design.
+    - Fig. 2. Measured response.
+    - Fig. 3. Validation results.
+  - id: caption_panels
+    guidance: Describe all panels in label order under one figure caption. Reuse the exact panel letters;
+      do not number captions separately.
+    status: project_recommendation
+    examples:
+    - Fig. 1. Study design. A Recruitment. B Sampling. C Analysis.
+  - id: caption_placement
+    guidance: Confirm whether captions belong beside figures, at the end of the manuscript, or in a separate
+      document for the submission stage.
+    status: unverified
+    source_url: https://ascopubs.org/journal/jco/author-instructions
+    examples:
+    - Keep captions in figure-number order wherever the journal requests them.
+  tables:
+  - id: table_numbering
+    guidance: Number tables independently of figures, starting at 1 in first-citation order.
+    status: unverified
+    source_url: https://ascopubs.org/journal/jco/author-instructions
+    source_section: 'Table numbering: confirm current journal instructions'
+    pattern: Table {number}
+    numbering:
+      style: arabic
+      start: 1
+      order: first_citation
+      sequence: main_tables
+    examples:
+    - Table 1
+    - Table 2
+    - Table 3
+  - id: table_title
+    guidance: Give each table a short descriptive title after its number; confirm placement for the submission
+      stage.
+    status: project_recommendation
+    pattern: Table {number}. {title}
+    examples:
+    - Table 1. Participant characteristics.
+    - Table 2. Model parameters.
+    - Table 3. Validation metrics.
+  - id: table_references
+    guidance: Use the table sequence in text references. These grouped and range examples are project
+      recommendations.
+    status: project_recommendation
+    examples:
+    - Table 1
+    - Tables 1 and 3
+    - Tables 1–3
+  supplementary:
+  - id: supplementary_figure_numbering
+    guidance: Use a separate sequence for this supplementary item type. These labels are provisional;
+      confirm the journal’s current supporting-information or appendix convention.
+    status: unverified
+    source_url: https://ascopubs.org/journal/jco/author-instructions
+    pattern: Fig. A{number}
+    numbering:
+      style: arabic
+      start: 1
+      order: first_citation
+      sequence: supplementary_figures
+    examples:
+    - Fig. A1
+    - Fig. A2
+    - Fig. A3
+  - id: supplementary_table_numbering
+    guidance: Use a separate sequence for this supplementary item type. These labels are provisional;
+      confirm the journal’s current supporting-information or appendix convention.
+    status: unverified
+    source_url: https://ascopubs.org/journal/jco/author-instructions
+    pattern: Table A{number}
+    numbering:
+      style: arabic
+      start: 1
+      order: first_citation
+      sequence: supplementary_tables
+    examples:
+    - Table A1
+    - Table A2
+    - Table A3
+  - id: supplementary_captions
+    guidance: Match supplementary captions and table titles to their supplementary identifiers, keeping
+      them separate from main-item sequences.
+    status: project_recommendation
+    examples:
+    - Fig. A1. Additional measurements.
+    - Table A1. Additional model parameters.
+  filenames:
+  - id: figure_filenames
+    guidance: Project filename recommendation for separate files only. Replace {ext} with an accepted
+      format for this item and submission stage; this does not require a separate upload.
+    status: project_recommendation
+    pattern: figure_{number:02d}.{ext}
+    examples:
+    - figure_01.{ext}
+    - figure_02.{ext}
+    - figure_03.{ext}
+  - id: table_filenames
+    guidance: Project filename recommendation for separate files only. Replace {ext} with an accepted
+      format for this item and submission stage; this does not require a separate upload.
+    status: project_recommendation
+    pattern: table_{number:02d}.{ext}
+    examples:
+    - table_01.{ext}
+    - table_02.{ext}
+    - table_03.{ext}
+  - id: caption_filenames
+    guidance: If caption documents are requested, use one combined document or matching figure stems for
+      individual documents. DOCX examples apply only when the journal accepts DOCX.
+    status: project_recommendation
+    examples:
+    - figure_captions.docx
+    - figure_01_caption.docx
+    - figure_02_caption.docx
+    - figure_03_caption.docx
+  - id: supplementary_filenames
+    guidance: Prefix separate supplementary files to prevent collisions with main items. Use an accepted
+      extension; keep the same numeric identifier as the supplementary label.
+    status: project_recommendation
+    examples:
+    - supplementary_figure_01.{ext}
+    - supplementary_figure_02.{ext}
+    - supplementary_table_01.{ext}
+    - supplementary_figure_01_caption.docx
+  - id: filename_priority
+    guidance: Publisher and submission-portal instructions override these project filenames. Zero-padding
+      is at least two digits and does not truncate larger numbers.
+    status: project_recommendation
+    examples:
+    - figure_10.{ext}
+    - figure_100.{ext}

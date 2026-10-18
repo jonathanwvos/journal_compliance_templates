@@ -1093,3 +1093,15 @@ footer a {
   text-decoration: none;
   font-weight: 600;
 }
+/* Journal naming guidance */
+.naming-card { margin-bottom: 2rem; }
+.naming-group { border-top: 1px solid var(--border-color); padding: 1rem 0; }
+.naming-group summary { cursor: pointer; font-weight: 700; }
+.naming-group summary:focus-visible { outline: 2px solid var(--accent-primary); outline-offset: 4px; }
+.naming-rule { margin-top: 1rem; padding: 0.75rem; background: var(--bg-secondary); border-radius: 8px; }
+.naming-rule p { margin: 0.5rem 0; }
+.naming-status { font-size: 0.8rem; font-weight: 700; }
+.naming-status.publisher_requirement { color: var(--accent-primary); }
+.naming-examples { padding-left: 1.5rem; }
+.naming-examples code, .naming-pattern { white-space: pre-wrap; overflow-wrap: anywhere; }
+.naming-source { font-size: 0.85rem; }
